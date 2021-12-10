@@ -1,2 +1,3 @@
-# docs
-The documentation for the 5g-ERA project
+# Documentation
+
+This repository contains the technical documentation for other parts of the 5G-ERA project.
