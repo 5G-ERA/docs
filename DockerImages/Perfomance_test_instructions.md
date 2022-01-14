@@ -144,7 +144,7 @@ The output should look like following:
 If the both commands have outputted the text similar to the shown it means that the demo application is working correctly in the Kubernetes environment.
 ## Running demo with the performance tests
 
-Retrieve the name of the talker pod and lister pod via the command:
+Retrieve the name of the talker pod and listener pod via the command:
 ```
 microk8s.kubectl get pod
 ```
