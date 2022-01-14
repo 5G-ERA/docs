@@ -103,7 +103,7 @@ The command will provision the new `NetworkAttachmentDefinition` and will create
 To validate that the application is working correctly use the command to list the resources provisioned by the Microk8s.
 
 ```shell
-microctl.kubectl get all
+microk8s.kubectl get all
 ```
 The command should output the 2 pods in the first section, the kubernetes service, 2 deployments for the talker and listener and 2 replica sets associated with the deployments.
 
