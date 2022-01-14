@@ -143,3 +143,33 @@ The output should look like following:
 
 If the both commands have outputted the text similar to the shown it means that the demo application is working correctly in the Kubernetes environment.
 ## Running demo with the performance tests
+
+Retrieve the name of the talker pod and lister pod via the command:
+```
+microk8s.kubectl get pod
+```
+
+Login to the talker pod using:
+```shell
+microk8s.kubectl exec --stdin --tty  name-of-ros-talker-pod      
+```
+run the performance test in the talker pod as:
+```
+/opt/performance_test/lib/performance_test/perf_test -c FastRTPS --msg Array1k --roundtrip-mode Main
+```
+Figure below shows the latency of the past 1000 messages (each message is 1K in size). The performance test had not been switched on in the listener yet . There are 0 messages received as highlighted in the screenshot.
+
+![The result of the performance test](img/test1.png "Test result 1")
+
+Open a new terminal, login to the listener using:
+```shell
+microk8s.kubectl exec --stdin --tty  name-of-ros-listener-pod      
+```
+run the listener in the relay mode as:
+```shell
+/opt/performance_test/lib/performance_test/perf_test -c FastRTPS --msg Array1k --roundtrip-mode Relay
+```
+
+As shown in the picture below, the received messages in the talker pod are updated immediately. There is no package lost in this test. The latency is less than 1 ms.
+
+![The result of the performance test nr 2](img/test2.png "Test result 2")
