@@ -88,4 +88,58 @@ To enable the easy access to the ROS commands, the correct `setup.bash` file has
 
 The whole configuration is presented in the [talker_listener_demo.yaml](talker_listener_demo.yaml) file.
 
+## Deploymnet 
+
+To deploy the demo application use the following command with the Microk8s:
+
+```shell
+microk8s.kubectl apply -f /path/to/the/talker_listener_demo.yaml
+```
+
+The command will provision the new `NetworkAttachmentDefinition` and will create the deployments for the talker and a listener. 
+## Demo validation 
+
+### Deployment validation
+To validate that the application is working correctly use the command to list the resources provisioned by the Microk8s.
+
+```shell
+microctl.kubectl get all
+```
+The command should output the 2 pods in the first section, the kubernetes service, 2 deployments for the talker and listener and 2 replica sets associated with the deployments.
+
+The pods should have the `Runnig` status. If it is the first time that these commands are being run bear in mind that the container may take a while to start as the image required has a big size (about 3.5GB when downloaded). While the image is being downloaded, the pods will show `ContainerCreating` status.
+
+### Application validation
+To validate that the both applications are working correctly use the following commands to check the outputs of each pod.
+
+```shell
+microk8s.kubectl logs --follow -l app=ros-talker
+```
+
+This command will print any text to your terminal that is outputted by the ros-talker pod. You should see the similar outputs:
+
+```
+[INFO] [1642153319.274536973] [talker]: Publishing: 'Hello World: 1779'
+[INFO] [1642153320.276232763] [talker]: Publishing: 'Hello World: 1780'
+[INFO] [1642153321.275711637] [talker]: Publishing: 'Hello World: 1781'
+[INFO] [1642153322.274403688] [talker]: Publishing: 'Hello World: 1782'
+[INFO] [1642153323.274761271] [talker]: Publishing: 'Hello World: 1783'
+```
+
+The listener pod is checked in the same way. We specify the command to follow logs in the listener pod.
+```shell
+microk8s.kubectl logs --follow -l app=ros-listener
+```
+
+The output should look like following:
+
+```
+[INFO] [1642153312.274727564] [listener]: I heard: [Hello World: 1772]
+[INFO] [1642153313.274628685] [listener]: I heard: [Hello World: 1773]
+[INFO] [1642153314.274828568] [listener]: I heard: [Hello World: 1774]
+[INFO] [1642153315.274757853] [listener]: I heard: [Hello World: 1775]
+[INFO] [1642153316.276216368] [listener]: I heard: [Hello World: 1776]
+```
+
+If the both commands have outputted the text similar to the shown it means that the demo application is working correctly in the Kubernetes environment.
 ## Running demo with the performance tests
