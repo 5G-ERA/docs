@@ -1,0 +1,82 @@
+apiVersion: "k8s.cni.cncf.io/v1"
+kind: NetworkAttachmentDefinition
+metadata:
+  name: dds-network
+spec:
+  config: '{
+    "cniVersion": "0.3.0",
+    "name": "dds-network",
+    "type": "macvlan",
+    "master": "enp0s3",
+    "mode": "bridge",
+    "isDefaultgateway": true,
+    "ipam": {
+      "type": "host-local",
+      "ranges": [
+         [ {
+           "subnet": "10.0.2.0/24",
+           "rangeStart": "10.0.2.1",
+           "rangeEnd": "10.0.2.254",
+           "gateway": "10.0.2.255"
+         } ]
+      ]
+    }
+  }'
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ros-listener-deployment
+  labels:
+    app: ros-listener
+  annotations:
+    k8s.v1.cni.cncf.io/networks: dds-network
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ros-listener
+  template:
+    metadata:
+      labels:
+        app: ros-listener
+      annotations:
+        k8s.v1.cni.cncf.io/networks: dds-network
+    spec:
+      containers:
+      - name: listener
+        image: public.ecr.aws/c8q3f0b5/ros-performance-test:latest 
+        command: ["/bin/bash", "-c"]
+        args: ["source /opt/ros/foxy/setup.bash && ros2 run demo_nodes_cpp listener "]
+        imagePullPolicy: IfNotPresent
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ros-talker-deployment
+  labels:
+    app: ros-talker
+  annotations:
+    k8s.v1.cni.cncf.io/networks: dds-network
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ros-talker
+  template:
+    metadata:
+      labels:
+        app: ros-talker
+      annotations:
+        k8s.v1.cni.cncf.io/networks: dds-network
+    spec:
+      containers:
+      - name: talker 
+        image: public.ecr.aws/c8q3f0b5/ros-performance-test:latest
+        command: ["/bin/bash", "-c"]
+        args: ["source /opt/ros/foxy/setup.bash && ros2 run demo_nodes_cpp talker --ros-args "]
+        imagePullPolicy: IfNotPresent
+---
