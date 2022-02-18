@@ -22,8 +22,9 @@ Param:
     ] 
   }
 ]
-
+```
 Return:
+```json
 [
   {
     "InstanceName": "name",
@@ -37,6 +38,7 @@ Return:
     "Status" : "Status"
   }
 ]
+```
 Status: 201 (Initilised), 201(Created), 203(Failed), 204 (No Content), 400 (Bad Request)
 
 
@@ -51,7 +53,9 @@ Param:
     "last_knownstatus" : "Status"
   }
 ]
+```
 Return:
+```json
 [
   {
     "InstanceName": "name",
@@ -72,7 +76,7 @@ Return:
     ]
   }
 ]
-
+```
 ### PATCH /deployment/ns/{id} 
 Scale up and down of an existing network service
 Param:
@@ -90,7 +94,9 @@ Param:
     ] 
   }
 ]
+```
 Return:
+```json
 [
   {
     "InstanceName": "name",
@@ -111,7 +117,7 @@ Return:
     ]
   }
 ]
-
+```
 ### DELETE /deployment/ns/{id} 
 Terminate an existing network service
 Param:
@@ -131,4 +137,4 @@ Return:
     "Status" : "Status"
   }
 ]
-
+```
