@@ -16,12 +16,13 @@ Param:
    "name": "name",
    "configuration":[
      {
-       scale:1
-       parameters:parameters
+       "scale":"1"
+       "parameters":"parameters"
      }
     ] 
   }
 ]
+
 Return:
 [
   {
@@ -29,8 +30,8 @@ Return:
     "InstanceId": "id",
     "InstanceRef":[
      {
-       url:url
-       entrypoint:entrypoint
+       "url":"url"
+       "entrypoint":"entrypoint"
      }
     ] 
     "Status" : "Status"
@@ -59,14 +60,14 @@ Return:
     "Feedback" : "feedback"
     "InstanceRef":[
      {
-       url:url
-       entrypoint:entrypoint
+       "url":"url"
+       "entrypoint":"entrypoint"
      }
     ] 
     "configuration":[
       {
-        Scale:scale
-        Parameters:parameters
+        "Scale":"1"
+        "Parameters":"parameters"
       }
     ]
   }
@@ -83,8 +84,8 @@ Param:
     "last_knownstatus" : "Status"
     "configuration":[
      {
-       scale:1
-       parameters:parameters
+       "scale":"1"
+       "parameters":"parameters"
      }
     ] 
   }
@@ -98,14 +99,14 @@ Return:
     "Feedback" : "feedback"
     "InstanceRef":[
      {
-       url:url
-       entrypoint:entrypoint
+       "url":"url"
+       "entrypoint":"entrypoint"
      }
     ] 
     "configuration":[
       {
-        Scale:scale
-        Parameters:parameters
+        "Scale":"scale"
+        "Parameters":"parameters"
       }
     ]
   }
