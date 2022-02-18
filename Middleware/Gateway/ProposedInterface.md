@@ -5,7 +5,7 @@ TBD
 ### /authentication/
 TBD
 
-## Deployment
+## Deployment of Network Service
 
 ### POST /deployment/ns/{ns_request} 
 Initiating a new network service in the OSM
@@ -13,7 +13,7 @@ Param:
 ```json
 [
  {
-   "name": "name",
+   "NSname": "NSname",
    "configuration":[
      {
        "scale":"1"
@@ -27,8 +27,8 @@ Return:
 ```json
 [
   {
-    "InstanceName": "name",
-    "InstanceId": "id",
+    "NSInstanceName": "NSname",
+    "NSInstanceId": "NSid",
     "InstanceRef":[
      {
        "url":"url"
@@ -42,14 +42,14 @@ Return:
 Status: 201 (Initilised), 201(Created), 203(Failed), 204 (No Content), 400 (Bad Request)
 
 
-### GET /deployment/ns/{id} 
+### GET /deployment/ns/{ns_request} 
 Get the information about a deployed service
 Param:
 ```json
 [
   {
-    "InstanceId": "id",
-    "InstanceName": "name",
+    "NSInstanceId": "NSid",
+    "NSInstanceName": "NSname",
     "last_knownstatus" : "Status"
   }
 ]
@@ -58,8 +58,8 @@ Return:
 ```json
 [
   {
-    "InstanceName": "name",
-    "InstanceId": "id",
+    "NSInstanceName": "NSname",
+    "NSInstanceId": "NSid",
     "Status" : "status"
     "Feedback" : "feedback"
     "InstanceRef":[
@@ -77,14 +77,14 @@ Return:
   }
 ]
 ```
-### PATCH /deployment/ns/{id} 
+### PATCH /deployment/ns/{ns_request} 
 Scale up and down of an existing network service
 Param:
 ```json
 [
   {
-    "InstanceId": "id",
-    "InstanceName": "name",
+    "NSInstanceId": "NSid",
+    "NSInstanceName": "NSname",
     "last_knownstatus" : "Status"
     "configuration":[
      {
@@ -99,8 +99,8 @@ Return:
 ```json
 [
   {
-    "InstanceName": "name",
-    "InstanceId": "id",
+    "NSInstanceName": "NSname",
+    "NSInstanceId": "NSid",
     "Status" : "status"
     "Feedback" : "feedback"
     "InstanceRef":[
@@ -118,14 +118,14 @@ Return:
   }
 ]
 ```
-### DELETE /deployment/ns/{id} 
+### DELETE /deployment/ns/{ns_request} 
 Terminate an existing network service
 Param:
 ```json
 [
   {
-    "InstanceId": "id",
-    "InstanceName": "name",
+    "NSInstanceId": "NSid",
+    "NSInstanceName": "NSname",
     "last_knownstatus" : "Status"
   }
 ]
@@ -134,9 +134,146 @@ Return:
 ```json
 [
   {
-    "InstanceName": "name",
-    "InstanceId": "id",
+    "NSInstanceName": "NSname",
+    "NSInstanceId": "NSid",
     "Status" : "Status"
   }
 ]
 ```
+
+## Deployment of a Task
+### POST /deployment/task/{task_request} 
+Initiating a new task in the 5G-ERA
+Param:
+```json
+[
+ {
+   "name": "name",
+   "configuration":[
+     {
+       "placement":"placement"
+       "slicing":"slicing"
+     }
+    ] 
+  }
+]
+```
+Return:
+```json
+[
+  {
+    "TaskInstanceName": "t_name",
+    "TaskInstanceId": "task_id",
+    "TaskInstanceRef":[
+     {
+       "url":"url"
+       "entrypoint":"entrypoint"
+     }
+    ] 
+    "Status" : "Status"
+  }
+]
+```
+Status: 201 (Initilised), 201(Created), 203(Failed), 204 (No Content), 400 (Bad Request)
+
+
+### GET /deployment/task/{ task_request} 
+Get the information about a deployed service
+Param:
+```json
+[
+  {
+    "TaskInstanceName": "t_name",
+    "TaskInstanceId": "task_id",
+    "last_knownstatus" : "Status"
+  }
+]
+```
+Return:
+```json
+[
+  {
+    "TaskInstanceName": "t_name",
+    "TaskInstanceId": "task_id",
+    "Status" : "status"
+    "Feedback" : "feedback"
+    "TaskInstanceRef":[
+     {
+       "url":"url"
+       "entrypoint":"entrypoint"
+     }
+    ] 
+    "configuration":[
+      {
+       "placement":"placement"
+       "slicing":"slicing"
+      }
+    ]
+  }
+]
+```
+### PATCH /deployment/task/{task_request } 
+Scale up and down of an existing network service
+Param:
+```json
+[
+  {
+    "TaskInstanceName": "t_name",
+    "TaskInstanceId": "task_id",
+    "last_knownstatus" : "Status"
+    "configuration":[
+     {
+       "placement":"placement"
+       "slicing":"slicing"
+     }
+    ] 
+  }
+]
+```
+Return:
+```json
+[
+  {
+    "TaskInstanceName": "t_name",
+    "TaskInstanceId": "task_id",
+    "Status" : "status"
+    "Feedback" : "feedback"
+    "TaskInstanceRef":[
+     {
+       "url":"url"
+       "entrypoint":"entrypoint"
+     }
+    ] 
+    "configuration":[
+      {
+       "placement":"placement"
+       "slicing":"slicing"
+      }
+    ]
+  }
+]
+```
+### DELETE /deployment/ns/{task_request } 
+Terminate an existing network service
+Param:
+```json
+[
+  {
+    "TaskInstanceName": "t_name",
+    "TaskInstanceId": "task_id",
+    "last_knownstatus" : "Status"
+  }
+]
+```
+Return:
+```json
+[
+  {
+    "TaskInstanceName": "t_name",
+    "TaskInstanceId": "task_id",
+    "Status" : "Status"
+  }
+]
+```
+
+
