@@ -276,4 +276,39 @@ Return:
 ]
 ```
 
+## Get Topology for possible placement
+### GET /topology/ 
+Return list of sites available in the system
+Param: none
+
+Return:
+```json
+[
+  {
+    "number_of_sites" : "3"
+    "site_names": ["Edge1","Edge2","Cloud1"]
+    "site_ids":["1", "2", "3"]
+    "site_type":["Edge","Edge","Cloud"]
+  }
+]
+```
+
+Return information of a specific site
+### GET / topology /site/{site_id} 
+
+Param: site_id
+
+Return:
+```json
+[
+  {
+    "CPU" : "status"
+    "RAM" : "status"
+    "eMBB" : "status"
+    "URLLC" : "status"
+    "mMTC" : "status"
+     }
+]
+```
+Status: available_idle, available_busy, impossible 
 
