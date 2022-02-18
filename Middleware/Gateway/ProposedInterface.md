@@ -1,4 +1,4 @@
-# Endpoints
+# External Interface
 
 ## Authentication
 TBD
