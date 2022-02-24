@@ -3,7 +3,7 @@
 ## Deployment
 
 ### POST /deployment/ns/{name} 
-Deploy the Network Service with specified name
+Get client/robot request for task help.
 Param: name - Name of the NS
 Return: ID of deployed NS as GUID
 Status: 201 (Created), 204 (No Content), 400 (Bad Request)
