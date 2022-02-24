@@ -34,21 +34,24 @@ Return:
     "REQUEST_ID": "REQUEST_1",
     "ROBOT_ID": "ROBOT_1",
     "PRIORITY": "MEDIUM",
+    "Timestamped" : "YY_MM_DD_HH_MM_SS"
   }
 ]
 ```
 Status: 200 (OK), 404(Not Found)
 
-### GET /deployment/ns/{id} 
-Get the NS instance by its ID
+### GET /Q&A/ns/{id} 
+Get the NS instance for Q&A by its ID
 Param: id - Id of the NS
 Return: 
 ```json
 [
   {
-    "ID": "guid",
-    "name": "name",
-    "status": "status"
+    "QUESTION_ID": "QUESTION_1",
+    "name": "ASK_FOR_MAP",
+    "status": "asked/answered/ignored/dont_know"
+    "answer": "String"/"integer"/"Boolean"
+    "Timestamped" : "YY_MM_DD_HH_MM_SS"
   }
 ]
 ```
