@@ -15,15 +15,15 @@ Return:
 ```json
 [
   {
-    "REQUEST_HELP_ID": "guid",
+    "REQUEST_HELP_ID": "REQUEST_1",
     "status": "issued/in_process/fail/queued/imposible"
-    "Timestamped"
+    "Timestamped" : YY_MM_DD_HH_MM_SS
   }
 ]
 ```
 Status: 200 (OK), 404(Not Found)
 
-### GET /deployment/ns/{name} 
+### GET /help request details/ns/{name} 
 Get the NS instances for the specific NS
 Param: name - Name of the NS
 Return: 
