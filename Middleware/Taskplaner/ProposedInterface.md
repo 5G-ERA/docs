@@ -8,7 +8,7 @@ Param: name - Name of the NS
 Return: ID of deployed NS as GUID
 Status: 201 (Created), 204 (No Content), 400 (Bad Request)
 
-## GET /deployment/ns/ 
+## GET /help request/ns/ 
 Get all the NS request for task help
 Param: None
 Return: 
