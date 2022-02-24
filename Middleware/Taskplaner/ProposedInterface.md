@@ -8,7 +8,7 @@ Param: name - Name of the NS
 Return: ID of deployed NS as GUID
 Status: 201 (Created), 204 (No Content), 400 (Bad Request)
 
-## GET /help request/ns/ 
+## GET /help request general/ns/ 
 Get all the NS request for task help
 Param: None
 Return: 
@@ -17,7 +17,7 @@ Return:
   {
     "REQUEST_HELP_ID": "REQUEST_1",
     "status": "issued/in_process/fail/queued/imposible"
-    "Timestamped" : YY_MM_DD_HH_MM_SS
+    "Timestamped" : "YY_MM_DD_HH_MM_SS"
   }
 ]
 ```
