@@ -9,15 +9,16 @@ Return: ID of deployed NS as GUID
 Status: 201 (Created), 204 (No Content), 400 (Bad Request)
 
 ## GET /deployment/ns/ 
-Get all the NS instances
+Get all the NS request for task help
 Param: None
 Return: 
 ```json
 [
   {
-    "ID": "guid",
-    "name": "name",
-    "status": "status"
+    "TASK_ID": "TASK_1",
+    “REQUEST_ID”:”REQUEST_1”,
+    "ROBOT_ID": "ROBOT_1",
+    "PRIORITY": "MEDIUM",
   }
 ]
 ```
