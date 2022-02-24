@@ -40,7 +40,7 @@ Return:
 ```
 Status: 200 (OK), 404(Not Found)
 
-### GET /Q&A/ns/{id} 
+### GET /QUESTION/{id} 
 Get the NS instance for Q&A by its ID
 Param: id - Id of the NS
 Return: 
@@ -58,7 +58,7 @@ Return:
 
 Status: 200 (OK), 404(Not Found)
 
-### GET /ACTION_PLANNER_OUTPUT/ns/{id} 
+### GET /OUTPUT/{id} 
 Get the NS action planner output by its ID
 Param: id - Id of the NS
 Return: 
