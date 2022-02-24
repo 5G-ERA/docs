@@ -50,7 +50,7 @@ Return:
     "QUESTION_ID": "QUESTION_1",
     "name": "ASK_FOR_MAP",
     "status": "asked/answered/ignored/dont_know"
-    "answer": "String"/"integer"/"Boolean"
+    "answer": "String/integer/Boolean"
     "Timestamped" : "YY_MM_DD_HH_MM_SS"
   }
 ]
