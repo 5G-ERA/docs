@@ -16,7 +16,7 @@ Return:
 [
   {
     "TASK_ID": "TASK_1",
-    “REQUEST_ID”:”REQUEST_1”,
+    "REQUEST_ID": "REQUEST_1",
     "ROBOT_ID": "ROBOT_1",
     "PRIORITY": "MEDIUM",
   }
