@@ -58,6 +58,23 @@ Return:
 
 Status: 200 (OK), 404(Not Found)
 
+### GET /ACTION_PLANNER_OUTPUT/ns/{id} 
+Get the NS action planner output by its ID
+Param: id - Id of the NS
+Return: 
+```json
+[
+  {
+    "ACTION_SEQUENCE": "[ACTION_1,ACTION_2,ACTION_3]",
+    "ACTION_PLANNER_OUTPUT_ID": "ACTION_PLANNER_OUTPUT_1",
+    "status": "queued/fail/in_process/completed/started/idle"
+    "Timestamped" : "YY_MM_DD_HH_MM_SS"
+  }
+]
+```
+
+Status: 200 (OK), 404(Not Found)
+
 ### DELETE /deploymnet/ns/{ID}
 Delete the NS instance with specified ID
 Param: id - ID Of the NS
