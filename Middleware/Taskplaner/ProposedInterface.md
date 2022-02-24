@@ -15,10 +15,9 @@ Return:
 ```json
 [
   {
-    "TASK_ID": "TASK_1",
-    "REQUEST_ID": "REQUEST_1",
-    "ROBOT_ID": "ROBOT_1",
-    "PRIORITY": "MEDIUM",
+    "REQUEST_HELP_ID": "guid",
+    "status": "issued/in_process/fail/queued/imposible"
+    "Timestamped"
   }
 ]
 ```
@@ -31,9 +30,10 @@ Return:
 ```json
 [
   {
-    "ID": "guid",
-    "name": "name",
-    "status": "status"
+    "TASK_ID": "TASK_1",
+    "REQUEST_ID": "REQUEST_1",
+    "ROBOT_ID": "ROBOT_1",
+    "PRIORITY": "MEDIUM",
   }
 ]
 ```
