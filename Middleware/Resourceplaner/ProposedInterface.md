@@ -4,7 +4,7 @@
 
 
 ### GET /ACTION_PLAN/{name} 
-Get the NS instances for the specific help request. Asking: 5G ERA ANSWER: ROBOT.
+Get the NS instances for the specific help request. Asking: RESOURCEPLANNER ANSWER: ACTIONPLANNER.
 (Assumptions: robot knows the task_id for a high level action -go to kitchen-).
 OUTPUT; ACTION_PLANNER_OUTPUT
 
@@ -26,6 +26,33 @@ Return:
   }
 ]
 ```
+
+
+### GET /POLICY/{id} 
+Get the NS instance for Q&A by its ID. Asking: RESOURCE PLANNER ANSWER: SEMANTIC DB REDIS.
+Param: id - Id of the NS
+
+```json
+[
+  {
+    "RobotId": "NSid",
+    "QUESTION_ID": "QUESTION_NUMBER",
+  }
+]
+```
+
+Return: 
+```json
+[
+  {
+    "QUESTION_ID": "QUESTION_NUMBER",
+    "name": "NAME",
+    "status": "asked/answered/dont_know"
+    "answer": "String/integer/Boolean"
+  }
+]
+```
+
 Status: 200 (OK), 404(Not Found)
 
 ### GET /QUESTION/{id} 
