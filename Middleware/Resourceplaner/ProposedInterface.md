@@ -10,7 +10,7 @@ Get the NS instances for the specific help request. Asking: 5G ERA ANSWER: ROBOT
 ```json
 [
   {
-    "RobotId": "NSid",
+    "OUTPUT_ID": "OUTPUT_ID",
   }
 ]
 ```
@@ -20,8 +20,8 @@ Return:
 ```json
 [
   {
-    "TASK_ID": "TASK_NUMBER",
-    "PRIORITY": "HIGH/MEDIUM/LOW",
+ "ACTION_SEQUENCE": ['ACTION_NUMBER [priority]'],
+ "PRIORITY": "HIGH/MEDIUM/LOW"
   }
 ]
 ```
