@@ -1,11 +1,10 @@
 # Endpoints
 
-
 This is the proposed endpoint structure for the Orchestrator. The endpoints should allow for the communication with the necessary features of the OSM and apply the plans for the 5G-ERA Middleware.
 
 The full specification of the OSM API can be seen under this [link](https://forge.etsi.org/swagger/ui/?url=https%3A%2F%2Fosm.etsi.org%2Fgitweb%2F%3Fp%3Dosm%2FSOL005.git%3Ba%3Dblob_plain%3Bf%3Dosm-openapi.yaml%3Bhb%3DHEAD).
 
-## Deployment
+# Deployment
 
 ### POST /deployment/ns/{name} 
 Deploy the Network Service with specified name
@@ -69,15 +68,18 @@ Status: 200 (OK), 404(Not Found)
 ### DELETE /deploymnet/ns/{ID}
 Delete the NS instance with specified ID
 
-Param: id - ID Of the NS
+**Param**: id - ID Of the NS
 
-Status: HTTP 204 (OK), 404 (Not found)
+**Status**: HTTP 204 (OK), 404 (Not found)
 
 ### POST /deployment/knf/{name} 
 Deploy the Kubernetes Network Function with specified name
-Param: name - name of the KNF
-Return: Id of created KNF
-Status: 201 (Created), 204 (No Content), 400 (Bad Request)
+
+**Param**: name - Name of the KNF
+
+**Return**: Id of created KNF
+
+**Status**: 201 (Created), 204 (No Content), 400 (Bad Request)
 
 ### GET /deployment/knf/
 Get all the KNF instances
@@ -96,8 +98,10 @@ Status: 200 (OK), 404(Not Found)
 
 ### GET /deployment/knf/{name}
 Get the KNF instances for the specific KNF
-Param: name - Name of the KNF
-Return: 
+
+**Param**: name - Name of the KNF
+
+**Return**: 
 ```json
 [
   {
@@ -107,20 +111,20 @@ Return:
   }
 ]
 ```
-
-
-Status: 200 (OK), 404(Not Found)
+**Status**: 200 (OK), 404(Not Found)
 
 ### DELETE /deploymnet/knf/{ID} 
 Delete the NS instance with specified ID
-Param: id - ID Of the NS
-Status: HTTP 204 (OK), 404 (Not Found)
 
-## Action
+**Param**: id - ID Of the NS
+
+**Status**: HTTP 204 (OK), 404 (Not Found)
+
+# Action
 
 Actions in the understanding of the 5G-ERA are the steps that the robot will have to conduct to finish the specified task.
 
-### POST /action/execute/{plan} 
+### POST /action/plan/{plan} 
 Executes resources for the specified plan
 **Param**: plan - List of resources to be instantiated
 ```json
@@ -151,7 +155,7 @@ Executes resources for the specified plan
 ```
 **Status**: 201 (Created), 204 (No Content), 400 (Bad Request)
 
-### POST /action/replan/{plan} 
+### POST /action/plan/{plan} 
 Updates the specified plan based on the change in the statuses of the services in the existing plan
 
 **Param**: plan - List of resources to be instantiated
@@ -239,4 +243,4 @@ Terminates the action plan with the specified Id
 **Status**: HTTP 204 (OK), 404 (Not Found)
 
 ## Additional functionality
-* Instantiation of Redis and Middleware and its termination
+* Instantiation of Redis and Middleware and its termination during the startup and shutdown
