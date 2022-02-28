@@ -15,7 +15,7 @@ Get the NS instances for the specific help request. Asking: 5G ERA ANSWER: ROBOT
 ]
 ```
 
-Param: name - Name of the NS
+
 Return: 
 ```json
 [
