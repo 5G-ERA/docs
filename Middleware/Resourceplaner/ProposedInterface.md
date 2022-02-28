@@ -20,7 +20,7 @@ Return:
 ```json
 [
   {
- "ACTION_SEQUENCE": ['ACTION_NUMBER [priority]'],
+ "ACTION_SEQUENCE": "[ACTION_NUMBER [PRIORITY]]",
  "PRIORITY": "HIGH/MEDIUM/LOW"
   }
 ]
