@@ -28,34 +28,43 @@ Return:
 Status: 200 (OK), 404(Not Found)
 
 ### GET /QUESTION/{id} 
-Get the NS instance for Q&A by its ID
+Get the NS instance for Q&A by its ID. Asking: 5G ERA ANSWER: ROBOT.
 Param: id - Id of the NS
+
+```json
+[
+  {
+    "RobotId": "NSid",
+    "QUESTION_ID": "QUESTION_NUMBER",
+  }
+]
+```
+
 Return: 
 ```json
 [
   {
-    "QUESTION_ID": "QUESTION_1",
-    "name": "ASK_FOR_MAP",
-    "status": "asked/answered/ignored/dont_know"
+    "QUESTION_ID": "QUESTION_NUMBER",
+    "name": "NAME",
+    "status": "asked/answered/dont_know"
     "answer": "String/integer/Boolean"
-    "Timestamped" : "YY_MM_DD_HH_MM_SS"
   }
 ]
 ```
 
 Status: 200 (OK), 404(Not Found)
 
-### GET /OUTPUT/{id} 
-Get the NS action planner output by its ID
+
+### GET /STATEMACHINE_OUTPUT/{id} 
+Get the NS action planner output by its ID. Asking: RESOURCE PLANNER ANSWER: ACTION_PLANNER.
 Param: id - Id of the NS
 Return: 
 ```json
 [
   {
-    "ACTION_SEQUENCE": "[ACTION_1,ACTION_2,ACTION_3]",
-    "ACTION_PLANNER_OUTPUT_ID": "ACTION_PLANNER_OUTPUT_1",
+    "ACTION_SEQUENCE": ['ACTION_NUMBER'],
+    "OUTPUT_ID": "OUTPUT_NUMBER",
     "status": "queued/fail/in_process/completed/started/idle"
-    "Timestamped" : "YY_MM_DD_HH_MM_SS"
   }
 ]
 ```
