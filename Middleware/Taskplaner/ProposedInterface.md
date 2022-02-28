@@ -15,7 +15,7 @@ Return:
 ```json
 [
   {
-    "REQUEST_HELP_ID": "REQUEST_1",
+    "REQUESTID": "REQUEST1",
     "status": "issued/in_process/fail/queued/imposible"
     "Timestamped" : "YY_MM_DD_HH_MM_SS"
   }
