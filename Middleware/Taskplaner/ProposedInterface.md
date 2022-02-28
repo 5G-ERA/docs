@@ -2,39 +2,26 @@
 
 ## Deployment
 
-### POST /deployment/ns/{name} 
-Get client/robot request for task help.
-Param: name - Name of the NS
-Return: ID of deployed NS as GUID
-Status: 201 (Created), 204 (No Content), 400 (Bad Request)
 
-## GET /help request general/ns/ 
-Get all the NS request for task help
-Param: None
-Return: 
+### GET /HELP/ns/{name} 
+Get the NS instances for the specific help request. Asking: 5G ERA ANSWER: ROBOT.
+(Assumptions: robot knows the task_id for a high level action -go to kitchen-).
+
 ```json
 [
   {
-    "REQUESTID": "REQUEST1",
-    "status": "issued/in_process/fail/queued/imposible"
-    "Timestamped" : "YY_MM_DD_HH_MM_SS"
+    "RobotId": "NSid",
   }
 ]
 ```
-Status: 200 (OK), 404(Not Found)
 
-### GET /help request details/ns/{name} 
-Get the NS instances for the specific NS
 Param: name - Name of the NS
 Return: 
 ```json
 [
   {
-    "TASK_ID": "TASK_1",
-    "REQUEST_ID": "REQUEST_1",
-    "ROBOT_ID": "ROBOT_1",
-    "PRIORITY": "MEDIUM",
-    "Timestamped" : "YY_MM_DD_HH_MM_SS"
+    "TASK_ID": "TASK_NUMBER",
+    "PRIORITY": "HIGH/MEDIUM/LOW",
   }
 ]
 ```
