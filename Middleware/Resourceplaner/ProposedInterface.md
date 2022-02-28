@@ -3,9 +3,10 @@
 ## Deployment
 
 
-### GET /HELP/{name} 
+### GET /ACTION_PLAN/{name} 
 Get the NS instances for the specific help request. Asking: 5G ERA ANSWER: ROBOT.
 (Assumptions: robot knows the task_id for a high level action -go to kitchen-).
+OUTPUT; ACTION_PLANNER_OUTPUT
 
 ```json
 [
