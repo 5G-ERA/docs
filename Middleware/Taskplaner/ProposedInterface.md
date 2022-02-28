@@ -3,7 +3,7 @@
 ## Deployment
 
 
-### GET /HELP/ns/{name} 
+### GET /HELP/{name} 
 Get the NS instances for the specific help request. Asking: 5G ERA ANSWER: ROBOT.
 (Assumptions: robot knows the task_id for a high level action -go to kitchen-).
 
