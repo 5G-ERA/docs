@@ -51,15 +51,14 @@ Return:
 
 Status: 200 (OK), 404(Not Found)
 
-### GET /QUESTION/{id} 
+### GET /GRAPH_TOPOLOGY/{id} 
 Get the NS instance for Q&A by its ID. Asking: 5G ERA ANSWER: ROBOT.
 Param: id - Id of the NS
 
 ```json
 [
   {
-    "RobotId": "NSid",
-    "QUESTION_ID": "QUESTION_NUMBER",
+    "REDIS_GRAPH_QUERY": "GRAPH",
   }
 ]
 ```
@@ -68,10 +67,7 @@ Return:
 ```json
 [
   {
-    "QUESTION_ID": "QUESTION_NUMBER",
-    "name": "NAME",
-    "status": "asked/answered/dont_know"
-    "answer": "String/integer/Boolean"
+    "UPDATED_GRAPH": "GRAPH",
   }
 ]
 ```
@@ -86,8 +82,8 @@ Return:
 ```json
 [
   {
-    "ACTION_SEQUENCE": ['ACTION_NUMBER'],
-    "OUTPUT_ID": "OUTPUT_NUMBER",
+    "RESOURCE_OUTPUT": [['ACTION_NUMBER', 'EDGE/CLOUD','PRIORITY'], ['ACTION_NUMBER', 'EDGE/CLOUD','PRIORITY'] , ['ACTION_NUMBER', 'EDGE/CLOUD','PRIORITY']]
+    "REOURCE_OUTPUT_ID": "OUTPUT_NUMBER",
     "status": "queued/fail/in_process/completed/started/idle"
   }
 ]
