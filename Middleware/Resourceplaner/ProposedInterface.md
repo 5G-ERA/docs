@@ -35,8 +35,7 @@ Param: id - Id of the NS
 ```json
 [
   {
-    "RobotId": "NSid",
-    "QUESTION_ID": "QUESTION_NUMBER",
+    "REDIS_QUERY": "POLICY",
   }
 ]
 ```
@@ -45,10 +44,7 @@ Return:
 ```json
 [
   {
-    "QUESTION_ID": "QUESTION_NUMBER",
-    "name": "NAME",
-    "status": "asked/answered/dont_know"
-    "answer": "String/integer/Boolean"
+    "POLICY": "[POLICY_NUMBER(TRUE/FALSE), POLICY_NUMBER(TRUE/FALSE), POLICY_NUMBER(TRUE/FALSE)]",
   }
 ]
 ```
