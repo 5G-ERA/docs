@@ -16,7 +16,7 @@ OUTPUT; ACTION_PLANNER_OUTPUT
    {
       "ActionId": 2,
       "Order": 0,
-      "ActionPriority": 1/2/3,      
+      "ActionPriority": "1/2/3",      
    } 
   ]
 }
@@ -28,12 +28,12 @@ Return:
 {
   "TaskId": "TASK_NUMBER",
   "TaskPriority": "HIGH/MEDIUM/LOW",
-  "ActionPlanId": guid,
+  "ActionPlanId": "guid",
   "ActionSequence": [
    {
       "ActionId": 2,
       "Order": 0,      
-      "ActionPriority": 1/2/3,
+      "ActionPriority": "1/2/3",
       "Placement: "EDGE/CLOUD",
       "ServiceId/Image name": "Object detection service"
    } 
