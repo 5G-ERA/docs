@@ -62,7 +62,7 @@ Return:
 ```json
 [
   {
-    "ACTION_SEQUENCE": ['ACTION_NUMBER'],
+    "ACTION_SEQUENCE": "['ACTION_NUMBER']",
     "OUTPUT_ID": "OUTPUT_NUMBER",
     "status": "queued/fail/in_process/completed/started/idle"
   }
