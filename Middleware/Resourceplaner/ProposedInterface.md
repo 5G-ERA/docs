@@ -16,7 +16,7 @@ OUTPUT; ACTION_PLANNER_OUTPUT
    {
       "ActionId": 2,
       "Order": 0,
-      "ActionPriority": 1/2/3      
+      "ActionPriority": 1/2/3,      
    } 
   ]
 }
