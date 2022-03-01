@@ -11,11 +11,11 @@ Asking: ROBOT ANSWER: 5G-ERA.
 
 ```json
 {
-  "RobotId": guid,
-  "TaskId" : task_id,
+  "RobotId": "guid",
+  "TaskId" : "task_id",
   "RobotInfo": {
     "map": "present, none"
-    ...
+    
   }
 }
 ```
@@ -25,13 +25,13 @@ Return:
 {
   "TaskId": "TASK_NUMBER",
   "TaskPriority": "HIGH/MEDIUM/LOW",
-  "ActionPlanId": guid,
+  "ActionPlanId": "guid",
   "ActionSequence": [
    {
       "ActionId": 2,
       "Order": 0,
-      "Placement: "EDGE/CLOUD",
-      "ActionPriority": 1/2/3,
+      "Placement": "EDGE/CLOUD",
+      "ActionPriority": "1/2/3",
       "Services": [
         "ServiceType: "Object detecction/SLAM"   
         "ServiceUrl": "https://...../......",
@@ -48,7 +48,7 @@ Status: 200 (OK), 404(Not Found)
 Param:
 ```json
 {
-  "TaskId: "guid"
+  "TaskId": "guid"
   "ActionPlanId": "guid",
   "ActionSequence": [
     {
