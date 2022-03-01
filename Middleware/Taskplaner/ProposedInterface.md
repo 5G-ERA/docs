@@ -32,8 +32,11 @@ Return:
       "Order": 0,
       "Placement: "EDGE/CLOUD",
       "ActionPriority": 1/2/3,
-      "ServiceUrl": "https://...../......",
-      "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating"
+      "Services": [
+        "ServiceType: "Object detecction/SLAM"   
+        "ServiceUrl": "https://...../......",
+        "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating"
+      ]
    } 
   ]
 }
