@@ -137,16 +137,18 @@ Asking: Action Planner Response: Orchestrator
    {
       "ActionId": 2,
       "Order": 0,
-      "Placement: "EDGE/CLOUD",
-      "ActionPriority": 1/2/3,
+      "Placement": "EDGE/CLOUD",
+      "ActionPriority": "1/2/3",
       "Services": [
-        "ServiceId/Image name": "Object detection service",
-        "ServiceInstanceId": "guid",
-        "ServiceType: "Object detection/SLAM",
-        "IsResusable": true,        
-        "DesiredStatus": "created",        
-        "ServiceUrl": "https://...../......",
-        "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating"
+        {
+          "ServiceId/Image name": "Object detection service",
+          "ServiceInstanceId": "guid",
+          "ServiceType": "Object detection/SLAM",
+          "IsReusable": true,
+          "DesiredStatus": "created",        
+          "ServiceUrl": "https://...../......",
+          "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating"
+        }
       ]      
    } 
   ]
@@ -163,16 +165,18 @@ Asking: Action Planner Response: Orchestrator
    {
       "ActionId": 2,
       "Order": 0,
-      "Placement: "EDGE/CLOUD",
-      "ActionPriority": 1/2/3,
+      "Placement": "EDGE/CLOUD",
+      "ActionPriority": "1/2/3",
       "Services": [
-        "ServiceId/Image name": "Object detection service",
-        "ServiceInstanceId": "guid",
-        "ServiceType: "Object detection/SLAM",
-        "IsResusable": true,        
-        "DesiredStatus": "created",        
-        "ServiceUrl": "https://...../......",
-        "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating"
+        {
+          "ServiceId/Image name": "Object detection service",
+          "ServiceInstanceId": "guid",
+          "ServiceType": "Object detection/SLAM",
+          "IsResusable": true,        
+          "DesiredStatus": "created",        
+          "ServiceUrl": "https://...../......",
+          "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating"
+        }
       ]
    } 
   ]
@@ -226,16 +230,18 @@ Get the status of services deployed with this plan
    {
       "ActionId": 2,
       "Order": 0,
-      "Placement: "EDGE/CLOUD",
-      "ActionPriority": 1/2/3,
+      "Placement": "EDGE/CLOUD",
+      "ActionPriority": "1/2/3",
       "Services": [
-        "ServiceId/Image name": "Object detection service",
-        "ServiceInstanceId": "guid",
-        "ServiceType: "Object detecction/SLAM",
-        "IsResusable": true,        
-        "DesiredStatus": "created",        
-        "ServiceUrl": "https://...../......",
-        "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating"
+        {
+          "ServiceId/Image name": "Object detection service",
+          "ServiceInstanceId": "guid",
+          "ServiceType": "Object detecction/SLAM",
+          "IsResusable": true,        
+          "DesiredStatus": "created",        
+          "ServiceUrl": "https://...../......",
+          "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating"
+        }
       ]
    } 
 ]
@@ -283,11 +289,13 @@ Param:
   "ActionSequence": [
    {
       "ActionId": 2,      
-      "Placement: "EDGE/CLOUD",      
+      "Placement": "EDGE/CLOUD",      
       "Services": [
-        "ServiceId/Image name": "Object detection service",
-        "ServiceInstanceId": "guid",
-        "IsResusable": "true"        
+        {
+          "ServiceId/Image name": "Object detection service",
+          "ServiceInstanceId": "guid",
+          "IsResusable": "true"   
+        }
       ]
    } 
   ]
