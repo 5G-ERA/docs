@@ -126,36 +126,63 @@ Actions in the understanding of the 5G-ERA are the steps that the robot will hav
 
 ### POST /action/plan/{plan} 
 Executes resources for the specified plan
+Asking: Action Planner Response: Orchestrator
 **Param**: plan - List of resources to be instantiated
 ```json
 {
-  "PlanId": "guid",
-  "name": "name",
-  "status": "status",
-  "steps": [
-    {
-      "Order": 1,
-      "InstanceName": "name",
-      "IsResusable": true,
-      "DesiredStatus": "created"
-    }
+  "TaskId": "TASK_NUMBER",
+  "TaskPriority": "HIGH/MEDIUM/LOW",
+  "ActionPlanId": "guid",
+  "ActionSequence": [
+   {
+      "ActionId": 2,
+      "Order": 0,
+      "Placement: "EDGE/CLOUD",
+      "ActionPriority": 1/2/3,
+      "Services": [
+        "ServiceId/Image name": "Object detection service",
+        "ServiceInstanceId": "guid",
+        "ServiceType: "Object detection/SLAM",
+        "IsResusable": true,        
+        "DesiredStatus": "created",        
+        "ServiceUrl": "https://...../......",
+        "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating"
+      ]      
+   } 
   ]
 }
+
 ```
 **Return**:
 ```json
-[
-  {
-    "Order": 1,
-    "InstanceName": "name",
-    "InstanceId": "id",
-    "Status" : "Status"
-  }
-]
+{
+  "TaskId": "TASK_NUMBER",
+  "TaskPriority": "HIGH/MEDIUM/LOW",
+  "ActionPlanId": "guid",
+  "ActionSequence": [
+   {
+      "ActionId": 2,
+      "Order": 0,
+      "Placement: "EDGE/CLOUD",
+      "ActionPriority": 1/2/3,
+      "Services": [
+        "ServiceId/Image name": "Object detection service",
+        "ServiceInstanceId": "guid",
+        "ServiceType: "Object detection/SLAM",
+        "IsResusable": true,        
+        "DesiredStatus": "created",        
+        "ServiceUrl": "https://...../......",
+        "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating"
+      ]
+   } 
+  ]
+}
 ```
 **Status**: 201 (Created), 204 (No Content), 400 (Bad Request)
 
 ### POST /action/plan/{plan} 
+**TODO**: retink if needed
+
 Updates the specified plan based on the change in the statuses of the services in the existing plan
 
 **Param**: plan - List of resources to be instantiated
@@ -196,11 +223,21 @@ Get the status of services deployed with this plan
 **Return**:
 ```json
 [
-  {
-    "Order": 1,
-    "InstanceId": "id",
-    "Status": "status"
-  }
+   {
+      "ActionId": 2,
+      "Order": 0,
+      "Placement: "EDGE/CLOUD",
+      "ActionPriority": 1/2/3,
+      "Services": [
+        "ServiceId/Image name": "Object detection service",
+        "ServiceInstanceId": "guid",
+        "ServiceType: "Object detecction/SLAM",
+        "IsResusable": true,        
+        "DesiredStatus": "created",        
+        "ServiceUrl": "https://...../......",
+        "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating"
+      ]
+   } 
 ]
 ```
 Status: 200 (OK), 404(Not Found)
@@ -235,6 +272,29 @@ Return:
 ]
 ```
 **Status**: 200(OK), 204(No Content), 409(Conflict)
+### DELETE /action/action/{actionId}
+Terminate services for specified action in a plan
+
+Param:
+```json
+{
+  "TaskId": "TASK_NUMBER",  
+  "ActionPlanId": "guid",
+  "ActionSequence": [
+   {
+      "ActionId": 2,      
+      "Placement: "EDGE/CLOUD",      
+      "Services": [
+        "ServiceId/Image name": "Object detection service",
+        "ServiceInstanceId": "guid",
+        "IsResusable": "true"        
+      ]
+   } 
+  ]
+}
+```
+**Status**: HTTP 204 (OK), 404 (Not Found)
+
 ### DELETE /action/{PlanId}
 Terminates the action plan with the specified Id
 
