@@ -52,7 +52,7 @@ Return:
 Status: 200 (OK), 404(Not Found)
 
 ### GET /GRAPH_TOPOLOGY/{id} 
-Get the NS instance for Q&A by its ID. Asking: 5G ERA ANSWER: ROBOT.
+Get the NS instance for Q&A by its ID. RESOURCE PLANNER ANSWER: REDIS GRAPH
 Param: id - Id of the NS
 
 ```json
@@ -76,13 +76,13 @@ Status: 200 (OK), 404(Not Found)
 
 
 ### GET /STATEMACHINE_OUTPUT/{id} 
-Get the NS action planner output by its ID. Asking: RESOURCE PLANNER ANSWER: ACTION_PLANNER.
+Get the NS action planner output by its ID. Asking: OSM ANSWER: RESOURCE_PLANNER.
 Param: id - Id of the NS
 Return: 
 ```json
 [
   {
-    "RESOURCE_OUTPUT": [['ACTION_NUMBER', 'EDGE/CLOUD','PRIORITY'], ['ACTION_NUMBER', 'EDGE/CLOUD','PRIORITY'] , ['ACTION_NUMBER', 'EDGE/CLOUD','PRIORITY']]
+    "RESOURCE_OUTPUT": [['ACTION_NUMBER', 'EDGE/CLOUD','PRIORITY', 'IMAGE'], ['ACTION_NUMBER', 'EDGE/CLOUD','PRIORITY', 'IMAGE'] , ['ACTION_NUMBER', 'EDGE/CLOUD','PRIORITY', 'IMAGE']]
     "REOURCE_OUTPUT_ID": "OUTPUT_NUMBER",
     "status": "queued/fail/in_process/completed/started/idle"
   }
