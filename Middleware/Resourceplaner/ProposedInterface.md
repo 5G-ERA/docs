@@ -3,48 +3,77 @@
 ## Deployment
 
 
-### GET /ACTION_PLAN/{name} 
-Get the NS instances for the specific help request. Asking: RESOURCEPLANNER ANSWER: ACTIONPLANNER.
+### GET /Resource/{name} 
+Asking: ACTION PLANNER  ANSWER: RESOURCE PLANNER.
 (Assumptions: robot knows the task_id for a high level action -go to kitchen-).
 OUTPUT; ACTION_PLANNER_OUTPUT
 
 ```json
-[
-  {
-    "OUTPUT_ID": "OUTPUT_ID",
-  }
-]
+{  
+  "ActionPlanId": "guid",
+  "TaskPriority": "HIGH/MEDIUM/LOW",
+  "ActionSequence": [
+   {
+      "ActionId": 2,
+      "Order": 0,
+      "ActionPriority": 1/2/3      
+   } 
+  ]
+}
 ```
 
 
 Return: 
 ```json
-[
-  {
- "ACTION_SEQUENCE": "[ACTION_NUMBER [PRIORITY]]",
- "PRIORITY": "HIGH/MEDIUM/LOW"
-  }
-]
+{
+  "TaskId": "TASK_NUMBER",
+  "TaskPriority": "HIGH/MEDIUM/LOW",
+  "ActionPlanId": guid,
+  "ActionSequence": [
+   {
+      "ActionId": 2,
+      "Order": 0,      
+      "ActionPriority": 1/2/3,
+      "Placement: "EDGE/CLOUD",
+      "ServiceId/Image name": "Object detection service"
+   } 
+  ]
+}
+
 ```
 
 
-### GET /POLICY/{id} 
-Get the NS instance for Q&A by its ID. Asking: RESOURCE PLANNER ANSWER: SEMANTIC DB REDIS.
-Param: id - Id of the NS
+### GET /POLICY/Current
 
-```json
-[
-  {
-    "REDIS_QUERY": "POLICY",
-  }
-]
-```
+**TODO**: Move to Redis API
+
+Asking: RESOURCE PLANNER ANSWER: SEMANTIC DB REDIS.
 
 Return: 
 ```json
 [
   {
-    "POLICY": "[POLICY_NUMBER(TRUE/FALSE), POLICY_NUMBER(TRUE/FALSE), POLICY_NUMBER(TRUE/FALSE)]",
+    "PolicyId": 10,
+    "PolicyDescription": "lorem ipsum"    
+  }
+]
+```
+
+Status: 200 (OK), 404(Not Found)
+### GET /POLICY/All
+
+**TODO**: Move to Redis API
+
+Asking: RESOURCE PLANNER ANSWER: SEMANTIC DB REDIS.
+
+Return: 
+```json
+[
+  {
+    "PolicyId": 10,
+    "PolicyDescription": "lorem ipsum",
+    "IsActive": "true/false",
+    "Timestamp": "dd/MM/yyyy"
   }
 ]
 ```
@@ -52,7 +81,10 @@ Return:
 Status: 200 (OK), 404(Not Found)
 
 ### GET /GRAPH_TOPOLOGY/{id} 
-Get the NS instance for Q&A by its ID. RESOURCE PLANNER ANSWER: REDIS GRAPH
+
+**TODO**: Move to Redis API
+
+RESOURCE PLANNER ANSWER: REDIS GRAPH
 Param: id - Id of the NS
 
 ```json
@@ -74,19 +106,3 @@ Return:
 
 Status: 200 (OK), 404(Not Found)
 
-
-### GET /STATEMACHINE_OUTPUT/{id} 
-Get the NS action planner output by its ID. Asking: OSM ANSWER: RESOURCE_PLANNER.
-Param: id - Id of the NS
-Return: 
-```json
-[
-  {
-    "RESOURCE_OUTPUT": "[['ACTION_NUMBER', 'EDGE/CLOUD','PRIORITY', 'IMAGE'], ['ACTION_NUMBER', 'EDGE/CLOUD','PRIORITY', 'IMAGE'] , ['ACTION_NUMBER', 'EDGE/CLOUD','PRIORITY', 'IMAGE']]"
-    "REOURCE_OUTPUT_ID": "OUTPUT_NUMBER",
-    "status": "queued/fail/in_process/completed/started/idle"
-  }
-]
-```
-
-Status: 200 (OK), 404(Not Found)
