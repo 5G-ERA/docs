@@ -65,13 +65,13 @@ Return:
 {
   "TaskId": "TASK_NUMBER",
   "TaskPriority": "HIGH/MEDIUM/LOW",
-  "ActionPlanId": guid,
+  "ActionPlanId": "guid",
   "ActionSequence": [
    {
       "ActionId": 2,
       "Order": 0,
-      "Placement: "EDGE/CLOUD",
-      "ActionPriority": 1/2/3,
+      "Placement": "EDGE/CLOUD",
+      "ActionPriority": "1/2/3",
       "ServiceUrl": "https://...../......",
       "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating"
    } 
