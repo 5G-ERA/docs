@@ -7,7 +7,7 @@
 
 
 Asking: ROBOT ANSWER: 5G-ERA.
-(Assumptions: robot knows the task_id for a high level action -go to kitchen-).
+(Assumptions: robot knows the task_id for a high level action -go to kitchen-). The ROBOT asks for help from 5G-ERA. 
 
 ```json
 {
@@ -44,6 +44,7 @@ Return:
 Status: 200 (OK), 404(Not Found)
 
 ### GET /replan/{param}
+Robot asks for replan to 5G-ERA
 
 Param:
 ```json
