@@ -47,7 +47,7 @@ Return:
 
 **TODO**: Move to Redis API
 
-Asking: RESOURCE PLANNER ANSWER: SEMANTIC DB REDIS.
+Asking: RESOURCE PLANNER ANSWER: SEMANTIC DB REDIS. Function to get the running policies 
 
 Return: 
 ```json
@@ -64,7 +64,7 @@ Status: 200 (OK), 404(Not Found)
 
 **TODO**: Move to Redis API
 
-Asking: RESOURCE PLANNER ANSWER: SEMANTIC DB REDIS.
+Asking: RESOURCE PLANNER ANSWER: SEMANTIC DB REDIS. Function to get the running policies. 
 
 Return: 
 ```json
@@ -82,7 +82,8 @@ Status: 200 (OK), 404(Not Found)
 
 ### GET /GRAPH_TOPOLOGY/{id} 
 
-**TODO**: Move to Redis API
+**TODO**: Move to Redis API 
+Function to ger a GRAPH. 
 
 RESOURCE PLANNER ANSWER: REDIS GRAPH
 Param: id - Id of the NS
