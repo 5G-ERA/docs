@@ -117,7 +117,7 @@ Return:
 
 Status: 200 (OK), 404(Not Found)
 
-### GET /ROBOTS/
+### GET /ROBOTS/ {all}
 
 Get all the information about all robots in the middleware.
 
@@ -151,7 +151,7 @@ Return:
 Status: 200 (OK), 404(Not Found)
 
 
-### GET /EDGES/
+### GET /EDGES/ {all}
 
 Get all the information about all edges in the middleware.
 
@@ -175,7 +175,7 @@ Return:
 
 Status: 200 (OK), 404(Not Found)
 
-### GET /CLOUD/
+### GET /CLOUD/ {all}
 
 Get all the information about all clouds in the middleware.
 
@@ -194,7 +194,7 @@ Return:
 
 Status: 200 (OK), 404(Not Found)
 
-### GET /TASK/
+### GET /TASK/ {all}
 
 Get all the information about all tasks.
 
@@ -215,26 +215,6 @@ Return:
 
 Status: 200 (OK), 404(Not Found)
 
-### GET /TASK/ {ID}
-
-Get the information about a particular tasks.
-
-Asking: DASHBOARD ANSWER: REDIS API. 
-
-Return: 
-
-```json
-[
-  {
-      "TaskId": "TASK_NUMBER",
-      "TaskName": "TaskName"
-      "TaskDescription": "Lorem Ipsum",
-      
-  }
-]
-```
-
-Status: 200 (OK), 404(Not Found)
 
 ### GET /task/robot/{}
 Return all the tasks executed by all robots.
@@ -248,7 +228,8 @@ Return:
 }
 ```
 
-### GET /GRAPH_TOPOLOGY/{id} 
+
+### GET /GRAPH_TOPOLOGY/{all} 
 
 **TODO**: Move to Redis API 
 Function to ger a GRAPH. 
@@ -274,4 +255,53 @@ Return:
 ```
 
 Status: 200 (OK), 404(Not Found)
+
+# RESOURCE PLANNER
+
+### GET/POST/DELETE/PATCH /QoE/{}
+Get/ add QoE metrics to a tasks performed by robot.
+Param: 
+* GET/DELETE: TaskId
+* POST/PATCH: TaskId, QoE
+
+return:
+```json
+{    
+    "TaskId": TaskId,
+    "QoE": 10,
+    "QoEDescription": "Lorem Ipsum"
+}
+```
+
+### GET/POST/DELETE/PATCH /QoS/{}
+Get/ add QoS metrics to a tasks performed by robot.
+Param: 
+* GET/DELETE: ActionId, TaskId/ActionPlanId
+* POST/PATCH: ActionId, InstanceId
+
+return:
+```json
+{    
+    "ActionID": "ActionID",
+    "QoS": 10,
+    "QoSDescription": "Lorem Ipsum"
+}
+```
+
+# AUTHENTICATION
+Get or update the credentials of the robot.
+Param: 
+* GET/DELETE: UserID, UserName
+* POST/PATCH: UserID, Password, UserName
+
+return:
+```json
+{    
+    "UserName": "UserName",
+    "UserID": "UserID",
+    "Password": "Password"
+}
+```
+# AUTHORIZATION: 
+TODO
 
