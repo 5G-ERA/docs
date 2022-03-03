@@ -133,13 +133,13 @@ Return:
     "TaskList": ["Task_Number"],
     "BatteryStatus": 90,
     "LocomotionSystem": "Ackerman/differential_Drive",
-    "Sensors": ["lidar", "camera", "IMU"]
-    "CPU": 90
-    "RAM": 90
-    "VirtualRam": 90
-    "StorageDisk": 90
-    "NumberCores": 3
-    "Questions: [
+    "Sensors": ["lidar", "camera", "IMU"],
+    "CPU": 90,
+    "RAM": 90,
+    "VirtualRam": 90,
+    "StorageDisk": 90,
+    "NumberCores": 3,
+    "Questions": [
         {"map": "present, none"},
         {"Question":"Answer"}
     ]
