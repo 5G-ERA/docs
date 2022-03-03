@@ -3,6 +3,7 @@
 # Orchestrator
 
 Full CRUD operations on services statuses. It stores the status of all the services deployed by the OSM.
+Service definition: knf/vnf --> container with an image and some functions.
 
 ### GET/POST/DELETE/PATCH /instance/{instance info}
 
