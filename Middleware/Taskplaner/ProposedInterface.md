@@ -13,11 +13,14 @@ Asking: ROBOT ANSWER: 5G-ERA.
 {
   "RobotId": "guid",
   "TaskId" : "task_id",
-  "RobotInfo": {
-    "map": "present, none"
-    
-  }
-}
+  "Questions: [
+    {
+    "Question_Id": "guid"
+    "Question": "Do you have a map?"
+    "Answer": "True/false"
+    }
+  ]
+  
 ```
 
 Return: 
