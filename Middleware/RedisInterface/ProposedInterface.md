@@ -90,6 +90,7 @@ Return:
 [
   {
     "PolicyId": 10,
+    "PolicyName": "PolicyName"
     "PolicyDescription": "lorem ipsum"    
   }
 ]
@@ -108,6 +109,7 @@ Return:
 [
   {
     "PolicyId": 10,
+    "PolicyName": "PolicyName"
     "PolicyDescription": "lorem ipsum",
     "IsActive": "true/false",
     "Timestamp": "dd/MM/yyyy"
