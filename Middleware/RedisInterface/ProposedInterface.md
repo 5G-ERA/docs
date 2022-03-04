@@ -1,5 +1,6 @@
 # Proposed API endpoints for RedisAPI
 Assumption for each of the end points we can get all and get by specific ID.
+Assumption that all policies are general to all robots.
 
 # Orchestrator
 
