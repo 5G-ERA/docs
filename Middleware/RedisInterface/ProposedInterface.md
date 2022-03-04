@@ -19,7 +19,7 @@ Param:
 
 ```json
 {
-    "ServiceId": "Service_Number"
+    "ServiceId": "Service_Number",
     "ImageName": "Object-detection-service",
     "ServiceInstanceId": "guid",
     "ServiceType": "Object detection/SLAM",
@@ -267,7 +267,7 @@ Param:
 return:
 ```json
 {    
-    "TaskId": TaskId,
+    "TaskId": "TaskId",
     "QoE": 10,
     "QoEDescription": "Lorem Ipsum"
 }
