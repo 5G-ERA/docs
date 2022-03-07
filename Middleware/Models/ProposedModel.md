@@ -50,25 +50,25 @@ Index 2
 "TaskId": "TASK_NUMBER",
 "TaskPriority": "HIGH/MEDIUM/LOW",
 "ActionPlanId": "guid",
-  "ActionSequence": [
-   {
-      "ActionId": 2,
-      "Order": 0,
-      "Placement": "EDGE/CLOUD",
-      "ActionPriority": "1/2/3",
-      "Services": [
-        {
-          "ServiceId/Image name": "Object detection service",
-          "ServiceInstanceId": "guid",
-          "ServiceType": "Object detection/SLAM",
-          "IsReusable": true,
-          "DesiredStatus": "created",        
-          "ServiceUrl": "https://...../......",
-          "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating"
-        }
-      ]      
-   } 
-  ]
+"ActionSequence": [
+  {
+    "ActionId": 2,
+    "Order": 0,
+    "Placement": "EDGE/CLOUD",
+    "ActionPriority": "1/2/3",
+    "Services": [
+      {
+        "ServiceId/Image name": "Object detection service",
+        "ServiceInstanceId": "guid",
+        "ServiceType": "Object detection/SLAM",
+        "IsReusable": true,
+        "DesiredStatus": "created",        
+        "ServiceUrl": "https://...../......",
+        "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating"
+      }
+    ]      
+  } 
+]
 }
 ```
 
@@ -141,7 +141,8 @@ Index 2
 ## Service data model:
 ```json
 {
-  "ServiceId/Image name": "Object detection service",
+  "ServiceId": "guid",
+  "ImageName": "Object detection service",
   "ServiceInstanceId": "guid",
   "ServiceType": "Object detection/SLAM",
   "IsReusable": true,
