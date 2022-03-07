@@ -13,11 +13,11 @@ Index 2
 
 ```json
 {
-"Policy_Id": "guid"
-"Timestamp": "dd/mm/yyyy"
-"IsActive": "True/False"
-"Description": "Try to use closest physical machine in the topolgy"
-"PolicyName": "Closest_Machine"
+"Policy_Id": "guid",
+"Timestamp": "dd/mm/yyyy",
+"IsActive": "True/False",
+"Description": "Try to use closest physical machine in the topolgy",
+"PolicyName": "Closest_Machine",
 }
 ```
 
@@ -25,8 +25,8 @@ Index 2
 
 ```json
 {
-"Question_Id": "guid"
-"Question": "Do you have a map?"
+"Question_Id": "guid",
+"Question": "Do you have a map?",
 "Answer": "True/false"
 }
 ```
@@ -35,9 +35,9 @@ Index 2
 
 ```json
 {
-"Image_Id": "guid"
-"Name": "Name"
-"Timestamp": "dd/mm/yyyy"
+"ImageId": "guid",
+"Name": "Name",
+"Timestamp": "dd/mm/yyyy",
 "Description": "Lorem Ipsum"
 
 }
@@ -81,7 +81,7 @@ Index 2
     "CurrentTaskID": "Task_Number",
     "TaskList": ["Task_Number"],
     "BatteryStatus": 90,
-    "MacAddress": "MacAddress"
+    "MacAddress": "MacAddress",
     "LocomotionSystem": "Ackerman/differential_Drive",
     "Sensors": ["lidar", "camera", "IMU"],
     "CPU": 90,
@@ -103,13 +103,13 @@ Index 2
   {
     "EdgeID": 10,
     "EdgeStatus": "Running/withOutBattery",
-    "EdgeIp": "192.168.1.2"
-    "MacAddress": "MacAddress"
-    "CPU": 90
-    "RAM": 90
-    "VirtualRam": 90
-    "StorageDisk": 90
-    "NumberCores": 3
+    "EdgeIp": "192.168.1.2",
+    "MacAddress": "MacAddress",
+    "CPU": 90,
+    "RAM": 90,
+    "VirtualRam": 90,
+    "DiskStorage": 90,
+    "NumberOfCores": 3
   }
   ```
 
@@ -119,13 +119,7 @@ Index 2
  {
     "CloudID": 10,
     "CloudStatus": "Running",
-    "CloudIp": "192.168.1.2",
-    "MacAddress": "MacAddress",
-    "CPU": 90,
-    "RAM": 90,
-    "VirtualRam": 90,
-    "StorageDisk": 90,
-    "NumberCores": 3
+    "CloudIp": "192.168.1.2"    
   }
 
 ```
