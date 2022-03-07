@@ -27,7 +27,7 @@ Param:
     "IsReusable": true,
     "DesiredStatus": "created",        
     "ServiceUrl": "https://...../......",
-    "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating"
+    "ServiceStatus": "Active/Down/Instantiating/Idle/Terminating"
 }
 ```
 
@@ -166,11 +166,11 @@ Return:
   {
     "EdgeID": 10,
     "EdgeStatus": "Running/withOutBattery",
-    "EdgeIp": "192.168.1.2"
-    "CPU": 90
-    "RAM": 90
-    "VirtualRam": 90
-    "StorageDisk": 90
+    "EdgeIp": "192.168.1.2",
+    "CPU": 90,
+    "RAM": 90,
+    "VirtualRam": 90,
+    "StorageDisk": 90,
     "NumberCores": 3
   }
 ]
@@ -209,7 +209,7 @@ Return:
 [
   {
       "TaskId": "TASK_NUMBER",
-      "TaskName": "TaskName"
+      "TaskName": "TaskName",
       "TaskDescription": "Lorem Ipsum",
       
   }
@@ -234,7 +234,7 @@ Return:
 
 ### GET /GRAPH_TOPOLOGY/{all} 
 
-**TODO**: Move to Redis API 
+**TODO**: Discuss in more datail the communication 
 Function to ger a GRAPH. 
 
 RESOURCE PLANNER ANSWER: REDIS GRAPH
