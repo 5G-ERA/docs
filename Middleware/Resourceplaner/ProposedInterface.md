@@ -53,7 +53,7 @@ Return:
 ```json
 [
   {
-    "PolicyId": 10,
+    "PolicyId": "guid",
     "PolicyDescription": "lorem ipsum"    
   }
 ]
