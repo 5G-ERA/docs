@@ -78,7 +78,9 @@ Index 2
 
 ```json
 {
-    "RobotID": 10,
+    "RobotID": "Robot_1",
+    "Manufacturer": "RobotNik",
+    "RobotModel": "Summit-xl"
     "RobotStatus": "Running/withOutBattery",
     "CurrentTaskID": "Task_Number",
     "TaskList": ["Task_Number"],
