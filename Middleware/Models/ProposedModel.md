@@ -86,7 +86,7 @@ Index 2
     "LocomotionSystem": "Ackerman/differential_Drive",
     "ArticulationAvailable": "false",
     "NumberOfArticulation": 0,
-    "ArticulationDof: [],
+    "ArticulationDof: []",
     "Sensors": ["lidar", "camera", "IMU"],
     "CPU": 90,
     "RAM": 90,
