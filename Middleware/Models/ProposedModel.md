@@ -50,6 +50,7 @@ Index 2
 {
 "TaskId": "TASK_NUMBER",
 "TaskPriority": "HIGH/MEDIUM/LOW",
+"TaskMaxDuration": 0
 "ActionPlanId": "guid",
 "ActionSequence": [
   {
