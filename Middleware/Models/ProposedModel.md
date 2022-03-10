@@ -27,8 +27,8 @@ Index 2
 {
 "Question_Id": "guid",
 "Question": "Do you have a map?",
-"Answer": "True/false",
-"Timestamp": "dd/mm/yyyy"
+"IsSingleAnswer": true,
+"Answer": [{key: value}]
 }
 ```
 
