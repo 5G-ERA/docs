@@ -83,7 +83,6 @@ Index 2
     "RobotModel": "Summit-xl"
     "RobotStatus": "Running/withOutBattery",
     "CurrentTaskID": "Task_Number",
-    "TaskList": ["Task_Number"],
     "BatteryStatus": 90,
     "MacAddress": "MacAddress",
     "LocomotionSystem": "Ackerman/differential_Drive",
