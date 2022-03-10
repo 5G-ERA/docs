@@ -28,7 +28,7 @@ Index 2
 "Question_Id": "guid",
 "Question": "Do you have a map?",
 "IsSingleAnswer": true,
-"Answer": [{key: value}]
+"Answer": [{"key": "value"}]
 }
 ```
 
