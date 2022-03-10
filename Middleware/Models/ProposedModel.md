@@ -158,7 +158,12 @@ Index 2
 }
 ```
 
-
+##Instance:
+{
+  "InstanceID": 1,
+  "InstanceStatus": "Instanciated/failed",
+  "Timestamp": "DD/MM/YYYY"
+  }
 
 
 
