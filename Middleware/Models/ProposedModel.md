@@ -51,11 +51,13 @@ Index 2
 "TaskId": "TASK_NUMBER",
 "TaskDescription": "Lorem Ipsum",
 "TaskPriority": "HIGH/MEDIUM/LOW",
-"TaskMaxDuration": 0
+"TaskMaxDuration": 0,
+"Robot_Id":  "Robot_1",
 "ActionPlanId": "guid",
 "ActionSequence": [
   {
     "ActionId": 2,
+    "ActionName": "Slam",
     "Order": 0,
     "Placement": "EDGE/CLOUD",
     "ActionPriority": "1/2/3",
