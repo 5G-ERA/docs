@@ -1,9 +1,9 @@
 {
   "InstanceID": 1,
   "InstanceStatus": "Instanciated/failed",
-  "Timestamp": "DD/MM/YYYY"
+  "Timestamp": "2022-03-11T12:09:43.5122616+00:00"
   }
 
-JSON.SET INSTANCE_1 . '{"InstanceID": "1", "InstanceStatus": "Instanciated", "Timestamp": "10/03/2022"}'
+JSON.SET INSTANCE_1 . '{"InstanceID": "1", "InstanceStatus": "Instanciated", "Timestamp": "2022-03-11T12:09:43.5122616+00:00"}'
 
-JSON.SET INSTANCE_2 . '{"InstanceID": "2", "InstanceStatus": "Failed", "Timestamp": "9/03/2022"}'
+JSON.SET INSTANCE_2 . '{"InstanceID": "2", "InstanceStatus": "Failed", "Timestamp": "2022-03-10T12:09:43.5122616+00:00"}'
