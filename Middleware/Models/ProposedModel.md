@@ -122,6 +122,7 @@ Todo
 ```json
 {
       "ActionId": "Guid",
+      "ActionFamily": "Manipulation",
       "ActionName": "Lorem ipsum",
       "ActionDescription": "Lorem ipsum",
       "TimeStamped": "2022-03-11T12:09:43.5122616+00:00"     
