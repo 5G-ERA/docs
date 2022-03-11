@@ -1,7 +1,6 @@
 {
   "InstanceId": "guid",
   "InstanceName": "Object detection service",
-  "InstanceId": "guid",
   "InstanceType": "Object detection/SLAM",
   "IsReusable": true,
   "DesiredStatus": "created",        
