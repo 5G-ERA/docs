@@ -49,6 +49,7 @@ Index 2
 ```json
 {
 "TaskId": "TASK_NUMBER",
+"TaskDescription": "Lorem Ipsum",
 "TaskPriority": "HIGH/MEDIUM/LOW",
 "TaskMaxDuration": 0
 "ActionPlanId": "guid",
