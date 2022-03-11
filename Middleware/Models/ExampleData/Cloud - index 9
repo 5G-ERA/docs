@@ -1,5 +1,15 @@
  {
-    "CloudID": 10,
+    "CloudID": 1,
     "CloudStatus": "Running",
     "CloudIp": "192.168.1.2"    
   }
+{
+    "CloudID": 12,
+    "CloudStatus": "Running",
+    "CloudIp": "192.168.1.1"    
+  }
+
+
+JSON.SET CLOUD_1 . '{"CloudID": "1", "CloudStatus": "Running", "CloudIp": "192.168.1.2"}'
+
+JSON.SET CLOUD_2 . '{"CloudID": "2", "CloudStatus": "Running", "CloudIp": "192.168.1.1"}'
