@@ -82,7 +82,7 @@ return:
 
 ### GET /POLICY/Current
 
-**TODO**: Move to Redis API
+
 
 Asking: RESOURCE PLANNER ANSWER: SEMANTIC DB REDIS. Function to get the running policies 
 
@@ -91,7 +91,7 @@ Return:
 [
   {
     "PolicyId": 10,
-    "PolicyName": "PolicyName"
+    "PolicyName": "PolicyName",
     "PolicyDescription": "lorem ipsum"    
   }
 ]
@@ -101,7 +101,7 @@ Status: 200 (OK), 404(Not Found)
 
 ### GET /POLICY/All
 
-**TODO**: Move to Redis API
+
 
 Asking: RESOURCE PLANNER ANSWER: SEMANTIC DB REDIS. Function to get the running policies. 
 
@@ -110,7 +110,7 @@ Return:
 [
   {
     "PolicyId": 10,
-    "PolicyName": "PolicyName"
+    "PolicyName": "PolicyName",
     "PolicyDescription": "lorem ipsum",
     "IsActive": "true/false",
     "Timestamp": "dd/MM/yyyy"

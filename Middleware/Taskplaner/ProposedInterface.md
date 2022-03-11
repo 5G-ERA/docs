@@ -52,7 +52,7 @@ Robot asks for replan to 5G-ERA
 Param:
 ```json
 {
-  "TaskId": "guid"
+  "TaskId": "guid",
   "ActionPlanId": "guid",
   "ActionSequence": [
     {
