@@ -1,6 +1,7 @@
 {
-  "ActionId": "8df4321d-4162-42eb-811b-aa3e7dc1bc04",
-  "ActionName": "Slam",
-  "ActionDescription": "Gmapping algorithm particle filter for 2d occupancy grid maps generation",
-  "TimeStamped": "2022-03-11T12:09:43.5122616+00:00",
-} 
+    "ActionId": "7c7c580e-69d1-4afd-af92-f4db74500072",
+    "ActionFamily": "Manipulation",
+    "ActionName": "MoveIt",
+    "ActionDescription": "MoveIt ROS stack",
+    "TimeStamped": "2022-03-11T12:09:43.5122616+00:00"
+}
