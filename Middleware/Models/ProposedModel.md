@@ -91,6 +91,7 @@ Todo
 ```json
   {
     "EdgeID": 10,
+    "EdgeName": "EdgeName"
     "EdgeStatus": "Running/withOutBattery",
     "EdgeIp": "192.168.1.2",
     "MacAddress": "MacAddress",
@@ -98,7 +99,8 @@ Todo
     "RAM": 90,
     "VirtualRam": 90,
     "DiskStorage": 90,
-    "NumberOfCores": 3
+    "NumberOfCores": 3,
+    "Timestamp": "2022-03-11T12:09:43.5122616+00:00"
   }
   ```
 
