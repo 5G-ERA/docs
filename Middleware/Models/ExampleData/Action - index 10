@@ -5,10 +5,5 @@
   "TimeStamped": "2022-03-11T12:09:43.5122616+00:00",
   "Order": 0,
   "Placement": "EDGE/CLOUD",
-  "ActionPriority": "1/2/3",
-  "Services": [
-    {
-      "ServiceDataModel": "ServiceDataModel"
-    }
-  ]
+  "ActionPriority": "1/2/3"
 } 
