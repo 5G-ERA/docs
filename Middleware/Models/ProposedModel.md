@@ -58,6 +58,7 @@ Index 2
 "TaskWithMultipleRobots":  false,
 "Robot_Id": [ { "Robot_1": "guid"} ],
 "ActionPlanId": "guid",
+"QoE": 95, 
 "ActionSequence": [
   {
     "ActionId": 2,
@@ -73,7 +74,8 @@ Index 2
         "IsReusable": true,
         "DesiredStatus": "created",        
         "ServiceUrl": "https://...../......",
-        "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating"
+        "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating",
+        "QoS":  90
       }
     ]      
   } 
