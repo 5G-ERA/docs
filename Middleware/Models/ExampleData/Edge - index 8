@@ -1,5 +1,6 @@
 {
-    "EdgeID": 1,
+    "EdgeID": "f686d326-ca3b-4e69-a687-5176232b4668",
+    "EdgeName": "Edge_1"
     "EdgeStatus": "Running",
     "EdgeIp": "192.168.1.2",
     "MacAddress": "9B9656CCEE6C",
@@ -7,22 +8,7 @@
     "RAM": 90,
     "VirtualRam": 90,
     "DiskStorage": 90,
-    "NumberOfCores": 3
+    "NumberOfCores": 3,
+    "Timestamp": "2022-03-11T12:09:43.5122616+00:00",
   }
   
-  {
-  "EdgeID": 2,
-    "EdgeStatus": "Running",
-    "EdgeIp": "192.168.1.1",
-    "MacAddress": "56ECE51DB5ED",
-    "CPU": 90,
-    "RAM": 90,
-    "VirtualRam": 90,
-    "DiskStorage": 80,
-    "NumberOfCores": 2 
-    }
-
-
-JSON.SET EDGE_1 . '{"EdgeID": "1", "Edgestatus": "Running", "EdgeIp": "192.168.1.2", "MacAddress": "9B9656CCEE6C", "CPU": "90", "RAM": "90", "VirtualRam": "90", "DiskStorage": "90", "Numberofcores": "3"}'
-
-JSON.SET EDGE_2 . '{"EdgeID": "2", "Edgestatus": "WithoutBattery", "EdgeIp": "192.168.1.1", "MacAddress": "56ECE51DB5ED", "CPU": "90", "RAM": "90", "VirtualRam": "90", "DiskStorage": "80", "Numberofcores": "2"}'
