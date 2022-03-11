@@ -18,6 +18,13 @@
   "NumberCores": 3,
   "Questions": [
     {
+      "Question_Id": "452d7766-aeed-488c-9fc3-06f378bbfb30",
+      "Question": "Do you want slicing?",
+      "IsSingleAnswer": true,
+      "Answer": [ { "key": true } ],
+      "Timestamp": "2022/09/03 16:30.45"
+    },
+    {
       "Question_Id": "452d7946-aeed-488c-9fc3-06f378bbfb30",
       "Question": "Do you have a map?",
       "IsSingleAnswer": true,
