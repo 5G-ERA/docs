@@ -30,7 +30,15 @@
   "ServiceUrl": "https://docs.microsoft.com/en-us/dotnet",
   "ServiceStatus": "Dowm"
   }
-  
+  {
+  "ServiceId": "88cad8c6-9556-4af3-aac6-3d00c7338ad3",
+  "ImageName": "Object detection service",
+  "ServiceInstanceId": "d907afbb-527f-4079-ad63-0332b98d974a",
+  "ServiceType": "SLAM",
+  "IsReusable": true,
+  "DesiredStatus": "created",        
+  "ServiceUrl": "https://docs.microsoft.com/en-us/dotnet",
+  "ServiceStatus": "Instanciating"
   {
   
 
