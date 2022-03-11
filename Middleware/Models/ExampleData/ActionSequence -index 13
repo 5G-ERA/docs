@@ -10,7 +10,7 @@
       "ActionPriority": "1",
       "Services": [
         {
-          "InstanceId": "6a97703d-c5b2-40ba-a326-5d4b532ef246",
+          "InstanceId": "6a97703d-c5b2-40ba-a326-5d4b532ef246"
         }
       ]
     },
@@ -23,7 +23,7 @@
       "ActionPriority": "1",
       "Services": [
         {
-          "InstanceId": "c26402d5-73cd-4a23-ae6d-25d97218b762",
+          "InstanceId": "c26402d5-73cd-4a23-ae6d-25d97218b762"
         }
       ]
     }
