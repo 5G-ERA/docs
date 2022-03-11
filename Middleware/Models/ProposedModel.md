@@ -42,40 +42,18 @@ Todo
 
 ```json
 {
-"Request_ID": "guid",
-"Timestamp": "2022-03-11T12:09:43.5122616+00:00",
-"TaskId": "TASK_NUMBER",
-"TaskDescription": "Lorem Ipsum",
-"TaskPriority": "HIGH/MEDIUM/LOW",
-"TaskMaxDuration": 0,
-"TaskStatus": "running",
-"TaskWithMultipleRobots":  false,
-"Robot_Id": [ { "Robot_1": "guid"} ],
-"ActionPlanId": "guid",
-"QoE": 95, 
-"TaskExecutionTime": 120,
-"ActionSequence": [
-  {
-    "ActionId": 2,
-    "ActionName": "Slam",
-    "Order": 0,
-    "Placement": "EDGE/CLOUD",
-    "ActionPriority": "1/2/3",
-    "Services": [
-      {
-        "ServiceId/Image name": "Object detection service",
-        "ServiceInstanceId": "guid",
-        "ServiceType": "Object detection/SLAM",
-        "IsReusable": true,
-        "ActionExecutionTime": [ { "Robot_1": 60 } ],
-        "DesiredStatus": "created",        
-        "ServiceUrl": "https://...../......",
-        "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating",
-        "QoS":  90
-      }
-    ]      
-  } 
-]
+  "Request_ID": "Guid",
+  "Timestamp": "2022-03-11T12:09:43.5122616+00:00",
+  "TaskId": "Guid",
+  "TaskDescription": "Lorem Ipsum",
+  "TaskPriority": "Low",
+  "TaskMaxDuration": 0,
+  "TaskStatus": "running",
+  "TaskWithMultipleRobots": false,
+  "Robot_Id": [ { "Robot_Id": "guid" } ],
+  "ActionPlanId": "Guid",
+  "QoE": 95,
+  "TaskExecutionTime": 120
 }
 ```
 
