@@ -9,7 +9,7 @@ Todo
 ```json
 {
 "Policy_Id": "guid",
-"Timestamp": "dd/mm/yyyy",
+"Timestamp": "2022-03-11T12:09:43.5122616+00:00",
 "IsActive": "True/False",
 "Description": "Try to use closest physical machine in the topolgy",
 "PolicyName": "Closest_Machine",
@@ -33,7 +33,7 @@ Todo
 {
 "ImageId": "guid",
 "Name": "Name",
-"Timestamp": "dd/mm/yyyy",
+"Timestamp": "2022-03-11T12:09:43.5122616+00:00",
 "Description": "Lorem Ipsum"
 
 }
@@ -44,7 +44,7 @@ Todo
 ```json
 {
 "Request_ID": "guid",
-"Timestamp": "yyyy/mm/dd hh:mm.ss",
+"Timestamp": "2022-03-11T12:09:43.5122616+00:00",
 "TaskId": "TASK_NUMBER",
 "TaskDescription": "Lorem Ipsum",
 "TaskPriority": "HIGH/MEDIUM/LOW",
