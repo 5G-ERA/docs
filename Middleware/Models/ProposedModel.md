@@ -1,6 +1,6 @@
 # REDIS GRAPH
 
-Lorem ipsum
+Todo
 
 # REDIS METADATA_&_QoS 
 
