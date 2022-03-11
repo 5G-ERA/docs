@@ -34,7 +34,7 @@ Todo
 "ImageId": "guid",
 "Name": "Name",
 "Timestamp": "2022-03-11T12:09:43.5122616+00:00",
-"Description": "Lorem Ipsum"ç
+"Description": "Lorem Ipsum"
 }
 ```
 
