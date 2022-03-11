@@ -144,6 +144,7 @@ Index 2
 ```json
 {
       "ActionId": 2,
+      "ActionName": "Slam",
       "Order": 0,
       "Placement": "EDGE/CLOUD",
       "ActionPriority": "1/2/3",
