@@ -166,13 +166,6 @@ Lorem ipsum
 }
 ```
 
-## Instance:
-```json
-{
-  "InstanceID": 1,
-  "InstanceStatus": "Instanciated/failed",
-  "Timestamp": "DD/MM/YYYY"
-  }
 
 
 
