@@ -119,6 +119,8 @@ Todo
 
 ```
 ## ACTION
+Action model Family hierarchy: ActionFamily {navigation, perception, manipulation, human-assisted navigation, human-assisted perception, human-assisted manipulation} 
+
 ```json
 {
       "ActionId": "Guid",
