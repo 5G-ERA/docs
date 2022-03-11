@@ -61,7 +61,8 @@ Todo
 
 ```json
 {
-    "RobotID": "Robot_1",
+    "RobotID": "Guid",
+    "RobotName": "RobotName",
     "Manufacturer": "RobotNik",
     "RobotModel": "Summit-xl"
     "RobotStatus": "Running/withOutBattery",
@@ -78,6 +79,7 @@ Todo
     "VirtualRam": 90,
     "StorageDisk": 90,
     "NumberCores": 3,
+    "Timestamp": "2022-03-11T12:09:43.5122616+00:00",
     "Questions": [
         {"map": "present, none"},
         {"Question":"Answer"}
