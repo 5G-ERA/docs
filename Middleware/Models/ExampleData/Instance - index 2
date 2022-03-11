@@ -1,9 +1,12 @@
 {
-  "InstanceID": 1,
-  "InstanceStatus": "Instanciated/failed",
-  "Timestamp": "2022-03-11T12:09:43.5122616+00:00"
-  }
+  "InstanceId": "guid",
+  "InstanceName": "Object detection service",
+  "InstanceId": "guid",
+  "InstanceType": "Object detection/SLAM",
+  "IsReusable": true,
+  "DesiredStatus": "created",        
+  "InstanceUrl": "https://...../......",
+  "InstanceStatus": "Active/Down/Instanciating/Idle/Terminating"
+}
 
-JSON.SET INSTANCE_1 . '{"InstanceID": "1", "InstanceStatus": "Instanciated", "Timestamp": "2022-03-11T12:09:43.5122616+00:00"}'
 
-JSON.SET INSTANCE_2 . '{"InstanceID": "2", "InstanceStatus": "Failed", "Timestamp": "2022-03-10T12:09:43.5122616+00:00"}'
