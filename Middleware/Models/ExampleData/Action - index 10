@@ -1,0 +1,14 @@
+{
+  "ActionId": "Action_1",
+  "ActionName": "Slam",
+  "ActionDescription": "Gmapping algorithm particle filter for 2d occupancy grid maps generation",
+  "TimeStamped": "2022-03-11T12:09:43.5122616+00:00",
+  "Order": 0,
+  "Placement": "EDGE/CLOUD",
+  "ActionPriority": "1/2/3",
+  "Services": [
+    {
+      "ServiceDataModel": "ServiceDataModel"
+    }
+  ]
+} 
