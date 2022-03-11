@@ -31,6 +31,8 @@
   "ServiceStatus": "Dowm"
   }
   
+  {
+  
 
 
 JSON.SET 00c5c9ae-d5d8-436d-a7d1-c39bd24bde11 . '{"ServiceId": "00c5c9ae-d5d8-436d-a7d1-c39bd24bde11", "ImageName": "Object Detection Service", "ServiceInstanceId": "c376c92f-737b-4388-a12e-987dba7588ad", "ServiceType": "Object Detection", "IsReusable": "true", "DesiredStatus": "created", "ServiceUrl": "https://docs.microsoft.com/en-us/dotnet", "ServiceStatus": "Active"}' 
