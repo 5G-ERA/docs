@@ -1,0 +1,12 @@
+{
+"ImageId": "guid",
+"Name": "Name",
+"Timestamp": "dd/mm/yyyy",
+"Description": "Lorem Ipsum"
+
+}
+
+
+JSON.SET 431e2134-cfbf-4383-b0d8-55c8184709ff . ' { "Image_Id": "431e2134-cfbf-4383-b0d8-55c8184709ff","Name": "Image_1","Timestamp": "10/03/2022","Description": "Action_1 needs Image_1 to complete the task"}'
+
+JSON.SET a688bfcb-653b-407e-b65c-87c7fbbf04dc . ' { "Image_Id": "a688bfcb-653b-407e-b65c-87c7fbbf04dc","Name": "Image_2","Timestamp": "9/03/2022","Description": "Action_2 needs Image_2 to complete the task"}'
