@@ -172,7 +172,8 @@ Todo
   "IsReusable": true,
   "DesiredStatus": "created",        
   "InstanceUrl": "https://...../......",
-  "InstanceStatus": "Active/Down/Instanciating/Idle/Terminating"
+  "InstanceStatus": "Active/Down/Instanciating/Idle/Terminating",
+  "TimeStamped": "2022-03-11T12:09:43.5122616+00:00"  
 }
 ```
 
