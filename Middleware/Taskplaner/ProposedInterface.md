@@ -1,5 +1,5 @@
 # Endpoints
-(Assumption: only take care of dds configuration and deployment if user requires slicing via the Q&A template)
+(Assumption: only take care of dds discovery server configuration and deployment if user requires slicing via the Q&A template)
 ## Deployment
 
 
