@@ -140,6 +140,7 @@ Lorem ipsum
 {
       "ActionId": 2,
       "ActionName": "Slam",
+      "ActionDescription": "Lorem ipsum",
       "Order": 0,
       "Placement": "EDGE/CLOUD",
       "ActionPriority": "1/2/3",
