@@ -1,5 +1,6 @@
 {
-  "RobotID": "Robot_1",
+  "RobotID": "73b43f02-0a95-41f8-a1b6-b4c90d5acccf",
+  "RobotName": "Robot_1",
   "Manufacturer": "RobotNik",
   "RobotModel": "Summit-xl",
   "RobotStatus": "Running",
@@ -16,6 +17,7 @@
   "VirtualRam": 90,
   "StorageDisk": 90,
   "NumberCores": 3,
+  "TimeStamped": "2022-03-11T12:09:43.5122616+00:00",
   "Questions": [
     {
       "Question_Id": "452d7766-aeed-488c-9fc3-06f378bbfb30",
