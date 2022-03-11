@@ -107,6 +107,7 @@ Todo
 ```json
  {
     "CloudID": 10,
+    "CloudName": "CloudName"
     "CloudStatus": "Running",
     "CloudIp": "192.168.1.2",
     "Timestamp": "2022-03-11T12:09:43.5122616+00:00"
