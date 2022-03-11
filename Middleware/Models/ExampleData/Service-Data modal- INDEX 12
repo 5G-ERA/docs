@@ -8,6 +8,29 @@
   "ServiceUrl": "https://...../......",
   "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating"
 }
+  {
+  {
+  "ServiceId": "00c5c9ae-d5d8-436d-a7d1-c39bd24bde11",
+  "ImageName": "Object detection service",
+  "ServiceInstanceId": "c376c92f-737b-4388-a12e-987dba7588ad",
+  "ServiceType": "Object detection",
+  "IsReusable": true,
+  "DesiredStatus": "created",        
+  "ServiceUrl": "https://docs.microsoft.com/en-us/dotnet",
+  "ServiceStatus": "Active"
+  
+}
+{
+  "ServiceId": "3e756dcb-64a3-46fe-b284-deab0558e5ff",
+  "ImageName": "Object detection service",
+  "ServiceInstanceId": "940e7da5-2776-44a8-b7a8-44727504041c",
+  "ServiceType": "Object detection",
+  "IsReusable": true,
+  "DesiredStatus": "created",        
+  "ServiceUrl": "https://docs.microsoft.com/en-us/dotnet",
+  "ServiceStatus": "Dowm"
+  }
+  
 
 
 JSON.SET 00c5c9ae-d5d8-436d-a7d1-c39bd24bde11 . '{"ServiceId": "00c5c9ae-d5d8-436d-a7d1-c39bd24bde11", "ImageName": "Object Detection Service", "ServiceInstanceId": "c376c92f-737b-4388-a12e-987dba7588ad", "ServiceType": "Object Detection", "IsReusable": "true", "DesiredStatus": "created", "ServiceUrl": "https://docs.microsoft.com/en-us/dotnet", "ServiceStatus": "Active"}' 
