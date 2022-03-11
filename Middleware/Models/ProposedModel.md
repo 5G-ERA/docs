@@ -115,31 +115,60 @@ Todo
 ## ACTION
 ```json
 {
-      "ActionId": 2,
-      "ActionName": "Slam",
+      "ActionId": "Guid",
+      "ActionName": "Lorem ipsum",
       "ActionDescription": "Lorem ipsum",
-      "Order": 0,
-      "Placement": "EDGE/CLOUD",
-      "ActionPriority": "1/2/3",
-      "Services": [
-        {
-          "ServiceDataModel":
-        }
-      ]      
+      "TimeStamped": "2022-03-11T12:09:43.5122616+00:00"     
    } 
  ```
+ 
+ ## ACTION SEQUENCE 
+ 
+ ```json
+ {
+ "ActionPlanId": "Guid",
+ "ActionSequence": [
+    {
+      "ActionId": "Guid",
+      "ActionName": "Slam",
+      "ActionStatus": "running",
+      "Order": 1,
+      "Placement": "Edge",
+      "ActionPriority": "1",
+      "Services": [
+        {
+          "InstanceId": "6a97703d-c5b2-40ba-a326-5d4b532ef246",
+        }
+      ]
+    },
+    {
+      "ActionId": "Guid",
+      "ActionName": "2DNavigation",
+      "ActionStatus": "running",
+      "Order": 2,
+      "Placement": "Cloud",
+      "ActionPriority": "1",
+      "Services": [
+        {
+          "InstanceId": "c26402d5-73cd-4a23-ae6d-25d97218b762",
+        }
+      ]
+    }
+  ]
+    }
+```
 
-## Service data model:
+## INSTANCE:
 ```json
 {
-  "ServiceId": "guid",
-  "ImageName": "Object detection service",
-  "ServiceInstanceId": "guid",
-  "ServiceType": "Object detection/SLAM",
+  "InstanceId": "guid",
+  "InstanceName": "Object detection service",
+  "InstanceId": "guid",
+  "InstanceType": "Object detection/SLAM",
   "IsReusable": true,
   "DesiredStatus": "created",        
-  "ServiceUrl": "https://...../......",
-  "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating"
+  "InstanceUrl": "https://...../......",
+  "InstanceStatus": "Active/Down/Instanciating/Idle/Terminating"
 }
 ```
 
