@@ -1,13 +1,8 @@
 # REDIS GRAPH
 
-Index db 1
-
-
-
+Lorem ipsum
 
 # REDIS METADATA_&_QoS 
-
-Index 2
 
 ## Policy
 
