@@ -54,7 +54,9 @@ Index 2
 "TaskDescription": "Lorem Ipsum",
 "TaskPriority": "HIGH/MEDIUM/LOW",
 "TaskMaxDuration": 0,
-"Robot_Id":  "Robot_1",
+"TaskStatus": "running",
+"TaskWithMultipleRobots":  false,
+"Robot_Id": [ { "Robot_1": "guid"} ],
 "ActionPlanId": "guid",
 "ActionSequence": [
   {
