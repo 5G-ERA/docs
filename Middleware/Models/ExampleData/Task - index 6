@@ -1,0 +1,58 @@
+{
+  "Request_ID": "4225e56e-4b68-4372-9d34-66bba1a633b3",
+  "Timestamp": "2022/09/03 16:30.45",
+  "TaskId": "TASK_1",
+  "TaskDescription": "Go to kitchen",
+  "TaskPriority": "Low",
+  "TaskMaxDuration": 0,
+  "TaskStatus": "running",
+  "TaskWithMultipleRobots": false,
+  "Robot_Id": [ { "Robot_1": "3a6f9285-3db7-4867-87a9-2be1faf74737" } ],
+  "ActionPlanId": "3a6f9285-3db7-4867-87a9-2be1faf74737",
+  "QoE": 95,
+  "TaskExecutionTime": 120,
+  "ActionSequence": [
+    {
+      "ActionId": 2,
+      "ActionName": "Slam",
+      "ActionStatus": "running",
+      "Order": 1,
+      "Placement": "Edge",
+      "ActionPriority": "1",
+      "Services": [
+        {
+          "ServiceId/Image name": "Slam",
+          "ServiceInstanceId": "6a97703d-c5b2-40ba-a326-5d4b532ef246",
+          "ServiceType": "2DNavigation",
+          "IsReusable": false,
+          "ActionExecutionTime": [ { "Robot_1": 60 } ],
+          "DesiredStatus": "created",
+          "ServiceUrl": "https://5g-Era.middleware.com",
+          "ServiceStatus": "Active",
+          "QoS": 90
+        }
+      ]
+    },
+    {
+      "ActionId": 2,
+      "ActionName": "2DNavigation",
+      "ActionStatus": "running",
+      "Order": 2,
+      "Placement": "Cloud",
+      "ActionPriority": "1",
+      "Services": [
+        {
+          "ServiceId/Image name": "2D_Navigation_MonteCarlo",
+          "ServiceInstanceId": "c26402d5-73cd-4a23-ae6d-25d97218b762",
+          "ServiceType": "FaceRecognition",
+          "IsReusable": true,
+          "ActionExecutionTime": [ { "Robot_1": 60 } ],
+          "DesiredStatus": "created",
+          "ServiceUrl": "https://5g-Era.middleware.com",
+          "ServiceStatus": "Active",
+          "QoS": 90
+        }
+      ]
+    }
+  ]
+}
