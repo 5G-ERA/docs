@@ -59,6 +59,7 @@ Index 2
 "Robot_Id": [ { "Robot_1": "guid"} ],
 "ActionPlanId": "guid",
 "QoE": 95, 
+"TaskExecutionTime": 120,
 "ActionSequence": [
   {
     "ActionId": 2,
@@ -72,6 +73,7 @@ Index 2
         "ServiceInstanceId": "guid",
         "ServiceType": "Object detection/SLAM",
         "IsReusable": true,
+        "ActionExecutionTime": [ { "Robot_1": 60 } ],
         "DesiredStatus": "created",        
         "ServiceUrl": "https://...../......",
         "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating",
