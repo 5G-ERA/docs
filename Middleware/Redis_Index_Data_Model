@@ -1,6 +1,6 @@
 #### Redis database indexes data model 5g era middleware 
 
-<!DOCTYPE html>
+```html
 <html>
 
    <body>
@@ -19,3 +19,5 @@
       </table>
    </body>
 </html>
+
+```
