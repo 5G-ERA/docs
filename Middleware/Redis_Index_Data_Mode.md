@@ -17,7 +17,53 @@ The 5G era Redis uses indexes to simulate different tables of data models. In th
             <td>INSTANCE</td>
             <td>Service knf/vnf deployed by OSM</td>
          </tr>
+         <tr>
+               <td>INDEX 3 </td>
+               <td>POLICIES</td>
+               <td>Stores all the templates policies and status</td>
+            </tr>
+         <tr>
+               <td>INDEX 4 </td>
+               <td>DIALOGUES</td>
+               <td>Stores all the templates questions and anwers between the middleware and robot</td>
+            </tr>
+         <tr>
+               <td>INDEX 5 </td>
+               <td>CONTAINER IMAGES</td>
+               <td>Stores the list of images available to use</td>
+            </tr>
+         <tr>
+               <td>INDEX 6 </td>
+               <td>TASK</td>
+               <td>Stores all the records about the tasks executed by robots.</td>
+            </tr>
+         <tr>
+               <td>INDEX 7 </td>
+               <td>ROBOT</td>
+               <td>Stores all the records about registered robots</td>
+            </tr>
+         <tr>
+               <td>INDEX 8 </td>
+               <td>EDGE</td>
+               <td>Stores all the records about registered Edge machines</td>
+            </tr>
+         <tr>
+               <td>INDEX 9 </td>
+               <td>CLOUD</td>
+               <td>Stores all the records about registered robots</td>
+            </tr>
+         <tr>
+               <td>ACTION 10 </td>
+               <td>EDGE</td>
+               <td>Stores all the templates of actions (instances/services) that the middleware can provide to create a plan (action sequence + location)</td>
+            </tr>
+          <tr>
+               <td>INDEX 13 </td>
+               <td>ACTION SEQUENCE</td>
+               <td>Stores all the records about middleware generated action plans for various robots.</td>
+            </tr>
       </table>
    </body>
 </html>
 
+* Note: Index 1 is reserved to the Redis graph.
