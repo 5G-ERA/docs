@@ -57,6 +57,11 @@ The 5G era Redis uses indexes to simulate different tables of data models. In th
                <td>EDGE</td>
                <td>Stores all the templates of actions (instances/services) that the middleware can provide to create a plan (action sequence + location)</td>
             </tr>
+         <tr>
+               <td>ACTION 12 </td>
+               <td>SERVICE DATA MODAL</td>
+               <td>Stores all the services of data modals</td>
+            </tr>
           <tr>
                <td>INDEX 13 </td>
                <td>ACTION SEQUENCE</td>
