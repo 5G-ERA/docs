@@ -3,5 +3,7 @@
     "ActionFamily": "Manipulation",
     "ActionName": "MoveIt",
     "ActionDescription": "MoveIt ROS stack",
+    "ROS_Version": "ROS2",
+    "ROS_Distro": "Foxy",
     "TimeStamped": "2022-03-11T12:09:43.5122616+00:00"
 }
