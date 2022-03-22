@@ -3,27 +3,24 @@
     "ActionSequence": [
         {
             "ActionId": "1c0970de-0174-4f29-95db-812bc07d15d7",
+	    "ActionFamily": "Navigation",
             "ActionName": "Amcl",
             "Order": 1,
             "ActionPriority": "1",
         },
         {
             "ActionId": "7c7c580e-69d1-4afd-af92-f4db74500072",
-            "ActionName": "Manipulation",
+	    "ActionFamily": "Manipulation",
+            "ActionName": "MoveIt",
             "ActionStatus": "",
             "Order": 2,
             "ActionPriority": "1",
         },
+
 		 {
             "ActionId": "7c7c580e-69d1-4afd-af92-f4db74500072",
-            "ActionName": "Navigation",
-            "ActionStatus": "",
-            "Order": 3,
-            "ActionPriority": "1",
-        },
-		 {
-            "ActionId": "7c7c580e-69d1-4afd-af92-f4db74500072",
-            "ActionName": "Perception",
+	    "ActionFamily": "Perception",
+            "ActionName": "ObjectDetection",
             "ActionStatus": "",
             "Order": 3,
             "ActionPriority": "1",
