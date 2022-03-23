@@ -2,16 +2,16 @@
 
 Todo
 
-# REDIS METADATA_&_QoS 
+## REDIS METADATA_&_QoS
 
 ## Policy
 
 ```json
 {
-"Policy_Id": "guid",
+"Id": "guid",
 "Timestamp": "2022-03-11T12:09:43.5122616+00:00",
 "IsActive": "True/False",
-"Description": "Try to use closest physical machine in the topolgy",
+"Description": "Try to use closest physical machine in the topology",
 "PolicyName": "Closest_Machine",
 }
 ```
@@ -20,7 +20,7 @@ Todo
 
 ```json
 {
-"Question_Id": "guid",
+"Id": "guid",
 "Question": "Do you have a map?",
 "IsSingleAnswer": true,
 "Answer": [{"key": "value"}]
@@ -31,7 +31,7 @@ Todo
 
 ```json
 {
-"ImageId": "guid",
+"Id": "guid",
 "Name": "Name",
 "Timestamp": "2022-03-11T12:09:43.5122616+00:00",
 "Description": "Lorem Ipsum"
@@ -42,7 +42,7 @@ Todo
 
 ```json
 {
-  "Request_ID": "Guid",
+  "Id": "Guid",
   "Timestamp": "2022-03-11T12:09:43.5122616+00:00",
   "TaskId": "Guid",
   "TaskDescription": "Lorem Ipsum",
@@ -61,10 +61,10 @@ Todo
 
 ```json
 {
-    "RobotID": "Guid",
+    "Id": "Guid",
     "RobotName": "RobotName",
     "Manufacturer": "RobotNik",
-    "RobotModel": "Summit-xl"
+    "RobotModel": "Summit-xl",
     "RobotStatus": "Running/withOutBattery",
     "CurrentTaskID": "Task_Number",
     "BatteryStatus": 90,
@@ -83,8 +83,7 @@ Todo
     "Questions": [
         {"map": "present, none"},
         {"Question":"Answer"}
-    ]
-    
+    ]    
   }
 ```
 
@@ -92,8 +91,8 @@ Todo
 
 ```json
   {
-    "EdgeID": 10,
-    "EdgeName": "EdgeName"
+    "Id": 10,
+    "EdgeName": "EdgeName",
     "EdgeStatus": "Running/withOutBattery",
     "EdgeIp": "192.168.1.2",
     "MacAddress": "MacAddress",
@@ -106,39 +105,48 @@ Todo
   }
   ```
 
-## CLOUD 
+## CLOUD
 
 ```json
  {
-    "CloudID": 10,
-    "CloudName": "CloudName"
+    "Id": 10,
+    "CloudName": "CloudName",
     "CloudStatus": "Running",
     "CloudIp": "192.168.1.2",
     "Timestamp": "2022-03-11T12:09:43.5122616+00:00"
   }
 
 ```
+
 ## ACTION
-Action model Family hierarchy: ActionFamily {navigation, perception, manipulation, human-assisted navigation, human-assisted perception, human-assisted manipulation} 
+
+Action model Family hierarchy:
+
+* navigation,
+* perception,
+* manipulation,
+* human-assisted navigation,
+* human-assisted perception,
+* human-assisted manipulation
 
 ```json
 {
-      "ActionId": "Guid",
+      "Id": "Guid",
       "ActionFamily": "Manipulation",
       "ActionName": "Lorem ipsum",
       "ActionDescription": "Lorem ipsum",
       "TimeStamped": "2022-03-11T12:09:43.5122616+00:00"     
    } 
  ```
- 
- ## ACTION SEQUENCE 
- 
+
+## ACTION SEQUENCE
+
  ```json
  {
  "ActionPlanId": "Guid",
  "ActionSequence": [
     {
-      "ActionId": "Guid",
+      "Id": "Guid",
       "ActionName": "Slam",
       "ActionStatus": "running",
       "Order": 1,
@@ -151,7 +159,7 @@ Action model Family hierarchy: ActionFamily {navigation, perception, manipulatio
       ]
     },
     {
-      "ActionId": "Guid",
+      "Id": "Guid",
       "ActionName": "2DNavigation",
       "ActionStatus": "running",
       "Order": 2,
@@ -167,21 +175,18 @@ Action model Family hierarchy: ActionFamily {navigation, perception, manipulatio
     }
 ```
 
-## INSTANCE:
+## INSTANCE
+
 ```json
 {
-  "InstanceId": "guid",
+  "Id": "guid",
   "InstanceName": "Object detection service",
   "InstanceId": "guid",
   "InstanceType": "Object detection/SLAM",
   "IsReusable": true,
   "DesiredStatus": "created",        
   "InstanceUrl": "https://...../......",
-  "InstanceStatus": "Active/Down/Instanciating/Idle/Terminating",
+  "InstanceStatus": "Active/Down/Instantiating/Idle/Terminating",
   "TimeStamped": "2022-03-11T12:09:43.5122616+00:00"  
 }
 ```
-
-
-
-

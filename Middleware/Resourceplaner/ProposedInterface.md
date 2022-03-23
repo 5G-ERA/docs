@@ -2,8 +2,8 @@
 
 ## Deployment
 
+### GET /Resource/{name}
 
-### GET /Resource/{name} 
 Asking: ACTION PLANNER  ANSWER: RESOURCE PLANNER.
 (Assumptions: robot knows the task_id for a high level action -go to kitchen-).
 OUTPUT; ACTION_PLANNER_OUTPUT
@@ -14,7 +14,7 @@ OUTPUT; ACTION_PLANNER_OUTPUT
   "TaskPriority": "HIGH/MEDIUM/LOW",
   "ActionSequence": [
    {
-      "ActionId": 2,
+      "Id": 2,
       "Order": 0,
       "ActionPriority": "1/2/3",      
    } 
@@ -22,16 +22,16 @@ OUTPUT; ACTION_PLANNER_OUTPUT
 }
 ```
 
+Return:
 
-Return: 
 ```json
 {
-  "TaskId": "TASK_NUMBER",
+  "Id": "TASK_NUMBER",
   "TaskPriority": "HIGH/MEDIUM/LOW",
   "ActionPlanId": "guid",
   "ActionSequence": [
    {
-      "ActionId": 2,
+      "Id": 2,
       "Order": 0,      
       "ActionPriority": "1/2/3",
       "Placement": "EDGE/CLOUD",
@@ -42,10 +42,10 @@ Return:
 
 ```
 
-### GET /GRAPH_TOPOLOGY/{id} 
+### GET /GRAPH_TOPOLOGY/{id}
 
-**TODO**: Move to Redis API 
-Function to ger a GRAPH. 
+**TODO**: Move to Redis API
+Function to ger a GRAPH.
 
 RESOURCE PLANNER ANSWER: REDIS GRAPH
 Param: id - Id of the NS
@@ -58,7 +58,8 @@ Param: id - Id of the NS
 ]
 ```
 
-Return: 
+Return:
+
 ```json
 [
   {
@@ -68,4 +69,3 @@ Return:
 ```
 
 Status: 200 (OK), 404(Not Found)
-

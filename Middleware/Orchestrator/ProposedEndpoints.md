@@ -16,18 +16,19 @@ Asking: Action Planner Response: Orchestrator
 
 ```json
 {
-  "TaskId": "TASK_NUMBER",
+  "Id": "TASK_NUMBER",
   "TaskPriority": "HIGH/MEDIUM/LOW",
   "ActionPlanId": "guid",
   "ActionSequence": [
    {
-      "ActionId": 2,
+      "Id": 2,
       "Order": 0,
       "Placement": "EDGE/CLOUD",
       "ActionPriority": "1/2/3",
       "Services": [
         {
-          "ServiceId/Image name": "Object detection service",
+          "Id": "guid",
+          "Image name": "Object detection service",
           "ServiceInstanceId": "guid",
           "ServiceType": "Object detection/SLAM",
           "IsReusable": true,
@@ -46,7 +47,7 @@ Asking: Action Planner Response: Orchestrator
 
 ```json
 {
-  "TaskId": "TASK_NUMBER",
+  "Id": "TASK_NUMBER",
   "TaskPriority": "HIGH/MEDIUM/LOW",
   "ActionPlanId": "guid",
   "ActionSequence": [
@@ -57,10 +58,11 @@ Asking: Action Planner Response: Orchestrator
       "ActionPriority": "1/2/3",
       "Services": [
         {
-          "ServiceId/Image name": "Object detection service",
+          "Id": "guid",
+          "Image name": "Object detection service",
           "ServiceInstanceId": "guid",
           "ServiceType": "Object detection/SLAM",
-          "IsResusable": true,        
+          "IsReusable": true,
           "DesiredStatus": "created",        
           "ServiceUrl": "https://...../......",
           "ServiceStatus": "Active/Down/Instantiating/Idle/Terminating"
@@ -69,45 +71,6 @@ Asking: Action Planner Response: Orchestrator
    } 
   ]
 }
-```
-
-**Status**: 201 (Created), 204 (No Content), 400 (Bad Request)
-
-### PATCH /orchestrate/plan/{plan}
-
-**TODO**: retink if needed
-
-Updates the specified plan based on the change in the statuses of the services in the existing plan
-
-**Param**: plan - List of resources to be instantiated
-
-```json
-{
-  "PlanId": "guid",
-  "name": "name",
-  "status": "status",
-  "steps": [
-    {
-      "Order": 1,
-      "InstanceName": "name",
-      "IsReusable": true,
-      "DesiredStatus": "created"
-    }
-  ]
-}
-```
-
-**Return**:
-
-```json
-[
-  {
-    "Order": 1,
-    "InstanceName": "name",
-    "InstanceId": "id",
-    "Status" : "Status"
-  }
-]
 ```
 
 **Status**: 201 (Created), 204 (No Content), 400 (Bad Request)
@@ -129,10 +92,11 @@ Get the status of services deployed with this plan
       "ActionPriority": "1/2/3",
       "Services": [
         {
-          "ServiceId/Image name": "Object detection service",
+          "Id": "guid",
+          "Image name": "Object detection service",
           "ServiceInstanceId": "guid",
           "ServiceType": "Object detection/SLAM",
-          "IsReusable": true,        
+          "IsReusable": true,
           "DesiredStatus": "created",        
           "ServiceUrl": "https://...../......",
           "ServiceStatus": "Active/Down/Instantiating/Idle/Terminating"
@@ -152,7 +116,7 @@ Modifies the existing plan to deploy additional services or remove unnecessary o
 
 ```json
 {
-  "PlanId": "guid",
+  "Id": "guid",
   "name": "name",
   "status": "status",
   "steps": [
@@ -188,7 +152,7 @@ Param:
 
 ```json
 {
-  "TaskId": "TASK_NUMBER",  
+  "Id": "TASK_NUMBER",  
   "ActionPlanId": "guid",
   "ActionSequence": [
    {
@@ -196,7 +160,8 @@ Param:
       "Placement": "EDGE/CLOUD",      
       "Services": [
         {
-          "ServiceId/Image name": "Object detection service",
+          "Id": "guid",
+          "Image name": "Object detection service",
           "ServiceInstanceId": "guid",
           "IsReusable": "true"   
         }

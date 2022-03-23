@@ -2,7 +2,7 @@
 Assumption for each of the end points we can get all and get by specific ID.
 Assumption that all policies are general to all robots.
 
-# Orchestrator
+## Orchestrator
 
 Full CRUD operations on services statuses. It stores the status of all the services deployed by the OSM.
 Service definition: knf/vnf --> container with an image and some functions.
@@ -10,17 +10,18 @@ Instance definition: network service deployed by the OSM/k8. Knf/Vnf deployed.
 Action definition: step to be conducted to execute a task - actionSequence. - Individual action from action sequence.
 Task: high level goal of robot.
 
+## GET/POST/DELETE/PATCH /instance/{instance info}
 
-### GET/POST/DELETE/PATCH /instance/{instance info}
 ASKING: Orchestrator ANSWERING: RedisAPI
 
-Param: 
+Param:
+
 * GET/DELETE - instance Id
 * POST/PATCH - instance definition
 
 ```json
 {
-    "ServiceId": "Service_Number",
+    "Id": "Service_Number",
     "ImageName": "Object-detection-service",
     "ServiceInstanceId": "guid",
     "ServiceType": "Object detection/SLAM",
@@ -31,14 +32,15 @@ Param:
 }
 ```
 
+## GET/DELETE/POST /instances/action/{}
 
-### GET/DELETE/POST /instances/action/{}
+Param:
 
-Param: 
 * GET/DELETE: ActionId, InstanceId
 * POST/PATCH: ActionId, InstanceId
 
 Param:
+
 ```json
 {
     "ActionId" : "guid",
@@ -47,15 +49,18 @@ Param:
 ```
 
 ### GET/POST/DELETE/PATCH /action/{}
+
 Perform the CRUD operation on current statuses of the actions:
-Param: 
+Param:
+
 * GET/DELETE: ActionId, TaskId/ActionPlanId
 * POST/PATCH: ActionId, InstanceId
 
 return:
+
 ```json
 {    
-    "ActionId": 2,
+    "Id": 2,
     "ActionPlanId/TaskId": "guid",
     "Order": 0,
     "Placement": "EDGE/CLOUD",
@@ -64,33 +69,35 @@ return:
 ```
 
 ### GET/POST/DELETE/PATCH /image/{}
+
 Perform get or update operations to an image:
-Param: 
+Param:
+
 * GET/DELETE: ImageId
 * POST/PATCH: ImageId, ImageInstance
 
 return:
+
 ```json
 {    
-    "ImageId": "ImageId",
+    "Id": "ImageId",
     "RepositoryName": "RepositoryName",
     "Tag": "Tag"
 }
 ```
 
-# TASK PLANNER 
+## TASK PLANNER
 
 ### GET /POLICY/Current
 
-
-
 Asking: RESOURCE PLANNER ANSWER: SEMANTIC DB REDIS. Function to get the running policies 
 
-Return: 
+Return:
+
 ```json
 [
   {
-    "PolicyId": 10,
+    "Id": 10,
     "PolicyName": "PolicyName",
     "PolicyDescription": "lorem ipsum"    
   }
@@ -101,15 +108,14 @@ Status: 200 (OK), 404(Not Found)
 
 ### GET /POLICY/All
 
+Asking: RESOURCE PLANNER ANSWER: SEMANTIC DB REDIS. Function to get the running policies.
 
+Return:
 
-Asking: RESOURCE PLANNER ANSWER: SEMANTIC DB REDIS. Function to get the running policies. 
-
-Return: 
 ```json
 [
   {
-    "PolicyId": 10,
+    "Id": 10,
     "PolicyName": "PolicyName",
     "PolicyDescription": "lorem ipsum",
     "IsActive": "true/false",
@@ -124,13 +130,14 @@ Status: 200 (OK), 404(Not Found)
 
 Get all the information about all robots in the middleware.
 
-Asking: DASHBOARD ANSWER: REDIS API. 
+Asking: DASHBOARD ANSWER: REDIS API.
 
-Return: 
+Return:
+
 ```json
 [
   {
-    "RobotID": 10,
+    "Id": 10,
     "RobotStatus": "Running/withOutBattery",
     "CurrentTaskID": "Task_Number",
     "TaskList": ["Task_Number"],
@@ -153,18 +160,18 @@ Return:
 
 Status: 200 (OK), 404(Not Found)
 
-
 ### GET /EDGES/ {all}
 
 Get all the information about all edges in the middleware.
 
-Asking: DASHBOARD ANSWER: REDIS API. 
+Asking: DASHBOARD ANSWER: REDIS API.
 
-Return: 
+Return:
+
 ```json
 [
   {
-    "EdgeID": 10,
+    "Id": 10,
     "EdgeStatus": "Running/withOutBattery",
     "EdgeIp": "192.168.1.2",
     "CPU": 90,
@@ -182,13 +189,14 @@ Status: 200 (OK), 404(Not Found)
 
 Get all the information about all clouds in the middleware.
 
-Asking: DASHBOARD ANSWER: REDIS API. 
+Asking: DASHBOARD ANSWER: REDIS API.
 
-Return: 
+Return:
+
 ```json
 [
   {
-    "CloudID": 10,
+    "Id": 10,
     "CloudStatus": "Running",
     "CloudIp": "192.168.1.2"
   }
@@ -201,14 +209,14 @@ Status: 200 (OK), 404(Not Found)
 
 Get all the information about all tasks.
 
-Asking: DASHBOARD ANSWER: REDIS API. 
+Asking: DASHBOARD ANSWER: REDIS API.
 
-Return: 
+Return:
 
 ```json
 [
   {
-      "TaskId": "TASK_NUMBER",
+      "Id": "TASK_NUMBER",
       "TaskName": "TaskName",
       "TaskDescription": "Lorem Ipsum",
       
@@ -218,11 +226,12 @@ Return:
 
 Status: 200 (OK), 404(Not Found)
 
-
 ### GET /task/robot/{}
+
 Return all the tasks executed by all robots.
 
-Return: 
+Return:
+
 ```json
 
 {
@@ -231,11 +240,10 @@ Return:
 }
 ```
 
+### GET /GRAPH_TOPOLOGY/{all}
 
-### GET /GRAPH_TOPOLOGY/{all} 
-
-**TODO**: Discuss in more datail the communication 
-Function to ger a GRAPH. 
+**TODO**: Discuss in more datail the communication
+Function to get a GRAPH.
 
 RESOURCE PLANNER ANSWER: REDIS GRAPH
 Param: id - Id of the NS
@@ -248,7 +256,8 @@ Param: id - Id of the NS
 ]
 ```
 
-Return: 
+Return:
+
 ```json
 [
   {
@@ -259,52 +268,62 @@ Return:
 
 Status: 200 (OK), 404(Not Found)
 
-# RESOURCE PLANNER
+## RESOURCE PLANNER
 
 ### GET/POST/DELETE/PATCH /QoE/{}
+
 Get/ add QoE metrics to a tasks performed by robot.
-Param: 
+Param:
+
 * GET/DELETE: TaskId
 * POST/PATCH: TaskId, QoE
 
 return:
+
 ```json
 {    
-    "TaskId": "TaskId",
+    "Id": "TaskId",
     "QoE": 10,
     "QoEDescription": "Lorem Ipsum"
 }
 ```
 
 ### GET/POST/DELETE/PATCH /QoS/{}
+
 Get/ add QoS metrics to a tasks performed by robot.
-Param: 
+Param:
+
 * GET/DELETE: ActionId, TaskId/ActionPlanId
 * POST/PATCH: ActionId, InstanceId
 
 return:
+
 ```json
 {    
-    "ActionID": "ActionID",
+    "Id": "ActionID",
     "QoS": 10,
     "QoSDescription": "Lorem Ipsum"
 }
 ```
 
-# AUTHENTICATION
+## AUTHENTICATION
+
 Get or update the credentials of the robot.
-Param: 
+Param:
+
 * GET/DELETE: UserID, UserName
 * POST/PATCH: UserID, Password, UserName
 
 return:
+
 ```json
 {    
     "UserName": "UserName",
-    "UserID": "UserID",
+    "Id": "UserID",
     "Password": "Password"
 }
 ```
-# AUTHORIZATION: 
-TODO
 
+## AUTHORIZATION
+
+TODO
