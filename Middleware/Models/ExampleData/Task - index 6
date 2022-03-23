@@ -8,7 +8,7 @@
   "TaskStatus": "running",
   "TaskWithMultipleRobots": false,
   "Robot_Id": [ { "Robot_1": "3a6f9285-3db7-4867-87a9-2be1faf74737" } ],
-  "ActionPlanId": "3a6f9285-3db7-4867-87a9-2be1faf74737",
+  "Action&ResourcePlanId": "3a6f9285-3db7-4867-87a9-2be1faf74737",
   "QoE": 95,
   "TaskExecutionTime": 120
 }
