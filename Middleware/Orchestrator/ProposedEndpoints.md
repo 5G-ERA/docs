@@ -4,11 +4,11 @@ This is the proposed endpoint structure for the Orchestrator. The endpoints shou
 
 The full specification of the OSM API can be seen under this [link](https://forge.etsi.org/swagger/ui/?url=https%3A%2F%2Fosm.etsi.org%2Fgitweb%2F%3Fp%3Dosm%2FSOL005.git%3Ba%3Dblob_plain%3Bf%3Dosm-openapi.yaml%3Bhb%3DHEAD).
 
-## Action
+## Orchestrate
 
 Actions in the understanding of the 5G-ERA are the steps that the robot will have to conduct to finish the specified task.
 
-### POST /action/plan/{plan}
+### POST /orchestrate/plan/{plan}
 
 Executes resources for the specified plan
 Asking: Action Planner Response: Orchestrator
@@ -33,7 +33,7 @@ Asking: Action Planner Response: Orchestrator
           "IsReusable": true,
           "DesiredStatus": "created",        
           "ServiceUrl": "https://...../......",
-          "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating"
+          "ServiceStatus": "Active/Down/Instantiating/Idle/Terminating"
         }
       ]      
    } 
@@ -63,7 +63,7 @@ Asking: Action Planner Response: Orchestrator
           "IsResusable": true,        
           "DesiredStatus": "created",        
           "ServiceUrl": "https://...../......",
-          "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating"
+          "ServiceStatus": "Active/Down/Instantiating/Idle/Terminating"
         }
       ]
    } 
@@ -73,13 +73,14 @@ Asking: Action Planner Response: Orchestrator
 
 **Status**: 201 (Created), 204 (No Content), 400 (Bad Request)
 
-### PATCH /action/plan/{plan}
+### PATCH /orchestrate/plan/{plan}
 
 **TODO**: retink if needed
 
 Updates the specified plan based on the change in the statuses of the services in the existing plan
 
 **Param**: plan - List of resources to be instantiated
+
 ```json
 {
   "PlanId": "guid",
@@ -89,7 +90,7 @@ Updates the specified plan based on the change in the statuses of the services i
     {
       "Order": 1,
       "InstanceName": "name",
-      "IsResusable": true,
+      "IsReusable": true,
       "DesiredStatus": "created"
     }
   ]
@@ -111,7 +112,7 @@ Updates the specified plan based on the change in the statuses of the services i
 
 **Status**: 201 (Created), 204 (No Content), 400 (Bad Request)
 
-### GET /action/{plan_id}
+### GET /orchestrate/plan/{plan_id}
 
 Get the status of services deployed with this plan
 
@@ -130,11 +131,11 @@ Get the status of services deployed with this plan
         {
           "ServiceId/Image name": "Object detection service",
           "ServiceInstanceId": "guid",
-          "ServiceType": "Object detecction/SLAM",
-          "IsResusable": true,        
+          "ServiceType": "Object detection/SLAM",
+          "IsReusable": true,        
           "DesiredStatus": "created",        
           "ServiceUrl": "https://...../......",
-          "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating"
+          "ServiceStatus": "Active/Down/Instantiating/Idle/Terminating"
         }
       ]
    } 
@@ -143,7 +144,7 @@ Get the status of services deployed with this plan
 
 Status: 200 (OK), 404(Not Found)
 
-### PATCH /action/execute/{plan}
+### PATCH /orchestrate/execute/{plan}
 
 Modifies the existing plan to deploy additional services or remove unnecessary ones
 
@@ -158,7 +159,7 @@ Modifies the existing plan to deploy additional services or remove unnecessary o
     {
       "Order": 1,
       "InstanceName": "name",
-      "IsResusable": true,
+      "IsReusable": true,
       "DesiredStatus": "terminated"
     }
   ]
@@ -179,7 +180,7 @@ Return:
 
 **Status**: 200(OK), 204(No Content), 409(Conflict)
 
-### DELETE /action/action/{actionId}
+### DELETE /orchestrate/action/{actionId}
 
 Terminate services for specified action in a plan
 
@@ -197,7 +198,7 @@ Param:
         {
           "ServiceId/Image name": "Object detection service",
           "ServiceInstanceId": "guid",
-          "IsResusable": "true"   
+          "IsReusable": "true"   
         }
       ]
    } 
@@ -207,7 +208,7 @@ Param:
 
 **Status**: HTTP 204 (OK), 404 (Not Found)
 
-### DELETE /action/{PlanId}
+### DELETE /orchestrate/plan/{PlanId}
 
 Terminates the action plan with the specified Id
 
