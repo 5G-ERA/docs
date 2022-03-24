@@ -3,6 +3,7 @@
  "ActionSequence": [
     {
       "ActionId": 2,
+      "ActionFamily": "Navigation",
       "ActionName": "Slam",
       "ActionStatus": "running",
       "Order": 1,
@@ -16,6 +17,7 @@
     },
     {
       "ActionId": 2,
+      "ActionFamily": "Navigation",
       "ActionName": "2DNavigation",
       "ActionStatus": "running",
       "Order": 2,
