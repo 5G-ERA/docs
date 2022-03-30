@@ -67,6 +67,11 @@ The 5G era Redis uses indexes to simulate different tables of data models. In th
                <td>ACTION SEQUENCE</td>
                <td>Stores all the records about middleware generated action plans for various robots.</td>
             </tr>
+         <tr>
+               <td>INDEX 15 </td>
+               <td>IMAGE</td>
+               <td>Stores all the records about images.</td>
+            </tr>
       </table>
    </body>
 </html>
