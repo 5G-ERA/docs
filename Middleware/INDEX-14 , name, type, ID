@@ -1,0 +1,29 @@
+QUERIES  - IN INDEX 14 -id, type, and name properties 
+ROBOT
+GRAPH.QUERY "RESOURCE_PLANNER" "CREATE (:ROBOT {ID: '607f42d3-1ef3-47d2-98ef-48c1acd054ba', Type: 'Robot', Name: 'Robot_1'})"
+GRAPH.QUERY "RESOURCE_PLANNER" "CREATE (:ROBOT {ID: '1f095f82-3e19-4952-b000-886a94d3b416', Type: 'Robot', Name: 'Robot_2'})"
+GRAPH.QUERY "RESOURCE_PLANNER" "CREATE (:ROBOT {ID: '0c77ccca-cc2a-4750-a3ab-53b36fbfd046', Type: 'Robot', Name: 'Robot_3'})"
+
+EDGE
+GRAPH.QUERY "RESOURCE_PLANNER" "CREATE (:EDGE {ID: 'f02f8042-aa93-47c2-8f9e-f5719b45f24b', Type: 'Edge', Name: 'Edge_1'})"
+GRAPH.QUERY "RESOURCE_PLANNER" "CREATE (:EDGE {ID: '553ed610-efe4-4aad-a748-bbae120b9f9f', Type: 'Edge', Name: 'Edge_2'})"
+GRAPH.QUERY "RESOURCE_PLANNER" "CREATE (:EDGE {ID: '904811c3-d14a-4eb2-83d0-0b9d1dc7a9ea', Type: 'Edge', Name: 'Edge_3'})"
+
+CLOUD
+GRAPH.QUERY "RESOURCE_PLANNER" "CREATE (:CLOUD {ID: 'e1a2ffcf-ea50-4d7b-8e61-8e36575c11dd', Type: 'Cloud', Name: 'Cloud_1'})"
+GRAPH.QUERY "RESOURCE_PLANNER" "CREATE (:CLOUD {ID: 'ebef5868-9bd9-420e-a1af-71ea4846cff8', Type: 'Cloud', Name: 'Cloud_2'})"
+ACTIONS 
+GRAPH.QUERY "RESOURCE_PLANNER" "CREATE (:ACTION {ID: '683f461e-47dd-4c82-84b2-f0773f287e9e', Type: 'Action', Name: 'Action_1'})"
+GRAPH.QUERY "RESOURCE_PLANNER" "CREATE (:ACTION {ID: '4dfd78d0-f786-4abe-8510-9eb677fda330', Type: 'Action', Name: 'Action_2'})"
+GRAPH.QUERY "RESOURCE_PLANNER" "CREATE (:ACTION {ID: '95e97e19-504d-41ed-8fa4-976deb92a17f', Type: 'Action', Name: 'Action_3'})"
+TASKS
+GRAPH.QUERY "RESOURCE_PLANNER" "CREATE (:TASK {ID: '34f2e930-e7db-4309-bb08-28dc92cf0820', Type: 'Task', Name: 'Task_1'})"
+GRAPH.QUERY "RESOURCE_PLANNER" "CREATE (:TASK {ID: '11071d4d-d1ae-4e55-8de2-e562c6078277', Type: 'Task', Name: 'Task_2'})"
+GRAPH.QUERY "RESOURCE_PLANNER" "CREATE (:TASK {ID: '957c57d0-b359-41f5-ac9c-10dce44fbcdb', Type: 'Task', Name: 'Task_3'})"
+RELATIONSHIP--OWNS
+GRAPH.QUERY "RESOURCE_PLANNER" "MATCH (x: TASK {ID: '34f2e930-e7db-4309-bb08-28dc92cf0820'}), (c: ACTION{ ID: '683f461e-47dd-4c82-84b2-f0773f287e9e'}) CREATE (x)-[:OWNS]->(c)"
+
+
+
+
+
