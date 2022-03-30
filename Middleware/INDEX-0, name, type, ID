@@ -1,4 +1,4 @@
-QUERIES  - IN INDEX 14 -id, type, and name properties 
+QUERIES  - IN INDEX 0 -id, type, and name properties 
 ROBOT
 GRAPH.QUERY "RESOURCE_PLANNER" "CREATE (:ROBOT {ID: '73b43f02-0a95-41f8-a1b6-b4c90d5acccf', Type: 'Robot', Name: 'Robot_1'})"
 GRAPH.QUERY "RESOURCE_PLANNER" "CREATE (:ROBOT {ID: '1f095f82-3e19-4952-b000-886a94d3b416', Type: 'Robot', Name: 'Robot_2'})"
