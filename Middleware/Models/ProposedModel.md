@@ -34,7 +34,9 @@ Todo
 "Id": "guid",
 "Name": "Name",
 "Timestamp": "2022-03-11T12:09:43.5122616+00:00",
-"Description": "Lorem Ipsum"
+"Description": "Lorem Ipsum",
+"K8SDeployment": "Description of the deployment in the form of the yaml file",
+"K8SService": "Description of the service in the form of the yaml file",
 }
 ```
 
