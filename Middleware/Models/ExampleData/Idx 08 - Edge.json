@@ -1,0 +1,13 @@
+{
+  "EdgeID": "f686d326-ca3b-4e69-a687-5176232b4668",
+  "EdgeName": "Edge_1",
+  "EdgeStatus": "Running",
+  "EdgeIp": "192.168.1.2",
+  "MacAddress": "9B9656CCEE6C",
+  "CPU": 90,
+  "RAM": 90,
+  "VirtualRam": 90,
+  "DiskStorage": 90,
+  "NumberOfCores": 3,
+  "Timestamp": "2022-03-11T12:09:43.5122616+00:00"
+}

@@ -74,7 +74,7 @@ Todo
     "LocomotionSystem": "Ackerman/differential_Drive",
     "ArticulationAvailable": "false",
     "NumberOfArticulation": 0,
-    "ArticulationDof: []",
+    "ArticulationDof": [],
     "Sensors": ["lidar", "camera", "IMU"],
     "CPU": 90,
     "RAM": 90,
@@ -188,7 +188,7 @@ Action model Family hierarchy:
   "IsReusable": true,
   "DesiredStatus": "created",        
   "InstanceUrl": "https://...../......",
-  "InstanceStatus": "Active/Down/Instantiating/Idle/Terminating",
+  "InstanceStatus": "Active/Down/Instantiating/Idle/Terminating/Problem",
   "TimeStamped": "2022-03-11T12:09:43.5122616+00:00"  
 }
 ```
