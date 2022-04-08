@@ -6,7 +6,7 @@
   "IsReusable": true,
   "DesiredStatus": "created",        
   "ServiceUrl": "https://...../......",
-  "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating"
+  "ServiceStatus": "Active/Down/Instanciating/Idle/Terminating/Problem"
 }
   {
   {
