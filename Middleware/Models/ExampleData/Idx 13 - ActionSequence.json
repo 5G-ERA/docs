@@ -1,6 +1,6 @@
 {
- "Action&ResourcePlanId": "50a85398-21b5-4604-8c6f-d510d2abbfd3",
- "ActionSequence": [
+  "ActionPlanId": "50a85398-21b5-4604-8c6f-d510d2abbfd3",
+  "ActionSequence": [
     {
       "ActionId": 2,
       "ActionFamily": "Navigation",
@@ -30,4 +30,4 @@
       ]
     }
   ]
-    }
+}

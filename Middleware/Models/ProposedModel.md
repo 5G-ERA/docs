@@ -48,7 +48,7 @@ Todo
   "Timestamp": "2022-03-11T12:09:43.5122616+00:00",
   "TaskId": "Guid",
   "TaskDescription": "Lorem Ipsum",
-  "TaskPriority": "Low",
+  "TaskPriority": 1,
   "TaskMaxDuration": 0,
   "TaskStatus": "running",
   "TaskWithMultipleRobots": false,
