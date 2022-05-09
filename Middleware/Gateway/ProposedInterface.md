@@ -6,16 +6,14 @@
 Param:
 ```json 
 {
-   "Id":"Guid.NewGuid()",
+   "Id":"3cace17e-a091-4f91-ad98-7d0c371b3a25",
    "Password":"password"
 }
 ```
 Return:
 ```json
 {
-   "Id":"Guid.NewGuid()",
-   "Password":"hashed_password",
-   "Salt":"salt"
+   HttpStatusCode.Craeted(201)
 }
 ```
 
@@ -26,15 +24,15 @@ Return:
 Param:
 ```json 
 {
-   "Id":"Guid.Id",
+   "Id":"3cace17e-a091-4f91-ad98-7d0c371b3a25",
    "Password":"password"
 }
 ```
 Return:
 ```json
 {
-   "Token":"JWTBearer_Token",
-   "ExpirationDate":"expirationDate"
+                           "token":"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50  aXR5L2NsYWltcy9uYW1lIjoiZmM2YTgwNGQtYzI0MC00YTRkLWFmMGUtOWM1NTk5Nzc4OGQzIiwianRpIjoiNTgyZDZhMGUtYTY0MS00Zjk3LTkyOTctYjU2M2FhMDExZmQxIiwiZXhwIjoxNjUyMTM1NzU2LCJpc3MiOi  JyZWRpc2ludGVyZmFjZUlzc3VlciIsImF1ZCI6InJlZGlzaW50ZXJmYWNlQXVkaWVuY2UifQ.a8yanix-k6JoFxjiyNEalnHqY--xNlRSovZvCFNYjDc",
+     "expirationDate": "2022-05-09T22:35:56.8472623Z"
 }
 ```
 
