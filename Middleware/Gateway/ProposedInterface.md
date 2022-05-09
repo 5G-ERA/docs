@@ -1,9 +1,42 @@
 # External Interface
 
+## Registration
+
+### POST /Register
+Param:
+```json 
+{
+   "Id":"Guid.NewGuid()",
+   "Password":"password"
+}
+```
+Return:
+```json
+{
+   "Id":"Guid.NewGuid()",
+   "Password":"hashed_password",
+   "Salt":"salt"
+}
+```
+
+
 ## Authentication
-TBD
-### /authentication/
-TBD
+
+### POST /Login
+Param:
+```json 
+{
+   "Id":"Guid.Id",
+   "Password":"password"
+}
+```
+Return:
+```json
+{
+   "Token":"JWTBearer_Token",
+   "ExpirationDate":"expirationDate"
+}
+```
 
 ## Deployment of Network Service
 
