@@ -11,11 +11,10 @@ Param:
 }
 ```
 Return:
-```json
-{
-   HttpStatusCode.Craeted(201)
-}
-```
+
+* 201 - after successful registration
+* 400 - when parameters are not specified
+* 500 - when the server experiences an error
 
 
 ## Authentication
