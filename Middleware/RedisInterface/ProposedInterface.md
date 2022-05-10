@@ -11,7 +11,7 @@ Get all the actions from redis.
 
 Return:
 
-* 200 - list of Actions from redis storage
+* 200 - Success, list of Actions from redis storage.
 ```json 
 [
   {
@@ -33,8 +33,8 @@ Return:
   
 ]
 ```
-* 404 - Actions were Not found
-* 500 - Server Error
+* 404 - Actions were Not found.
+* 500 - Server Error.
 
 ### POST Data/Action
 Add new action entity in redis.
@@ -53,7 +53,7 @@ Param:
 
 Return:
 
-* 200 - Newly created action entity.
+* 200 - Success, newly created action entity.
 ```json 
 {
     "Id": "425b46eb-eaea-45e0-8769-4926159f9c87",
@@ -66,6 +66,30 @@ Return:
 ```
 * 400 - Bad Request parameters were not specified corectly.
 * 500 - Server Error.
+
+### GET Data/Action/{id}
+Get action by id.
+
+Param:
+* id - 5ebd4bbe-9c75-46df-a4f4-93c7dea10373  provide the guid id for the desired action entity to be retrieved.
+
+Return:
+
+* 200 - Success, the specified entity.
+```json
+{
+    "Id": "425b46eb-eaea-45e0-8769-4926159f9c87",
+    "Name": "detect-botle",
+    "ActionFamily": "detection",
+    "Order": 11,
+    "Placement": "edge",
+    "ActionPriority": "low"
+}
+```
+* 404 - Actions were Not found.
+* 500 - Server Error.
+
+
 
 ## ORCHESTRATOR
 
