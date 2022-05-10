@@ -7,8 +7,10 @@ Assumption that all policies are general to all robots.
 RedisInterface API allows full CRUD operations (GET/POST/PUT/PATCH/DELETE) on all data models that are embebed in the system. 
 
 ### GET Data/Action
-Get all the actions from redis
+Get all the actions from redis.
+
 Return:
+
 * 200 - list of Actions from redis storage
 ```json 
 [
