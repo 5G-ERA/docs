@@ -15,18 +15,57 @@ Return:
 ```json 
 [
   {
-    "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-    "Name": "string",
-    "ActionFamily": "string",
-    "Order": 0,
-    "Placement": "string",
-    "ActionPriority": "string"
+    "Id": "5ebd4bbe-9c75-46df-a4f4-93c7dea10373",
+    "Name": "move-base",
+    "ActionFamily": "movment",
+    "Order": 10,
+    "Placement": "cloud",
+    "ActionPriority": "medium"
+  },
+  {
+    "Id": "425b46eb-eaea-45e0-8769-4926159f9c87",
+    "Name": "detect-botle",
+    "ActionFamily": "detection",
+    "Order": 11,
+    "Placement": "edge",
+    "ActionPriority": "low"
   }
+  
 ]
 ```
 * 404 - Actions were Not found
 * 500 - Server Error
 
+### POST Data/Action
+Add new action entity in redis.
+
+Param:
+```json
+{
+  "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "Name": "string",
+  "ActionFamily": "string",
+  "Order": 0,
+  "Placement": "string",
+  "ActionPriority": "string"
+}
+```
+
+Return:
+
+* 200 - Newly created action entity.
+```json 
+{
+    "Id": "425b46eb-eaea-45e0-8769-4926159f9c87",
+    "Name": "detect-botle",
+    "ActionFamily": "detection",
+    "Order": 11,
+    "Placement": "edge",
+    "ActionPriority": "low"
+}
+```
+* 400 - Bad Request parameters were not specified corectly.
+* 500 - Server Error.
 
 ## ORCHESTRATOR
 
