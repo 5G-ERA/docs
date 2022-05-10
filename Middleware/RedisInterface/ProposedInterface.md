@@ -2,7 +2,31 @@
 Assumption for each of the end points we can get all and get by specific ID.
 Assumption that all policies are general to all robots.
 
-## Orchestrator
+## REDISINTERFACE
+
+RedisInterface API allows full CRUD operations (GET/POST/PUT/PATCH/DELETE) on all data models that are embebed in the system. 
+
+### GET Data/Action
+Get all the actions from redis
+Return:
+* 200 - list of Actions from redis storage
+```json 
+[
+  {
+    "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "Name": "string",
+    "ActionFamily": "string",
+    "Order": 0,
+    "Placement": "string",
+    "ActionPriority": "string"
+  }
+]
+```
+* 404 - Actions were Not found
+* 500 - Server Error
+
+
+## ORCHESTRATOR
 
 Full CRUD operations on services statuses. It stores the status of all the services deployed by the OSM.
 Service definition: knf/vnf --> container with an image and some functions.
@@ -10,7 +34,7 @@ Instance definition: network service deployed by the OSM/k8. Knf/Vnf deployed.
 Action definition: step to be conducted to execute a task - actionSequence. - Individual action from action sequence.
 Task: high level goal of robot.
 
-## GET/POST/DELETE/PATCH /instance/{instance info}
+### GET/POST/DELETE/PATCH /instance/{instance info}
 
 ASKING: Orchestrator ANSWERING: RedisAPI
 
@@ -32,7 +56,7 @@ Param:
 }
 ```
 
-## GET/DELETE/POST /instances/action/{}
+### GET/DELETE/POST /instances/action/{}
 
 Param:
 
