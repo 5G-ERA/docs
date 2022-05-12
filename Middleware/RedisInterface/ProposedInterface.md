@@ -7,11 +7,11 @@ Assumption that all policies are general to all robots.
 RedisInterface API allows full CRUD operations (GET/POST/PUT/PATCH/DELETE) on all data models that are embebed in the system. 
 
 ### GET Data/Action
-Get all the action entities.
+Get all the action objects.
 
 Return:
 
-* 200 - Success, list of Actions from redis storage.
+* 200 - Success, list of Actions.
 ```json 
 [
   {
@@ -33,8 +33,8 @@ Return:
   
 ]
 ```
-* 404 - Actions were not found.
-* 500 - Server Error.
+* 404 - Objects were not found.
+* 500 - An error occurred.
 
 ### POST Data/Action
 Add new action entity.
@@ -65,19 +65,19 @@ Return:
     "ActionPriority": "low"
 }
 ```
-* 400 - Bad Request parameters were not specified correctly.
-* 500 - Server Error.
+* 400 - Bad Request, parameters were not specified correctly.
+* 500 - An error occurred.
 
 ### GET Data/Action/{id}
-Get action by id.
+Get action entity by id.
 
 Param:
 
-* id - 425b46eb-eaea-45e0-8769-4926159f9c87  provide the guid id for the desired action entity to be retrieved.
+* id -  provide the guid id for the desired action entity to be retrieved ex. 425b46eb-eaea-45e0-8769-4926159f9c87.
 
 Return:
 
-* 200 - Success, the specified entity.
+* 200 - Success, the specified action entity.
 ```json
 {
     "Id": "425b46eb-eaea-45e0-8769-4926159f9c87",
@@ -88,15 +88,15 @@ Return:
     "ActionPriority": "low"
 }
 ```
-* 404 - Action entity was not found.
-* 500 - Server Error.
+* 404 - Object was not found.
+* 500 - An error occurred.
 
 ### PATCH Data/Action/{id}
 Modify an existing action entity.
 
 Param:
 
-* id - 425b46eb-eaea-45e0-8769-4926159f9c87  provide the guid id for the desired action entity to be modified.
+* id - provide the guid id for the desired action entity to be modified ex. 425b46eb-eaea-45e0-8769-4926159f9c87.
 
 ```json
 {
@@ -122,20 +122,20 @@ Return:
 }
 ```
 * 404 - Action entity was not found.
-* 500 - Server Error.
+* 500 - An error occurred.
 
 ### DELETE Data/Action/{id}
 Delete an action entity.
 
 Param:
 
-* id - 425b46eb-eaea-45e0-8769-4926159f9c87  provide the guid id for the desired action entity to be deleted.
+* id -  provide the guid id for the desired action entity to be deleted ex. 425b46eb-eaea-45e0-8769-4926159f9c87.
 
 Return:
 
 * 200 - Success, true.
 * 404 - Action entity was not found.
-* 500 - Server Error.
+* 500 - An error occurred.
 
 ### POST Data/Action/AddRelation
 Create a relation between two entities.
@@ -177,15 +177,15 @@ Return:
 }
 ```
 * 400 - Bad Request parameters were not specified correctly.
-* 500 - Server Error.
+* 500 - An error occurred.
 
 ### GET Data/Action/relation/{name}
 Get relation by name.
 
 Param:
 
-* id - 5ebd4bbe-9c75-46df-a4f4-93c7dea10373  provide the guid id for the desired action entity relation to be retrieved.
-* name - NEEDS provide the relation name.
+* id - provide the guid id for the desired action entity relation to be retrieved ex. e5ebd4bbe-9c75-46df-a4f4-93c7dea10373.
+* name - provide the relation name ex. NEEDS.
 
 Return:
 
@@ -206,7 +206,7 @@ Return:
 }
 ```
 * 404 - Relation was not found.
-* 500 - Server Error.
+* 500 - An error occurred.
 
 ### GET Data/Action/relations/{firstName}/{secondName}
 Currently, Action has single relation use case scenario.
@@ -249,7 +249,7 @@ Return:
 ]
 ```
 * 404 - Plans were not found.
-* 500 - Server Error.
+* 500 - An error occurred.
 
 ### POST Data/Action/plan
 Add new plan.
@@ -314,14 +314,14 @@ Return:
 }
 ```
 * 400 - Bad Request parameters were not specified correctly.
-* 500 - Server Error.
+* 500 - An error occurred.
 
 ### GET Data/Action/plan/{id}
 Get plan by id.
 
 Param:
 
-* id - 97bb19b1-042c-408e-b1d9-2a2ebbe05b66  provide the guid id for the desired action plan to be retrieved.
+* id - provide the guid id for the desired action plan to be retrieved ex. 97bb19b1-042c-408e-b1d9-2a2ebbe05b66.
 
 Return:
 
@@ -355,28 +355,28 @@ Return:
   "relations": []
 }
 ```
-* 404 - Plans was not found.
-* 500 - Server Error.
+* 404 - Plans were not found.
+* 500 - An error occurred.
 
 ### DELETE Data/Action/plan/{id}
 Delete plan by id.
 
 Param:
 
-* id - 97bb19b1-042c-408e-b1d9-2a2ebbe05b66  provide the guid id for the desired action plan to be deleted.
+* id - provide the guid id for the desired action plan to be deleted ex. 97bb19b1-042c-408e-b1d9-2a2ebbe05b66.
 
 Return:
 
 * 200 Success, plan was deleted.
-* 404 Plan was not found
-* 500 Server error
+* 404 Plan was not found.
+* 500 An error occurred.
 
 ### PUT Data/Action/plan/{id}
 Update an existing plan.
 
 Param:
 
-* id - 97bb19b1-042c-408e-b1d9-2a2ebbe05b66  provide the guid id for the desired action plan to be updated.
+* id - provide the guid id for the desired action plan to be updated ex. 97bb19b1-042c-408e-b1d9-2a2ebbe05b66.
 
 ```json
 {
@@ -442,7 +442,7 @@ Return:
 ```
 * 400 Bad Request parameters were not specified correctly.
 * 404 The plan to be uodated was not found.
-* 500 Server error
+* 500 An error occurred.
 
 ### GET Data/Cloud
 Get all the clouds.
@@ -469,7 +469,7 @@ Return:
 ]
 ```
 * 404 - Clouds were not found.
-* 500 - Server Error.
+* 500 - An error occurred.
 
 ### POST Data/Cloud
 Add new cloud.
@@ -497,15 +497,15 @@ Return:
   "relations": []
 }
 ```
-* 400 - Bad Request parameters were not specified correctly.
-* 500 - Server Error.
+* 400 - Bad Request, parameters were not specified correctly.
+* 500 - An error occurred.
 
 ### GET Data/Cloud/{id}
 Get cloud by id.
 
 Param:
 
-* id - e56e1928-03a0-43e9-b999-318198c6d7ca  provide the guid id for the desired cloud entity to be retrieved.
+* id - provide the guid id for the desired cloud entity to be retrieved ex. e56e1928-03a0-43e9-b999-318198c6d7ca.
 
 Return:
 
@@ -527,7 +527,7 @@ Modify an existing cloud entity.
 
 Param:
 
-* id - e56e1928-03a0-43e9-b999-318198c6d7ca  provide the guid id for the desired cloud entity to be modified.
+* id - provide the guid id for the desired cloud entity to be modified ex. e56e1928-03a0-43e9-b999-318198c6d7ca.
 
 ```json
 {
@@ -551,20 +551,20 @@ Return:
 }
 ```
 * 404 - Cloud entity was not found.
-* 500 - Server Error.
+* 500 - An error occurred.
 
 ### DELETE Data/Cloud/{id}
 Delete a cloud entity.
 
 Param:
 
-* id - e56e1928-03a0-43e9-b999-318198c6d7ca  provide the guid id for the desired cloud entity to be deleted.
+* id - provide the guid id for the desired cloud entity to be deleted ex. e56e1928-03a0-43e9-b999-318198c6d7ca.
 
 Return:
 
-* 200 - Success, true.
+* 200 - Success, cloud was deleted.
 * 404 - Cloud entity was not found.
-* 500 - Server Error.
+* 500 - An error occurred.
 
 ### POST Data/Cloud/AddRelation
 Create a relation between two entities.
@@ -605,16 +605,16 @@ Return:
   }
 }
 ```
-* 400 - Bad Request parameters were not specified correctly.
-* 500 - Server Error.
+* 400 - Bad Request, parameters were not specified correctly.
+* 500 - An error occurred.
 
 ### GET Data/Cloud/relation/{name}
 Get relation by name.
 
 Param:
 
-* id - e56e1928-03a0-43e9-b999-318198c6d7ca  provide the guid id for the desired Cloud entity relation to be retrieved.
-* name - WORKING_FOR provide the relation name.
+* id - provide the guid id for the desired Cloud entity relation to be retrieved ex. e56e1928-03a0-43e9-b999-318198c6d7ca.
+* name - provide the relation name ex. WORKING_FOR.
 
 Return:
 
@@ -635,7 +635,7 @@ Return:
 }
 ```
 * 404 - Relation was not found.
-* 500 - Server Error.
+* 500 - An error occurred.
 
 ### GET Data/Cloud/relations/{firstName}/{secondName}
 Currently, Cloud has single relation use case scenario.
@@ -669,7 +669,7 @@ Return:
 ]
 ```
 * 404 - Containers were not found.
-* 500 - Server Error.
+* 500 - An error occurred.
 
 ### POST Data/ContainerImage
 Create a new container entity.
@@ -702,14 +702,14 @@ Return:
 }
 ```
 * 400 - Bad Request parameters were not specified correctly.
-* 500 - Server Error.
+* 500 - An error occurred.
 
 ### GET Data/ContainerImage/{id}
 Get container by id.
 
 Param:
 
-* id - 92e97d88-d7f1-4d17-959f-b7e03083a547  provide the guid id for the desired container entity to be retrieved.
+* id - provide the guid id for the desired container entity to be retrieved ex. 92e97d88-d7f1-4d17-959f-b7e03083a547.
 
 Return:
 
@@ -726,14 +726,14 @@ Return:
 }
 ```
 * 404 - ContainerImage entity was not found.
-* 500 - Server Error.
+* 500 - An error occurred.
 
 ### PATCH Data/ContainerImage/{id}
 Modify an existing container entity.
 
 Param:
 
-* id - 92e97d88-d7f1-4d17-959f-b7e03083a547  provide the guid id for the desired container entity to be modified.
+* id - provide the guid id for the desired container entity to be modified ex. 92e97d88-d7f1-4d17-959f-b7e03083a547.
 
 ```json
 {
@@ -760,20 +760,20 @@ Return:
 }
 ```
 * 404 - ContainerImage entity was not found.
-* 500 - Server Error.
+* 500 - An error occurred.
 
 ### DELETE Data/ContainerImage/{id}
 Delete a container entity.
 
 Param:
 
-* id -  92e97d88-d7f1-4d17-959f-b7e03083a547  provide the guid id for the desired container entity to be deleted.
+* id -  provide the guid id for the desired container entity to be deleted ex. 92e97d88-d7f1-4d17-959f-b7e03083a547.
 
 Return:
 
-* 200 - Success, true.
+* 200 - Success, container was deleted.
 * 404 - ContainerImage entity was not found.
-* 500 - Server Error.
+* 500 - An error occurred.
 
 ### POST Data/ContainerImage/AddRelation
 Currently the ContainerImage does not support relations to initiate from.
@@ -785,11 +785,11 @@ Currently the ContainerImage does not support relations to initiate from.
 Currently the ContainerImage does not support relations to initiate from.
 
 ### GET Data/ContainerImage/instace/{id}
-Get the container associated with the specified instance.
+Get the container images associated with the specified instance.
 
 Param:
 
-* id -  d3f31c7e-8b6c-43d7-9cb5-99838ed27880  provide the guid id for the instance entities associated with the container images.
+* id - provide the guid id for the instance entity associated with the container images ex. d3f31c7e-8b6c-43d7-9cb5-99838ed27880.
 
 Return:
 
