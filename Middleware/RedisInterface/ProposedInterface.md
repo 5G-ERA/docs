@@ -1,13 +1,9 @@
-# Proposed endpoints for RedisInterface API
-Assumption for each of the end points we can get all and get by specific ID.
-Assumption that all policies are general to all robots.
-
-## REDISINTERFACE
+## RedisInterface API
 
 RedisInterface API allows full CRUD operations (GET/POST/PUT/PATCH/DELETE) on all data models that are embebed in the system. 
 
 ### GET Data/Action
-Get all the action objects.
+Get all the actions.
 
 Return:
 
@@ -33,7 +29,7 @@ Return:
   
 ]
 ```
-* 404 - Objects were not found.
+* 404 - Actions were not found.
 * 500 - An error occurred.
 
 ### POST Data/Action
@@ -88,7 +84,7 @@ Return:
     "ActionPriority": "low"
 }
 ```
-* 404 - Object was not found.
+* 404 - Action was not found.
 * 500 - An error occurred.
 
 ### PATCH Data/Action/{id}
@@ -216,7 +212,7 @@ Get all the plans.
 
 Return:
 
-* 200 - Success, plans were found.
+* 200 - Success, list of plans.
 ```json
 [
   {
@@ -313,7 +309,7 @@ Return:
   "relations": []
 }
 ```
-* 400 - Bad Request parameters were not specified correctly.
+* 400 - Bad Request, parameters were not specified correctly.
 * 500 - An error occurred.
 
 ### GET Data/Action/plan/{id}
@@ -325,7 +321,7 @@ Param:
 
 Return:
 
-* 200 - Success, plan scuccessfully retrieved.
+* 200 - Success, the specified plan.
 ```json
 {
   "id": "97bb19b1-042c-408e-b1d9-2a2ebbe05b66",
@@ -355,7 +351,7 @@ Return:
   "relations": []
 }
 ```
-* 404 - Plans were not found.
+* 404 - Plan was not found.
 * 500 - An error occurred.
 
 ### DELETE Data/Action/plan/{id}
@@ -440,8 +436,8 @@ Return:
   "relations": []
 }
 ```
-* 400 Bad Request parameters were not specified correctly.
-* 404 The plan to be uodated was not found.
+* 400 Bad Request, parameters were not specified correctly.
+* 404 The plan was not found.
 * 500 An error occurred.
 
 ### GET Data/Cloud
@@ -449,7 +445,7 @@ Get all the clouds.
 
 Return:
 
-* 200 - Success, list of Clouds from redis storage.
+* 200 - Success, list of Clouds.
 ```json
 [
   {
@@ -520,7 +516,7 @@ Return:
 }
 ```
 * 404 - Cloud was not found.
-* 500 - Server Error.
+* 500 - An error occurred.
 
 ### PATCH Data/Cloud/{id}
 Modify an existing cloud entity.
@@ -550,7 +546,7 @@ Return:
   "relations": []
 }
 ```
-* 404 - Cloud entity was not found.
+* 404 - Cloud was not found.
 * 500 - An error occurred.
 
 ### DELETE Data/Cloud/{id}
@@ -563,7 +559,7 @@ Param:
 Return:
 
 * 200 - Success, cloud was deleted.
-* 404 - Cloud entity was not found.
+* 404 - Cloud was not found.
 * 500 - An error occurred.
 
 ### POST Data/Cloud/AddRelation
@@ -645,7 +641,7 @@ Get all containers.
 
 Return:
 
-* 200 - Success, list of containers from redis storage.
+* 200 - Success, list of containers.
 ```json
 [
   {
@@ -701,7 +697,7 @@ Return:
   "relations": []
 }
 ```
-* 400 - Bad Request parameters were not specified correctly.
+* 400 - Bad Request, parameters were not specified correctly.
 * 500 - An error occurred.
 
 ### GET Data/ContainerImage/{id}
@@ -809,334 +805,1287 @@ Return:
 ```
 * 404 - Container images were not found.
 
+### GET Data/Edge
+Get all the edges.
 
+Return:
 
-
-
+* 200 - Success, list of Edges.
 ```json
+[
+  {
+  "Id": "f686d326-ca3b-4e69-a687-5176232b4668",
+  "Name": "Edge_1",
+  "EdgeStatus": "Running",
+  "EdgeIp": "192.168.1.2",
+  "MacAddress": "9B9656CCEE6C",
+  "CPU": 90,
+  "RAM": 90,
+  "VirtualRam": 90,
+  "DiskStorage": 90,
+  "NumberOfCores": 3
+  },
+  {
+  "Id": "bfcf00e1-1044-44b5-abca-50d28bc6af44",
+  "Name": "Edge_2",
+  "EdgeStatus": "WithoutBattery",
+  "EdgeIp": "192.168.1.3",
+  "MacAddress": "56ECE51DB5ED",
+  "CPU": 90,
+  "RAM": 90,
+  "VirtualRam": 90,
+  "DiskStorage": 80,
+  "NumberOfCores": 2
+  }
+]
 ```
-## ORCHESTRATOR
+* 404 - Edges were not found.
+* 500 - An error occurred.
 
-Full CRUD operations on services statuses. It stores the status of all the services deployed by the OSM.
-Service definition: knf/vnf --> container with an image and some functions.
-Instance definition: network service deployed by the OSM/k8. Knf/Vnf deployed.
-Action definition: step to be conducted to execute a task - actionSequence. - Individual action from action sequence.
-Task: high level goal of robot.
-
-### GET/POST/DELETE/PATCH /instance/{instance info}
-
-ASKING: Orchestrator ANSWERING: RedisAPI
-
-Param:
-
-* GET/DELETE - instance Id
-* POST/PATCH - instance definition
-
-```json
-{
-    "Id": "Service_Number",
-    "ImageName": "Object-detection-service",
-    "ServiceInstanceId": "guid",
-    "ServiceType": "Object detection/SLAM",
-    "IsReusable": true,
-    "DesiredStatus": "created",        
-    "ServiceUrl": "https://...../......",
-    "ServiceStatus": "Active/Down/Instantiating/Idle/Terminating"
-}
-```
-
-### GET/DELETE/POST /instances/action/{}
-
-Param:
-
-* GET/DELETE: ActionId, InstanceId
-* POST/PATCH: ActionId, InstanceId
+### POST Data/Edge
+Add new edge.
 
 Param:
 
 ```json
 {
-    "ActionId" : "guid",
-    "InstanceId": "guid"
+  "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "Name": "string",
+  "EdgeStatus": "string",
+  "EdgeIp": "string",
+  "MacAddress": "string",
+  "CPU": 0,
+  "RAM": 0,
+  "VirtualRam": 0,
+  "DiskStorage": 0,
+  "NumberOfCores": 0
 }
 ```
 
-### GET/POST/DELETE/PATCH /action/{}
-
-Perform the CRUD operation on current statuses of the actions:
-Param:
-
-* GET/DELETE: ActionId, TaskId/ActionPlanId
-* POST/PATCH: ActionId, InstanceId
-
-return:
-
-```json
-{    
-    "Id": 2,
-    "ActionPlanId/TaskId": "guid",
-    "Order": 0,
-    "Placement": "EDGE/CLOUD",
-    "ActionPriority": "1/2/3",
-}
-```
-
-### GET/POST/DELETE/PATCH /image/{}
-
-Perform get or update operations to an image:
-Param:
-
-* GET/DELETE: ImageId
-* POST/PATCH: ImageId, ImageInstance
-
-return:
-
-```json
-{    
-    "Id": "ImageId",
-    "RepositoryName": "RepositoryName",
-    "Tag": "Tag"
-}
-```
-
-## TASK PLANNER
-
-### GET /POLICY/Current
-
-Asking: RESOURCE PLANNER ANSWER: SEMANTIC DB REDIS. Function to get the running policies 
-
 Return:
 
+* 200 Success, newly created edge entity
 ```json
-[
-  {
-    "Id": 10,
-    "PolicyName": "PolicyName",
-    "PolicyDescription": "lorem ipsum"    
-  }
-]
-```
-
-Status: 200 (OK), 404(Not Found)
-
-### GET /POLICY/All
-
-Asking: RESOURCE PLANNER ANSWER: SEMANTIC DB REDIS. Function to get the running policies.
-
-Return:
-
-```json
-[
-  {
-    "Id": 10,
-    "PolicyName": "PolicyName",
-    "PolicyDescription": "lorem ipsum",
-    "IsActive": "true/false",
-    "Timestamp": "dd/MM/yyyy"
-  }
-]
-```
-
-Status: 200 (OK), 404(Not Found)
-
-### GET /ROBOTS/ {all}
-
-Get all the information about all robots in the middleware.
-
-Asking: DASHBOARD ANSWER: REDIS API.
-
-Return:
-
-```json
-[
-  {
-    "Id": 10,
-    "RobotStatus": "Running/withOutBattery",
-    "CurrentTaskID": "Task_Number",
-    "TaskList": ["Task_Number"],
-    "BatteryStatus": 90,
-    "LocomotionSystem": "Ackerman/differential_Drive",
-    "Sensors": ["lidar", "camera", "IMU"],
-    "CPU": 90,
-    "RAM": 90,
-    "VirtualRam": 90,
-    "StorageDisk": 90,
-    "NumberCores": 3,
-    "Questions": [
-        {"map": "present, none"},
-        {"Question":"Answer"}
-    ]
-    
-  }
-]
-```
-
-Status: 200 (OK), 404(Not Found)
-
-### GET /EDGES/ {all}
-
-Get all the information about all edges in the middleware.
-
-Asking: DASHBOARD ANSWER: REDIS API.
-
-Return:
-
-```json
-[
-  {
-    "Id": 10,
-    "EdgeStatus": "Running/withOutBattery",
-    "EdgeIp": "192.168.1.2",
-    "CPU": 90,
-    "RAM": 90,
-    "VirtualRam": 90,
-    "StorageDisk": 90,
-    "NumberCores": 3
-  }
-]
-```
-
-Status: 200 (OK), 404(Not Found)
-
-### GET /CLOUD/ {all}
-
-Get all the information about all clouds in the middleware.
-
-Asking: DASHBOARD ANSWER: REDIS API.
-
-Return:
-
-```json
-[
-  {
-    "Id": 10,
-    "CloudStatus": "Running",
-    "CloudIp": "192.168.1.2"
-  }
-]
-```
-
-Status: 200 (OK), 404(Not Found)
-
-### GET /TASK/ {all}
-
-Get all the information about all tasks.
-
-Asking: DASHBOARD ANSWER: REDIS API.
-
-Return:
-
-```json
-[
-  {
-      "Id": "TASK_NUMBER",
-      "TaskName": "TaskName",
-      "TaskDescription": "Lorem Ipsum",
-      
-  }
-]
-```
-
-Status: 200 (OK), 404(Not Found)
-
-### GET /task/robot/{}
-
-Return all the tasks executed by all robots.
-
-Return:
-
-```json
-
 {
-    "TaskId" : "TaskId",
-    "RobotID": "RobotID"
+  "Id": "f686d326-ca3b-4e69-a687-5176232b4668",
+  "Name": "Edge_1",
+  "EdgeStatus": "Running",
+  "EdgeIp": "192.168.1.2",
+  "MacAddress": "9B9656CCEE6C",
+  "CPU": 90,
+  "RAM": 90,
+  "VirtualRam": 90,
+  "DiskStorage": 90,
+  "NumberOfCores": 3
+}
+```
+* 400 - Bad Request, parameters were not specified correctly.
+* 500 - An error occurred.
+
+### GET Data/Edge/{id}
+Get Edge by id.
+
+Param:
+
+* id - provide the guid id for the desired Edge entity to be retrieved ex. f686d326-ca3b-4e69-a687-5176232b4668.
+
+Return:
+
+* 200 - Success, the specified entity.
+```json
+{
+  "Id": "f686d326-ca3b-4e69-a687-5176232b4668",
+  "Name": "Edge_1",
+  "EdgeStatus": "Running",
+  "EdgeIp": "192.168.1.2",
+  "MacAddress": "9B9656CCEE6C",
+  "CPU": 90,
+  "RAM": 90,
+  "VirtualRam": 90,
+  "DiskStorage": 90,
+  "NumberOfCores": 3
+}
+```
+* 404 - Edge was not found.
+* 500 - An error occurred.
+
+### PATCH Data/Edge/{id}
+Modify an existing edge entity.
+
+Param:
+
+* id - provide the guid id for the desired edge entity to be modified ex. f686d326-ca3b-4e69-a687-5176232b4668.
+
+```json
+{
+  "Name": "Edge_1",
+  "EdgeStatus": "Running",
+  "EdgeIp": "192.168.1.2",
+  "MacAddress": "9B9656CCEE6C",
+  "CPU": 90,
+  "RAM": 90,
+  "VirtualRam": 90,
+  "DiskStorage": 100,
+  "NumberOfCores": 5
 }
 ```
 
-### GET /GRAPH_TOPOLOGY/{all}
+Return:
 
-**TODO**: Discuss in more datail the communication
-Function to get a GRAPH.
+* 200 - Success, the specified entity was modified.
+```json
+{
+  "Id": "f686d326-ca3b-4e69-a687-5176232b4668",
+  "Name": "Edge_1",
+  "EdgeStatus": "Running",
+  "EdgeIp": "192.168.1.2",
+  "MacAddress": "9B9656CCEE6C",
+  "CPU": 90,
+  "RAM": 90,
+  "VirtualRam": 90,
+  "DiskStorage": 100,
+  "NumberOfCores": 5
+}
+```
+* 404 - Edge was not found.
+* 500 - An error occurred.
 
-RESOURCE PLANNER ANSWER: REDIS GRAPH
-Param: id - Id of the NS
+### DELETE Data/Edge/{id}
+Delete an Edge entity.
+
+Param:
+
+* id - provide the guid id for the desired edge entity to be deleted ex. f686d326-ca3b-4e69-a687-5176232b4668.
+
+Return:
+
+* 200 - Success, edge was deleted.
+* 404 - Edge was not found.
+* 500 - An error occurred.
+
+### POST Data/Edge/AddRelation
+Create a relation between two entities.
+
+Param:
 
 ```json
-[
-  {
-    "REDIS_GRAPH_QUERY": "GRAPH",
+{
+  "initiatesFrom": {
+    "id": "f686d326-ca3b-4e69-a687-5176232b4668",
+    "type": "Edge",
+    "name": "Edge_1"
+  },
+  "relationName": "WORKING_FOR",
+  "pointsTo": {
+    "id": "5d82d55d-03ab-4ee1-ba4e-529c4949cbdc",
+    "type": "Action",
+    "name": "move-base"
   }
+}
+```
+
+Return:
+
+* 200 - Success, relation was created.
+```json
+{
+  "initiatesFrom": {
+    "id": "f686d326-ca3b-4e69-a687-5176232b4668",
+    "type": "Edge",
+    "name": "Edge_1"
+  },
+  "relationName": "WORKING_FOR",
+  "pointsTo": {
+    "id": "5d82d55d-03ab-4ee1-ba4e-529c4949cbdc",
+    "type": "Action",
+    "name": "move-base"
+  }
+}
+```
+* 400 - Bad Request, parameters were not specified correctly.
+* 500 - An error occurred.
+
+### GET Data/Edge/relation/{name}
+Get relation by name.
+
+Param:
+
+* id - provide the guid id for the desired Edge entity relation to be retrieved ex. f686d326-ca3b-4e69-a687-5176232b4668.
+* name - provide the relation name ex. WORKING_FOR.
+
+Return:
+
+* 200 - Success, relation was found.
+```json
+{
+  "initiatesFrom": {
+    "id": "f686d326-ca3b-4e69-a687-5176232b4668",
+    "type": "Edge",
+    "name": "Edge_1"
+  },
+  "relationName": "WORKING_FOR",
+  "pointsTo": {
+    "id": "5d82d55d-03ab-4ee1-ba4e-529c4949cbdc",
+    "type": "Action",
+    "name": "move-base"
+  }
+}
+```
+* 404 - Relation was not found.
+* 500 - An error occurred.
+
+### GET Data/Edge/relations/{firstName}/{secondName}
+Currently, Edge has single relation use case scenario.
+
+### GET Data/Health
+Check for the functionality of the RedisInterface API.
+
+Return:
+
+* 200 Success, RedisInterface API is functional.
+
+### GET Data/Instance
+Get all the instances.
+
+Return:
+
+* 200 - Success, list of Instances.
+```json
+[
+ {
+  "id": "7865bd0f-62c6-421d-a82d-1d9a16223b64",
+  "name": "my-test-instance-8",
+  "imageName": "my-image-name-8",
+  "serviceInstanceId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "serviceType": "web-api",
+  "isReusable": true,
+  "desiredStatus": "up",
+  "serviceUrl": "http://my-test-url-8.rdu",
+  "serviceStatus": "up",
+  "containerImage": null,
+  "relations": []
+ },
+ {
+  "id": "d3f31c7e-8b6c-43d7-9cb5-99838ed27880",
+  "name": "my-test-instance-9",
+  "imageName": "my-image-name-9",
+  "serviceInstanceId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "serviceType": "web-api",
+  "isReusable": true,
+  "desiredStatus": "up",
+  "serviceUrl": "http://my-test-url-9.rdu",
+  "serviceStatus": "up",
+  "containerImage": null,
+  "relations": []
+}
 ]
+```
+* 404 - Instances were not found.
+* 500 - An error occurred.
+
+### POST Data/Instance
+Add new instance.
+
+Param:
+
+```json
+{
+  "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "Name": "string",
+  "ImageName": "string",
+  "ServiceInstanceId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "ServiceType": "string",
+  "IsReusable": true,
+  "DesiredStatus": "string",
+  "ServiceUrl": "string",
+  "ServiceStatus": "string"
+}
+```
+
+Return:
+
+* 200 Success, newly created instance entity
+```json
+{
+  "id": "7865bd0f-62c6-421d-a82d-1d9a16223b64",
+  "name": "my-test-instance-8",
+  "imageName": "my-image-name-8",
+  "serviceInstanceId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "serviceType": "web-api",
+  "isReusable": true,
+  "desiredStatus": "up",
+  "serviceUrl": "http://my-test-url-8.rdu",
+  "serviceStatus": "up",
+  "containerImage": null,
+  "relations": []
+}
+```
+* 400 - Bad Request, parameters were not specified correctly.
+* 500 - An error occurred.
+
+### GET Data/Instance/{id}
+Get Instance by id.
+
+Param:
+
+* id - provide the guid id for the desired Instance entity to be retrieved ex. 7865bd0f-62c6-421d-a82d-1d9a16223b64.
+
+Return:
+
+* 200 - Success, the specified entity.
+```json
+{
+  "id": "7865bd0f-62c6-421d-a82d-1d9a16223b64",
+  "name": "my-test-instance-8",
+  "imageName": "my-image-name-8",
+  "serviceInstanceId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "serviceType": "web-api",
+  "isReusable": true,
+  "desiredStatus": "up",
+  "serviceUrl": "http://my-test-url-8.rdu",
+  "serviceStatus": "up",
+  "containerImage": null,
+  "relations": []
+}
+```
+* 404 - Instance was not found.
+* 500 - An error occurred.
+
+### PATCH Data/Instance/{id}
+Modify an existing Instance entity.
+
+Param:
+
+* id - provide the guid id for the desired instance entity to be modified ex. 7865bd0f-62c6-421d-a82d-1d9a16223b64.
+
+```json
+{
+  "name": "my-test-instance-8",
+  "imageName": "my-image-name-8",
+  "serviceInstanceId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "serviceType": "web-api",
+  "isReusable": true,
+  "desiredStatus": "up",
+  "serviceUrl": "http://my-test-url-8.rdu",
+  "serviceStatus": "down",
+  "containerImage": null,
+  "relations": []
+}
+```
+
+Return:
+
+* 200 - Success, the specified entity was modified.
+```json
+{
+  "id": "7865bd0f-62c6-421d-a82d-1d9a16223b64",
+  "name": "my-test-instance-8",
+  "imageName": "my-image-name-8",
+  "serviceInstanceId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "serviceType": "web-api",
+  "isReusable": true,
+  "desiredStatus": "up",
+  "serviceUrl": "http://my-test-url-8.rdu",
+  "serviceStatus": "down",
+  "containerImage": null,
+  "relations": []
+}
+```
+* 404 - Instance was not found.
+* 500 - An error occurred.
+
+### DELETE Data/Instance/{id}
+Delete an Instance entity.
+
+Param:
+
+* id - provide the guid id for the desired instance entity to be deleted ex. 7865bd0f-62c6-421d-a82d-1d9a16223b64.
+
+Return:
+
+* 200 - Success, instance was deleted.
+* 404 - Instance was not found.
+* 500 - An error occurred.
+
+### POST Data/Instance/AddRelation
+Create a relation between two entities.
+
+Param:
+
+```json
+{
+  "initiatesFrom": {
+    "id": "7865bd0f-62c6-421d-a82d-1d9a16223b64",
+    "type": "Instance",
+    "name": "my-test-instance-8"
+  },
+  "relationName": "NEEDS",
+  "pointsTo": {
+    "id": "1ae73495-01f3-4273-8fd7-003c941a8491",
+    "type": "Container",
+    "name": "my-image-8"
+  }
+}
+```
+
+Return:
+
+* 200 - Success, relation was created.
+```json
+{
+  "initiatesFrom": {
+    "id": "7865bd0f-62c6-421d-a82d-1d9a16223b64",
+    "type": "Instance",
+    "name": "my-test-instance-8"
+  },
+  "relationName": "NEEDS",
+  "pointsTo": {
+    "id": "1ae73495-01f3-4273-8fd7-003c941a8491",
+    "type": "Container",
+    "name": "my-image-8"
+  }
+}
+```
+* 400 - Bad Request, parameters were not specified correctly.
+* 500 - An error occurred.
+
+### GET Data/Instance/relation/{name}
+Get relation by name.
+
+Param:
+
+* id - provide the guid id for the desired Instance entity relation to be retrieved ex. 7865bd0f-62c6-421d-a82d-1d9a16223b64.
+* name - provide the relation name ex. NEEDS.
+
+Return:
+
+* 200 - Success, relation was found.
+```json
+{
+    "initiatesFrom": {
+      "id": "7865bd0f-62c6-421d-a82d-1d9a16223b64",
+      "type": "INSTANCE",
+      "name": "my-test-instance-8"
+    },
+    "relationName": "NEEDS",
+    "pointsTo": {
+      "id": "1ae73495-01f3-4273-8fd7-003c941a8491",
+      "type": "CONTAINER",
+      "name": "my-image-8"
+    }
+}
+```
+* 404 - Relation was not found.
+* 500 - An error occurred.
+
+### GET Data/Instance/relations/{firstName}/{secondName}
+Currently, Instance has single relation use case scenario.
+
+### GET Data/Policy/{id}
+Get policy by id.
+
+Param:
+
+* id - provide the guid id for the desired Policy entity to be retrieved ex. a0c4b9e2-00e0-4aaa-97de-c06c9f6a1204.
+
+Return:
+
+* 200 Success, the specified policy entity.
+```json
+{
+    "id": "a0c4b9e2-00e0-4aaa-97de-c06c9f6a1204",
+    "name": "QoS",
+    "timestamp": "2022-03-09T10:09:43.5122616+00:00",
+    "isActive": true,
+    "description": "Look for Quality of Service, Quality of Experience, and Historical data available",
+    "relations": []
+}
+```
+* 404 - Policy was not found.
+* 500 - An error occurred.
+
+### PATCH Data/Policy/{id}
+Modifiy an existing policy entity.
+
+Param:
+
+id - provide the guid id for the desired policy entity to be modified ex. a0c4b9e2-00e0-4aaa-97de-c06c9f6a1204.
+
+```json
+{
+  "name": "QoS",
+  "timestamp": "2022-03-09T10:09:43.5122616+00:00",
+  "isActive": true,
+  "description": "Look for Quality of Service, Quality of Experience, and Historical data available",
+}
 ```
 
 Return:
 
 ```json
+{
+    "id": "a0c4b9e2-00e0-4aaa-97de-c06c9f6a1204",
+    "name": "QoS",
+    "timestamp": "2022-03-09T10:09:43.5122616+00:00",
+    "isActive": false,
+    "description": "Look for Quality of Service, Quality of Experience, and Historical data available",
+    "relations": []
+}
+```
+* 404 - Policy was not found.
+* 500 - An error occurred.
+
+### GET Data/Policy
+Get all the policies.
+
+Return:
+
+* 200 - Success, list of Policies.
+```json
 [
   {
-    "UPDATED_GRAPH": "GRAPH",
+    "id": "a0c4b9e2-00e0-4aaa-97de-c06c9f6a1204",
+    "name": "QoS",
+    "timestamp": "2022-03-09T10:09:43.5122616+00:00",
+    "isActive": true,
+    "description": "Look for Quality of Service, Quality of Experience, and Historical data available",
+    "relations": []
+  },
+  {
+    "id": "7e982d41-1d67-4761-a902-5cafaabbc8de",
+    "name": "QoS",
+    "timestamp": "2022-03-11T12:09:43.5122616+00:00",
+    "isActive": true,
+    "description": "Try to use closest physical machine in the topolgy",
+    "relations": []
   }
 ]
 ```
+* 404 - Policies were not found.
+* 500 - An error occurred.
 
-Status: 200 (OK), 404(Not Found)
+### GET Data/Policy/current
+Get the currently active policies.
 
-## RESOURCE PLANNER
+Return:
 
-### GET/POST/DELETE/PATCH /QoE/{}
+* 200 - Success, list of active Policies.
+```json
+[
+  {
+    "id": "a0c4b9e2-00e0-4aaa-97de-c06c9f6a1204",
+    "policyName": "QoS",
+    "policyDescription": "Look for Quality of Service, Quality of Experience, and Historical data available"
+  },
+  {
+    "id": "7e982d41-1d67-4761-a902-5cafaabbc8de",
+    "policyName": "QoS",
+    "policyDescription": "Try to use closest physical machine in the topolgy"
+  }
+]
+```
+* 404 - Active policies were not found.
+* 500 - An error occurred.
 
-Get/ add QoE metrics to a tasks performed by robot.
+### GET Data/Robot
+Get all the robots.
+
+Return:
+
+* 200 - Success, list of Robots.
+```json
+[
+  {
+      "Id": "1f095f82-3e19-4952-b000-886a94d3b416",
+      "Name": "Robot_1",
+      "Manufacturer": "RobotNik",
+      "RobotModel": "Summit-xl",
+      "RobotStatus": "Running",
+      "TaskList": [
+          "Task_2"
+      ],
+      "BatteryStatus": 90,
+      "MacAddress": "00:00:5e:00:53:af",
+      "LocomotionSystem": "differential_Drive",
+      "Sensors": [
+          "lidar",
+          "camera",
+          "IMU"
+      ],
+      "CPU": 90,
+      "RAM": 90,
+      "VirtualRam": 90,
+      "StorageDisk": 90,
+      "NumberCores": 3,
+      "TimeStamped": "2022-03-11T12:09:43.5122616+00:00",
+      "Questions": [
+          {
+              "Id": "452d7766-aeed-488c-9fc3-06f378bbfb30",
+              "Question": "Do you want slicing?",
+              "IsSingleAnswer": true,
+              "Answer": [
+                  {
+                      "key": true
+                  }
+              ],
+              "Timestamp": "2022-03-11T12:09:43.5122616+00:00"
+          },
+          {
+              "Id": "46e3662a-f94c-4770-8a5a-ef3ba4e49122",
+              "Question": "What types of maps do you have?",
+              "IsSingleAnswer": false,
+              "Answer": [
+                  {
+                      "2ac61d8b-896d-4428-867b-d3483bcb5c88": "2d_Geometry"
+                  },
+                  {
+                      "4dd2464f-0215-4bd5-9f2f-07c32f1f5eaa": "2d_Semantic"
+                  }
+              ],
+              "Timestamp": "2022-03-10T12:09:43.5122616+00:00"
+          }  
+      ]
+  }
+]
+```
+* 404 - Robots were not found.
+* 500 - An error occurred.
+
+### POST Data/Robot
+Add new robot.
+
 Param:
 
-* GET/DELETE: TaskId
-* POST/PATCH: TaskId, QoE
-
-return:
-
 ```json
-{    
-    "Id": "TaskId",
-    "QoE": 10,
-    "QoEDescription": "Lorem Ipsum"
+{
+  "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "Name": "string",
+  "Manufacturer": "string",
+  "RobotModel": "string",
+  "RobotStatus": "string",
+  "CurrentTaskID": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "TaskList": [
+    "string"
+  ],
+  "BatteryStatus": 0,
+  "MacAddress": "string",
+  "LocomotionSystem": "string",
+  "Sensors": [
+    "string"
+  ],
+  "CPU": 0,
+  "RAM": 0,
+  "VirtualRam": 0,
+  "StorageDisk": 0,
+  "NumberCores": 0,
+  "Questions": [
+    {
+      "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "Question": "string",
+      "IsSingleAnswer": true,
+      "Answer": [
+        {
+          "key": "string",
+          "value": "string"
+        }
+      ]
+    }
+  ]
 }
 ```
 
-### GET/POST/DELETE/PATCH /QoS/{}
+Return:
 
-Get/ add QoS metrics to a tasks performed by robot.
+* 200 Success, newly created robot entity
+```json
+{
+      "Id": "1f095f82-3e19-4952-b000-886a94d3b416",
+      "Name": "Robot_1",
+      "Manufacturer": "RobotNik",
+      "RobotModel": "Summit-xl",
+      "RobotStatus": "Running",
+      "TaskList": [
+          "Task_2"
+      ],
+      "BatteryStatus": 90,
+      "MacAddress": "00:00:5e:00:53:af",
+      "LocomotionSystem": "differential_Drive",
+      "Sensors": [
+          "lidar",
+          "camera",
+          "IMU"
+      ],
+      "CPU": 90,
+      "RAM": 90,
+      "VirtualRam": 90,
+      "StorageDisk": 90,
+      "NumberCores": 3,
+      "TimeStamped": "2022-03-11T12:09:43.5122616+00:00",
+      "Questions": [
+          {
+              "Id": "452d7766-aeed-488c-9fc3-06f378bbfb30",
+              "Question": "Do you want slicing?",
+              "IsSingleAnswer": true,
+              "Answer": [
+                  {
+                      "key": true
+                  }
+              ],
+              "Timestamp": "2022-03-11T12:09:43.5122616+00:00"
+          },
+          {
+              "Id": "46e3662a-f94c-4770-8a5a-ef3ba4e49122",
+              "Question": "What types of maps do you have?",
+              "IsSingleAnswer": false,
+              "Answer": [
+                  {
+                      "2ac61d8b-896d-4428-867b-d3483bcb5c88": "2d_Geometry"
+                  },
+                  {
+                      "4dd2464f-0215-4bd5-9f2f-07c32f1f5eaa": "2d_Semantic"
+                  }
+              ],
+              "Timestamp": "2022-03-10T12:09:43.5122616+00:00"
+          }  
+      ]
+  }
+```
+* 400 - Bad Request, parameters were not specified correctly.
+* 500 - An error occurred.
+
+### GET Data/Robot/{id}
+Get robot by id.
+
 Param:
 
-* GET/DELETE: ActionId, TaskId/ActionPlanId
-* POST/PATCH: ActionId, InstanceId
+* id - provide the guid id for the desired robot entity to be retrieved ex. 1f095f82-3e19-4952-b000-886a94d3b416.
 
-return:
+Return:
+
+* 200 - Success, the specified entity.
+```json
+{
+      "Id": "1f095f82-3e19-4952-b000-886a94d3b416",
+      "Name": "Robot_1",
+      "Manufacturer": "RobotNik",
+      "RobotModel": "Summit-xl",
+      "RobotStatus": "Running",
+      "TaskList": [
+          "Task_2"
+      ],
+      "BatteryStatus": 90,
+      "MacAddress": "00:00:5e:00:53:af",
+      "LocomotionSystem": "differential_Drive",
+      "Sensors": [
+          "lidar",
+          "camera",
+          "IMU"
+      ],
+      "CPU": 90,
+      "RAM": 90,
+      "VirtualRam": 90,
+      "StorageDisk": 90,
+      "NumberCores": 3,
+      "TimeStamped": "2022-03-11T12:09:43.5122616+00:00",
+      "Questions": [
+          {
+              "Id": "452d7766-aeed-488c-9fc3-06f378bbfb30",
+              "Question": "Do you want slicing?",
+              "IsSingleAnswer": true,
+              "Answer": [
+                  {
+                      "key": true
+                  }
+              ],
+              "Timestamp": "2022-03-11T12:09:43.5122616+00:00"
+          },
+          {
+              "Id": "46e3662a-f94c-4770-8a5a-ef3ba4e49122",
+              "Question": "What types of maps do you have?",
+              "IsSingleAnswer": false,
+              "Answer": [
+                  {
+                      "2ac61d8b-896d-4428-867b-d3483bcb5c88": "2d_Geometry"
+                  },
+                  {
+                      "4dd2464f-0215-4bd5-9f2f-07c32f1f5eaa": "2d_Semantic"
+                  }
+              ],
+              "Timestamp": "2022-03-10T12:09:43.5122616+00:00"
+          }  
+      ]
+  }
+```
+* 404 - Robot was not found.
+* 500 - An error occurred.
+
+### PATCH Data/Robot/{id}
+Modify an existing robot entity.
+
+Param:
+
+* id - provide the guid id for the desired robot entity to be modified ex. 1f095f82-3e19-4952-b000-886a94d3b416.
 
 ```json
-{    
-    "Id": "ActionID",
-    "QoS": 10,
-    "QoSDescription": "Lorem Ipsum"
+{
+      "Name": "Robot_1",
+      "Manufacturer": "RobotNik",
+      "RobotModel": "Summit-xl",
+      "RobotStatus": "Running",
+      "TaskList": [
+          "Task_2"
+      ],
+      "BatteryStatus": 90,
+      "MacAddress": "00:00:5e:00:53:af",
+      "LocomotionSystem": "differential_Drive",
+      "Sensors": [
+          "lidar",
+          "camera",
+          "IMU"
+      ],
+      "CPU": 90,
+      "RAM": 90,
+      "VirtualRam": 90,
+      "StorageDisk": 90,
+      "NumberCores": 3,
+      "TimeStamped": "2022-03-11T12:09:43.5122616+00:00",
+      "Questions": [
+          {
+              "Id": "452d7766-aeed-488c-9fc3-06f378bbfb30",
+              "Question": "Do you want slicing?",
+              "IsSingleAnswer": true,
+              "Answer": [
+                  {
+                      "key": true
+                  }
+              ],
+              "Timestamp": "2022-03-11T12:09:43.5122616+00:00"
+          },
+          {
+              "Id": "46e3662a-f94c-4770-8a5a-ef3ba4e49122",
+              "Question": "What types of maps do you have?",
+              "IsSingleAnswer": false,
+              "Answer": [
+                  {
+                      "2ac61d8b-896d-4428-867b-d3483bcb5c88": "2d_Geometry"
+                  },
+                  {
+                      "4dd2464f-0215-4bd5-9f2f-07c32f1f5eaa": "2d_Semantic"
+                  }
+              ],
+              "Timestamp": "2022-03-10T12:09:43.5122616+00:00"
+          }  
+      ]
+  }
+```
+
+Return:
+
+* 200 - Success, the specified entity was modified.
+```json
+{
+      "Id": "1f095f82-3e19-4952-b000-886a94d3b416",
+      "Name": "Robot_1",
+      "Manufacturer": "RobotNik",
+      "RobotModel": "Summit-xl",
+      "RobotStatus": "Running",
+      "TaskList": [
+          "Task_2"
+      ],
+      "BatteryStatus": 90,
+      "MacAddress": "00:00:5e:00:53:af",
+      "LocomotionSystem": "differential_Drive",
+      "Sensors": [
+          "lidar",
+          "camera",
+          "IMU"
+      ],
+      "CPU": 90,
+      "RAM": 90,
+      "VirtualRam": 90,
+      "StorageDisk": 90,
+      "NumberCores": 3,
+      "TimeStamped": "2022-03-11T12:09:43.5122616+00:00",
+      "Questions": [
+          {
+              "Id": "452d7766-aeed-488c-9fc3-06f378bbfb30",
+              "Question": "Do you want slicing?",
+              "IsSingleAnswer": true,
+              "Answer": [
+                  {
+                      "key": true
+                  }
+              ],
+              "Timestamp": "2022-03-11T12:09:43.5122616+00:00"
+          },
+          {
+              "Id": "46e3662a-f94c-4770-8a5a-ef3ba4e49122",
+              "Question": "What types of maps do you have?",
+              "IsSingleAnswer": false,
+              "Answer": [
+                  {
+                      "2ac61d8b-896d-4428-867b-d3483bcb5c88": "2d_Geometry"
+                  },
+                  {
+                      "4dd2464f-0215-4bd5-9f2f-07c32f1f5eaa": "2d_Semantic"
+                  }
+              ],
+              "Timestamp": "2022-03-10T12:09:43.5122616+00:00"
+          }  
+      ]
+  }
+```
+* 404 - Robot was not found.
+* 500 - An error occurred.
+
+### DELETE Data/Robot/{id}
+Delete an Robot entity.
+
+Param:
+
+* id - provide the guid id for the desired robot entity to be deleted ex. 1f095f82-3e19-4952-b000-886a94d3b416.
+
+Return:
+
+* 200 - Success, robot was deleted.
+* 404 - Robot was not found.
+* 500 - An error occurred.
+
+### POST Data/Robot/AddRelation
+Create a relation between two entities.
+
+Param:
+
+```json
+{
+  "initiatesFrom": {
+    "id": "73b43f02-0a95-41f8-a1b6-b4c90d5acccf",
+    "type": "Robot",
+    "name": "Robot_1"
+  },
+  "relationName": "OWNS",
+  "pointsTo": {
+    "id": "4225e56e-4b68-4372-9d34-66bba1a633b3",
+    "type": "Task",
+    "name": "Task_1"
+  }
 }
 ```
 
-## AUTHENTICATION
+Return:
 
-Get or update the credentials of the robot.
+* 200 - Success, relation was created.
+```json
+{
+  "initiatesFrom": {
+    "id": "73b43f02-0a95-41f8-a1b6-b4c90d5acccf",
+    "type": "Robot",
+    "name": "Robot_1"
+  },
+  "relationName": "OWNS",
+  "pointsTo": {
+    "id": "4225e56e-4b68-4372-9d34-66bba1a633b3",
+    "type": "Task",
+    "name": "Task_1"
+  }
+}
+```
+* 400 - Bad Request, parameters were not specified correctly.
+* 500 - An error occurred.
+
+### GET Data/Robot/relation/{name}
+Get relation by name.
+
 Param:
 
-* GET/DELETE: UserID, UserName
-* POST/PATCH: UserID, Password, UserName
+* id - provide the guid id for the desired robot entity relation to be retrieved ex. 73b43f02-0a95-41f8-a1b6-b4c90d5acccf.
+* name - provide the relation name ex. OWNS.
 
-return:
+Return:
+
+* 200 - Success, relation was found.
+```json
+{
+  "initiatesFrom": {
+    "id": "73b43f02-0a95-41f8-a1b6-b4c90d5acccf",
+    "type": "Robot",
+    "name": "Robot_1"
+  },
+  "relationName": "OWNS",
+  "pointsTo": {
+    "id": "4225e56e-4b68-4372-9d34-66bba1a633b3",
+    "type": "Task",
+    "name": "Task_1"
+  }
+}
+```
+* 404 - Relation was not found.
+* 500 - An error occurred.
+
+### GET Data/Robot/relations/{firstName}/{secondName}
+Get multiple relations by names.
+
+Param:
+
+* id - provide the guid id for the desired robot entity relation to be retrieved ex. 73b43f02-0a95-41f8-a1b6-b4c90d5acccf.
+* firstName - provide the relation name ex. OWNS.
+* secondName - provide the relation name ex. CAN_REACH.
+
+Return:
+
+* 200 - Success, relations were found.
+```json
+[
+  {
+    "initiatesFrom": {
+      "id": "73b43f02-0a95-41f8-a1b6-b4c90d5acccf",
+      "type": "Robot",
+      "name": "Robot_1"
+    },
+    "relationName": "OWNS",
+    "pointsTo": {
+      "id": "4225e56e-4b68-4372-9d34-66bba1a633b3",
+      "type": "Task",
+      "name": "Task_1"
+    }
+  },
+  {
+    "initiatesFrom": {
+      "id": "73b43f02-0a95-41f8-a1b6-b4c90d5acccf",
+      "type": "Robot",
+      "name": "Robot_1"
+    },
+    "relationName": "CAN_REACH",
+    "pointsTo": {
+      "id": "bfcf00e1-1044-44b5-abca-50d28bc6af44",
+      "type": "Edge",
+      "name": "Edge_1"
+    }
+  },
+  {
+    "initiatesFrom": {
+      "id": "73b43f02-0a95-41f8-a1b6-b4c90d5acccf",
+      "type": "Robot",
+      "name": "Robot_1"
+    },
+    "relationName": "CAN_REACH",
+    "pointsTo": {
+      "id": "186e9c60-4682-4ec0-85b4-9284f39a381d",
+      "type": "Cloud",
+      "name": "Cloud_1"
+    }
+  }
+]
+```
+* 404 - Relations were not found.
+* 500 - An error occurred.
+
+### GET Data/Task
+Get all the tasks.
+
+Return:
+
+* 200 - Success, list of Tasks.
+```json
+[
+  {
+    "id": "0a37089e-8dae-4574-895b-af837dc2e96f",
+    "name": "task-test",
+    "taskPriority": 5,
+    "actionPlanId": "138970b3-c05e-40d4-8729-7dc7fca871c7",
+    "actionSequence": null,
+    "relations": []
+  },
+  {
+    "id": "c712ea4a-a83f-49b6-a6ce-36682d6418e5",
+    "name": "task-test",
+    "taskPriority": 13,
+    "actionPlanId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "actionSequence": null,
+    "relations": []
+  },
+]
+```
+* 404 - Tasks were not found.
+* 500 - An error occurred.
+
+### POST Data/Task
+Add new task.
+
+Param:
 
 ```json
-{    
-    "UserName": "UserName",
-    "Id": "UserID",
-    "Password": "Password"
+{
+  "Id": "5fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "Name": "string",
+  "TaskPriority": 0,
+  "ActionPlanId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
 }
 ```
 
-## AUTHORIZATION
+Return:
 
-TODO
+* 200 Success, newly created task entity
+```json
+{
+  "id": "c712ea4a-a83f-49b6-a6ce-36682d6418e5",
+  "name": "task-test",
+  "taskPriority": 13,
+  "actionPlanId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "actionSequence": null,
+  "relations": []
+}
+```
+* 400 - Bad Request, parameters were not specified correctly.
+* 500 - An error occurred.
+
+### GET Data/Task/{id}
+Get Task by id.
+
+Param:
+
+* id - provide the guid id for the desired Task entity to be retrieved ex. c712ea4a-a83f-49b6-a6ce-36682d6418e5.
+
+Return:
+
+* 200 - Success, the specified entity.
+```json
+{
+  "id": "c712ea4a-a83f-49b6-a6ce-36682d6418e5",
+  "name": "task-test",
+  "taskPriority": 13,
+  "actionPlanId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "actionSequence": null,
+  "relations": []
+}
+```
+* 404 - Task was not found.
+* 500 - An error occurred.
+
+### PATCH Data/Task/{id}
+Modify an existing Task entity.
+
+Param:
+
+* id - provide the guid id for the desired task entity to be modified ex. c712ea4a-a83f-49b6-a6ce-36682d6418e5.
+
+```json
+{
+  "name": "task-test",
+  "taskPriority": 11,
+  "actionPlanId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "actionSequence": null,
+  "relations": []
+}
+```
+
+Return:
+
+* 200 - Success, the specified entity was modified.
+```json
+{
+  "id": "c712ea4a-a83f-49b6-a6ce-36682d6418e5",
+  "name": "task-test",
+  "taskPriority": 11,
+  "actionPlanId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "actionSequence": null,
+  "relations": []
+}
+```
+* 404 - Task was not found.
+* 500 - An error occurred.
+
+### DELETE Data/Task/{id}
+Delete an Task entity.
+
+Param:
+
+* id - provide the guid id for the desired Task entity to be deleted ex. c712ea4a-a83f-49b6-a6ce-36682d6418e5.
+
+Return:
+
+* 200 - Success, task was deleted.
+* 404 - Task was not found.
+* 500 - An error occurred.
+
+### POST Data/Task/AddRelation
+Create a relation between two entities.
+
+Param:
+
+```json
+{
+  "initiatesFrom": {
+    "id": "4225e56e-4b68-4372-9d34-66bba1a633b3",
+    "type": "Task",
+    "name": "Task_1"
+  },
+  "relationName": "EXTENDS",
+  "pointsTo": {
+    "id": "ce45d487-3cc1-4029-9166-fb81524c9d61",
+    "type": "Action",
+    "name": "Action_3"
+  }
+}
+```
+
+Return:
+
+* 200 - Success, relation was created.
+```json
+{
+  "initiatesFrom": {
+    "id": "4225e56e-4b68-4372-9d34-66bba1a633b3",
+    "type": "Task",
+    "name": "Task_1"
+  },
+  "relationName": "EXTENDS",
+  "pointsTo": {
+    "id": "ce45d487-3cc1-4029-9166-fb81524c9d61",
+    "type": "Action",
+    "name": "Action_3"
+  }
+}
+```
+* 400 - Bad Request, parameters were not specified correctly.
+* 500 - An error occurred.
+
+### GET Data/Task/relation/{name}
+Get relation by name.
+
+Param:
+
+* id - provide the guid id for the desired Task entity relation to be retrieved ex. 4225e56e-4b68-4372-9d34-66bba1a633b3.
+* name - provide the relation name ex. EXTENDS.
+
+Return:
+
+* 200 - Success, relation was found.
+```json
+{
+  "initiatesFrom": {
+    "id": "4225e56e-4b68-4372-9d34-66bba1a633b3",
+    "type": "Task",
+    "name": "Task_1"
+  },
+  "relationName": "EXTENDS",
+  "pointsTo": {
+    "id": "ce45d487-3cc1-4029-9166-fb81524c9d61",
+    "type": "Action",
+    "name": "Action_3"
+  }
+}
+```
+* 404 - Relation was not found.
+* 500 - An error occurred.
+
+### GET Data/Task/relations/{firstName}/{secondName}
+Currently, Task has single relation use case scenario.
+
+### POST Data/Task/ImportTask
+Imports the complete task definition for the user to incorporate services to be used in the middleware.
+
+Param:
+
+```json
+```
