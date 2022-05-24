@@ -2310,5 +2310,147 @@ Imports the complete task definition for the user to incorporate services to be 
 Param:
 
 ```json
+{
+    "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "Name": "Task_1",
+    "TaskPriority": 3,
+    "ActionPlanId": "00000000-0000-0000-0000-000000000000",
+    "ActionSequence": [
+      {
+        "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "Name": "move-base",
+        "ActionFamily": "Movement",
+        "Order": 1,
+        "Placement": "Edge_1",
+        "ActionPriority": "high",
+            "Services": [
+               {
+                "Id": "e8f9b8a3-af9c-49dd-bf64-bd741b3e835c",
+                "Name": "Instance_1",
+                "ServiceInstanceId": "00000000-0000-0000-0000-000000000000",
+                "ServiceType": "Web-API",
+                "IsReusable": true,
+                "DesiredStatus": "running",
+                "ServiceUrl": "http://localhost:4091",
+                "ServiceStatus": "running",
+                    "ContainerImage": {
+                    "Id": "431e2134-cfbf-4383-b0d8-55c8184709ff",
+                    "Name": "394603622351.dkr.ecr.eu-west-1.amazonaws.com/redis-interface-api:latest",
+                    "Timestamp": "2022-03-11T12:09:43.5122616+00:00",
+                    "Description": "Redis API Client",
+                    "K8SDeployment": "apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: redis-interface-api\nspec:\n  selector:\n    matchLabels:\n      name: redis-interface-api\n  template:\n    metadata:\n      labels:\n        name: redis-interface-api\n    spec:\n      nodeSelector:\n        kubernetes.io/os: linux\n      containers:        \n      - name: redis-interface-api\n        image: 394603622351.dkr.ecr.eu-west-1.amazonaws.com/redis-interface-api:latest\n        imagePullPolicy: Always\n        resources: {}\n        env:\n        - name: REDIS_HOSTNAME\n          value: ec2-18-133-117-215.eu-west-2.compute.amazonaws.com # to be changed with real value\n        - name: REDIS_PORT\n          value: '6309' # to be changed with real value",
+                    "K8SService": "apiVersion: v1\nkind: Service\nmetadata:\n  name: redis-interface-api\nspec:\n  type: ClusterIP\n  selector:\n    name: redis-interface-api\n  ports:\n  - port: 80\n    targetPort: 80\n    name: http\n  - port: 433\n    targetPort: 433\n    name: https"
+                }
+               }
+            ]
+       },
+       {
+        "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "Name": "detect-botle",
+        "ActionFamily": "Detection",
+        "Order": 2,
+        "Placement": "Cloud_1",
+        "ActionPriority": "high",
+            "Services": [
+               {
+                "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+                "Name": "Instance_2",
+                "ServiceInstanceId": "00000000-0000-0000-0000-000000000000",
+                "ServiceType": "Web-API",
+                "IsReusable": true,
+                "DesiredStatus": "running",
+                "ServiceUrl": "http://localhost:4143",
+                "ServiceStatus": "running",
+                    "ContainerImage": {
+                    "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+                    "Name": "394603622351.dkr.ecr.eu-west-1.amazonaws.com/task-planner-api:latest",
+                    "Timestamp": "2022-03-11T12:09:43.5122616+00:00",
+                    "Description": "Task Planner API",
+                    "K8SDeployment": "apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: task-planner-api\nspec:\n  selector:\n    matchLabels:\n      name: task-planner-api\n  template:\n    metadata:\n      labels:\n        name: task-planner-api\n    spec:\n      nodeSelector:\n        kubernetes.io/os: linux\n      containers:        \n      - name: task-planner-api\n        image: 394603622351.dkr.ecr.eu-west-1.amazonaws.com/task-planner-api:latest\n        imagePullPolicy: Always\n        resources: {}\n        env:\n        - name: REDIS_INTERFACE_ADDRESS\n          value: http://redis-interface-api\n        - name: ORCHESTRATOR_ADDRESS\n          value: http://orchestrator-api",
+                    "K8SService": "apiVersion: v1\nkind: Service\nmetadata:\n  name: redis-interface-api\nspec:\n  type: ClusterIP\n  selector:\n    name: redis-interface-api\n  ports:\n  - port: 80\n    targetPort: 80\n    name: http\n  - port: 433\n    targetPort: 433\n    name: https"
+                }
+               }
+            ]
+       }
+    ]
+}
 ```
 
+Return:
+
+* 200 - Success, Task was imported
+```json
+{
+  "id": "5bbd201c-a581-4385-9581-b6e1d60a766c",
+  "name": "Task_1",
+  "taskPriority": 3,
+  "actionPlanId": "00000000-0000-0000-0000-000000000000",
+  "actionSequence": [
+    {
+      "id": "f25ca20f-5ffc-450e-9e39-1287b304b3fa",
+      "name": "move-base",
+      "actionFamily": "Movement",
+      "order": 1,
+      "placement": "Edge_1",
+      "actionPriority": "high",
+      "services": [
+        {
+          "id": "e1a3a51b-d3cf-4a3f-a245-a33a9444fc9d",
+          "name": "Instance_1",
+          "serviceInstanceId": "00000000-0000-0000-0000-000000000000",
+          "serviceType": "Web-API",
+          "isReusable": true,
+          "desiredStatus": "running",
+          "serviceUrl": "http://localhost:4091",
+          "serviceStatus": "running",
+          "containerImage": {
+            "id": "0c57e635-4698-4cc0-ad65-331cdba1d609",
+            "name": "394603622351.dkr.ecr.eu-west-1.amazonaws.com/redis-interface-api:latest",
+            "timestamp": "2022-03-11T12:09:43.5122616+00:00",
+            "description": "Redis API Client",
+            "k8SDeployment": "apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: redis-interface-api\nspec:\n  selector:\n    matchLabels:\n      name: redis-interface-api\n  template:\n    metadata:\n      labels:\n        name: redis-interface-api\n    spec:\n      nodeSelector:\n        kubernetes.io/os: linux\n      containers:        \n      - name: redis-interface-api\n        image: 394603622351.dkr.ecr.eu-west-1.amazonaws.com/redis-interface-api:latest\n        imagePullPolicy: Always\n        resources: {}\n        env:\n        - name: REDIS_HOSTNAME\n          value: ec2-18-133-117-215.eu-west-2.compute.amazonaws.com # to be changed with real value\n        - name: REDIS_PORT\n          value: '6309' # to be changed with real value",
+            "k8SService": "apiVersion: v1\nkind: Service\nmetadata:\n  name: redis-interface-api\nspec:\n  type: ClusterIP\n  selector:\n    name: redis-interface-api\n  ports:\n  - port: 80\n    targetPort: 80\n    name: http\n  - port: 433\n    targetPort: 433\n    name: https",
+            "relations": []
+          },
+          "relations": []
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "a0a24247-1c20-440f-be2d-d7d82981dbae",
+      "name": "detect-botle",
+      "actionFamily": "Detection",
+      "order": 2,
+      "placement": "Cloud_1",
+      "actionPriority": "high",
+      "services": [
+        {
+          "id": "e431f75c-7609-4503-9450-b46647c90f52",
+          "name": "Instance_2",
+          "serviceInstanceId": "00000000-0000-0000-0000-000000000000",
+          "serviceType": "Web-API",
+          "isReusable": true,
+          "desiredStatus": "running",
+          "serviceUrl": "http://localhost:4143",
+          "serviceStatus": "running",
+          "containerImage": {
+            "id": "5da96f1b-6f87-4647-a2fa-6f166776a139",
+            "name": "394603622351.dkr.ecr.eu-west-1.amazonaws.com/task-planner-api:latest",
+            "timestamp": "2022-03-11T12:09:43.5122616+00:00",
+            "description": "Task Planner API",
+            "k8SDeployment": "apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: task-planner-api\nspec:\n  selector:\n    matchLabels:\n      name: task-planner-api\n  template:\n    metadata:\n      labels:\n        name: task-planner-api\n    spec:\n      nodeSelector:\n        kubernetes.io/os: linux\n      containers:        \n      - name: task-planner-api\n        image: 394603622351.dkr.ecr.eu-west-1.amazonaws.com/task-planner-api:latest\n        imagePullPolicy: Always\n        resources: {}\n        env:\n        - name: REDIS_INTERFACE_ADDRESS\n          value: http://redis-interface-api\n        - name: ORCHESTRATOR_ADDRESS\n          value: http://orchestrator-api",
+            "k8SService": "apiVersion: v1\nkind: Service\nmetadata:\n  name: redis-interface-api\nspec:\n  type: ClusterIP\n  selector:\n    name: redis-interface-api\n  ports:\n  - port: 80\n    targetPort: 80\n    name: http\n  - port: 433\n    targetPort: 433\n    name: https",
+            "relations": []
+          },
+          "relations": []
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "relations": []
+}
+```
+* 400 - Bad Request, parameters were not specified correctly.
+* 500 - An error occurred.
