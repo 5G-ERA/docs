@@ -2084,18 +2084,27 @@ Currently, Task has single relation use case scenario.
 
 ### POST Data/Task/ImportTask
 Imports the complete task definition for the user to incorporate services to be used in the middleware.
+This endpoint will add new items in redis, for the following entities : Task, Action, Instance, ContainerImage 
+Graph representation with relations is also created when accessing this endpoint
+New GUID Id's will be automatically generated for each new entiy
+The Id of the newly created Task will be used as input for the ActionClient
+
+Task Definition JSON structure breakdown : 
+Each Task contains a list of Actions named ActionSequence 
+Each Action contains a list of Instances named Services 
+Each Instance contains a ContainerImage
 
 Param:
 
 ```json
 {
-    "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "Id": "00000000-0000-0000-0000-000000000000",
     "Name": "Task_1",
     "TaskPriority": 3,
     "ActionPlanId": "00000000-0000-0000-0000-000000000000",
     "ActionSequence": [
       {
-        "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "Id": "00000000-0000-0000-0000-000000000000",
         "Name": "move-base",
         "ActionFamily": "Movement",
         "Order": 1,
@@ -2103,7 +2112,7 @@ Param:
         "ActionPriority": "high",
             "Services": [
                {
-                "Id": "e8f9b8a3-af9c-49dd-bf64-bd741b3e835c",
+                "Id": "00000000-0000-0000-0000-000000000000",
                 "Name": "Instance_1",
                 "ServiceInstanceId": "00000000-0000-0000-0000-000000000000",
                 "ServiceType": "Web-API",
@@ -2112,7 +2121,7 @@ Param:
                 "ServiceUrl": "http://localhost:4091",
                 "ServiceStatus": "running",
                     "ContainerImage": {
-                    "Id": "431e2134-cfbf-4383-b0d8-55c8184709ff",
+                    "Id": "00000000-0000-0000-0000-000000000000",
                     "Name": "394603622351.dkr.ecr.eu-west-1.amazonaws.com/redis-interface-api:latest",
                     "Timestamp": "2022-03-11T12:09:43.5122616+00:00",
                     "Description": "Redis API Client",
@@ -2123,7 +2132,7 @@ Param:
             ]
        },
        {
-        "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "Id": "00000000-0000-0000-0000-000000000000",
         "Name": "detect-botle",
         "ActionFamily": "Detection",
         "Order": 2,
@@ -2131,7 +2140,7 @@ Param:
         "ActionPriority": "high",
             "Services": [
                {
-                "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+                "Id": "00000000-0000-0000-0000-000000000000",
                 "Name": "Instance_2",
                 "ServiceInstanceId": "00000000-0000-0000-0000-000000000000",
                 "ServiceType": "Web-API",
@@ -2140,7 +2149,7 @@ Param:
                 "ServiceUrl": "http://localhost:4143",
                 "ServiceStatus": "running",
                     "ContainerImage": {
-                    "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+                    "Id": "00000000-0000-0000-0000-000000000000",
                     "Name": "394603622351.dkr.ecr.eu-west-1.amazonaws.com/task-planner-api:latest",
                     "Timestamp": "2022-03-11T12:09:43.5122616+00:00",
                     "Description": "Task Planner API",
