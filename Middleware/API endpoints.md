@@ -2307,15 +2307,15 @@ Currently, Task has single relation use case scenario.
 ### POST Data/Task/ImportTask
 Imports the complete task definition for the user to incorporate services to be used in the middleware.
 
-This endpoint will add new items in redis, for the following entities : Task, Action, Instance, ContainerImage. 
+This endpoint will add new items in redis, for the following entities : **Task**, **Action**, **Instance**, **ContainerImage**. 
 
 Graph representation with relations is also created when accessing this endpoint.
 
 New GUID Id's will be automatically generated for each new entiy.
 
-The Id of the newly created Task will be used as input for the ActionClient.
+The Id of the newly created **Task** will be used as input for the **ActionClient**.
 
-Task Definition JSON structure breakdown : 
+Task Definition **JSON** structure breakdown : 
 * Each Task contains a list of Actions named ActionSequence. 
 * Each Action contains a list of Instances named Services. 
 * Each Instance contains a ContainerImage.
