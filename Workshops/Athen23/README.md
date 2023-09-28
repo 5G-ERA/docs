@@ -18,7 +18,7 @@ URL: https://www.eucnc.eu/programme/special-sessions/special-session-9/.
 ### Venue: OTE Academy, Athens, Greece;
 #### _26th Oct 2023 - 10:00 (EEST)_
 
-* [Agenda ClickMe!](#Agenda)
+* [Agenda ClickMe!](#Agenda_Venue)
 
 
 ## Demonstration Videos:
@@ -42,7 +42,7 @@ Offloading and Radio-Aware Semantic Maps
 [<img src="https://img.youtube.com/vi/xiZsWGed9FU/maxresdefault.jpg" width="50%">](https://youtu.be/xiZsWGed9FU&t)
 
 
-<div id="Agenda"></div>
+<div id="Agenda_Venue"></div>
 
 ## Agenda:
 ### Venue: OTE Academy, Athens, Greece;
