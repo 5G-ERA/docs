@@ -1,5 +1,4 @@
-## 5G-Enhanced Robotic Autonomy Workshop
-## From Cloud Robots to 5G/6G enabled Connected Robotics
+## From Cloud Robots to 5G/6G enabled Connected Robotics - 5G-Enhanced Robotic Autonomy Workshop
 
 ## Abstract:
 
@@ -41,6 +40,22 @@ Offloading and Radio-Aware Semantic Maps
 
 [<img src="https://img.youtube.com/vi/xiZsWGed9FU/maxresdefault.jpg" width="50%">](https://youtu.be/xiZsWGed9FU&t)
 
+* Transport Robot
+
+[<img src="https://github.com/5G-ERA/docs/blob/main/Workshops/ICRA24/files/Transport.png" width="50%">](https://drive.google.com/file/d/1nE6pK1BZHgOEQWO3PwDbNSTkKrUXQwMh/view?usp=sharing)
+
+* Surveillance Robot
+
+[<img src="https://github.com/5G-ERA/docs/blob/main/Workshops/ICRA24/files/Survilience.png" width="50%">](https://drive.google.com/file/d/1Gv4h6ThK_YSgq8uCPa-nv6ZkcuSTKtZh/view?usp=sharing)
+
+* Manufacturing Robot
+
+[<img src="https://github.com/5G-ERA/docs/blob/main/Workshops/ICRA24/files/Manufacturing.png" width="50%">](https://drive.google.com/file/d/1PngJkUEGcL0MKmtqTNpuv9ED02qb5Y24/view?usp=sharing)
+
+
+* 5G Testbed
+
+[<img src="https://github.com/5G-ERA/docs/blob/main/Workshops/ICRA24/files/Testbed.png" width="50%">](https://drive.google.com/file/d/1s5CeFMR5aM87kWybYq3Paf0xL4JKwE-r/view?usp=sharing)
 
 <div id="Agenda_Venue"></div>
 
