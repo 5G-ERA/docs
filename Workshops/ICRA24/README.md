@@ -40,7 +40,20 @@ Offloading and Radio-Aware Semantic Maps
 
 * Transport Robot
 
-[<img src="https://github.com/5G-ERA/docs/blob/main/Workshops/ICRA24/files/Transport.png" width="30%">](https://drive.google.com/file/d/1nE6pK1BZHgOEQWO3PwDbNSTkKrUXQwMh/view?usp=sharing)
+[<img src="https://github.com/5G-ERA/docs/blob/main/Workshops/ICRA24/files/Transport.png" width="100%">](https://drive.google.com/file/d/1nE6pK1BZHgOEQWO3PwDbNSTkKrUXQwMh/view?usp=sharing)
+
+* Surveillance Robot
+
+[<img src="https://github.com/5G-ERA/docs/blob/main/Workshops/ICRA24/files/Survilience.png" width="100%">](https://drive.google.com/file/d/1Gv4h6ThK_YSgq8uCPa-nv6ZkcuSTKtZh/view?usp=sharing)
+
+* Manufacturing Robot
+
+[<img src="https://github.com/5G-ERA/docs/blob/main/Workshops/ICRA24/files/Manufacturing.png" width="100%">](https://drive.google.com/file/d/1PngJkUEGcL0MKmtqTNpuv9ED02qb5Y24/view?usp=sharing)
+
+
+* 5G Testbed
+
+[<img src="https://github.com/5G-ERA/docs/blob/main/Workshops/ICRA24/files/Testbed.png" width="100%">](https://drive.google.com/file/d/1s5CeFMR5aM87kWybYq3Paf0xL4JKwE-r/view?usp=sharing)
 
 <div id="Preliminary_Agenda"></div>
 
