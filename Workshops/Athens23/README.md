@@ -1,4 +1,4 @@
-## From Cloud Robots to 5G/6G enabled Connected Robotics - 5G-Enhanced Robotic Autonomy Workshop
+## From Cloud Robots to 5G/6G enabled Connected Robotics - 5G-Enhanced Robot Autonomy Workshop
 
 ## Abstract:
 
