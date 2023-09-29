@@ -40,7 +40,7 @@ Offloading and Radio-Aware Semantic Maps
 
 * Transport Robot
 
-[<img src="https://drive.google.com/file/d/1OdIRfAk59He4C-QmfW2EJtVMm1HlD_1S/view?usp=sharing" width="30%">](https://drive.google.com/file/d/1nE6pK1BZHgOEQWO3PwDbNSTkKrUXQwMh/view?usp=sharing)
+[<img src="https://github.com/5G-ERA/docs/blob/main/Workshops/ICRA24/files/Transport.png" width="30%">](https://drive.google.com/file/d/1nE6pK1BZHgOEQWO3PwDbNSTkKrUXQwMh/view?usp=sharing)
 
 <div id="Preliminary_Agenda"></div>
 
