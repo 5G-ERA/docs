@@ -27,12 +27,14 @@ Connected Robotics Platform for ROS in an Unstructured Network Environment | Tow
 [<img src="https://img.youtube.com/vi/KtKC98YrqK0/maxresdefault.jpg"  height="200">](https://youtu.be/KtKC98YrqK0) | [<img src="https://img.youtube.com/vi/CMcDZyFyge8/maxresdefault.jpg" height="200">](https://youtu.be/CMcDZyFyge8)
 
 
-
+<video src="https://youtu.be/KtKC98YrqK0" data-canonical-src="https://youtu.be/KtKC98YrqK0" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px">  </video>
 
 Collision avoidance demonstration | Train detector demonstration
 :-: | :-:
 [<img src="https://img.youtube.com/vi/4RbB8IuZZy8/maxresdefault.jpg"  height="200">](https://youtu.be/4RbB8IuZZy8) | [<img src="https://img.youtube.com/vi/xiZsWGed9FU/maxresdefault.jpg"  height="200">](https://youtu.be/xiZsWGed9FU&t)
 
+
+<video src="https://img.youtube.com/vi/KtKC98YrqK0/maxresdefault.jpg" data-canonical-src="https://youtu.be/KtKC98YrqK0" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px">  </video>
 
 
 
@@ -40,6 +42,9 @@ Transport Robot | Surveillance Robot
 :-: | :-:
 [<img src="https://github.com/5G-ERA/docs/blob/main/Workshops/ICRA24/files/Transport.png" height="200">](https://drive.google.com/file/d/1nE6pK1BZHgOEQWO3PwDbNSTkKrUXQwMh/view?usp=sharing) | [<img src="https://github.com/5G-ERA/docs/blob/main/Workshops/ICRA24/files/Survilience.png" height="200">](https://drive.google.com/file/d/1Gv4h6ThK_YSgq8uCPa-nv6ZkcuSTKtZh/view?usp=sharing)
 
+
+
+<video src="https://youtu.be/KtKC98YrqK0" data-canonical-src="https://img.youtube.com/vi/KtKC98YrqK0/maxresdefault.jpg" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px">  </video>
 
 
 Manufacturing Robot | 5G Testbed
