@@ -20,34 +20,25 @@ URL: https://www.eucnc.eu/programme/special-sessions/special-session-9/.
 
 ## Demonstration Videos:
 
-caption1 | caption2
+
+Connected Robotics Platform for ROS in an Unstructured Network Environment | Towards Smarter 5G-Connected Mobile Robots Offloading and Radio-Aware Semantic Maps
 :-: | :-:
-<video src='video1.mov' width=180/> | <video src='https://drive.google.com/file/d/1nE6pK1BZHgOEQWO3PwDbNSTkKrUXQwMh/view' width=180/>
+[<img src="https://img.youtube.com/vi/KtKC98YrqK0/maxresdefault.jpg" width="100%">](https://youtu.be/KtKC98YrqK0) | [<img src="https://img.youtube.com/vi/CMcDZyFyge8/maxresdefault.jpg" width="100%">](https://youtu.be/CMcDZyFyge8)
 
-
-caption1 | caption2
-:-: | :-:
-<video src='video1.mov' width=180/> | <video src='(https://drive.google.com/file/d/1nE6pK1BZHgOEQWO3PwDbNSTkKrUXQwMh/view?usp=sharing' width=180/>
-
-
-<video src="https://github.com/5G-ERA/docs/blob/main/Workshops/ICRA24/files/Transport.png" data-canonical-src="https://drive.google.com/u/0/uc?id=1nE6pK1BZHgOEQWO3PwDbNSTkKrUXQwMh&export=download" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px">  </video>
-
-
-<video src="https://drive.google.com/u/0/uc?id=1nE6pK1BZHgOEQWO3PwDbNSTkKrUXQwMh&export=download" data-canonical-src="https://github.com/5G-ERA/docs/blob/main/Workshops/ICRA24/files/Transport.png" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px">  </video>
-
-
-<video src="https://user-images.githubusercontent.com/3165635/181919180-3e5970ea-96c2-4ded-8ba9-c3900ebb97a4.mov" data-canonical-src="https://user-images.githubusercontent.com/3165635/181919180-3e5970ea-96c2-4ded-8ba9-c3900ebb97a4.mov" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px">  </video>
 
 Collision avoidance demonstration | Train detector demonstration
 :-: | :-:
-[<img src="https://img.youtube.com/vi/4RbB8IuZZy8/maxresdefault.jpg" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit"  style="max-height:640px; min-height: 100">](https://youtu.be/4RbB8IuZZy8) | [<img src="https://img.youtube.com/vi/xiZsWGed9FU/maxresdefault.jpg" width="100%">](https://youtu.be/xiZsWGed9FU&t)
+[<img src="https://img.youtube.com/vi/4RbB8IuZZy8/maxresdefault.jpg" width="100%">](https://youtu.be/4RbB8IuZZy8) | [<img src="https://img.youtube.com/vi/xiZsWGed9FU/maxresdefault.jpg" width="100%">](https://youtu.be/xiZsWGed9FU&t)
 
 
-<video src="https://youtu.be/KtKC98YrqK0" data-canonical-src="https://img.youtube.com/vi/KtKC98YrqK0/maxresdefault.jpg" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px">  </video>
+Transport Robot | Surveillance Robot
+:-: | :-:
+[<img src="https://img.youtube.com/vi/J19jpORf4Po/maxresdefault.jpg" width="100%">](https://www.youtube.com/watch?v=J19jpORf4Po) | [<img src="https://img.youtube.com/vi/-apRZ1EWGo0/maxresdefault.jpg" width="100%">](https://www.youtube.com/watch?v=-apRZ1EWGo0) 
 
 
-
-
+Manufacturing Robot | 5G Testbed
+:-: | :-:
+[<img src="https://img.youtube.com/vi/t5Q4KgpOAp0/maxresdefault.jpg" width="100%">](https://www.youtube.com/watch?v=t5Q4KgpOAp0) | [<img src="https://img.youtube.com/vi/MQnypIggWu0/maxresdefault.jpg" width="100%">](https://www.youtube.com/watch?v=MQnypIggWu0) 
 
 
 <div id="Preliminary_Agenda"></div>
