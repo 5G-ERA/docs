@@ -23,10 +23,9 @@ URL: https://www.eucnc.eu/programme/special-sessions/special-session-9/.
 
 
 
-Connected Robotics Platform for ROS in an Unstructured Network Environment | Towards Smarter 5G-Connected Mobile Robots Offloading and Radio-Aware Semantic Maps
+CROP for ROS in a Indistinct Network | Radio-Aware Semantic Maps
 :-: | :-:
-[<img src="https://img.youtube.com/vi/KtKC98YrqK0/maxresdefault.jpg" width="250" height="150" align="left">](https://youtu.be/KtKC98YrqK0) | [<img src="https://img.youtube.com/vi/CMcDZyFyge8/maxresdefault.jpg" width="250" height="150" align="left">](https://youtu.be/CMcDZyFyge8)
-
+[<img src="https://img.youtube.com/vi/KtKC98YrqK0/maxresdefault.jpg" width="260" height="150">](https://youtu.be/KtKC98YrqK0) | [<img src="https://img.youtube.com/vi/CMcDZyFyge8/maxresdefault.jpg" width="260" height="150">](https://youtu.be/CMcDZyFyge8&t)
 
 Collision avoidance demonstration | Train detector demonstration
 :-: | :-:
