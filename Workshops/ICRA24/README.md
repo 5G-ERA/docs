@@ -21,15 +21,24 @@ URL: https://www.eucnc.eu/programme/special-sessions/special-session-9/.
 ## Demonstration Videos:
 
 
+
+
 Connected Robotics Platform for ROS in an Unstructured Network Environment | Towards Smarter 5G-Connected Mobile Robots Offloading and Radio-Aware Semantic Maps
 :-: | :-:
 [<img src="https://img.youtube.com/vi/KtKC98YrqK0/maxresdefault.jpg" width="100%">](https://youtu.be/KtKC98YrqK0) | [<img src="https://img.youtube.com/vi/CMcDZyFyge8/maxresdefault.jpg" width="100%">](https://youtu.be/CMcDZyFyge8)
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/KtKC98YrqK0" 
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
 
 
 Collision avoidance demonstration | Train detector demonstration
 :-: | :-:
 [<img src="https://img.youtube.com/vi/4RbB8IuZZy8/maxresdefault.jpg" width="100%">](https://youtu.be/4RbB8IuZZy8) | [<img src="https://img.youtube.com/vi/xiZsWGed9FU/maxresdefault.jpg" width="100%">](https://youtu.be/xiZsWGed9FU&t)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xiZsWGed9FU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Transport Robot | Surveillance Robot
 :-: | :-:
