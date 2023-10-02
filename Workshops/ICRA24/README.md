@@ -36,7 +36,7 @@ caption1 | caption2
 <video src="https://drive.google.com/u/0/uc?id=1nE6pK1BZHgOEQWO3PwDbNSTkKrUXQwMh&export=download" data-canonical-src="https://github.com/5G-ERA/docs/blob/main/Workshops/ICRA24/files/Transport.png" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px">  </video>
 
 
-<video src="https://user-images.githubusercontent.com/3165635/181919180-3e5970ea-96c2-4ded-8ba9-c3900ebb97a4.mov" data-canonical-src="https://drive.google.com/u/0/uc?id=1nE6pK1BZHgOEQWO3PwDbNSTkKrUXQwMh&export=download" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px">  </video>
+<video src="https://user-images.githubusercontent.com/3165635/181919180-3e5970ea-96c2-4ded-8ba9-c3900ebb97a4.mov" data-canonical-src="https://user-images.githubusercontent.com/3165635/181919180-3e5970ea-96c2-4ded-8ba9-c3900ebb97a4.mov" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px">  </video>
 
 Collision avoidance demonstration | Train detector demonstration
 :-: | :-:
