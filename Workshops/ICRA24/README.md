@@ -20,7 +20,9 @@ URL: https://www.eucnc.eu/programme/special-sessions/special-session-9/.
 
 ## Demonstration Videos:
 
-
+caption1 | caption2
+:-: | :-:
+<video src='video1.mov' width=180/> | <video src='https://drive.google.com/file/d/1nE6pK1BZHgOEQWO3PwDbNSTkKrUXQwMh/view' width=180/>
 
 
 <video src="https://github.com/5G-ERA/docs/blob/main/Workshops/ICRA24/files/Transport.png" data-canonical-src="https://drive.google.com/u/0/uc?id=1nE6pK1BZHgOEQWO3PwDbNSTkKrUXQwMh&export=download" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px">  </video>
