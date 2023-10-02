@@ -23,7 +23,7 @@ URL: https://www.eucnc.eu/programme/special-sessions/special-session-9/.
 
 
 
-CROP for ROS in an Unstructured Network | Radio-Aware Semantic Maps
+CROP for ROS in an Unstructured Network Environment | 5G-Connected Mobile Robots Offloading and Radio-Aware
 :-: | :-:
 [<img src="https://img.youtube.com/vi/KtKC98YrqK0/maxresdefault.jpg"  width="400" height="265">](https://youtu.be/KtKC98YrqK0) | [<img src="https://img.youtube.com/vi/CMcDZyFyge8/maxresdefault.jpg" width="400" height="265">](https://youtu.be/CMcDZyFyge8&t)
 
