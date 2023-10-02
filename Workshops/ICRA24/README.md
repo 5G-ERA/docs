@@ -23,24 +23,24 @@ URL: https://www.eucnc.eu/programme/special-sessions/special-session-9/.
 
 
 
-CROP for ROS in a Indistinct Network | Radio-Aware Semantic Maps
+CROP for ROS in an Unstructured Network | Radio-Aware Semantic Maps
 :-: | :-:
-[<img src="https://img.youtube.com/vi/KtKC98YrqK0/maxresdefault.jpg" width="260" height="150">](https://youtu.be/KtKC98YrqK0) | [<img src="https://img.youtube.com/vi/CMcDZyFyge8/maxresdefault.jpg" width="260" height="150">](https://youtu.be/CMcDZyFyge8&t)
+[<img src="https://img.youtube.com/vi/KtKC98YrqK0/maxresdefault.jpg"  width="400" height="265">](https://youtu.be/KtKC98YrqK0) | [<img src="https://img.youtube.com/vi/CMcDZyFyge8/maxresdefault.jpg" width="400" height="265">](https://youtu.be/CMcDZyFyge8&t)
 
 Collision avoidance demonstration | Train detector demonstration
 :-: | :-:
-[<img src="https://img.youtube.com/vi/4RbB8IuZZy8/maxresdefault.jpg" width="260" height="150">](https://youtu.be/4RbB8IuZZy8) | [<img src="https://img.youtube.com/vi/xiZsWGed9FU/maxresdefault.jpg" width="260" height="150">](https://youtu.be/xiZsWGed9FU&t)
+[<img src="https://img.youtube.com/vi/4RbB8IuZZy8/maxresdefault.jpg"  width="400" height="265">](https://youtu.be/4RbB8IuZZy8) | [<img src="https://img.youtube.com/vi/xiZsWGed9FU/maxresdefault.jpg"  width="400" height="265">](https://youtu.be/xiZsWGed9FU&t)
 
 
 Transport Robot | Surveillance Robot
 :-: | :-:
-[<img src="https://img.youtube.com/vi/J19jpORf4Po/maxresdefault.jpg" width="260" height="150">](https://www.youtube.com/watch?v=J19jpORf4Po) | [<img src="https://img.youtube.com/vi/-apRZ1EWGo0/maxresdefault.jpg" width="260" height="150">](https://www.youtube.com/watch?v=-apRZ1EWGo0) 
+[<img src="https://img.youtube.com/vi/J19jpORf4Po/maxresdefault.jpg"  width="400" height="265">](https://www.youtube.com/watch?v=J19jpORf4Po) | [<img src="https://img.youtube.com/vi/-apRZ1EWGo0/maxresdefault.jpg"  width="400" height="265">](https://www.youtube.com/watch?v=-apRZ1EWGo0) 
 
 
 
 Manufacturing Robot | 5G Testbed
 :-: | :-:
-[<img src="https://img.youtube.com/vi/t5Q4KgpOAp0/maxresdefault.jpg" width="260" height="150">](https://www.youtube.com/watch?v=t5Q4KgpOAp0) | [<img src="https://img.youtube.com/vi/MQnypIggWu0/maxresdefault.jpg" width="260" height="150">](https://www.youtube.com/watch?v=MQnypIggWu0) 
+[<img src="https://img.youtube.com/vi/t5Q4KgpOAp0/maxresdefault.jpg"  width="400" height="265">](https://www.youtube.com/watch?v=t5Q4KgpOAp0) | [<img src="https://img.youtube.com/vi/MQnypIggWu0/maxresdefault.jpg"  width="400" height="265">](https://www.youtube.com/watch?v=MQnypIggWu0) 
 
 
 <div id="Preliminary_Agenda"></div>
