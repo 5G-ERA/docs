@@ -29,8 +29,11 @@ URL: https://www.eucnc.eu/programme/special-sessions/special-session-9/.
 <video src="https://img.youtube.com/vi/KtKC98YrqK0/maxresdefault.jpg" data-canonical-src="https://youtu.be/KtKC98YrqK0" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px">  </video>
 
 
+<video src="https://user-images.githubusercontent.com/3165635/181919180-3e5970ea-96c2-4ded-8ba9-c3900ebb97a4.mov" data-canonical-src="https://user-images.githubusercontent.com/3165635/181919180-3e5970ea-96c2-4ded-8ba9-c3900ebb97a4.mov" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px">  </video>
 
-
+Collision avoidance demonstration | Train detector demonstration
+:-: | :-:
+[<img src="https://img.youtube.com/vi/4RbB8IuZZy8/maxresdefault.jpg" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit"  style="max-height:640px; min-height: 100">](https://youtu.be/4RbB8IuZZy8) | [<img src="https://img.youtube.com/vi/xiZsWGed9FU/maxresdefault.jpg" width="100%">](https://youtu.be/xiZsWGed9FU&t)
 
 
 <video src="https://youtu.be/KtKC98YrqK0" data-canonical-src="https://img.youtube.com/vi/KtKC98YrqK0/maxresdefault.jpg" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px">  </video>
