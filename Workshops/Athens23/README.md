@@ -70,9 +70,12 @@ Manufacturing Robot | 5G Testbed
 * From Robot to Cloud: Seamless Transition of Local ROS Applications to Cloud Environment  By: _Dr. Michal Kapinus (Brno University of Technology, Czechia)_ (15 mins)
 * Teleoperations By: _Dr. George Agapiou (WINGS, Greece)_ and Dashboard By: _Dr. Marios Sophocleous (eBOS Technologies, Cyprus)_ (10 mins)
 * Q&A Session (15 mins)
+
 **Booth session :** 
 * A reference design for 5G enhanced cloud robotics
 * Semi-autonomous transport robot with connected intelligence
 * 5G Enahnced manufacturing process
+
 **Live Demo:**
+
 **Closure**
