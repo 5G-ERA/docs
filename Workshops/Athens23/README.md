@@ -48,22 +48,21 @@ Manufacturing Robot | 5G Testbed
 #### _26th Oct 2023 - 10:00 - 16:00 (EEST)_
 
 
-**Welcome** 
+**Welcome 10:00-10:10** 
 * _Ms Christina Lessi (Hellenic Telecommunications Organisation S.A., Greece)_ (10 mins)
 
-**Overview & Introduction**
+**Overview & Introduction 10:10-10:25**
 
 * _Prof Renxi Qiu (Scientific Coordinator of 5G Enhanced Robot Autonomy Project. University of Bedfordshire, UK)_ (15 mins)
 
-**Use Cases**
+**Use Cases 10:25-11:10:**
 * 5G Enhanced Rescue Robot and its network applications By: _Mr. Guillem Garí (RobotNik Automation SLL, Spain)_ (15 mins)
 * Semi-autonomous Transport Robot with Connected Intelligence By: _Mr. Matúš Kašuba (BringAuto, Czechia)_ (15 mins)
 * 5G Enhanced Manufacturing Services By: _Mr. Kandarp Amin (TWI Ltd, UK)_ (15 mins)
 
 **Break (30 mins)**
-* Break start time: 11:10 (30 mins)
 
-**Technical issues :**
+**Technical issues 11:40-13:00:**
 * Slicing and Network Function Virtualisation for Robot Applications By: _Ms Christina Lessi & Prof Renxi Qiu_ (10 mins)
 * Towards Smarter 5G-Connected Mobile Robots: Dynamic Offloading and Radio-Aware Semantic Maps By: _Dr. Lanfranco Zanzi (NECLab, Germany)_ (15 mins)
 * Connected Robotics Platform for ROS in an Unstructured Network Environments By: _Mr. Bartosz Bratus (University of Bedfordshire, UK)_ (15 mins)
@@ -71,11 +70,13 @@ Manufacturing Robot | 5G Testbed
 * Teleoperations By: _Dr. George Agapiou (WINGS, Greece)_ and Dashboard By: _Dr. Marios Sophocleous (eBOS Technologies, Cyprus)_ (10 mins)
 * Q&A Session (15 mins)
 
-**Booth session :** 
+**Break (45 mins)**
+
+**Booth session 13:45-14:45:** 
 * A reference design for 5G enhanced cloud robotics
 * Semi-autonomous transport robot with connected intelligence
 * 5G Enahnced manufacturing process
 
-**Live Demo:**
+**Live Demo 14:45-15:45:**
 
-**Closure**
+**Closure 15:45-16:00**
