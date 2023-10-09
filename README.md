@@ -14,3 +14,8 @@ This repository contains the technical information about different components of
 * [NetApp](./NetApp/readme.md) - Network Application framework description and description of the in-house Network Applications developed by the 5G-ERA consortium
 * [Workshops](./Workshops/readme.md) - list of the workshops prepared by the 5G-ERa consortium.
 * [Resources](./Resources/readme.md) - folder containing additional resources that help get familiar with teh 5G-ERA project.
+
+
+## System Architecture
+
+Explanation of the architecture from the very high-level POV.
