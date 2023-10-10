@@ -77,9 +77,9 @@ Manufacturing Robot | 5G Testbed
 * Semi-autonomous transport robot with connected intelligence
 * 5G Enahnced manufacturing process
 * Seminar and tutorials
-**	Seminar on 5G-ERA fleet management by _Miss Sandra Moreno Olivares_ (RobotNik Automation SLL, Spain)
-**	Tutorial on security and identity management under Connected Robotics Platform by _Mr. Radu Popescu_ (University of Bedfordshire, UK)
-**	Tutorial on relay network applications and efficient communication by _Dr. Michal Kapinus_ (Brno University of Technology, Czechia)
+  * Seminar on 5G-ERA fleet management by _Miss Sandra Moreno Olivares_ (RobotNik Automation SLL, Spain)
+  * Tutorial on security and identity management under Connected Robotics Platform by _Mr. Radu Popescu_ (University of Bedfordshire, UK)
+  *	Tutorial on relay network applications and efficient communication by _Dr. Michal Kapinus_ (Brno University of Technology, Czechia)
 
 
 **Live Demo 14:45-15:45:**
