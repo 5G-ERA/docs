@@ -1,10 +1,10 @@
 # Network Applications
 
-This section contains the information about the available network applications. On op of this, this section described design principles behind the network applications
+This section contains the information about the available network applications. On op of this, this section described design principles behind the network applications.
 
 
 ## Available Network Applications
 
-* Reference NetApp
-* Relay NetApp
-* InterRelay NetApp
+* [Reference NetApp](https://github.com/5G-ERA/Reference-NetApp)
+* [Relay NetApp](https://github.com/5G-ERA/relay_network_application)
+* [Collision Warning Service](https://github.com/5G-ERA/CollisionWarningService)

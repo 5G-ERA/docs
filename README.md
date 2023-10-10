@@ -1,8 +1,8 @@
-# Documentation
+# Connected Robotics Platform (CROP) - Documentation
 
-This repository contains the technical documentation for other parts of the 5G-ERA project.
+This repository contains the technical documentation of CROP, the 5G-ERA project.
 
-This documentation contains the information about the 5G-ERa project components. Mainly Middleware, Network Applications and Workshops organized by the consortium. 
+This documentation contains the information about the 5G-ERA project components. Mainly Middleware, Network Applications and Workshops organized by the consortium. 
 
 Middleware and Network Applications explain what are these components and how they allow efficient cooperation between robots and vertical applications. 
 
