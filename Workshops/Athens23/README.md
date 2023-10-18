@@ -4,6 +4,8 @@
 
 In recent years, there has been a significant advancement in wireless communication technologies. Concurrently, the field of robotics has witnessed rapid progress, particularly in the domain of autonomous mobile robots. With progress achieved in both fields, there is a trend to leverage the connectivity into more intelligent and connected robots “beyond the abilities of a single robot in an interconnected environment (such as the internet)”. The workshop is designed to demonstrate the latest progress of 5G-Enhanced Robotic Autonomy on accelerating the transformation from the traditional Cloud Robots to 5G/6G enabled Connected Robotics.
 
+To register for this event (fill in the form here.)[https://forms.office.com/Pages/ResponsePage.aspx?id=eMgyl0WZ6UualYbjzskaGBuUORkIL_BKlX46L95FL-pURDRJSkY5NzdCRVRNSEdCVzQ2UFdSTTlDMC4u]
+
 ## Previous events:
 
 * Hackathon: 5G Enhanced Robot Autonomy hackathon, April 2023, organised by 5G-ERA
