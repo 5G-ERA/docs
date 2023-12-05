@@ -44,11 +44,11 @@ To login to the Middleware the user has to adjust the following changes for the 
 * Path for the `request /Login`
 * The body of the request should contain the `username` and `password`
 
-![image](imgs/User%20login4v2.PNG)
+![image](imgs/User%20login4v2.png)
 
 Once the user makes the request for the login, the response body will contain a JWT token which will have to be attached to the calls in order to access the endpoints of the Middleware.
 
-![image](imgs/Tokennewuser.PNG)
+![image](imgs/Tokennewuser.png)
 
 ## Step 4: Using the JWT token for accessing the Middleware
 
