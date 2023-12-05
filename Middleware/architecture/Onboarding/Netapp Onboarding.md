@@ -19,7 +19,7 @@ The onboarding of the Network Application extends the functionality of the Middl
 
 To onboard the NetWork application the Middleware API has to be called. The REST API has an endpoint at path `data/task/importTask`. For this, the endpoint takes a specific complex parameter in the body.
 
-![import task endpoint](img/ImportTaskEndpointPostman.png)
+![import task endpoint](imgs/ImportTaskEndpointPostman.png)
 
 ```json
 {
@@ -152,7 +152,7 @@ For attaching the token when making a call to one of the endpoints of the Middle
 
 Then make a call using the **Send** button.
 
-![import task endpoint](img/ImportTaskSendPostman.png)
+![import task endpoint](imgs/ImportTaskSendPostman.png)
 
 The returned response with the status code `200` means that the operation has succeeded. Now the `Task` and the Network Application can be deployed through the Middleware.
 
