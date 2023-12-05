@@ -82,7 +82,7 @@ Make sure to change localhost to the IP address of the gateway of the middleware
 watch -c kubectl get all -n middleware
 ````
 <p align="left">
-  <img src="img/OnboardRobot.png" alt="Middleware architecture"/>
+  <img src="imgs/OnboardRobot.png" alt="Middleware architecture"/>
 </p>
 
 You will have to add the content of the output script from the onboarding to the body of the script.
@@ -91,7 +91,7 @@ ___
 The headers required for this request should be the ones indicated in the image below.
 
 <p align="left">
-  <img src="img/OnboardingRobotHeaders.png" alt="Middleware architecture"/>
+  <img src="imgs/OnboardingRobotHeaders.png" alt="Middleware architecture"/>
 </p>
 
 Your robot was succesfully onboarded if you get a 200 http response.
