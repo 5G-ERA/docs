@@ -26,9 +26,9 @@ CROP enables seamless interaction among robots and Cloud/Edge devices. With the 
 
 ### Possible Scenarios, technical challenges and solutions by CROP
 
-## Scenario 1: 
+# Scenario 1: 
 
-### Potential Users : 
+## Potential Users : 
 Robot Application Developers 
 
 ### Example : 
@@ -53,9 +53,9 @@ Step 3: Onboard the ROS network application from the [tutorial](https://github.c
 Step 4: Trigger the Deployment of  your ROS network application
 
 
-## Scenario 2:
+# Scenario 2:
 
-### Potential Users: 
+## Potential Users: 
 Robot Application Developers
 
 ### Example:
@@ -79,29 +79,29 @@ Step 4: Configuration of new or existing tasks for utilising [slice mechanism](h
 
 Step 5: Trigger the Deployment of  your ROS network application
 
-## Scenario 3:
+# Scenario 3:
 
 ## Potential Users 
 System administrators 
 
-## Example:
+### Example:
 I want a secured communication between robot and ROS application offloaded in the cloud. 
 Problem, I have no idea what is running in the robot. I might break the system completely.
 
-## Technical Challenge:
+### Technical Challenge:
 Scalability and maintainability of robot applications.
 
-## CROP Solution:
+### CROP Solution:
 CROP utilises cloud native design to separate vertical logic from horizontal deployment. It enables encrypted end to end communication and provides role-based access at the container networking level which is fully encapsulated from ROS applications. Furthermore, CROP supports infrastructure as code (IaC) to automate the management process of the system administrators.
 
-## Tutorial/Documentation:
+### Tutorial/Documentation:
 Step 2(optional): Additional configuration of the middleware  (https, domain name)
 
 Step 3(optional): Identity Management tutorial, role based control (RBAC)  
 
-## Scenario 4:
+# Scenario 4:
 
-### Potential Users: 
+## Potential Users: 
 Network Applications Developers
 
 ### Example:
