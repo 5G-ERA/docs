@@ -27,6 +27,7 @@ CROP enables seamless interaction among robots and Cloud/Edge devices. With the 
 ### Possible Scenarios, technical challenges and solutions by CROP
 
 ## Scenario 1: 
+
 ### Potential Users : 
 Robot Application Developers 
 
@@ -43,11 +44,11 @@ It generates a static virtual LAN for ROS applications, at the same time dynamic
 Domain knowledge of Robotics and ICT are encapsulated separately.
 
 ### Tutorial/Documentation : 
-(Pre-required Step1: that is needed to be followed in every scenario mentioned*) Go through the prerequisites and middleware installation tutorial
+(Pre-required Step1: that is needed to be followed in every scenario mentioned*) Go through the prerequisites and [middleware installation tutorial](https://github.com/5G-ERA/docs/tree/main/Middleware/architecture/Middleware%20Installation%20guide)
 
-Step 2: Onboard your custom robot from the onboarding robot tutorial 
+Step 2: Onboard your custom robot from the [onboarding robot tutorial](https://github.com/5G-ERA/docs/blob/main/Middleware/architecture/Onboarding/New%20robot%20onboarding.md)
 
-Step 3: Onboard the ROS network application from the tutorial 
+Step 3: Onboard the ROS network application from the [tutorial](https://github.com/5G-ERA/docs/blob/main/Middleware/architecture/Onboarding/Netapp%20Onboarding.md) 
 
 Step 4: Trigger the Deployment of  your ROS network application
 
@@ -74,9 +75,61 @@ Step 2: Register and onboard your robot
 
 Step 3: Tutorial will be added (Configuring of the infrastructure of the testbed) slice manager
 
-Step 4: Configuration of new or existing tasks for utilising slice mechanism 
+Step 4: Configuration of new or existing tasks for utilising [slice mechanism](https://github.com/5G-ERA/middleware/blob/0d21429019390f2f96e29266185a1cb75eade1a0/docs/Developer/5g_testbed_integration.md) 
 
 Step 5: Trigger the Deployment of  your ROS network application
+
+## Scenario 3:
+
+## Potential Users 
+System administrators 
+
+## Example:
+I want a secured communication between robot and ROS application offloaded in the cloud. 
+Problem, I have no idea what is running in the robot. I might break the system completely.
+
+## Technical Challenge:
+Scalability and maintainability of robot applications.
+
+## CROP Solution:
+CROP utilises cloud native design to separate vertical logic from horizontal deployment. It enables encrypted end to end communication and provides role-based access at the container networking level which is fully encapsulated from ROS applications. Furthermore, CROP supports infrastructure as code (IaC) to automate the management process of the system administrators.
+
+## Tutorial/Documentation:
+Step 2(optional): Additional configuration of the middleware  (https, domain name)
+
+Step 3(optional): Identity Management tutorial, role based control (RBAC)  
+
+## Scenario 4:
+
+### Potential Users: 
+Network Applications Developers
+
+### Example:
+I want my network application to be roaming on multiple edges (available in multiple locations), while maintaining real-time ROS communication to the robots.
+Problem, the development is time consuming and can hardly be reused. 
+
+### Technical Challenge:
+•	Synchronisation of data.
+
+•	Maintain stateless and stateful transactions in operation. 
+
+•	Integrating robot specific domain knowledge into the resource provision
+
+### CROP Solution:
+CROP enables Platform as a Service for dynamic resource provision. It orchestrates robot specific operations together with network resources for the best quality of experience. 
+CROP supports event sourcing and CQRS for schema on read. It enables knowledge to be better reused in unexpected situations.  
+
+### Tutorial/Documentation:
+Step 2: Go through the [Relay network application tutorial](https://github.com/5G-ERA/relay_network_application) 
+
+Step 3: Onboard the [ROS network application](https://github.com/5G-ERA/middleware/blob/main/docs/User/Onboarding/NetworkApplication) from the tutorial 
+
+Step 3: Trigger the Deployment of  your ROS network application
+
+
+
+
+
 
 
 
