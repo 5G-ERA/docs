@@ -129,7 +129,7 @@ CROP supports event sourcing and CQRS for schema on read. It enables knowledge t
 ### Tutorial/Documentation:
 Step 1: Go through the [Relay network application tutorial](https://github.com/5G-ERA/relay_network_application) 
 
-Step 2: Onboard the [ROS network application](https://github.com/5G-ERA/middleware/blob/main/docs/User/Onboarding/NetworkApplication) from the tutorial 
+Step 2: Onboard the [ROS network application](https://github.com/5G-ERA/docs/blob/main/Middleware/architecture/Onboarding/Netapp%20Onboarding.md) from the tutorial 
 
 Step 3: Trigger the Deployment of  your ROS network application
 
