@@ -1,10 +1,7 @@
 # Connected Robotics Platform (CROP) - Documentation
 
-This repository contains the technical documentation of CROP, the 5G-ERA project.
+CROP enables seamless interaction among robots and Cloud/Edge devices. With the new capability, distributed robots’ development with Robot Operating System (ROS) is significantly simplified. CROP is highly efficient, secure, fully open source and vendor independent. The topology of the infrastructure is completely transparent to robots under the CROP. Therefore, there is little difference to robot developers that the device is running remotely via the internet on cloud or locally in local area network (LAN). 
 
-This documentation contains the information about the 5G-ERA project components. Mainly Middleware, Network Applications and Workshops organized by the consortium. 
-
-Middleware and Network Applications explain what are these components and how they allow efficient cooperation between robots and vertical applications. 
 
 ## Contents
 
@@ -12,27 +9,15 @@ This repository contains the technical information about different components of
 
 * [Middleware](./Middleware/readme.md) - Middleware for the on demand deployment of the vertical applications
 * [NetApp](./NetApp/readme.md) - Network Application framework description and description of the in-house Network Applications developed by the 5G-ERA consortium
-* [Workshops](./Workshops/readme.md) - list of the workshops prepared by the 5G-ERa consortium.
-* [Resources](./Resources/readme.md) - folder containing additional resources that help get familiar with teh 5G-ERA project.
+* [Workshops](./Workshops/readme.md) - list of the workshops prepared by the 5G-ERA consortium.
+* [Resources](./Resources/readme.md) - folder containing additional resources that help get familiar with the 5G-ERA project.
 
 
-## System Architecture
+# Pre-required step
 
-Explanation of the architecture from the very high-level POV.
+Please go through the prerequisites and [middleware installation tutorial](https://github.com/5G-ERA/docs/tree/main/Middleware/architecture/Middleware%20Installation%20guide)
 
-## What is CROP? 
-
-CROP enables seamless interaction among robots and Cloud/Edge devices. With the new capability, distributed robots’ development with Robot Operating System (ROS) is significantly simplified. CROP is highly efficient, secure, fully open source and vendor independent. The topology of the infrastructure is completely transparent to robots under the CROP. Therefore, there is little difference to robot developers that the device is running remotely via the internet on cloud or locally in local area network (LAN). 
-
-### Possible Scenarios, technical challenges and solutions by CROP
-
-```
-There is one pre-required step which is needed to be followed before every scenario mentioned below:
-```
-
-Pre-required step : Go through the prerequisites and [middleware installation tutorial](https://github.com/5G-ERA/docs/tree/main/Middleware/architecture/Middleware%20Installation%20guide)
-
-
+## Possible Scenarios, technical challenges and solutions by CROP
 
 # Scenario 1: 
 
@@ -40,9 +25,11 @@ Pre-required step : Go through the prerequisites and [middleware installation tu
 Robot Application Developers 
 
 ### Example : 
-I want my ROS application to be deployed in the cloud and Interact with my local robots. 
-Problem, although my ROS code works fine in LAN, it does not work anymore through the Internet.
 
+```
+I want my ROS application to be deployed in the cloud and Interact with my local robots. 
+Problem: Although my ROS code works fine in LAN, it does not work anymore through the Internet.
+```
 ### Technical Challenge : 
 The Internet has multiple domains and multi administrations. Various security requirements and package inspection kill my existing ROS application. 
 
@@ -66,9 +53,11 @@ Step 3: Trigger the Deployment of  your ROS network application
 Robot Application Developers
 
 ### Example:
+```
 I want to give the best possible  resources to my mobile robots. Although, there the answer is not fixed. It could be either 5G or WiFi; either Local Edge or Remote Cloud; either eMBB or URLLC slice.
-Problem, the task is cumbersome and completely out of my knowledge. At the end, I just use VPN and hard code everything to the robot. 
 
+Problem: The task is cumbersome and completely out of my knowledge. At the end, I just use VPN and hard code everything to the robot. 
+```
 ### Technical Challenge: 
 •	Network topology for mobile robots is dynamic. 
 
@@ -76,7 +65,7 @@ Problem, the task is cumbersome and completely out of my knowledge. At the end, 
 
 ### CROP Solution:
 
-
+Please follow the documentation.
 ### Tutorial/Documentation:
 Step 1: Register and onboard your robot 
 
@@ -92,8 +81,11 @@ Step 4: Trigger the Deployment of  your ROS network application
 System administrators 
 
 ### Example:
+```
 I want a secured communication between robot and ROS application offloaded in the cloud. 
-Problem, I have no idea what is running in the robot. I might break the system completely.
+
+Problem: I have no idea what is running in the robot. I might break the system completely.
+```
 
 ### Technical Challenge:
 Scalability and maintainability of robot applications.
@@ -112,8 +104,11 @@ Step 2(optional): Identity Management tutorial, role based control (RBAC)
 Network Applications Developers
 
 ### Example:
+```
 I want my network application to be roaming on multiple edges (available in multiple locations), while maintaining real-time ROS communication to the robots.
-Problem, the development is time consuming and can hardly be reused. 
+
+Problem: The development is time consuming and can hardly be reused. 
+```
 
 ### Technical Challenge:
 •	Synchronisation of data.
