@@ -10,7 +10,7 @@ This repository contains the technical information about different components of
 * [Middleware](./Middleware/readme.md) - Middleware for the on demand deployment of the vertical applications
 * [NetApp](./NetApp/readme.md) - Network Application framework description and description of the in-house Network Applications developed by the 5G-ERA consortium
 * [Workshops](https://github.com/5G-ERA/docs/tree/main/Workshops/Athens23) - list of the workshops prepared by the 5G-ERA consortium.
-* [Resources](./Resources/readme.md) - folder containing additional resources that help get familiar with the 5G-ERA project.
+* Resources - folder containing additional resources that help get familiar with the 5G-ERA project.
 
 
 # Pre-required step
