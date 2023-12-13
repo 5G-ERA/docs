@@ -13,6 +13,91 @@ This repository contains the technical information about different components of
 * Resources - folder containing additional resources that help get familiar with the 5G-ERA project.
 
 
+
+<table style="width: 98%; margin-right: calc(2%);">
+    <tbody>
+        <tr>
+            <td style="width: 35.9372%;">Technical Challenge<br></td>
+            <td style="width: 35.9372%;">Potential Usesr</td>
+            <td style="width: 35.9686%;">Tutorial (Crop Solution) </td>
+        <tr>
+            <td style="width: 35.9372%;">ROS application to be running in the cloud and interact with robot</td>
+            <td style="width: 35.9372%;">Robot Application Developers</td>
+            <td style="width: 35.9686%;">
+            [Tutorial](https://github.com/5G-ERA/docs#scenario-1) </td>
+            <td style="width: 35.9686%;"><br>
+                <table style="width: 100%;">
+                    <tbody>
+                        <tr>
+                        </tr>
+                    </tbody>
+                </table><br>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 35.9372%;">Robot interaction within unstructured network </td>
+            <td style="width: 35.9372%;">Robot Application Developers </td>
+            <td style="width: 35.9686%;">[Turorial](https://github.com/5G-ERA/docs#scenario-2)</td>
+            <td style="width: 35.9686%;">
+                <table style="width: 100%;">
+                    <tbody>
+                        <tr>
+                        </tr>
+                    </tbody>
+                </table><br>
+            </td>
+               </tr>
+        <tr>
+            <td style="width: 35.9372%;">Role based access control </td>
+            <td style="width: 35.9372%;">System Administrators</td>
+            <td style="width: 35.9686%;">[Turorial](https://github.com/5G-ERA/docs#scenario-3)</td>
+            <td style="width: 35.9686%;">
+                <table style="width: 100%;">
+                    <tbody>
+                        <tr>
+                        </tr>
+                    </tbody>
+                </table><br>
+            </td>
+               </tr>
+        <tr>
+            <td style="width: 35.9372%;">Netapp on multiple edges and locations </td>
+            <td style="width: 35.9372%;">Network Application Developers </td>
+            <td style="width: 35.9686%;">[Turorial](https://github.com/5G-ERA/docs#scenario-4)</td>
+            <td style="width: 35.9686%;">
+                <table style="width: 100%;">
+                    <tbody>
+                        <tr>
+                        </tr>
+                    </tbody>
+                </table><br>
+            </td>
+            <td style="width: 35.0000%;">
+                <table style="width: 98%; margin-right: calc(2%);">
+                    <tbody>
+                        <tr>
+                        </tr>
+                    </tbody>
+                </table><br>
+            </td>
+        </tr>
+        <tr>
+                        <tr>
+                        </tr>
+                    </tbody>
+                </table><br>
+            </td>
+            <td style="width: 35.0000%;">
+                <table style="width: 98%; margin-right: calc(2%);">
+                    <tbody>
+                        <tr>
+                        </tr>
+                    </tbody>
+                </table><br>
+            </td>
+        </tr>
+        <tr>
+
 # Pre-required step
 
 Please go through the prerequisites and [middleware installation tutorial](https://github.com/5G-ERA/docs/tree/main/Middleware/architecture/Middleware%20Installation%20guide)
