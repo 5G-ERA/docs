@@ -12,8 +12,10 @@ This repository contains the technical information about different components of
 * [Workshops](https://github.com/5G-ERA/docs/tree/main/Workshops/Athens23) - list of the workshops prepared by the 5G-ERA consortium.
 * Resources - folder containing additional resources that help get familiar with the 5G-ERA project.
 
-
-
+   </table><br>
+            </td>
+        </tr>
+        <tr>
 <table style="width: 98%; margin-right: calc(2%);">
     <tbody>
         <tr>
@@ -94,10 +96,7 @@ This repository contains the technical information about different components of
                         </tr>
                     </tbody>
                 </table><br>
-            </td>
-        </tr>
-        <tr>
-
+         
 # Pre-required step
 
 Please go through the prerequisites and [middleware installation tutorial](https://github.com/5G-ERA/docs/tree/main/Middleware/architecture/Middleware%20Installation%20guide)
