@@ -12,90 +12,21 @@ This repository contains the technical information about different components of
 * [Workshops](https://github.com/5G-ERA/docs/tree/main/Workshops/Athens23) - list of the workshops prepared by the 5G-ERA consortium.
 * Resources - folder containing additional resources that help get familiar with the 5G-ERA project.
 
-   </table><br>
-            </td>
-        </tr>
-        <tr>
-<table style="width: 98%; margin-right: calc(2%);">
-    <tbody>
-        <tr>
-            <td style="width: 35.9372%;">Technical Challenge<br></td>
-            <td style="width: 35.9372%;">Potential Users</td>
-            <td style="width: 35.9686%;">Tutorial (Crop Solution) </td>
-        <tr>
-            <td style="width: 35.9372%;">ROS application to be running in the cloud and interact with robot</td>
-            <td style="width: 35.9372%;">Robot Application Developers</td>
-            <td style="width: 35.9686%;">
-            [Tutorial](https://github.com/5G-ERA/docs#scenario-1) </td>
-            <td style="width: 35.9686%;"><br>
-                <table style="width: 100%;">
-                    <tbody>
-                        <tr>
-                        </tr>
-                    </tbody>
-                </table><br>
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 35.9372%;">Robot interaction within unstructured network </td>
-            <td style="width: 35.9372%;">Robot Application Developers </td>
-            <td style="width: 35.9686%;">[Tutorial](https://github.com/5G-ERA/docs#scenario-2)</td>
-            <td style="width: 35.9686%;">
-                <table style="width: 100%;">
-                    <tbody>
-                        <tr>
-                        </tr>
-                    </tbody>
-                </table><br>
-            </td>
-               </tr>
-        <tr>
-            <td style="width: 35.9372%;">Role based access control </td>
-            <td style="width: 35.9372%;">System Administrators</td>
-            <td style="width: 35.9686%;">[Tutorial](https://github.com/5G-ERA/docs#scenario-3)</td>
-            <td style="width: 35.9686%;">
-                <table style="width: 100%;">
-                    <tbody>
-                        <tr>
-                        </tr>
-                    </tbody>
-                </table><br>
-            </td>
-               </tr>
-        <tr>
-            <td style="width: 35.9372%;">Netapp on multiple edges and locations </td>
-            <td style="width: 35.9372%;">Network Application Developers </td>
-            <td style="width: 35.9686%;">[Tutorial](https://github.com/5G-ERA/docs#scenario-4)</td>
-            <td style="width: 35.9686%;">
-                <table style="width: 100%;">
-                    <tbody>
-                        <tr>
-                        </tr>
-                    </tbody>
-                </table><br>
-            </td>
-            <td style="width: 35.0000%;">
-                <table style="width: 98%; margin-right: calc(2%);">
-                    <tbody>
-                        <tr>
-                        </tr>
-                    </tbody>
-                </table><br>
-            </td>
-        </tr>
-        <tr>
-                        <tr>
-                        </tr>
-                    </tbody>
-                </table><br>
-            </td>
-            <td style="width: 35.0000%;">
-                <table style="width: 98%; margin-right: calc(2%);">
-                    <tbody>
-                        <tr>
-                        </tr>
-                    </tbody>
-                </table><br>
+
+
+
+| Technical Challenge  | Potential Users          |  Scenarios |
+|----------|:-------------:|------:|
+| ROS application to be running in the cloud and interact with robot |  Robot Application Developers | Tutorial|
+| Robot interaction within unstructured network |    Robot Application Developers  |  Tutorial  |
+| Role based access control | System Administrators |  Tutorial   |
+| Netapp on multiple edges and locations | Network Application Developers |  Tutorial   |
+    
+
+
+
+
+  
          
 # Pre-required step
 
