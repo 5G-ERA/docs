@@ -17,10 +17,10 @@ This repository contains the technical information about different components of
 
 | Technical Challenge  | Potential Users          |  Scenarios |
 |----------|:-------------:|------:|
-| ROS application to be running in the cloud and interact with robot |  Robot Application Developers | [Tutorial](docs/Scenario1.md)|
-| Robot interaction within unstructured network |    Robot Application Developers  |  [Tutorial](docs/Scenario2.md)  |
-| Role based access control | System Administrators |  [Tutorial](docs/Scenario3.md)   |
-| Netapp on multiple edges and locations | Network Application Developers |  [Tutorial](docs/Scenario4.md)   |
+| ROS application to be running in the cloud and interact with robot |  Robot Application Developers | [Tutorial](https://github.com/5G-ERA/docs?tab=readme-ov-file#scenario-1)|
+| Robot interaction within unstructured network |    Robot Application Developers  |  [Tutorial](https://github.com/5G-ERA/docs?tab=readme-ov-file#scenario-2)  |
+| Role based access control | System Administrators |  [Tutorial](https://github.com/5G-ERA/docs?tab=readme-ov-file#scenario-3)   |
+| Netapp on multiple edges and locations | Network Application Developers |  [Tutorial](https://github.com/5G-ERA/docs?tab=readme-ov-file#scenario-4)   |
     
 
 
@@ -34,7 +34,7 @@ Please go through the prerequisites and [middleware installation tutorial](https
 
 ## Possible Scenarios, technical challenges and solutions by CROP
 
-# Scenario 1: 
+# Scenario1: 
 
 ## Potential Users : 
 Robot Application Developers 
@@ -63,7 +63,7 @@ Step 2: Onboard the ROS network application from the [tutorial](https://github.c
 Step 3: Trigger the Deployment of  your ROS network application
 
 
-# Scenario 2:
+# Scenario2:
 
 ## Potential Users: 
 Robot Application Developers
@@ -91,7 +91,7 @@ Step 3: Configuration of new or existing tasks for utilising [slice mechanism](h
 
 Step 4: Trigger the Deployment of  your ROS network application
 
-# Scenario 3:
+# Scenario3:
 
 ## Potential Users 
 System administrators 
@@ -114,7 +114,7 @@ Step 1(optional): Additional configuration of the middleware  (https, domain nam
 
 Step 2(optional): Identity Management tutorial, role based control (RBAC)  
 
-# Scenario 4:
+# Scenario4:
 
 ## Potential Users: 
 Network Applications Developers
