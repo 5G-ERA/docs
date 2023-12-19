@@ -1,11 +1,11 @@
 # Final demonstration planning
 
-Robot operating autonomously and asking Middleware 
-* Resource Planning
+Robot operating autonomously and asking Middleware for plan and conducting:
+* Resource Planning using the available locations
 * Deployment of the NetApps
 * Robot performing Slice Switchover
 * Robot utilising NetApp through Middleware
-* Robot performing one of:
+* Robot performing one of or multiple:
 	* Train detection
 	* Collision avoidance
 	* Human Sensing
@@ -16,18 +16,19 @@ Robot operating autonomously and asking Middleware
 * When the robot is connected, the switchover is completed
 * Robot achieves the desired goal (finds a person, completes the map depending on the NetApp)
 
-## Additionally to be included: 
+## Additionally, to be included: 
 
 * Data persistence:
 	* Event sourcing 
 	* Required by stateful NetApps
 	* LLM?
-* Utilise semantic signal map for switching between WiFi and 5G?
+* Utilise semantic signal map for switching between Wi-Fi and 5G?
 	* Utilise 2 NIC to perform a switch 
 	* Possible reduction in quality and frequency of the send data in the yellow zone
 	* In the red zone, the robot switches to a different network communication
 	* How to predict the best possible action for the robot?
 	
+## Task List
 
 **BED**:
 
@@ -35,7 +36,7 @@ Robot operating autonomously and asking Middleware
 -	Define parameters for the connection status to be estimated in the resource planning.
 -	Signal quality needs to be included in the robot heartbeat.
 -	Architect the state machine to manage the changes in the state of the robot network connectivity.
--	Decision service to change the used network communication method (from WiFi to 5G) should be placed on the robot.
+-	Decision service to change the used network communication method (from Wi-Fi to 5G) should be placed on the robot.
  
 **BUT**:
 
