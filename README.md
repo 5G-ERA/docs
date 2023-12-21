@@ -17,10 +17,10 @@ This repository contains the technical information about different components of
 
 | Technical Challenge  | Potential Users          |  Scenarios |
 |----------|:-------------:|------:|
-| ROS application to be running in the cloud and interact with robot |  Robot Application Developers | [Tutorial](https://github.com/5G-ERA/docs?tab=readme-ov-file#scenario-1)|
-| Robot interaction within unstructured network |    Robot Application Developers  |  [Tutorial](https://github.com/5G-ERA/docs?tab=readme-ov-file#scenario-2)  |
-| Role based access control | System Administrators |  [Tutorial](https://github.com/5G-ERA/docs?tab=readme-ov-file#scenario-3)   |
-| Netapp on multiple edges and locations | Network Application Developers |  [Tutorial](https://github.com/5G-ERA/docs?tab=readme-ov-file#scenario-4)   |
+| ROS application to be running in the cloud and interact with robot |  Robot Application Developers | [Tutorial](https://github.com/5G-ERA/docs?tab=readme-ov-file#scenario1)|
+| Robot interaction within unstructured network |    Robot Application Developers  |  [Tutorial](https://github.com/5G-ERA/docs?tab=readme-ov-file#scenario2)  |
+| Role based access control | System Administrators |  [Tutorial](https://github.com/5G-ERA/docs?tab=readme-ov-file#scenario3)   |
+| Netapp on multiple edges and locations | Network Application Developers |  [Tutorial](https://github.com/5G-ERA/docs?tab=readme-ov-file#scenario4)   |
     
 
 
