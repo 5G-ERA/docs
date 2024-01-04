@@ -196,7 +196,7 @@ Each of these services is represented by the pod, service, deployment and replic
 If only the Orchestrator is visible with the status of the pod as Container Creating, it needs additional time to download the application. After the deployment of the Orchestrator, soon the other components should begin their deployment. The result should look like the image below.
 
 <p align="left">
-    <img src="5G-ERA/docs/Middleware/img/deployed_middleware.png" alt="- Deployed middleware.">
+    <img src="https://github.com/5G-ERA/docs/blob/main/Middleware/img/deployed_middleware.png" alt="- Deployed middleware.">
 </p>
 
 
@@ -230,7 +230,7 @@ sudo snap install microk8s --classic
 ```
 
 <p align="left">
-    <img src="5G-ERA/docs/Middleware/img/snap_error.png" alt="- Deployed middleware.">
+    <img src="https://github.com/5G-ERA/docs/blob/main/Middleware/img/snap_error.png" alt="- Deployed middleware.">
 </p>
 
 
