@@ -49,27 +49,30 @@ CROP enables seamless interaction among robots and Cloud/Edge devices. With the 
     
 # 1. Introduction:
 
-The aim of the CROP package is the seamless integration and easy to use solution for ROS robots to utilice and offload on-demand to the digital enviroment i.e Edge or Clouds, in order to complete their given tasks faster, eficiently and with greater computational capabilities using cloud-computer and containerisation & orchestration technologies. In addition, CROP supports various 5G slicing technologies. CROP provides a vendor-free solution for ROS to extend its connectivity in a various of ways that solve some of the main problems like single network domain and administration access to the network. 
+The aim of the CROP package is the seamless integration and easy to use solution for ROS robots to utilise and offload on-demand to the digital environment i.e Edge or Clouds, in order to complete their given tasks faster, more efficiently and with greater computational capabilities using cloud-computing, containerisation and orchestration technologies. In addition, CROP supports various 5G slicing technologies. CROP provides a vendor-free solution for ROS to extend its connectivity to solve some of the main problems like single network domain and administration access to the network. 
 
 ## 1.1 CROP Target audience:
 
-CROP is developed as a solution to the ROS-Developer and provides and abstraction layer that allows for easy hands-on experience with cloud-computing addressing the main limitations of ROS connecivity and security issues with regards to the networking implementation.
+CROP is developed as a solution to the ROS Developers and provides and abstraction layer that allows for easy hands-on experience with cloud-computing addressing the main limitations of ROS connectivity and security concerning the networking implementation.
 
 ## 1.2 Why to use CROP - Use cases:
 
-Significant effort has been done by the new ROS 2 to solve some of the problems of its predecesor and introducing DDS as the main connectivity mechanism. However, ROS 2 still limited to structured/industry enviroments where:
+Significant effort has been done by the new ROS 2 to solve some of the problems of its predecessor and introducing DDS as the main connectivity mechanism. However, ROS 2 is still limited to structured/industry environments where:
 
-    - QoS is fixed.
-    - Networkm topology is static.
-    - Single domain.
-    - Single administration.
+- QoS is fixed,
+- Network topology is static,
+- Networks work under single domain and single administration,
 
-This, however, limits ROS robots to approach the more realistic use cases and use cloud-native design further done VPN solutions. Reality imposes the following rules:
+This, however, limits the robots ability to operate using cloud-native resources and forces robots to use solutions like VPN to enable connection to external services running outside of LAN.
 
-    - QoS changes constantly.
-    - Network topology is dynamic.
-    - Multi-domains co-exits.
-    - Multi administration with different security requirements.
+[//]: # (This, however, limits ROS robots to approach the more realistic use cases and use cloud-native design further done VPN solutions.)
+
+Reality imposes the following rules:
+
+- QoS changes constantly.
+- Network topology is dynamic.
+- Multi-domains co-exits.
+- Multi administration with different security requirements.
 
 Following are some use-cases where CROP comes in handy.
 
@@ -79,15 +82,15 @@ Following are some use-cases where CROP comes in handy.
 
 **Example 1:** 
 ```
-I want my ROS application to be deployed in the cloud and Interact with my local robots. 
+I want my ROS application to be deployed in the cloud and interact with my local robots. 
 
 Problem: Although my ROS code works fine in LAN, it does not work anymore through the Internet.
 
-🔳 Technical Challenge :
+🔳 Technical Challenge:
 
-The Internet has multiple domains and multi administrations. Various security requirements and package inspection kills my existing ROS application.
+The Internet has multiple domains and multiple administrations. Various security requirements and package inspection kills my existing ROS application.
 
-🔳 CROP Solution :
+🔳 CROP Solution:
 
 CROP integrates network function virtualisation into robot deployment. It generates a static virtual LAN for ROS applications, at the same time dynamically adapting the network resources for the virtual network on demand.
 Domain knowledge of Robotics and ICT are encapsulated separately.
@@ -95,7 +98,7 @@ Domain knowledge of Robotics and ICT are encapsulated separately.
 
 **Example 2:**
 ```
-I want to give the best possible resources to my mobile robots. Although, there the answer is not fixed. It could be either 5G or WiFi; either Local Edge or Remote Cloud; either eMBB or URLLC slice.
+I want to give the best possible resources to my mobile robots. Although, there the resources and connectivity means are not known. It could be either 5G or WiFi; either Local Edge or Remote Cloud; either eMBB or URLLC slice.
 
 Problem: The task is cumbersome and completely out of my knowledge. At the end, I just use VPN and hard code everything to the robot. 
 
@@ -150,15 +153,15 @@ Visit the 5G ERA project [website](https://5g-era.eu) for more information and f
 
 Following are listed some of the limitations identified in the product:
 
-🔴 Network applitcations have different hardware resources, therefore edge and cloud requriments for the CROP may change and it needs to be provided and deployed.
+🔴 Network applications have different hardware resources, therefore edge and cloud requirements for the CROP may change, and it needs to be provided and deployed.
 
 🔴 CROP is limited to ROS framework for robotics. However, network applications are ROS agnostic. For more information visit [network-apps]().
 
-🔴 Middleware does not work outside of kubernetes cluster (both advantage and limitation).
+🔴 Middleware does not work outside Kubernetes cluster (both advantage and limitation).
 
-🔴 The package of Middleware, NetApp Client, Relay Server supports only ROS2, altough other application can still be deployed as cloud native applications.
+🔴 The package of Middleware, NetApp Client, Relay Server supports only ROS2, although other application can still be deployed as cloud native applications.
 
-🔴 Currently , the first hand cloud support is only available for AWS.
+🔴 Currently, the first-hand cloud support is only available for AWS.
 
 🔴 Containerization of existing applications is necessary to manage them using Middleware.
 
@@ -169,12 +172,12 @@ For the licensing information see [LICENSE](LICENSE).
 # 2. Installation
 
 There are two types of installation: cloud base and local base. Both use terraform scripts.
-
+```
 TODO: terraform examples for cloud installation with AWS.
 
 TODO: terraform local machine --> k8 credentials
-
-The CROP solution is a distributed system with a central-api in your infrastructure topology. You will need to install the middleware in each of the machines of your distributed system.
+```
+CROP is a distributed system with a central-api in your infrastructure topology. You will need to install the middleware in each of the machines of your distributed system.
 
 The CROP solution is a distributed system with a central-api in your infrastructure topology. You will need to install the middleware in each of the machines of your distributed system.
 
@@ -194,21 +197,20 @@ If this is your first interaction with the CROP package, please follow this sect
 
 ### 3.1.1 Middleware:
 
-The CROP solution is built by a distributed collection of middlewares each in a machine of your insfraestructure topology.
+The CROP solution is built by a distributed collection of middlewares each in a machine of your infrastructure topology.
 
-The middleware manages robot requests to complete a task by deploying network applications as VNF's (Virtual network functions). Middleware's speak to one another to deploy reources and perform resource allocation and task optimization & management.
+The middleware manages robot requests to complete a task by deploying network applications as VNF's (Virtual network functions). Middlewares speak to one another to deploy resources and perform resource allocation and task optimization & management.
 
  The core principles and functionality of the Middleware cover the lifecycle management, recovery and error handling of the network applications, and integration of the semantic planning into the orchestration process.
 
-Full documention of the [Middleware](Middleware\readme.md).
+Full documentation of the [Middleware](Middleware\readme.md).
 
 ### 3.1.2 Network applications & relay.
-- The aim of a network application under the CROP 
- frame is to transition local ROS applications to cloud enviroment.
+- The aim of a network application managed by CROP is to transition local ROS applications to cloud environment.
 
 - A network application is a vertical application managed by ROS (Robot Operating System). 
 
-**Why network appliations:** some vertial applications for robotics are heavy and demanding on CPU & GPU, like object detection. If this task can be offloaded to the cloud, the robots have more capabilities in running tasks that are limited by hw specs.
+**Why network applications:** some vertical applications for robotics are heavy and demanding on CPU & GPU, like object detection. If this task can be offloaded to the cloud, the robots have more capabilities in running tasks that are limited by hardware specs.
 
 **Traditional ROS PARADIGM:**
 
@@ -218,7 +220,7 @@ Full documention of the [Middleware](Middleware\readme.md).
 
 <img src="NetApp\img\netapp2.png" alt="drawing" width="200%" height="100%"/>
 
-CROP provides a list of already made network applications for usage under ROS 2 in your cloud enviroment. **However, a tutorial for make custom network applications in [available]().** 
+CROP provides a list of ready-made network applications for usage under ROS 2 in your cloud enviroment. **To create your own network application follow the dedicated [tutorial]().** 
 
 Full documentation of the **[network application](NetApp\readme.md).**
 
@@ -238,7 +240,8 @@ For more details about the dashboard, follow [here](Dashboard\readme.md).
 
 ## 3.2 User roles.
 
-The CROP system is a cloud native solution that involves multiple roles, each assuming an specific user-knowledge. If you are a single ROS developer, you will need to assume all basic roles except CROP developer.
+The CROP system is a cloud native solution that involves multiple roles, each assuming a specific user-knowledge. We highly recommend following CROP tutorial that reflects your knowledge area.
+If you are a single ROS developer, you will need to assume all basic roles.
 
 ### 3.2.1 Administrator
 
