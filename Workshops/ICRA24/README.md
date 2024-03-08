@@ -30,7 +30,7 @@ Presentations:
 *	Applications of Connected Robotics in Transportation – _Mr. Jan Kubálek (BringAuto, Czechia)_
 *	Applications of Connected Robotics in Manufacturing – _Mr. Kandarp Amin and Prof Darren Williams (TWI, UK), Mr. Sebastian Andraos (HAL-Robotics, UK)_
 
-**14:50-15:40 Hand on experience of ROS under connected robotics**
+**14:50-15:40 Hand on experience of ROS under the Connected Robotics**
 
 Scenario: Breaking the barrier of ROS2 DDS into real-world networks
 * Limitation of ROS2 and DDS (BUT) and Hand on experience of remote object detection in unstructured networks – _Dr Michal Kapinus (Brno University of Technology, Czechia)_
@@ -39,7 +39,7 @@ Scenario: Breaking the barrier of ROS2 DDS into real-world networks
 
 **15:40-16:00 Break**
 
-**16:00-17:20 Building your own ROS applications for connected robotics**
+**16:00-17:20 Building your own ROS applications for the Connected Robotics**
 
 Scenario: Accelerated ROS application development
 *	Demonstration: Relay in connected robotics – _Dr Michal Kapinus (Brno University of Technology, Czechia)_
