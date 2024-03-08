@@ -34,7 +34,7 @@ Manufacturing Robot | 5G Testbed
 <div id="Agenda"></div>
 
 ## Agenda, ICRA24, Yokohama, Japan 13th May 2024 from 13:00-17:40PM (JST GMT+9):
-**13:00-13:20 Registration and Environment Setup**
+**13:00-13:20 registration and environment Setup**
 
 **13:20-13:40 Opening and introduction**
 
