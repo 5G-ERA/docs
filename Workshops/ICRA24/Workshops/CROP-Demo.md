@@ -63,6 +63,28 @@ The expected output is:
 
 
 ### 3) Resilient and robust service with autonomous Edge switch over (BED)
+
+To perform the edge switch over the middleware API the following endpoint needs to be called: /task/plan/switchover
+
+Body content: 
+
+```
+          {
+            "actionPlanId": "<uuid>",
+            "actionId": "<uuid>",
+            "destination": "<string>",
+            "destinationType": "<string>"
+          }
+```
+
+destinationType: EDGE/CLOUD
+
+
+<img width="789" alt="Captura de pantalla 2024-03-12 a las 13 37 42" src="https://github.com/5G-ERA/docs/assets/26432703/35178ea4-c9b6-4a6a-9d83-15fb5e571293">
+
+
+
+
 ## The demonstration is hybrid:
 ### 1) Remote demonstration by summit XL connected to AWS Cloud (ROB, BED)
 ### 2) Onsite demonstration by simulated robot with pre-recorded point cloud data (ROB, BED, BUT)
