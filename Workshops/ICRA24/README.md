@@ -9,6 +9,9 @@ Internet is a dynamic and unstructured network with multi-domain and multi-admin
 <div id="Agenda"></div>
 
 ## Agenda:
+[<img src="https://github.com/5G-ERA/docs/blob/main/Workshops/ICRA24/files/Agenda.jpg"  width="800" >](https://youtu.be/KtKC98YrqK0)
+
+
 **13:00-13:15 Registration and environment setup**
 
 **13:15-13:30 Opening and introduction**
