@@ -70,7 +70,7 @@ Robot Application Developers
 
 ### Example:
 ```
-I want to give the best possible  resources to my mobile robots. Although, there the answer is not fixed. It could be either 5G or WiFi; either Local Edge or Remote Cloud; either eMBB or URLLC slice.
+My robots want the best resource and infrastructure. Although, there is no fixed answer to this request. Depending on robot task and location, it could be connected either to 5G or WiFi; either on Local Edge or Remote Cloud; either using eMBB or URLLC slice.
 
 Problem: The task is cumbersome and completely out of my knowledge. At the end, I just use VPN and hard code everything to the robot. 
 ```
