@@ -77,11 +77,11 @@ Problem: The task is cumbersome and completely out of my knowledge. At the end, 
 ### Technical Challenge: 
 •	Network topology for mobile robots is dynamic. 
 
-•	Knowledge gap between robotics and ICT.
+•	Knowledge gap between robotics and DevOps.
 
 ### CROP Solution:
+Virtualized and portable robot operational environments with dynamic edge switch over and slice switch over on-demand.
 
-Please follow the documentation.
 ### Tutorial/Documentation:
 Step 1: Register and onboard your robot 
 
@@ -134,8 +134,7 @@ Problem: The development is time consuming and can hardly be reused.
 •	Integrating robot specific domain knowledge into the resource provision
 
 ### CROP Solution:
-CROP enables Platform as a Service for dynamic resource provision. It orchestrates robot specific operations together with network resources for the best quality of experience. 
-CROP supports event sourcing and CQRS for schema on read. It enables knowledge to be better reused in unexpected situations.  
+CROP enables dynamic resource provision through software-defined and portable interfaces. It reduces the developers’ burden by orchestrating robot specific operations together with network resources for the best quality of experience. 
 
 ### Tutorial/Documentation:
 Step 1: Go through the [Relay network application tutorial](https://github.com/5G-ERA/relay_network_application) 
