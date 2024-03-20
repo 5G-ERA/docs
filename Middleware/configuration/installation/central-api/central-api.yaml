@@ -1,0 +1,55 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: central-api
+spec:
+  type: NodePort  
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 31003
+      name: http
+  selector:
+    app: central-api
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: central-api
+spec:
+  selector:
+    matchLabels:
+      app: central-api
+  template:
+    metadata:
+      labels:
+        app: central-api
+    spec:
+      nodeSelector:
+        kubernetes.io/os: linux
+      imagePullSecrets:
+        - name: awsecr-cred
+      containers:
+        - name: central-api
+          image: ghcr.io/5g-era/central-api:edge
+          imagePullPolicy: Always
+          resources:
+            limits:
+              cpu: "0.5"
+              memory: "200Mi"
+            requests:
+              cpu: "0.2"
+              memory: "100Mi"
+          env:
+            - name: Redis__ClusterHostname
+              value: redis-master.redis.svc.cluster.local
+            - name: Redis__Password
+              value: redispassword
+            - name: CustomLogger__LoggerName
+              value: Loki # user can choose between Loki or Elasticsearch
+            - name: CustomLogger__Url
+              value: http://loki.loki.svc.cluster.local:3100
+            - name: CustomLogger__User
+              value: lokiuser # to be replaced with real value
+            - name: CustomLogger__Password
+              value: lokipassword # to be replaced with real value
