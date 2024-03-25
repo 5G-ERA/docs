@@ -1,0 +1,124 @@
+{
+  "relations": [
+    {
+      "initiatesFrom": {
+        "value": "<Error: Too many levels of nesting to fake this schema>"
+      },
+      "relationName": "voluptate sint eu velit",
+      "relationAttributes": [
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        },
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        }
+      ],
+      "pointsTo": {
+        "value": "<Error: Too many levels of nesting to fake this schema>"
+      }
+    },
+    {
+      "initiatesFrom": {
+        "value": "<Error: Too many levels of nesting to fake this schema>"
+      },
+      "relationName": "sed dolor fugiat eiusmod",
+      "relationAttributes": [
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        },
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        }
+      ],
+      "pointsTo": {
+        "value": "<Error: Too many levels of nesting to fake this schema>"
+      }
+    }
+  ],
+  "Id": "f4bdfa2e-e8ec-593e-4577-09d37d9a9772",
+  "Name": "incididunt in eu minim",
+  "ReplanActionPlannerLocked": true,
+  "ResourceLock": false,
+  "TaskPriority": 32013432,
+  "ActionPlanId": "f6fca0d2-cfd2-bb49-8970-2ee6116bb2b4",
+  "FullReplan": false,
+  "PartialRePlan": false,
+  "DeterministicTask": false,
+  "MarkovianProcess": false,
+  "ActionSequence": [
+    {
+      "relations": [
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        },
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        }
+      ],
+      "Id": "urn:uuid:d676ec35-c3d8-2d00-144c-3f154db625b9",
+      "Name": "laboris eu consectetur",
+      "Tags": [
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        },
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        }
+      ],
+      "Order": -15072342,
+      "Placement": "ipsum laboris in",
+      "PlacementType": "sint voluptate laboris",
+      "ActionPriority": "dolore labore cupidatat occaecat",
+      "ActionStatus": "eu ut",
+      "Services": [
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        },
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        }
+      ],
+      "MinimumRam": 85811634,
+      "MinimumNumCores": -27695979
+    },
+    {
+      "relations": [
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        },
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        }
+      ],
+      "Id": "560fbf65-936e-fb83-b8c9-00afff479986",
+      "Name": "dolor nostrud non",
+      "Tags": [
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        },
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        }
+      ],
+      "Order": 14099136,
+      "Placement": "reprehenderit in incididunt sunt",
+      "PlacementType": "pariatur in proident",
+      "ActionPriority": "voluptate dolor velit",
+      "ActionStatus": "dolore Duis",
+      "Services": [
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        },
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        }
+      ],
+      "MinimumRam": -50154121,
+      "MinimumNumCores": 60698259
+    }
+  ],
+  "Tags": [
+    "nulla labore mollit",
+    "officia n"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+    "relations": [
+    {
+      "initiatesFrom": {
+        "value": "<Error: Too many levels of nesting to fake this schema>"
+      },
+      "relationName": "Duis deserunt anim aliqua qui",
+      "relationAttributes": [
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        },
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        }
+      ],
+      "pointsTo": {
+        "value": "<Error: Too many levels of nesting to fake this schema>"
+      }
+    },
+    {
+      "initiatesFrom": {
+        "value": "<Error: Too many levels of nesting to fake this schema>"
+      },
+      "relationName": "lab",
+      "relationAttributes": [
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        },
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        }
+      ],
+      "pointsTo": {
+        "value": "<Error: Too many levels of nesting to fake this schema>"
+      }
+    }
+  ],  
+  "Id": "ce892f9b-b269-4713-9851-08599dbda61e",
+  "Name": "commod2",
+  "Type": "nostrud ex dolore ipsum voluptate",
+  "EdgeStatus": "ipsum consectetur in veniam",
+  "EdgeIp": "https://NNVGNKQKKZMGkhhPawDqWmafCC.qzwvP8r4pAYqO6C7ScbeiD+akPxFFUVx2MQTGmrN",
+  "MacAddress": "d",
+  "CPU": -2705329,
+  "RAM": -48866615,
+  "VirtualRam": 67739305,
+  "DiskStorage": 49302050,
+  "NumberOfCores": 19626111
+}

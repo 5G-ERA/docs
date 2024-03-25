@@ -1,0 +1,49 @@
+{
+    "relations": [
+    {
+      "initiatesFrom": {
+        "value": "<Error: Too many levels of nesting to fake this schema>"
+      },
+      "relationName": "ex minim",
+      "relationAttributes": [
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        },
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        }
+      ],
+      "pointsTo": {
+        "value": "<Error: Too many levels of nesting to fake this schema>"
+      }
+    },
+    {
+      "initiatesFrom": {
+        "value": "<Error: Too many levels of nesting to fake this schema>"
+      },
+      "relationName": "ullamco cillum consequat ad",
+      "relationAttributes": [
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        },
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        }
+      ],
+      "pointsTo": {
+        "value": "<Error: Too many levels of nesting to fake this schema>"
+      }
+    }
+  ],
+  "Id": "8d74dcc9-4d35-4ea2-a80e-02f7f75a6584",
+  "Name": "in Duis exercitati2",
+  "Type": "ut qui aute",
+  "CloudStatus": "dolor consequat",
+  "CloudIp": "http://neDqYSZDLsbcTZiYGH.czZEvK3mxtR2qJZ6FXu1,I3sFQFEgyBeEpXgAPzQ6zlklHTT9DgH2sgmYYJuUHt",
+  "NumberOfCores": -26341751,
+  "DiskStorage": -81987379,
+  "VirtualRam": 8076360,
+  "CPU": -93068079,
+  "RAM": 17635151,
+  "MacAddress": "adipisicing"
+}

@@ -1,0 +1,80 @@
+{
+   "relations": [
+    {
+      "initiatesFrom": {
+        "value": "<Error: Too many levels of nesting to fake this schema>"
+      },
+      "relationName": "Duis deserunt anim aliqua qui",
+      "relationAttributes": [
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        },
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        }
+      ],
+      "pointsTo": {
+        "value": "<Error: Too many levels of nesting to fake this schema>"
+      }
+    },
+    {
+      "initiatesFrom": {
+        "value": "<Error: Too many levels of nesting to fake this schema>"
+      },
+      "relationName": "lab",
+      "relationAttributes": [
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        },
+        {
+          "value": "<Error: Too many levels of nesting to fake this schema>"
+        }
+      ],
+      "pointsTo": {
+        "value": "<Error: Too many levels of nesting to fake this schema>"
+      }
+    }
+  ], 
+  "Id": "2d1464b7-03b6-4772-91f3-bec6788916cc",
+  "Name": "lorem ipsum",
+  "ServiceInstanceId": "1f3cd73d-8b82-16f2-44d0-72b1ea58a8a1",
+  "ServiceType": "Web-API",
+  "IsReusable": true,
+  "DesiredStatus": "running",
+  "ServiceUrl": "http://localhost:4091",
+  "RosTopicsPub": [
+    {
+      "name": "iru",
+      "type": "Duis voluptate aliqua consequat",
+      "description": "id Lorem occaecat cupidatat"
+    },
+    {
+      "name": "proident elit dolore occaecat",
+      "type": "et velit pariatur",
+      "description": "laboris Ut dolor"
+    }
+  ],
+  "RosTopicsSub": [
+    {
+      "name": "mollit in",
+      "type": "sint tempor q",
+      "description": "cillum in consequat"
+    },
+    {
+      "name": "in consequat volupt",
+      "type": "ut laboris non",
+      "description": "ea adipisicing"
+    }
+  ],
+  "ROSVersion": 2,
+  "ROSDistro": "Foxy",
+  "Tags": [
+    "sunt occaeca",
+    "qui Duis aliqua dolor"
+  ],
+  "InstanceFamily": "Perception",
+  "SuccessRate": 90,
+  "ServiceStatus": "running",
+  "MinimumRam": 4,
+  "MinimumNumCores": 4
+}

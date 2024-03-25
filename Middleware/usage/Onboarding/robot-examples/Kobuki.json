@@ -1,0 +1,208 @@
+{
+  "relations": [
+    {
+      "initiatesFrom": {
+        "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "type": "string",
+        "name": "string"
+      },
+      "relationName": "string",
+      "relationAttributes": [
+        {
+          "key": "string",
+          "value": "string"
+        }
+      ],
+      "pointsTo": {
+        "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "type": "string",
+        "name": "string"
+      }
+    }
+  ],
+  "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "Name": "Kobuki",
+  "RosVersion": 1,
+  "RosDistro": "kinetic",
+  "MaximumPayload": 5,
+  "MaximumTranslationalVelocity": 65,
+  "MaximumRotationalVelocity": 3.13,
+  "RobotWeight": 6.3,
+  "ROSRepo": "https://github.com/yujinrobot/kobuki",
+  "ROSNodes": [
+    {
+      "Name": "/mobile_base",
+      "Publications": [
+        {
+          "Name": "/odom",
+          "Type": "nav_msgs/Odometry",
+          "Description": ""
+        },
+        {
+          "Name": "/mobile_base/sensors/imu_data",
+          "Type": "sensor_msgs/Imu",
+          "Description": ""
+        },
+        {
+          "Name": "/mobile_base/sensors/imu_data_raw",
+          "Type": "sensor_msgs/Imu",
+          "Description": ""
+        },
+        {
+          "Name": "/mobile_base/events/cliff",
+          "Type": "kobuki_msgs/CliffEvent",
+          "Description": ""
+        },
+        {
+          "Name": "/mobile_base/events/bumper",
+          "Type": "kobuki_msgs/BumperEvent",
+          "Description": ""
+        },
+        {
+          "Name": " /joint_states",
+          "Type": "sensor_msgs/JointState",
+          "Description": ""
+        },
+        {
+          "Name": "/tf",
+          "Type": "tf2_msgs/TFMessage",
+          "Description": ""
+        }
+      ],
+      "Subscriptions": [
+        {
+          "Name": "/mobile_base/commands/motor_power",
+          "Type": "unknown type",
+          "Description": ""
+        },
+        {
+          "Name": "/mobile_base/commands/reset_odometry",
+          "Type": "unknown type",
+          "Description": ""
+        },
+        {
+          "Name": "/mobile_base/commands/velocity",
+          "Type": "geometry_msgs/Twist",
+          "Description": ""
+        }
+      ],
+      "Services": [
+      ]
+    },
+    {
+      "Name": "/cmd_vel_mux",
+      "Publications": [
+        {
+          "Name": "/mobile_base/commands/velocity",
+          "Type": "geometry_msgs/Twist",
+          "Description": "nodelete acting as multiplexer for many cmd topics incoming and controlling priority queue."
+        }
+      ],
+      "Subscriptions": [
+      ],
+      "Services": [
+      ]
+    }
+
+  ],
+  "Manufacturer": "Yujin Robot",
+  "ManufacturerUrl": "https://yujinrobot.com",
+  "RobotModel": "Kobuki Base",
+  "RobotStatus": "Unknown",
+  "TaskList": "",
+  "BatteryStatus": 100,
+  "MacAddress": "00:00:5e:00:53:af",
+  "LocomotionSystem": "Differential",
+  "LocomotionTypes": "Rolling",
+  "Sensors": [
+    {
+      "Name": "Gyroscope",
+      "Type": "Gyro",
+      "Description": "Gyro: factory calibrated, 1 axis (110 deg/s)",
+      "Nodes": [ "/mobile_base" ],
+      "number": 1
+    },
+    {
+      "Name": "Cliff Sensors",
+      "Type": "Infrared",
+      "Description": "Cliff sensors: left, center, right",
+      "Nodes": [ "/mobile_base" ],
+      "number": 3
+    },
+    {
+      "Name": "Wheel drop sensor",
+      "Type": "Touch",
+      "Description": "Wheel drop sensor: left, right",
+      "Nodes": [ "/mobile_base" ],
+      "number": 1
+    },
+    {
+      "Name": "Bumpers",
+      "Type": "Touch",
+      "Description": "Bumpers: left, center, right",
+      "Nodes": [ "/mobile_base" ],
+      "number": 1
+    },
+    {
+      "Name": "Odometry",
+      "Type": "Encoder",
+      "Description": "52 ticks/enc rev, 2578.33 ticks/wheel rev, 11.7 ticks/mm",
+      "Nodes": [ "/mobile_base" ],
+      "number": 1
+    }
+
+  ],
+  "Actuator": [
+    {
+      "Name": "RightWheel",
+      "Type": "Rotatory",
+      "Number": 1,
+      "Nodes": [ "/cmd_vel_mux" ]
+    },
+    {
+      "Name": "LeftWheel",
+      "Type": "Rotatory",
+      "Number": 1,
+      "Nodes": [ "/cmd_vel_mux" ]
+    }
+  ],
+  "Manipulators": [],
+  "CPU": 1,
+  "RAM": 1,
+  "StorageDisk": 8,
+  "NumberCores": 4,
+  "Questions": [
+    {
+      "relations": [
+        {
+          "initiatesFrom": {
+            "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "type": "string",
+            "name": "string"
+          },
+          "relationName": "string",
+          "relationAttributes": [
+            {
+              "key": "string",
+              "value": "string"
+            }
+          ],
+          "pointsTo": {
+            "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "type": "string",
+            "name": "streing"
+          }
+        }
+      ],
+      "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "Question": "string",
+      "IsSingleAnswer": true,
+      "Answer": [
+        {
+          "key": "string",
+          "value": "string"
+        }
+      ]
+    }
+  ]
+}

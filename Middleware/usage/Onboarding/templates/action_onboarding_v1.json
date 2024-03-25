@@ -1,0 +1,37 @@
+{
+  "relations": [
+    {
+      "initiatesFrom": {
+        "id": "1e5bc80c-5c9c-4314-a6aa-1eb4f63cf86c",
+        "type": "string",
+        "name": "string"
+      },
+      "relationName": "EXTENDS",
+      "relationAttributes": [
+        {
+          "key": "string",
+          "value": "string"
+        }
+      ],
+      "pointsTo": {
+        "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "type": "ACTION",
+        "name": "ActionReplan"
+      }
+    }
+  ],
+  "Id": "0dc5a016-bcdd-4e0f-8481-1f3612bfc26e",
+  "Name": "ActionReplan",
+  "Tags": [
+    "string"
+  ],
+  "Order": 0,
+  "Placement": "string",
+  "PlacementType": "EDGE",
+  "ActionPriority": "1",
+  "ActionStatus": "running",
+  "Services": [
+  ],
+  "MinimumRam": 4,
+  "MinimumNumCores": 4
+}

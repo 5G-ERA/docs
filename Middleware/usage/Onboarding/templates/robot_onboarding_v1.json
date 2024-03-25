@@ -1,0 +1,118 @@
+{
+  "relations": [
+    {
+      "initiatesFrom": {
+        "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "type": "string",
+        "name": "string"
+      },
+      "relationName": "string",
+      "relationAttributes": [
+        {
+          "key": "string",
+          "value": "string"
+        }
+      ],
+      "pointsTo": {
+        "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "type": "string",
+        "name": "string"
+      }
+    }
+  ],
+  "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "Name": "test",
+  "ROSRepo": "string",
+  "ROSNodes": [
+    {
+      "Name": "string",
+      "Publications": [
+        {
+          "Name": "string",
+          "Type": "string",
+          "Description": "string"
+        }
+      ],
+      "Subscriptions": [
+        {
+          "Name": "string",
+          "Type": "string",
+          "Description": "string"
+        }
+      ],
+      "Services": [
+        {
+          "Name": "string",
+          "Description": "string"
+        }
+      ]
+    }
+
+  ],
+  "Manufacturer": "string",
+  "ManufacturerUrl": "string",
+  "RobotModel": "string",
+  "RobotStatus": "Unkown",
+  "TaskList": "",
+  "BatteryStatus": 100,
+  "MacAddress": "00:00:5e:00:53:af",
+  "LocomotionSystem": "None",
+  "LocomotionTypes": "None",
+  "Sensors": [
+    {
+      "Name": "cameraSensor",
+      "Type": "Camera",
+      "Description": "string",
+      "Nodes": [ "string" ],
+      "number": 1
+    }
+
+  ],
+  "Actuator": [
+    {
+      "Name": "string",
+      "Type": "Rotatory",
+      "Number": 1,
+      "Nodes": [ "string" ]
+    }
+  ],
+  "Manipulators": [],
+  "CPU": 1,
+  "RAM": 1,
+  "StorageDisk": 8,
+  "NumberCores": 1,
+  "Questions": [
+    {
+      "relations": [
+        {
+          "initiatesFrom": {
+            "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "type": "string",
+            "name": "string"
+          },
+          "relationName": "string",
+          "relationAttributes": [
+            {
+              "key": "string",
+              "value": "string"
+            }
+          ],
+          "pointsTo": {
+            "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "type": "string",
+            "name": "streing"
+          }
+        }
+      ],
+      "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "Question": "string",
+      "IsSingleAnswer": true,
+      "Answer": [
+        {
+          "key": "string",
+          "value": "string"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,640 @@
+{
+  "Id": "78785f64-5717-4562-b3fc-2c963f66afa6",
+  "Name": "AisoyKiK",
+  "RosVersion": 1,
+  "RosDistro": "Indigo",
+  "MaximumPayload": 0,
+  "MaximumTranslationalVelocity": 0,
+  "MaximumRotationalVelocity": 0,
+  "RobotWeight": 0.6,
+  "ROSRepo": "http://wiki.ros.org/aisoy_ros",
+  "ROSNodes": [
+    {
+      "Name": "/airos/camera/camera_node",
+      "Publications": [
+        {
+          "Name": "/airos/camera/image",
+          "Type": "sensor_msgs/Image",
+          "Description": "main front camera topic of the head of the robot."
+        }
+      ],
+      "Services": [],
+      "Subscriptions": []
+    },
+    {
+      "Name": "/airos/touch/touch_node",
+      "Publications": [
+        {
+          "Name": "/airos/touch/data",
+          "Type": "airos_msgs/TouchAiros6",
+          "Description": "touch sensor topic."
+        },
+        {
+          "Name": "/airo5s/touch/data",
+          "Type": "airos_msgs/Touch",
+          "Description": "touch sensor topic."
+        }
+      ],
+      "Subscriptions": [],
+      "Services": []
+    },
+    {
+      "Name": "/airos/asr/asrnode",
+      "Publications": [
+        {
+          "Name": "/airos5/asr/recognition",
+          "Type": "std_msgs/String",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/asr/state",
+          "Type": "std_msgs/String",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/audio/recognition",
+          "Type": "std_msgs/String",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/asr/is_listening",
+          "Type": "std_msgs/Bool",
+          "Description": "null"
+        }
+      ],
+      "Subscriptions": [
+        {
+          "Name": "/airos/aiplay/state",
+          "Type": "null",
+          "Description": "null"
+        },
+        {
+          "Name": "/kik/presence",
+          "Type": "std_msgs/Bool",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/botapp/state",
+          "Type": "std_msgs/String",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/tts/is_talking",
+          "Type": "std_msgs/Bool",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/servo/is_moving",
+          "Type": "std_msgs/Bool",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/audio/is_playing",
+          "Type": "std_msgs/Bool",
+          "Description": "null"
+        }
+      ],
+      "Services": [
+        {
+          "Name": "/airos/asr/set_language",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos5/asr/set_language_available",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/asr/asrnode/set_logger_level",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/asr/set_asr",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos5/asr/get_asr_name",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/asr/is_language_available",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/asr/get_asr_name",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos5/asr/get_available_languages",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/asr/asrnode/get_loggers",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/asr/asrnode/get_available_languages",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/asr/asrnode/get_languages",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos5/asr/asrnode/set_asr",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos5/asr/asrnode/set_language",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos5/asr/asrnode/get_language",
+          "Description": "null"
+        }
+      ]
+    },
+    {
+      "Name": "/airos/audio/audio_node",
+      "Publications": [
+        {
+          "Name": "/airos/audio/finished",
+          "Type": "airos_msgs/Int32",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/audio/is_playing",
+          "Type": "airos_msgs/Bool",
+          "Description": "null"
+        }
+      ],
+      "Subscriptions": [
+        {
+          "Name": "/airos/audio/play",
+          "Type": "airos_msgs/PlayAudio",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/audio/stop",
+          "Type": "airos_msgs/Empty",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/audio/stop_all",
+          "Type": "airos_msgs/Empty",
+          "Description": "null"
+        }
+      ],
+      "Services": [
+        {
+          "Name": "/airos/audio/play",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/audio/restore_volume",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/audio/play_volume",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos5/audio/get_list_audio",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/audio/play_file",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos5/audio/restore_volume",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/audio/get_volume",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos5/audio/stop_all",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/audio/get_list_audio",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/audio/stop",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos5/audio/play_volume",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/audio/audio_node/get_loggers",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos5/audio/set_volume",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos5/audio/stop",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/audio/audio_node/set_logger_level",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/audio/set_volume",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/audio/stop_all",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos5/audio/play",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos5/audio/get_volume",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos5/audio/play_file",
+          "Description": "null"
+        }
+      ]
+    },
+    {
+      "Name": "/airos/display/display_node",
+      "Publications": [
+        {
+          "Name": "/airos/display/finished",
+          "Type": "std_msgs/Int32",
+          "Description": "null"
+        }
+      ],
+      "Subscriptions": [
+        {
+          "Name": "/airos/display/draw",
+          "Type": "std_msgs/String",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/display/write",
+          "Type": "airos_msgs/DisplayWriteTopic",
+          "Description": "null"
+        },
+        {
+          "Name": "/kik/emotions/data",
+          "Type": "null",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/stop_all",
+          "Type": "std_msgs/Empty",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/tts/is_talking_performance",
+          "Type": "airos_msgs/IsTalking",
+          "Description": "null"
+        }
+      ],
+      "Services": [
+        {
+          "Name": "/airos5/display/write",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/display/write",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/display/display_node/set_logger_level",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/display/get_state",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/display/get_img_list",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos5/mouth/draw_array",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/display/draw_array",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/display/draw",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos5/display/draw",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/display/display_node/get_loggers",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos5/mouth/get_state",
+          "Description": "null"
+        }
+      ]
+    },
+    {
+      "Name": "/airos/color/color_node",
+      "Publications": [
+        {
+          "Name": "/airos/color/is_working",
+          "Type": "std_msgs/Bool",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/color/finished_id",
+          "Type": "std_msgs/Int32",
+          "Description": "null"
+        }
+      ],
+      "Subscriptions": [
+        {
+          "Name": "/airos/tts/is_talking",
+          "Type": "std_msgs/Bool",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/color/set_name",
+          "Type": "airos_msgs/SetColorName",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/color/blink",
+          "Type": "std_msgs/Bool",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/interruption_manager/output",
+          "Type": "null",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/color/set",
+          "Type": "airos_msgs/SetRgb",
+          "Description": "null"
+        }
+      ],
+      "Services": [
+        {
+          "Name": "/airos5/color/set_rgb",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/color/color_node/set_logger_level",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/color/blink",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos5/color/flash",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/color/set_rgb",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/color/flash",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos5/color/color_node/get_loggers",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos5/color/stop_all",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/color/stop_all",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/color/get_rgb",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos5/color/get_state",
+          "Description": "null"
+        }
+      ]
+    },
+    {
+      "Name": "/kik/actions/actions_node",
+      "Publications": [
+        {
+          "Name": "/airos/audio/play",
+          "Type": "airos_msgs/PlayAudio",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/vision/start_detection",
+          "Type": "std_msgs/String",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/display/draw",
+          "Type": "std_msgs/String",
+          "Description": "null"
+        },
+        {
+          "Name": "/kik/actions/finished_id",
+          "Type": "std_msgs/Int32",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/color/set_name",
+          "Type": "airos_msgs/SetRgb",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/tts/say_topic",
+          "Type": "airos_msgs/SayTopic",
+          "Description": "null"
+        },
+        {
+          "Name": "/kik/actions/working",
+          "Type": "std_msgs/Bool",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/display/write",
+          "Type": "airos_msgs/DisplayWriteTopic",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/color/blink",
+          "Type": "std_msgs/Bool",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/audio/stop",
+          "Type": "std_msgs/Empty",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/face/new_task",
+          "Type": "std_msgs/String",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/servo/set",
+          "Type": "airos_msgs/SetServo",
+          "Description": "null"
+        }
+      ],
+      "Subscriptions": [
+        {
+          "Name": "/airos/servo/finished_id",
+          "Type": "std_msgs/Int32",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/vision/get_detection",
+          "Type": "null",
+          "Description": "null"
+        },
+        {
+          "Name": "/kik/actions/start",
+          "Type": "std_msgs/String",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/tts/finished_id",
+          "Type": "std_msgs/Int32",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/color/finished_id",
+          "Type": "std_msgs/Int32",
+          "Description": "null"
+        },
+        {
+          "Name": "/kik/actions/start_id",
+          "Type": "null",
+          "Description": "null"
+        },
+        {
+          "Name": "/airos/accel/data",
+          "Type": "airos_msgs/Accelerometer",
+          "Description": "null"
+        }
+      ],
+      "Services": [
+        {
+          "Name": "/kik/actions/actions_node/set_logger_level",
+          "Description": "null"
+        },
+        {
+          "Name": "/kik/actions/actions_node/get_logger_level",
+          "Description": "null"
+        }
+      ]
+    }
+
+  ],
+  "Manufacturer": "AisoyRobotics",
+  "ManufacturerUrl": "https://aisoy.com/es/kik/",
+  "RobotModelName": "KiK",
+  "RobotStatus": "Unkown",
+  "currentTaskId": "00000000-0000-0000-0000-000000000000",
+  "TaskList": [
+    ""
+  ],
+  "BatteryStatus": 1,
+  "MacAddress": "00:00:5e:00:53:af",
+  "LocomotionSystem": "None",
+  "LocomotionTypes": "None",
+  "Sensors": [
+    {
+      "name": "cameraSensor",
+      "type": "Camera",
+      "description": "RGDB camera sensor",
+      "nodes": [
+        "/airos/camera/camera_node"
+      ],
+      "number": 1
+    },
+    {
+      "Name": "touchSensor",
+      "Type": "Touch",
+      "Description": " touch sensors for the belly of the robot",
+      "Nodes": [ "/airos/touch/touch_node" ],
+      "number": 3
+    },
+    {
+      "Name": "microphoneSensor",
+      "Type": "Microphone",
+      "Description": "one microphone sensor to listen to the world",
+      "Nodes": [ "/airos/asr/asrnode" ],
+      "number": 1
+    },
+    {
+      "Name": "speakerSensor",
+      "Type": "Speaker",
+      "Description": "one speaker sensor inside the robot",
+      "Nodes": [ "/airos/audio/audio_node" ],
+      "number": 1
+    },
+    {
+      "Name": "displaySensor",
+      "Type": "Display",
+      "Description": "little display in the mouth of the robot",
+      "Nodes": [ "/airos/display/display_node" ],
+      "number": 1
+    },
+    {
+      "Name": "light",
+      "Type": "Light",
+      "Description": "light in the belly of the robot to signal emotional state",
+      "Nodes": [ "/airos/color/color_node" ],
+      "number": 1
+    }
+  ],
+  "Actuators": [
+    {
+      "name": "RightEyebrow",
+      "type": "Rotatory",
+      "number": 1,
+      "nodes": [
+        "/kik/actions/actions_node"
+      ]
+    },
+    {
+      "Name": "LeftEyebrow",
+      "Type": "Rotatory",
+      "Number": 1,
+      "Nodes": [ "/kik/actions/actions_node" ]
+    }
+
+  ],
+  "Manipulators": [
+  ],
+  "CPU": 1,
+  "RAM": 1,
+  "StorageDisk": 8,
+  "NumberCores": 4,
+  "Questions": [
+  ],
+  "LastUpdatedTime": "2023-03-15T13:45:30.0000000-07:00",
+  "OnboardedTime": "2023-03-15T13:45:30.0000000-07:00"
+}

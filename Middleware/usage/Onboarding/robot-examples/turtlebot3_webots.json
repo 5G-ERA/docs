@@ -1,0 +1,633 @@
+{
+    "id": "b0a881a6-24d9-4589-aefb-f8642f73ea87",
+    "name": "Turtlebot3-webots",
+    "modelName": null,
+    "status": null,
+    "batteryStatus": 100,
+    "rosVersion": 2,
+    "rosDistro": "Foxy",
+    "maximumPayload": 15,
+    "maximumTranslationalVelocity": 1,
+    "maximumRotationalVelocity": 1,
+    "robotWeight": 1,
+    "rosRepo": "http://wiki.ros.org/turtlebot3",
+    "rosNodes": [
+        {
+            "Name": "/Ros2Supervisor",
+            "Publications": [
+                {
+                    "Name": "/clock",
+                    "Type": "rosgraph_msgs/msg/Clock",
+                    "Description": ""
+                },
+                {
+                    "Name": "/parameter_events",
+                    "Type": "rcl_interfaces/msg/ParameterEvent",
+                    "Description": ""
+                },
+                {
+                    "Name": "/rosout",
+                    "Type": "rcl_interfaces/msg/Log",
+                    "Description": ""
+                }
+            ],
+            "Subscriptions": [
+                {
+                    "Name": "/remove_node",
+                    "Type": "std_msgs/msg/String",
+                    "Description": ""
+                }
+            ],
+            "Services": [
+                {
+                    "Name": "/Ros2Supervisor/describe_parameters",
+                    "Type": "rcl_interfaces/srv/DescribeParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/Ros2Supervisor/get_parameter_types",
+                    "Type": "rcl_interfaces/srv/GetParameterTypes",
+                    "Description": ""
+                },
+                {
+                    "Name": "/Ros2Supervisor/get_parameters",
+                    "Type": "rcl_interfaces/srv/GetParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/Ros2Supervisor/list_parameters",
+                    "Type": "rcl_interfaces/srv/ListParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/Ros2Supervisor/set_parameters",
+                    "Type": "rcl_interfaces/srv/SetParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/Ros2Supervisor/set_parameters_atomically",
+                    "Type": "rcl_interfaces/srv/SetParametersAtomically",
+                    "Description": ""
+                },
+                {
+                    "Name": "/spawn_node_from_string",
+                    "Type": "webots_ros2_msgs/srv/SpawnNodeFromString",
+                    "Description": ""
+                },
+                {
+                    "Name": "/spawn_urdf_robot",
+                    "Type": "webots_ros2_msgs/srv/SpawnUrdfRobot",
+                    "Description": ""
+                }
+            ]
+        },
+        {
+            "Name": "/TurtleBot3Burger",
+            "Publications": [
+                {
+                    "Name": "/TurtleBot3Burger/gps",
+                    "Type": "geometry_msgs/msg/PointStamped",
+                    "Description": ""
+                },
+                {
+                    "Name": "/TurtleBot3Burger/gps/speed",
+                    "Type": "std_msgs/msg/Float32",
+                    "Description": ""
+                },
+                {
+                    "Name": "/TurtleBot3Burger/gps/speed_vector",
+                    "Type": "geometry_msgs/msg/Vector3",
+                    "Description": ""
+                },
+                {
+                    "Name": "/imu",
+                    "Type": "sensor_msgs/msg/Imu",
+                    "Description": ""
+                },
+                {
+                    "Name": "/parameter_events",
+                    "Type": "rcl_interfaces/msg/ParameterEvent",
+                    "Description": ""
+                },
+                {
+                    "Name": "/remove_urdf_robot",
+                    "Type": "std_msgs/msg/String",
+                    "Description": ""
+                },
+                {
+                    "Name": "/rosout",
+                    "Type": "rcl_interfaces/msg/Log",
+                    "Description": ""
+                },
+                {
+                    "Name": "/scan",
+                    "Type": "sensor_msgs/msg/LaserScan",
+                    "Description": ""
+                },
+                {
+                    "Name": "/scan/point_cloud",
+                    "Type": "sensor_msgs/msg/PointCloud2",
+                    "Description": ""
+                }
+            ],
+            "Subscriptions": [
+                {
+                    "Name": "/clock",
+                    "Type": "rosgraph_msgs/msg/Clock",
+                    "Description": ""
+                },
+                {
+                    "Name": "/parameter_events",
+                    "Type": "rcl_interfaces/msg/ParameterEvent",
+                    "Description": ""
+                }
+            ],
+            "Services": [
+                {
+                    "Name": "/TurtleBot3Burger/describe_parameters",
+                    "Type": "rcl_interfaces/srv/DescribeParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/TurtleBot3Burger/get_parameter_types",
+                    "Type": "rcl_interfaces/srv/GetParameterTypes",
+                    "Description": ""
+                },
+                {
+                    "Name": "/TurtleBot3Burger/get_parameters",
+                    "Type": "rcl_interfaces/srv/GetParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/TurtleBot3Burger/list_parameters",
+                    "Type": "rcl_interfaces/srv/ListParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/TurtleBot3Burger/set_parameters",
+                    "Type": "rcl_interfaces/srv/SetParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/TurtleBot3Burger/set_parameters_atomically",
+                    "Type": "rcl_interfaces/srv/SetParametersAtomically",
+                    "Description": ""
+                }
+            ]
+        },
+        {
+            "Name": "/controller_manager",
+            "Publications": [
+                {
+                    "Name": "/parameter_events",
+                    "Type": "rcl_interfaces/msg/ParameterEvent",
+                    "Description": ""
+                },
+                {
+                    "Name": "/rosout",
+                    "Type": "rcl_interfaces/msg/Log",
+                    "Description": ""
+                }
+            ],
+            "Subscriptions": [
+                {
+                    "Name": "/clock",
+                    "Type": "rosgraph_msgs/msg/Clock",
+                    "Description": ""
+                },
+                {
+                    "Name": "/parameter_events",
+                    "Type": "rcl_interfaces/msg/ParameterEvent",
+                    "Description": ""
+                }
+            ],
+            "Services": [
+                {
+                    "Name": "/controller_manager/configure_and_start_controller",
+                    "Type": "controller_manager_msgs/srv/ConfigureStartController",
+                    "Description": ""
+                },
+                {
+                    "Name": "/controller_manager/configure_controller",
+                    "Type": "controller_manager_msgs/srv/ConfigureController",
+                    "Description": ""
+                },
+                {
+                    "Name": "/controller_manager/describe_parameters",
+                    "Type": "rcl_interfaces/srv/DescribeParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/controller_manager/get_parameter_types",
+                    "Type": "rcl_interfaces/srv/GetParameterTypes",
+                    "Description": ""
+                },
+                {
+                    "Name": "/controller_manager/get_parameters",
+                    "Type": "rcl_interfaces/srv/GetParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/controller_manager/list_controller_types",
+                    "Type": "controller_manager_msgs/srv/ListControllerTypes",
+                    "Description": ""
+                },
+                {
+                    "Name": "/controller_manager/list_controllers",
+                    "Type": "controller_manager_msgs/srv/ListControllers",
+                    "Description": ""
+                },
+                {
+                    "Name": "/controller_manager/list_hardware_interfaces",
+                    "Type": "controller_manager_msgs/srv/ListHardwareInterfaces",
+                    "Description": ""
+                },
+                {
+                    "Name": "/controller_manager/list_parameters",
+                    "Type": "rcl_interfaces/srv/ListParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/controller_manager/load_and_configure_controller",
+                    "Type": "controller_manager_msgs/srv/LoadConfigureController",
+                    "Description": ""
+                },
+                {
+                    "Name": "/controller_manager/load_and_start_controller",
+                    "Type": "controller_manager_msgs/srv/LoadStartController",
+                    "Description": ""
+                },
+                {
+                    "Name": "/controller_manager/load_controller",
+                    "Type": "controller_manager_msgs/srv/LoadController",
+                    "Description": ""
+                },
+                {
+                    "Name": "/controller_manager/reload_controller_libraries",
+                    "Type": "controller_manager_msgs/srv/ReloadControllerLibraries",
+                    "Description": ""
+                },
+                {
+                    "Name": "/controller_manager/set_parameters",
+                    "Type": "rcl_interfaces/srv/SetParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/controller_manager/set_parameters_atomically",
+                    "Type": "rcl_interfaces/srv/SetParametersAtomically",
+                    "Description": ""
+                },
+                {
+                    "Name": "/controller_manager/switch_controller",
+                    "Type": "controller_manager_msgs/srv/SwitchController",
+                    "Description": ""
+                },
+                {
+                    "Name": "/controller_manager/unload_controller",
+                    "Type": "controller_manager_msgs/srv/UnloadController",
+                    "Description": ""
+                }
+            ]
+        },
+        {
+            "Name": "/plugin_node_example",
+            "Publications": [
+                {
+                    "Name": "/custom_clock",
+                    "Type": "rosgraph_msgs/msg/Clock",
+                    "Description": ""
+                },
+                {
+                    "Name": "/parameter_events",
+                    "Type": "rcl_interfaces/msg/ParameterEvent",
+                    "Description": ""
+                },
+                {
+                    "Name": "/rosout",
+                    "Type": "rcl_interfaces/msg/Log",
+                    "Description": ""
+                }
+            ],
+            "Subscriptions": [
+                {
+                    "Name": "/clock",
+                    "Type": "rosgraph_msgs/msg/Clock",
+                    "Description": ""
+                }
+            ],
+            "Services": [
+                {
+                    "Name": "/plugin_node_example/describe_parameters",
+                    "Type": "rcl_interfaces/srv/DescribeParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/plugin_node_example/get_parameter_types",
+                    "Type": "rcl_interfaces/srv/GetParameterTypes",
+                    "Description": ""
+                },
+                {
+                    "Name": "/plugin_node_example/get_parameters",
+                    "Type": "rcl_interfaces/srv/GetParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/plugin_node_example/list_parameters",
+                    "Type": "rcl_interfaces/srv/ListParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/plugin_node_example/set_parameters",
+                    "Type": "rcl_interfaces/srv/SetParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/plugin_node_example/set_parameters_atomically",
+                    "Type": "rcl_interfaces/srv/SetParametersAtomically",
+                    "Description": ""
+                }
+            ]
+        },
+        {
+            "Name": "/robot_state_publisher",
+            "Publications": [
+                {
+                    "Name": "/parameter_events",
+                    "Type": "rcl_interfaces/msg/ParameterEvent",
+                    "Description": ""
+                },
+                {
+                    "Name": "/robot_description",
+                    "Type": "std_msgs/msg/String",
+                    "Description": ""
+                },
+                {
+                    "Name": "/rosout",
+                    "Type": "rcl_interfaces/msg/Log",
+                    "Description": ""
+                },
+                {
+                    "Name": "/tf",
+                    "Type": "tf2_msgs/msg/TFMessage",
+                    "Description": ""
+                },
+                {
+                    "Name": "/tf_static",
+                    "Type": "tf2_msgs/msg/TFMessage",
+                    "Description": ""
+                }
+            ],
+            "Subscriptions": [
+                {
+                    "Name": "/joint_states",
+                    "Type": "sensor_msgs/msg/JointState",
+                    "Description": ""
+                },
+                {
+                    "Name": "/parameter_events",
+                    "Type": "rcl_interfaces/msg/ParameterEvent",
+                    "Description": ""
+                }
+            ],
+            "Services": [
+                {
+                    "Name": "/robot_state_publisher/describe_parameters",
+                    "Type": "rcl_interfaces/srv/DescribeParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/robot_state_publisher/get_parameter_types",
+                    "Type": "rcl_interfaces/srv/GetParameterTypes",
+                    "Description": ""
+                },
+                {
+                    "Name": "/robot_state_publisher/get_parameters",
+                    "Type": "rcl_interfaces/srv/GetParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/robot_state_publisher/list_parameters",
+                    "Type": "rcl_interfaces/srv/ListParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/robot_state_publisher/set_parameters",
+                    "Type": "rcl_interfaces/srv/SetParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/robot_state_publisher/set_parameters_atomically",
+                    "Type": "rcl_interfaces/srv/SetParametersAtomically",
+                    "Description": ""
+                }
+            ]
+        },
+        {
+            "Name": "/robot_state_publisher",
+            "Publications": [
+                {
+                    "Name": "/parameter_events",
+                    "Type": "rcl_interfaces/msg/ParameterEvent",
+                    "Description": ""
+                },
+                {
+                    "Name": "/robot_description",
+                    "Type": "std_msgs/msg/String",
+                    "Description": ""
+                },
+                {
+                    "Name": "/rosout",
+                    "Type": "rcl_interfaces/msg/Log",
+                    "Description": ""
+                },
+                {
+                    "Name": "/tf",
+                    "Type": "tf2_msgs/msg/TFMessage",
+                    "Description": ""
+                },
+                {
+                    "Name": "/tf_static",
+                    "Type": "tf2_msgs/msg/TFMessage",
+                    "Description": ""
+                }
+            ],
+            "Subscriptions": [
+                {
+                    "Name": "/joint_states",
+                    "Type": "sensor_msgs/msg/JointState",
+                    "Description": ""
+                },
+                {
+                    "Name": "/parameter_events",
+                    "Type": "rcl_interfaces/msg/ParameterEvent",
+                    "Description": ""
+                }
+            ],
+            "Services": [
+                {
+                    "Name": "/robot_state_publisher/describe_parameters",
+                    "Type": "rcl_interfaces/srv/DescribeParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/robot_state_publisher/get_parameter_types",
+                    "Type": "rcl_interfaces/srv/GetParameterTypes",
+                    "Description": ""
+                },
+                {
+                    "Name": "/robot_state_publisher/get_parameters",
+                    "Type": "rcl_interfaces/srv/GetParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/robot_state_publisher/list_parameters",
+                    "Type": "rcl_interfaces/srv/ListParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/robot_state_publisher/set_parameters",
+                    "Type": "rcl_interfaces/srv/SetParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/robot_state_publisher/set_parameters_atomically",
+                    "Type": "rcl_interfaces/srv/SetParametersAtomically",
+                    "Description": ""
+                }
+            ]
+        },
+        {
+            "Name": "/static_transform_publisher_4ZVhG4eilBPlgXRQ",
+            "Publications": [
+                {
+                    "Name": "/parameter_events",
+                    "Type": "rcl_interfaces/msg/ParameterEvent",
+                    "Description": ""
+                },
+                {
+                    "Name": "/rosout",
+                    "Type": "rcl_interfaces/msg/Log",
+                    "Description": ""
+                },
+                {
+                    "Name": "/tf_static",
+                    "Type": "tf2_msgs/msg/TFMessage",
+                    "Description": ""
+                }
+            ],
+            "Subscriptions": [
+                {
+                    "Name": "/parameter_events",
+                    "Type": "rcl_interfaces/msg/ParameterEvent",
+                    "Description": ""
+                }
+            ],
+            "Services": [
+                {
+                    "Name": "/static_transform_publisher_4ZVhG4eilBPlgXRQ/describe_parameters",
+                    "Type": "rcl_interfaces/srv/DescribeParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/static_transform_publisher_4ZVhG4eilBPlgXRQ/get_parameter_types",
+                    "Type": "rcl_interfaces/srv/GetParameterTypes",
+                    "Description": ""
+                },
+                {
+                    "Name": "/static_transform_publisher_4ZVhG4eilBPlgXRQ/get_parameters",
+                    "Type": "rcl_interfaces/srv/GetParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/static_transform_publisher_4ZVhG4eilBPlgXRQ/list_parameters",
+                    "Type": "rcl_interfaces/srv/ListParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/static_transform_publisher_4ZVhG4eilBPlgXRQ/set_parameters",
+                    "Type": "rcl_interfaces/srv/SetParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/static_transform_publisher_4ZVhG4eilBPlgXRQ/set_parameters_atomically",
+                    "Type": "rcl_interfaces/srv/SetParametersAtomically",
+                    "Description": ""
+                }
+            ]
+        },
+        {
+            "Name": "/static_transform_publisher_nwsn2W369f7rN487",
+            "Publications": [
+                {
+                    "Name": "/parameter_events",
+                    "Type": "rcl_interfaces/msg/ParameterEvent",
+                    "Description": ""
+                },
+                {
+                    "Name": "/rosout",
+                    "Type": "rcl_interfaces/msg/Log",
+                    "Description": ""
+                },
+                {
+                    "Name": "/tf_static",
+                    "Type": "tf2_msgs/msg/TFMessage",
+                    "Description": ""
+                }
+            ],
+            "Subscriptions": [
+                {
+                    "Name": "/parameter_events",
+                    "Type": "rcl_interfaces/msg/ParameterEvent",
+                    "Description": ""
+                }
+            ],
+            "Services": [
+                {
+                    "Name": "/static_transform_publisher_nwsn2W369f7rN487/describe_parameters",
+                    "Type": "rcl_interfaces/srv/DescribeParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/static_transform_publisher_nwsn2W369f7rN487/get_parameter_types",
+                    "Type": "rcl_interfaces/srv/GetParameterTypes",
+                    "Description": ""
+                },
+                {
+                    "Name": "/static_transform_publisher_nwsn2W369f7rN487/get_parameters",
+                    "Type": "rcl_interfaces/srv/GetParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/static_transform_publisher_nwsn2W369f7rN487/list_parameters",
+                    "Type": "rcl_interfaces/srv/ListParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/static_transform_publisher_nwsn2W369f7rN487/set_parameters",
+                    "Type": "rcl_interfaces/srv/SetParameters",
+                    "Description": ""
+                },
+                {
+                    "Name": "/static_transform_publisher_nwsn2W369f7rN487/set_parameters_atomically",
+                    "Type": "rcl_interfaces/srv/SetParametersAtomically",
+                    "Description": ""
+                }
+            ]
+        }
+    ],
+    "manufacturer": "robotis",
+    "manufacturerUrl": "https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/#:~:text=TurtleBot3%20is%20a%20collaboration%20project%20among%20Open%20Robotics%2C%20ROBOTIS%2C%20and,Lab%20at%20National%20Chiao%20Tung",
+    "macAddress": "00-B0-D0-63-C2-26",
+    "locomotionSystem": "Differential",
+    "locomotionType": "Rolling",
+    "sensors": [],
+    "actuators": [],
+    "manipulators": [],
+    "cpu": 1,
+    "numberOfCores": null,
+    "ram": 1,
+    "storageDisk": 8,
+    "questions": [],
+    "lastUpdatedTime": "2023-04-20T14:55:34.0538164",
+    "onboardedTime": "2023-04-20T14:55:34.0538164"
+}
