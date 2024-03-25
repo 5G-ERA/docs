@@ -2,7 +2,7 @@
 
 This document describes the architecture used by the Middleware. How it interacts with other system components and backing resources needed like databases or platforms it is designed to run on. 
 
-Diagram below presents a very high level visualization of the Middleware architecture.
+The diagram below presents a very high-level visualization of the Middleware architecture.
 
 ![middleware architecture](../diagrams/crop-architecture.png)
 
@@ -18,6 +18,8 @@ The main components of the Middleware are:
 
 * Redis Interface - allows the users to retrieve, insert, and update data from/into the Redis-Server
 ROS: robotics framework 
+
+Additionally, there is a CentralApi service that connects all the Middleware instances. 
 
 ## Infrastructure provision
 
