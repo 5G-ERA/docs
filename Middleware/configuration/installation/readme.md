@@ -95,7 +95,7 @@ With all the necessary programs and addons installed, we can proceed to configur
 
 After the `microk8s` is installed and the `kubectl` command has access to the cluster, it is time to configure the cluster so the middleware can be deployed and function correctly inside of it.
 
-The files required for the execution of the cluster configuration are provided [here](../../k8s/cluster-config).
+The files required for the execution of the cluster configuration are provided [here](https://github.com/5G-ERA/middleware/tree/main/k8s/cluster-config).
 
 
 **Note: To execute the provided commands, make sure you are in the same directory as the downloaded files.**
@@ -149,11 +149,11 @@ When using AWS Secrets Manager, the Middleware requires minimal configuration wh
 7. AWS_ACCESS_KEY_ID - Aws access key ID used to access the services in AWS like Secret Manager.
 8. AWS_SECRET_ACCESS_KEY - Aws secret used to authenticate the access key.
 
-In the [orchestrator.yaml](../../k8s/orchestrator/orchestrator.yaml) file, remove commented lines that are required only for the deployment without Secrets Manager.
+In the [orchestrator.yaml](https://github.com/5G-ERA/middleware/tree/main/k8s/orchestrator/orchestrator.yaml) file, remove commented lines that are required only for the deployment without Secrets Manager.
 
 ### Manual Configuration
 
-The last step is to prepare the deployment script for the middleware. It can be found [here](../../k8s/orchestrator/orchestrator.yaml). In the `orchestrator.yaml` file there are environment variables that must be set to ensure the correct work of the Orchestrator. 
+The last step is to prepare the deployment script for the middleware. It can be found [here](https://github.com/5G-ERA/middleware/tree/main/k8s/orchestrator/orchestrator.yaml). In the `orchestrator.yaml` file there are environment variables that must be set to ensure the correct work of the Orchestrator. 
 
 
 The required variables are:
@@ -180,7 +180,7 @@ The required variables are:
 20. InfluxDB__ApiKey - Api key to access InfluxDB
 
 ## Middleware version
-The most up-to-date Middleware version is `v0.9.0`. Remember to set this tag in the `orchestrator.yaml` file in the `spec -> template -> spec -> containers -> image`. 
+The most up-to-date Middleware version is `v0.10.0`. Remember to set this tag in the `orchestrator.yaml` file in the `spec -> template -> spec -> containers -> image`. 
 
 Until the Middleware releases version `1.0`, we recommend using the `latest` tag, as it is not guaranteed to provide backward compatibility. From versions `1.0` and later, backward compatibility will be ensured.
 
@@ -192,7 +192,7 @@ After all the values are set, the Middleware can be deployed. Start with the dep
 kubectl apply -f orchestrator.yaml -n middleware
 ```
 
-Alternatively, you can use utility scripts located at [k8s/orchestrator](../../k8s/orchestrator/):
+Alternatively, you can use utility scripts located at [k8s/orchestrator](https://github.com/5G-ERA/middleware/tree/main/k8s/orchestrator):
 
 ```shell
 ./deploy.sh
@@ -224,7 +224,7 @@ Each of these services is represented by the pod, service, deployment and replic
 If only the Orchestrator is visible with the status of the pod as Container Creating, it needs additional time to download the application. After the deployment of the Orchestrator, soon the other components should begin their deployment. The result should look like the image below.
 
 <p align="left">
-    <img src="imgs/deployed_middleware.png" alt="- Deployed middleware.">
+    <img src="../../img/deployed_middleware.png" alt="- Deployed middleware.">
 </p>
 
 If there are errors during the deployment of the orchestrator, then check if you correctly configured access to the AWS registry and access keys.
@@ -255,7 +255,7 @@ sudo snap install microk8s --classic
 ```
 
 <p align="left">
-    <img src="imgs/snap_error.png" alt="- Deployed middleware.">
+    <img src="../../img/snap_error.png" alt="- Deployed middleware.">
 </p>
 
 
