@@ -1,0 +1,4 @@
+middleware.io.        IN  SOA dns.middleware.io. maintainer.middleware.io. 2024040335 720 360 1209600 3600
+
+middleware.io.  IN  A   192.168.0.100
+*.middleware.io.    IN  A   192.168.0.100
