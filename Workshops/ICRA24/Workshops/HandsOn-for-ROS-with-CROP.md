@@ -101,7 +101,7 @@ Once again, you can visualize results with the detection_publisher and show_imag
 
 In this section, you will try to deploy collision avoidance, a.k.a Forward Collision Warning Service Network Application (FCW). Contrary to the previous example, ROS is not used in this case. The complete documentation for the FCW is located here: https://github.com/5G-ERA/CollisionWarningService
 
-For the following tutorial, only the client part is needed since the Network Application itself will be deployed on the remote server. To try the FCW, you will need a video from a robot or an autonomous vehicle and a configuration script for the corresponding video. Here you can download both: TBA
+For the following tutorial, only the client part is needed since the Network Application itself will be deployed on the remote server. To try the FCW, you will need a video from a robot or an autonomous vehicle, a calibration file and a configuration script for the corresponding video. Here you can download both: TBA
 
 To install the client package, follow these steps:
 
@@ -114,7 +114,7 @@ Now you can run the example client script:
 
 ```bash
 export NETAPP_ADDRESS=TBA
-fcw_client_python_simple -c config.yaml --camera video3.yaml video3.mp4
+fcw_client_python_simple -c config.yaml --camera video.yaml video.mp4
 ```
 In the previous section, the address of the deployed network application needs to be added. Ask the organizer where the network application is deployed.
 
