@@ -98,6 +98,38 @@ To instruct the Middleware to deploy the network application for you, you need t
 Once again, you can visualize results with the detection_publisher and show_image, just like with one of the previous steps.
 
 ### 3) Hand on experience of obstacle avoidance in unstructured networks (BUT)
+
+In this section, you will try to deploy collision avoidance, a.k.a Forward Collision Warning Service Network Application (FCW). Contrary to the previous example, ROS is not used in this case. The complete documentation for the FCW is located here: https://github.com/5G-ERA/CollisionWarningService
+
+For the following tutorial, only the client part is needed since the Network Application itself will be deployed on the remote server. To try the FCW, you will need a video from a robot or an autonomous vehicle and a configuration script for the corresponding video. Here you can download both: TBA
+
+To install the client package, follow these steps:
+
+```bash
+python3 -m venv myvenv
+myvenv\Scripts\activate
+pip install fcw-client
+```
+Now you can run the example client script:
+
+```bash
+export NETAPP_ADDRESS=TBA
+fcw_client_python_simple -c config.yaml --camera video3.yaml video3.mp4
+```
+In the previous section, the address of the deployed network application needs to be added. Ask the organizer where the network application is deployed.
+
+To deploy the network application using the middleware, you can use a second client script, which requires setting several middleware variables. The organizers will provide you with the details of the configuration:
+
+```bash
+export MIDDLEWARE_ADDRESS=TBA
+export MIDDLEWARE_USER=TBA
+export MIDDLEWARE_PASSWORD=TBA
+export MIDDLEWARE_TASK_ID=TBA
+export MIDDLEWARE_ROBOT_ID=TBA
+fcw_client_python_middleware -c config.yaml --camera video3.yaml video3.mp4
+```
+ 
+
 ### 4) Demonstration: Behind scene story, fully orchestrated infrastructure automation (BED)
 
 Current enviroment in robotics:
