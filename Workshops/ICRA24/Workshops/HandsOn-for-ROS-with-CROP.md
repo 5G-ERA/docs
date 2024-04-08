@@ -128,7 +128,37 @@ export MIDDLEWARE_TASK_ID=TBA
 export MIDDLEWARE_ROBOT_ID=TBA
 fcw_client_python_middleware -c config.yaml --camera video3.yaml video3.mp4
 ```
- 
+
+#### Running remote visualization
+
+The visualisation should be enabled with config arguments during initialization command (`CollisionWorker` created 
+with `viz` parameter set to `True` (ZeroMQ port can be also configured)).
+
+If the FCW service has been started, **run RTSP server first**, e.g. https://github.com/bluenviron/mediamtx
+on address: rtsp://localhost:8554 (TCP port 8554) and then:
+
+```bash
+docker run --rm -it -p 8554:8554 -e MTX_PROTOCOLS=tcp bluenviron/mediamtx:latest-ffmpeg
+```
+
+In other terminal run
+
+```bash
+cd fcw-service/fcw_service
+fcw_visualization
+```
+
+or executing 
+```bash
+cd fcw-service/fcw_service
+python3 visualization.py
+```
+
+You can view video, e.g. (localhost can be replaced with server address):
+
+```bash
+ffplay rtsp://localhost:8554/video
+```
 
 ### 4) Demonstration: Behind scene story, fully orchestrated infrastructure automation (BED)
 
