@@ -1,0 +1,40 @@
+{
+  "Middleware": {
+    "Organization": "",
+    "InstanceName": "",
+    "InstanceType": "",
+    "Address": ""
+  },
+  "User": {
+    "Username": "",
+    "Password": ""
+  },
+  "Slice": {
+    "Hostname": ""
+  },
+  "RabbitMQ": {
+    "Address": "",
+    "User": "",
+    "Pass": "",
+    "Port": ""
+  },
+  "Redis": {
+    "HostName": "",
+    "ClusterHostname": "",
+    "Password": ""
+  },
+  "CustomLogger": {
+    "LoggerName": "",
+    "Url": "",
+    "User": "",
+    "Password": ""
+  },
+  "InfluxDB": {
+    "ApiKey": "",
+    "Address": ""
+  },
+  "GatewayConfig": {
+    "NodePort": 31000,
+    "IsIngress": false
+  }
+}

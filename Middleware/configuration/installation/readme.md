@@ -14,7 +14,7 @@ The recommended hardware specifications for running the Middleware locally for t
 * RAM - 16 GB or above
 * Memory - 100 GB or more
 
-For the production environment, the hardware specifications will differ as the minimum requirements will be based on the number of Network Applications the Middleware will be running. The more Network Applications the more hardware resources will be needed.
+For the production environment, the hardware specifications will differ as the minimum requirements will be based on the number of Network Applications the Middleware will be running. The more Network Applications, the more hardware resources will be needed.
 
 ## Troubleshooting
 

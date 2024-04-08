@@ -6,18 +6,17 @@ The diagram below presents a very high-level visualization of the Middleware arc
 
 ![middleware architecture](../diagrams/crop-architecture.png)
 
-The main components of the Middleware are:
+The main elements of the Middleware are:
 
-* Gateway - It redirects the traffic across the Middleware system meaning rerouting to the microservices within the system. It also handles the authentication and authorization process.
+* [Gateway](./gateway/readme.md)-It redirects the traffic across the Middleware system meaning rerouting to the microservices within the system. It also handles the authentication and authorization process.
 
-* Task Planner - Integrating the semantic knowledge of the vertical into resource planning. It is part of the vertical-level life cycle management implemented by Middleware.
+* [Task Planner](./task-planner/readme.md) - Integrating the semantic knowledge of the vertical into resource planning. It is part of the vertical-level life cycle management implemented by Middleware.
 
-* Resource Planner - is responsible for assigning the placement example, on the cloud, Edge to the tasks.
+* [Resource Planner](./resource-planner/readme.md) - is responsible for assigning the placement example, on the cloud, Edge to the tasks.
 
-* Orchestrator - it orchestrates the deployment process of resources. It is responsible for the vertical-level lifecycle management of the deployed services
+* [Orchestrator](./orchestrator/readme.md) - is responsible for the deployment process of resources. It is responsible for the vertical-level lifecycle management of the deployed services
 
-* Redis Interface - allows the users to retrieve, insert, and update data from/into the Redis-Server
-ROS: robotics framework 
+* [Redis Interface](./redis-interface/readme.md) - allows the users to retrieve, insert, and update data from/into the Redis-Server
 
 Additionally, there is a CentralApi service that connects all the Middleware instances. 
 
