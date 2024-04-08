@@ -132,7 +132,8 @@ fcw_client_python_middleware -c config.yaml --camera video3.yaml video3.mp4
 #### Running remote visualization
 
 The visualisation should be enabled with config arguments during initialization command (`CollisionWorker` created 
-with `viz` parameter set to `True` (ZeroMQ port can be also configured)).
+with `viz` parameter set to `True` (ZeroMQ port can be also configured)).B y default, visualization is turned on 
+using `viz` parameter in CollisionWarningClient.
 
 If the FCW service has been started, **run RTSP server first**, e.g. https://github.com/bluenviron/mediamtx
 on address: rtsp://localhost:8554 (TCP port 8554) and then:
@@ -141,16 +142,21 @@ on address: rtsp://localhost:8554 (TCP port 8554) and then:
 docker run --rm -it -p 8554:8554 -e MTX_PROTOCOLS=tcp bluenviron/mediamtx:latest-ffmpeg
 ```
 
-In other terminal run
+In other terminal...
 
+If you don't have fcw-service installed, install it and run it
 ```bash
-cd fcw-service/fcw_service
+pip install fcw-service
 fcw_visualization
 ```
 
-or executing 
+or use git
 ```bash
-cd fcw-service/fcw_service
+git clone https://github.com/5G-ERA/CollisionWarningService.git
+cd CollisionWarningService
+cd fcw-service
+pip install .
+cd fcw_service
 python3 visualization.py
 ```
 
