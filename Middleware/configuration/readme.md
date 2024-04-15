@@ -7,11 +7,17 @@ There are a few steps required to be completed before the use of the 5G-ERA Midd
 ## Installation
 Before Middleware can be used, it needs to have all the necessary infrastructure installed. 
 For the detailed instructions on how to install the required infrastructure, 
-see an [Installation guide](./installation/readme.md)
+see an [Installation guide](installation/crop-middleware/readme.md)
 
 ## Configuration
 Proper configuration of the Middleware is required before the deployment, for more details, 
 see a [configuration guide](./configuration/readme.md).
+## Routing and DNS for Cloud deployments
+To enable access to the Middleware in the Cloud, the DNS resolver configuration is required.
+When using a Cloud DNS provider like AWS Route 53 or Cloudflare, create `A` record mapping to Middleware address. 
+Next, add a wildcard subdomain mapping to the same address as the Middleware.
+
+This will ensure all the requests will reach the Middleware, that will route the traffic to the correct NetApps.
 
 ## Routing and local DNS for Edge deployments
 To fully use Middleware capabilities, for the local Edge deployments,

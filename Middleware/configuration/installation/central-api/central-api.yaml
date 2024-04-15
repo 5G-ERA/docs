@@ -31,7 +31,7 @@ spec:
         - name: awsecr-cred
       containers:
         - name: central-api
-          image: ghcr.io/5g-era/central-api:edge
+          image: ghcr.io/5g-era/central-api:latest
           imagePullPolicy: Always
           resources:
             limits:
