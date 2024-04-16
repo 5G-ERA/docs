@@ -21,12 +21,11 @@ Connected Robotics Platform (CROP) – Network softwarization and virtualization
 **13:30-14:50 Demonstration of the Connected Robotics**
 
 Scenario: Network-based SLAM in unstructured real-world network using CROP
-* Offloading SLAM to remote Cloud and local Edge – _Dr Michal Kapinus (Brno University of Technology, Czechia)_
+* Offloading SLAM to from robots to Edge – _Dr Michal Kapinus (Brno University of Technology, Czechia)_
 * Quality-aware robot operations, robot selecting optimal resource based on quality signals – _Dr Lanfranco Zanzi (NECLab, Germany)_
 * Resilient and robust service by autonomous Edge switch over – _Mr. Bartosz Bratus (University of Bedfordshire, UK)_
 
 Integrated demonstration (hybrid): 
-*	Onsite demonstration: Simulated robot with pre-recorded point cloud data 
 *	Remote demonstration: Summit XL connected to AWS Cloud for PPDR surveillance tasks – _Mr. Guillem Garí and Ms. Sandra Moreno Olivares (RobotNik Automation SLL, Spain), Mr. Adrian Lendínez (Telefonica, Spain) and Mr. Vladimir Guroma (University of Bedfordshire, UK)_
 
 Presentations:
@@ -36,7 +35,7 @@ Presentations:
 **14:50-15:40 Hand on experience of ROS under the Connected Robotics**
 
 Scenario: Breaking the barrier of ROS2 DDS into real-world networks
-* Limitation of ROS2 and DDS (BUT) and Hand on experience of remote object detection in unstructured networks – _Dr Michal Kapinus (Brno University of Technology, Czechia)_
+* Limitation of ROS2/DDS and Hand on experience of remote object detection in unstructured networks – _Dr Michal Kapinus (Brno University of Technology, Czechia)_
 * Hand on experience of obstacle avoidance in unstructured networks – _Dr Michal Kapinus (Brno University of Technology, Czechia)_
 * Demonstration: Behind scene story, fully orchestrated infrastructure automation – _Mr. Bartosz Bratus and Mr. Radu Popescu (University of Bedfordshire, UK)_
 
@@ -46,8 +45,8 @@ Scenario: Breaking the barrier of ROS2 DDS into real-world networks
 
 Scenario: Accelerated ROS application development
 *	Demonstration: Relay in connected robotics – _Dr Michal Kapinus (Brno University of Technology, Czechia)_
-*	Demonstration: How to build a networked object detector in unstructured network and use it in an industrial Robot – _Dr Michal Kapinus (Brno University of Technology, Czechia) and Mr. Paul McHard (HAL-Robotics, UK)_
 *	Demonstration: How to build a tele-operation app in unstructured network – _Mr. Angelos Stathis (WINGS ICT Solution, Greece)_
+*	Demonstration: How to build a containersied portable region detector for industrial Robots – Mr. Paul McHard &  Mr. Sebastian Andraos (HAL-Robotics, UK)_
 *	Demonstration: Onboarding and deploying the newly created network applications with orchestration – _Mr Bartosz Bratus and Mr. Radu Popescu (University of Bedfordshire, UK)_
 *	Hand on experience to the newly created ROS applications for connected robotics _Users, assisted by all_
 
