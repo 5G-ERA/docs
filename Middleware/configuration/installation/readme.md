@@ -19,7 +19,22 @@ The detailed infrastructure deployment instructions are in [infrastructure deplo
 Supporting services are responsible for work of the Middleware system, they are Redis for Graph and NoSQL database, 
 RabbitMQ messaging system, Grafana loki Centralized logging system and InfluxDB for time series robot and NetApp insights.
 
-To deploy them, the infrastructure is required.
+To deploy them, the infrastructure is required. Follow [supporting infrastructure](./terraform/infrastructure-deployment-terraform.md) 
+guide to learn how to deploy them. 
 ## CentralApi
+CentralApi is the service responsible for Middleware discovery and synchronization. 
+For correct work of even the single Middleware, CentralApi is required. 
+
+To deploy it, read the [guide](./central-api/readme.md).
 
 ## Middleware
+
+Finally, we come to the Middleware itself. With all the services deployed, deployment of the Middleware itself is very easy.
+
+Follow the instructions in [Middleware deployment guide](./crop-middleware/readme.md). 
+
+
+## Further steps
+
+With the Middleware and all supporting services deployed, now you can continue to deep dive into the 
+[Middleware configuration options](../configuration/readme.md).
