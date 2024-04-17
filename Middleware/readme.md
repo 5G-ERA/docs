@@ -6,7 +6,7 @@ Middleware enables this functionality by deploying the network applications on d
 
 5G-ERA Middleware allows robots from different vertical sectors to use 5G-based digital
 skills to enhance their autonomy. The Middleware is the link between vertical applications
-managed by ROS and 4G infrastructure managed by OSM. It realises the 5G-ERA intentbased network using cloud-native design. The Middleware can be instantiated in the core
+managed by ROS and 4G infrastructure managed by OSM. It realises the 5G-ERA intent-based network using cloud-native design. The Middleware can be instantiated in the core
 network either in the Edge Machines or in the cloud. The implementation allows the Robot to
 request the instantiation of the cloud-native resources that will support the execution of the
 task.
