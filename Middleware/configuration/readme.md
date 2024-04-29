@@ -4,6 +4,12 @@ This directory showcases the required configuration to run the Middleware and po
 
 There are a few steps required to be completed before the use of the 5G-ERA Middleware.
 
+## Infrastructure: 
+
+If you have already prepared the middleware infrastructure, you may skip this Infrastructure section, else if it is your first time deploying middleware. Please follow the instructions to prepare infrastrucutre require:
+[Infrastructure](installation/infrastructure/readme.md)
+
+
 ## Installation
 Before Middleware can be used, it needs to have all the necessary infrastructure installed. 
 For the detailed instructions on how to install the required infrastructure, 
