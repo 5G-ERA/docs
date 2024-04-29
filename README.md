@@ -30,7 +30,7 @@ This repository contains the technical information about different components of
          
 # Pre-required step
 
-Please go through the prerequisites and [middleware installation tutorial](./Middleware/configuration).
+Please go through the prerequisites and [middleware installation tutorial](./Middleware/configuration/readme.md).
 
 ## Possible Scenarios, technical challenges and solutions by CROP
 
