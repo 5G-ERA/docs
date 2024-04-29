@@ -48,7 +48,7 @@ The required variables are:
 19. InfluxDB__ApiKey - Api key to access InfluxDB
 
 ## Middleware version
-The most up-to-date Middleware version is `v1.0.0`. Remember to set this tag in the `orchestrator.yaml` file in the `spec -> template -> spec -> containers -> image`. 
+The most up-to-date Middleware version is `v1.0.1`. Remember to set this tag in the `orchestrator.yaml` file in the `spec -> template -> spec -> containers -> image`. 
 
 
 ## Middleware deployment 
