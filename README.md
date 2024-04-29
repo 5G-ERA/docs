@@ -30,7 +30,7 @@ This repository contains the technical information about different components of
          
 # Pre-required step
 
-Please go through the prerequisites and [middleware installation tutorial](https://github.com/5G-ERA/docs/tree/main/Middleware/architecture/Middleware%20Installation%20guide)
+Please go through the prerequisites and [middleware installation tutorial](./Middleware/configuration).
 
 ## Possible Scenarios, technical challenges and solutions by CROP
 
@@ -56,9 +56,9 @@ Domain knowledge of Robotics and ICT are encapsulated separately.
 
 ### Tutorial/Documentation : 
 
-Step 1: Onboard your custom robot from the [onboarding robot tutorial](https://github.com/5G-ERA/docs/blob/main/Middleware/architecture/Onboarding/New%20robot%20onboarding.md)
+Step 1: Onboard your custom robot from the [onboarding robot tutorial](./Middleware/usage/Onboarding/New%20robot%20onboarding.md)
 
-Step 2: Onboard the ROS network application from the [tutorial](https://github.com/5G-ERA/docs/blob/main/Middleware/architecture/Onboarding/Netapp%20Onboarding.md) 
+Step 2: Onboard the ROS network application from the [tutorial](./Middleware/usage/Onboarding/Netapp%20Onboarding.md) 
 
 Step 3: Trigger the Deployment of  your ROS network application
 
@@ -87,7 +87,7 @@ Step 1: Register and onboard your robot
 
 Step 2: Tutorial will be added (Configuring of the infrastructure of the testbed) slice manager
 
-Step 3: Configuration of new or existing tasks for utilising [slice mechanism](https://github.com/5G-ERA/middleware/blob/0d21429019390f2f96e29266185a1cb75eade1a0/docs/Developer/5g_testbed_integration.md) 
+Step 3: Configuration of new or existing tasks for utilising [slice mechanism](./Middleware/usage/5g-testbed-integration/5g_testbed_integration.md) 
 
 Step 4: Trigger the Deployment of  your ROS network application
 
@@ -139,7 +139,7 @@ CROP enables dynamic resource provision through software-defined and portable in
 ### Tutorial/Documentation:
 Step 1: Go through the [Relay network application tutorial](https://github.com/5G-ERA/relay_network_application) 
 
-Step 2: Onboard the [ROS network application](https://github.com/5G-ERA/docs/blob/main/Middleware/architecture/Onboarding/Netapp%20Onboarding.md) from the tutorial 
+Step 2: Onboard the [ROS network application](./Middleware/usage/Onboarding/Netapp%20Onboarding.md) from the tutorial 
 
 Step 3: Trigger the Deployment of  your ROS network application
 
