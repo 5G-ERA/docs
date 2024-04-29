@@ -17,4 +17,4 @@ The Middleware documentation is divided into four sections:
 * interface - showcases the ways how Middleware interacts with other services and possible integration guidelines
 * usage - this section describes how to use 5G-ERA Middleware from the end-user point of view
 
-5G-ERA Middleware documentation relies heavily on abbreviations. From the full list of abbreviations please visit [glossary](glosary).
+5G-ERA Middleware documentation relies heavily on abbreviations. From the full list of abbreviations please visit [glossary](./Middleware/glosary.md).
