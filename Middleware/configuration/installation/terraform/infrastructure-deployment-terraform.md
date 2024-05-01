@@ -146,7 +146,7 @@ Make sure your configuration is valid and as expected with the plan command:
 ```shell
 terraform plan
 ```
-Once the workspace has been initialize you can run the apply command, when you will be asked for confirmation type `yes` and press `ENTER`:
+Once the workspace has been initialize you can run the apply command `(the installation process will create namespaces for each baking service, to avoid installation failure make sure you don't have duplicate namespaces, check *main.tf* file for namespaces to be created)`, when you will be asked for confirmation type `yes` and press `ENTER`:
 ```shell
 terraform apply
 ```
