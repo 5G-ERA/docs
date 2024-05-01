@@ -70,7 +70,7 @@ The DNS module is responsible for routing the DNS-based requests to be routed to
 ```
 
 We enable ingress as a backup for exposing the services from the cluster.
- **If you want to use the TLS encryption for your Middleware, you can skip enabling the ingress here and activate the already preconfigured one which includes the routes for the Middleware in the terraform `main.tf` by commenting out the resource. However, this will not automatically enable the TLS, its configuration will have to be addressed with your own domain and certificates.**.
+ **If you want to use the TLS encryption for your Middleware, you can skip enabling the ingress here and activate the already preconfigured `ingress-nginx` which includes the routes for the Middleware in the terraform `main.tf` by commenting out the resource. However, this will not automatically enable the TLS, its configuration will have to be addressed with your own domain and certificates.**.
 
 ```shell
  sudo microk8s enable ingress
@@ -83,7 +83,46 @@ sudo microk8s enable hostpath-storage
 
 ## Install Terraform
 
-Terraform is an Infrastructure as Code tool for provisioning and management of the infrastructure. To install Terraform use the following link: [official guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli).
+Terraform is an Infrastructure as Code tool for provisioning and management of the infrastructure. To install Terraform use the following link: [official guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli), or execute the following commands for Ubuntu/Debian:
+
+Ensure your system is up to date and the `gnupg`, `curl` and `software-properties-common` are installed:
+```shell
+sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
+```
+Install HashiCorp GPG key:
+```shell
+wget -O- https://apt.releases.hashicorp.com/gpg | \
+gpg --dearmor | \
+sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
+
+```
+Verify key fingerprint:
+```shell
+gpg --no-default-keyring \
+--keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
+--fingerprint
+
+```
+Add the official HashiCorp repo to your system:
+```shell
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
+https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
+sudo tee /etc/apt/sources.list.d/hashicorp.list
+
+```
+Download the package from HashiCorp:
+```shell
+sudo apt update
+```
+Install Terraform:
+```shell
+sudo apt-get install terraform
+```
+Verify installation:
+```shell
+terraform -help
+```
+
 
 ### Initialize and deploy the CROP infrastructure with Terraform
 
@@ -98,11 +137,15 @@ Navigate to your newly created directory:
 cd terraform-crop
 ```
 
-Copy the content from the `terraform` directory in your newly created `terraform-crop` directory, make sure your directory contains the following files(`main.tf, influxdb-values.yaml, redis-values.yaml, loki-values.yaml, nginx-values.yaml, rabbitmq-values.yaml`) and run the init command:
+Copy the content from the [Edge-infrastructure-terraform](Edge-infrastructure-terraform) directory in your newly created `terraform-crop` directory, make sure your directory contains the following files(`main.tf, influxdb-values.yaml, redis-values.yaml, loki-values.yaml, nginx-values.yaml, rabbitmq-values.yaml`) and then run the init command:
 ```shell
 terraform init
 ```
+Make sure your configuration is valid and as expected with the plan command:
 
+```shell
+terraform plan
+```
 Once the workspace has been initialize you can run the apply command, when you will be asked for confirmation type `yes` and press `ENTER`:
 ```shell
 terraform apply
@@ -113,9 +156,9 @@ Create namespace:
 ```shell
 kubectl create namespace middleware-central
 ```
-Deploy the central-api. The `central-api.yaml` file is locate in the central-api directory, copy the file to your device and run the command:
+The `central-api-edge.yaml` file is locate in the [Edge-middleware](Edge-middleware) directory, copy the file to your device and run the command:
 ```shell
-kubectl apply -n middleware-central -f central-api.yaml
+kubectl apply -n middleware-central -f central-api-edge.yaml
 ```
 ## Install CROP Middleware
 ### Cluster configuration
@@ -160,7 +203,7 @@ kubectl apply -f orchestrator_role_binding.yaml
 
 ### Middleware Configuration
 
-The last step is to prepare the deployment script for the middleware. It can be found in the crop-middleware folder. In the `orchestrator.yaml` file there are environment variables that must be set to ensure the correct work of the Orchestrator. 
+The last step is to prepare the deployment script for the middleware. It can be found in the [Edge-middleware](Edge-middleware). In the `orchestrator-edge.yaml` file there are environment variables that must be set to ensure the correct work of the Orchestrator. 
 
 
 The required variables are:
@@ -169,7 +212,7 @@ The required variables are:
 2. Middleware__Organization – the organization to which this middleware belongs. The organization is an artificial group of Middlewares that can cooperate.
 3. Middleware__InstanceName – a **unique** name of the Middleware.
 4. Middleware__InstanceType – Either Edge/Cloud.
-5. Middleware__Address - The entry point for the middleware is usually the gateway address ex: 10.10.18.17:80, for local deployment use the ip address of the machine ex: 192.168.50.80 
+5. Middleware__Address - The entry point for the middleware is usually the gateway address, for local deployment use the ip address of the machine ex: 192.168.50.55. 
 6. CustomLogger__LoggerName - Either Loki/Elasticsearch.
 7. CustomLogger__Url - The url of the logger.
 8. CustomLogger__User - The username for the logger.
@@ -178,31 +221,22 @@ The required variables are:
 11. RabbitMQ__Address - The address of RabbitMQ. 
 12. RabbitMQ__User - The user for RabbitMQ. 
 13. RabbitMQ__Pass - The password for RabbitMQ.
-14. CENTRAL_API_HOSTNAME - Address of the CentralAPI that is responsible for authenticating the Middleware instances during the startup. For more information refer to the [CentralAPI documentation](CentralApi).
-15. AWS_ACCESS_KEY_ID - Aws access key ID used to access the services in AWS like Secret Manager.
-16. AWS_SECRET_ACCESS_KEY - Aws secret used to authenticate the access key.
-17. Redis__ClusterHostname - The address of the redis backend.
-18. Redis__Password - The password for the redis backend.
-19. InfluxDB__Address - Address to which connect to InfluxDB, includes protocol, address, and port
-20. InfluxDB__ApiKey - Api key to access InfluxDB
+14. CENTRAL_API_HOSTNAME - Address of the CentralAPI that is responsible for authenticating the Middleware instances during the startup. For more information refer to the [CentralAPI documentation](../central-api)
+15. Redis__ClusterHostname - The address of the redis backend.
+16. Redis__Password - The password for the redis backend.
+17. InfluxDB__Address - Address to which connect to InfluxDB, includes protocol, address, and port
+18. InfluxDB__ApiKey - Api key to access InfluxDB
 
 ## Middleware version
-The most up-to-date Middleware version is `v0.10.0`. Remember to set this tag in the `orchestrator.yaml` file in the `spec -> template -> spec -> containers -> image`. 
+The most up-to-date Middleware version is `v1.0.1`. Remember to set this tag in the `orchestrator-edge.yaml` file in the `spec -> template -> spec -> containers -> image`. 
 
-Until the Middleware releases version `1.0`, we recommend using the `latest` tag, as it is not guaranteed to provide backward compatibility. From versions `1.0` and later, backward compatibility will be ensured.
 
 ## Middleware deployment 
 
 After all the values are set, the Middleware can be deployed. Start with the deployment of the Orchestrator:
 
 ```shell
-kubectl apply -f orchestrator.yaml -n middleware
-```
-
-Alternatively, you can use utility scripts located at [k8s/orchestrator](../../k8s/orchestrator/):
-
-```shell
-./deploy.sh
+kubectl apply -f orchestrator-edge.yaml -n middleware
 ```
 
 The containers will be downloaded, and the Orchestrator will deploy the rest of the Middleware deployments and services required. 
