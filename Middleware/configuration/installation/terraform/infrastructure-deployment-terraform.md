@@ -1,4 +1,4 @@
-# Infrastructure deployment with Terraform and CROP Middleware installation
+# Infrastructure deployment with Terraform and CROP Middleware installation for local Edge
 
 The CROP Middleware system relies on numerous backing services that have to be deployed before its own installation process, such as: `redis`, `influxdb`, `rabbitmq`, `ingress-nginx`, `loki/grafana`, and a customized `central-api` which is responsible for the CROP registration and scalability management.
 
