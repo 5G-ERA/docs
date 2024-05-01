@@ -44,7 +44,7 @@ helm repo update
 ```
 
 ### 3. Modify values.yaml file:
-The nginx chart contains a `values.yaml` file, this file requires a few modifications in the `ipFamilyPolicy` section, in order to function with the current Middleware architecture. The initial configuration for the nginx controller service comes with `type: LoadBalancer`. Since the Middleware is already exposed through a Network Load Balancer, this has to be adjusted to `type: NodePort`. Also in the Network Load Balancer that serves the Middleware system the listeners and target groups are assigned to: `http: 80:31000` and `https: 443:31011`, these properties also have to be adjusted to match the same values. The below code depicts the required modifications:   
+The nginx chart contains a `values.yaml` file, this file requires a few modifications in the `ipFamilyPolicy` section, in order to function with the current Middleware architecture. The initial configuration for the nginx controller service comes with `type: LoadBalancer`. Since the Middleware is already exposed through a Network Load Balancer, this has to be adjusted to `type: NodePort`. Also in the Network Load Balancer that serves the Middleware system the listeners and target groups are assigned to: `http: 80:31010` and `https: 443:31011`, these properties also have to be adjusted to match the same values. The below code depicts the required modifications:   
 
 ```
     ipFamilyPolicy: "SingleStack"
@@ -58,7 +58,7 @@ The nginx chart contains a `values.yaml` file, this file requires a few modifica
       https: https
     type: NodePort
     nodePorts:
-      http: 31000
+      http: 31010
       https: 31011
       tcp: {}
       udp: {}
@@ -83,7 +83,7 @@ kubectl -n ingress get svc
 The desired result should look like below:
 ```
 NAME                               TYPE       CLUSTER-IP       EXTERNAL-IP   PORT(S)                      AGE
-service/ingress-nginx-controller   NodePort   172.20.190.113   <none>        80:31000/TCP,443:31011/TCP   11d
+service/ingress-nginx-controller   NodePort   172.20.190.113   <none>        80:31010/TCP,443:31011/TCP   11d
 ```
 
 ## Domain registration
@@ -103,7 +103,7 @@ https://community.letsencrypt.org/t/dns-providers-who-easily-integrate-with-lets
 First we setup the ingress for both services we want to access through the nginx controller without configuring the TLS yet.
 
 ### 1. Ingress for the Gateway:
-The host name for the gateway service is `crop.5gera.net`, however, in the later step when we will have to configure the cert-manager, we want to provide a wildcard certificate that will be serving for other subdomains as well, hence we will use the host `*.5gera.net`, with this host, cert-manager will generate a single tls certificate that can be used for other subdomains that will be registered under `5gera.net`.\
+The host name for the gateway service is `crop.5gera.net`, we will have to configure the cert-manager to provide a wildcard certificate that will be serving for other subdomains as well, hence, cert-manager will generate a single tls certificate that can be used for other subdomains that will be registered under `5gera.net`.\
 Create the ingress for the Gateway in a `ingress-gateway.yaml` file as below, and leave the commented out code as it is for now:
 
 ```
@@ -123,7 +123,7 @@ spec:
         number: 80
   ingressClassName: nginx
   rules:
-    - host: "*.5gera.net"
+    - host: "crop.5gera.net"
     - http:
         paths:
           - pathType: Prefix
@@ -136,7 +136,7 @@ spec:
   # This section will be uncommented after the cluster-issuer in the cert-manager is configured
   #tls:
   #  - hosts:
-  #    - "*.5gera.net"
+  #    - "crop.5gera.net"
   #    secretName: tls-secret
 ```
 
@@ -154,7 +154,7 @@ kubectl -n middleware get ingress
 The desired result should look like below:
 ```
 NAME              CLASS   HOSTS         ADDRESS          PORTS     AGE
-ingress-gateway   nginx   *.5gera.net   172.20.190.113   80        11d
+ingress-gateway   nginx   crop.5gera.net   172.20.190.113   80        11d
 ```
 
 ### 2. Ingress for the Central-API:
@@ -326,7 +326,7 @@ spec:
         number: 80
   ingressClassName: nginx
   rules:
-    - host: "*.5gera.net"
+    - host: "crop.5gera.net"
     - http:
         paths:
           - pathType: Prefix
@@ -339,7 +339,7 @@ spec:
   # This section will be uncommented after the cluster-issuer in the cert-manager is configured
   tls:
     - hosts:
-      - "*.5gera.net"
+      - "crop.5gera.net"
       secretName: tls-secret
 ```
 Apply the yaml configuration file with: 
@@ -356,7 +356,7 @@ kubectl -n middleware get ingress
 The desired result should look like below, notice the port 443 in the new ingress:
 ```
 NAME              CLASS   HOSTS         ADDRESS          PORTS     AGE
-ingress-gateway   nginx   *.5gera.net   172.20.190.113   80, 443   11d1h
+ingress-gateway   nginx   crop.5gera.net   172.20.190.113   80, 443   11d1h
 ```
 The ingress for central-api can remain with the same configuration, the nginx-ingress-controller will automatically forward the traffic that is coming on port 80/http to port 443/https. The TLS configuration is also not required in the ingress for the central-api, as explained above the wildcard certificate will serve for all other subdomains registered under the `5gera.net` domain, and this option has already been enabled when applying the new `ingress-gateway.yaml`.
 
