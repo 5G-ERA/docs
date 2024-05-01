@@ -1,6 +1,6 @@
 # Infrastructure deployment with Terraform and CROP Middleware installation for local Edge
 
-The CROP Middleware system relies on numerous backing services that have to be deployed before its own installation process, such as: `redis`, `influxdb`, `rabbitmq`, `ingress-nginx`, `loki/grafana`, and a customized `central-api` which is responsible for the CROP registration and scalability management.
+The CROP Middleware system relies on numerous backing services that have to be deployed before its own installation process, such as: `redis`, `influxdb`, `rabbitmq`, `ingress-nginx`, `loki/grafana`, and a customized `central-api` which is responsible for the CROP registration and scalability management. When finishing this tutorial you should have CROP Middleware deployed and connected to all the baking infrustructure. It is recomended to use the configurarion and deployment files that are linked to this tutorial for successful deployment.
 
 ## Prerequisites
 
@@ -14,7 +14,7 @@ The recommended hardware specifications for running the CROP Middleware locally 
 
 For the production environment, the hardware specifications will differ as the minimum requirements will be based on the number of Network Applications the Middleware will be running. The more Network Applications the more hardware resources will be needed.
 
-## Install Kubectl
+## 1. Install Kubectl
 
 The Kubectl is the command-line tool that allows communication and management of the Kubernetes cluster. To install it use the preferred way on the [official guide](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/).
 
@@ -24,7 +24,7 @@ Afterward, if the `~/.kube` folder was not created:
 mkdir -p ~/.kube
 ```
 
-## Install Microk8s
+## 2. Install Microk8s
 
 Microk8s is the minimal Kubernetes installation that can be used on the local computer. It will be used to run the Middleware. 
 
@@ -81,7 +81,7 @@ And lastly for the applications that require data persistance we enable the host
 sudo microk8s enable hostpath-storage
 ```
 
-## Install Terraform
+## 3. Install Terraform
 
 Terraform is an Infrastructure as Code tool for provisioning and management of the infrastructure. To install Terraform use the following link: [official guide](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli), or execute the following commands for Ubuntu/Debian:
 
@@ -151,7 +151,7 @@ Once the workspace has been initialize you can run the apply command, when you w
 terraform apply
 ```
 
-## Install Central-api
+## 4. Install Central-API
 Create namespace:
 ```shell
 kubectl create namespace middleware-central
@@ -160,7 +160,7 @@ The `central-api-edge.yaml` file is locate in the [Edge-middleware](Edge-middlew
 ```shell
 kubectl apply -n middleware-central -f central-api-edge.yaml
 ```
-## Install CROP Middleware
+## 5. Install CROP Middleware
 ### Cluster configuration
 
 After the `microk8s` is installed and the `kubectl` command has access to the cluster, it is time to configure the cluster so the middleware can be deployed and function correctly inside of it.
