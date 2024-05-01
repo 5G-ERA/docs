@@ -34,7 +34,7 @@ Although this guide provides installation instructions for the `microk8s`, any K
 `microk8s` can be installed with the following command:
 
 ```shell
-sudo snap install microk8s --classic
+sudo snap install microk8s --classic --channel=1.27/stable
 ```
 
 After the installation is complete `microk8s` needs access to the `~/.kube` folder so we give it the permissions and we add the current user to the `microk8s` group, so we can use the commands without `sudo`.
@@ -58,7 +58,7 @@ kubectl get all -n kube-system
 
 With the `kubectl` access to the cluster, the additional modules have to be installed to ensure the correct work of the CROP Middleware.
 
-We enable `metallb` addon to enable communication with the services inside the cluster with the dedicated IP address. During the execution of this command, **you will be asked to provide the ranges of the IP addresses you wish to use** for exposing services behind a Load Balancer.
+We enable `metallb` addon to enable communication with the services inside the cluster with the dedicated IP address. During the execution of this command, **you will be asked to provide the ranges of the IP addresses you wish to use** for exposing services behind a Load Balancer, you can copy the suggested example excluding the quotes, like this one: `10.64.140.43-10.64.140.49,192.168.0.105-192.168.0.111`
 ```shell
  sudo microk8s enable metallb
 ```
@@ -69,10 +69,16 @@ The DNS module is responsible for routing the DNS-based requests to be routed to
  sudo microk8s enable dns
 ```
 
-In the end, we enable ingress as a backup for exposing the services from the cluster. 
+We enable ingress as a backup for exposing the services from the cluster.
+ **If you want to use the TLS encryption for your Middleware, you can skip enabling the ingress here and activate the already preconfigured one which includes the routes for the Middleware in the terraform `main.tf` by commenting out the resource. However, this will not automatically enable the TLS, its configuration will have to be addressed with your own domain and certificates.**.
 
 ```shell
  sudo microk8s enable ingress
+```
+And lastly for the applications that require data persistance we enable the hostpath-storage addon.
+
+```shell
+sudo microk8s enable hostpath-storage
 ```
 
 ## Install Terraform
@@ -116,7 +122,7 @@ kubectl apply -n middleware-central -f central-api.yaml
 
 After the `microk8s` is installed and the `kubectl` command has access to the cluster, it is time to configure the cluster so the middleware can be deployed and function correctly inside of it.
 
-The files required for the execution of the cluster configuration are provided [here](../../k8s/cluster-config).
+The files required for the execution of the cluster configuration are provided [here](../crop-middleware/)
 
 
 **Note: To execute the provided commands, make sure you are in the same directory as the downloaded files.**
