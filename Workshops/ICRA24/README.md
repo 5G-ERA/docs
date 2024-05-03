@@ -7,8 +7,8 @@ Internet is a dynamic and unstructured network with multi-domain and multi-admin
 
 
 ## Pre-requirement:
-You can enjoy our talks and demonstrations, explore networking and DevOp aspects of ROS under the connected robotics platform (CROP) without any preparation.
-To follow the hand-on session fully, please take a laptop with Ubuntu 22.04 and ROS2 Humble installed.
+* You can enjoy our talks and demonstrations, explore networking and DevOp aspects of ROS under the connected robotics platform (CROP) without any preparation.
+* To follow the hand-on session fully, please take a laptop with Ubuntu 22.04 and ROS2 Humble installed.
 
 
 
