@@ -58,7 +58,8 @@ Scenario: Accelerated ROS application development
 
 **17:20-17:30 Closing remarks**
 
-
+## Speakers / Demonstrators
+<img src="https://raw.githubusercontent.com/5G-ERA/docs/main/Workshops/ICRA24/files/Speakers.png"  width="900" >
 
 ## Demonstration Videos:
 
