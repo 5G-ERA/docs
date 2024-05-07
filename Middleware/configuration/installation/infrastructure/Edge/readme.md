@@ -156,7 +156,7 @@ mkdir terraform-crop
 cd terraform-crop
 ```
 
-#### 3.10 Copy the content from the [Edge-infrastructure-terraform](Edge-infrastructure-terraform) directory in your newly created `terraform-crop` directory, make sure your directory contains the following files(`main.tf, influxdb-values.yaml, redis-values.yaml, loki-values.yaml, nginx-values.yaml, rabbitmq-values.yaml`) and then run the init command:
+#### 3.10 Copy the content from the [services](../services) directory in your newly created `terraform-crop` directory, make sure your directory contains the following files(`main.tf, influxdb-values.yaml, redis-values.yaml, loki-values.yaml, nginx-values.yaml, rabbitmq-values.yaml`) and then run the init command:
 ```shell
 terraform init
 ```
@@ -184,7 +184,7 @@ kubectl apply -n middleware-central -f central-api-edge.yaml
 
 After the `microk8s` is installed and the `kubectl` command has access to the cluster, it is time to configure the cluster so the middleware can be deployed and function correctly inside of it.
 
-The files required for the execution of the cluster configuration are provided [here](../crop-middleware/)
+The files required for the execution of the cluster configuration are provided in the folder [crop-middleware](../../crop-middleware/)
 
 
 **Note: To execute the provided commands, make sure you are in the same directory as the downloaded files.**
@@ -239,7 +239,7 @@ The required variables are:
 11. RabbitMQ__Address - The address of RabbitMQ. 
 12. RabbitMQ__User - The user for RabbitMQ. 
 13. RabbitMQ__Pass - The password for RabbitMQ.
-14. CENTRAL_API_HOSTNAME - Address of the CentralAPI that is responsible for authenticating the Middleware instances during the startup. For more information refer to the [CentralAPI documentation](../central-api)
+14. CENTRAL_API_HOSTNAME - Address of the CentralAPI that is responsible for authenticating the Middleware instances during the startup. For more information refer to the [CentralAPI documentation](../../central-api)
 15. Redis__ClusterHostname - The address of the redis backend.
 16. Redis__Password - The password for the redis backend.
 17. InfluxDB__Address - Address to which connect to InfluxDB, includes protocol, address, and port
