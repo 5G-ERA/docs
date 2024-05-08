@@ -5,7 +5,7 @@ from diagrams.custom import Custom
 from diagrams.k8s.compute import Pod
 from diagrams.onprem.network import Nginx
 
-with Diagram("", direction="TB", show=False, filename="switchover-full"):
+with Diagram("", direction="TB", show=False, filename="switchover-full", strict=True):
     robot = Custom("Robot", "../img/summit-xl.jpg")
     with Cluster("AWS") as cloud:
         nlb = NLB("NLB", )
