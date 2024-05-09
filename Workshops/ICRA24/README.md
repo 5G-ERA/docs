@@ -1,6 +1,6 @@
 ## Connected Robotics Platform for ROS Deployment in Real-world Network Settings – ICRA Tutorial
 
-[ICRA24, Yokohama, Japan 13th May 2024 from 13:00-17:30PM (JST GMT+9)](https://2024.ieee-icra.org/program/#Workshops-Tutorials)
+[13:00-17:30PM (JST GMT+9), 13th May 2024, ICRA24 Yokohama Japan](https://2024.ieee-icra.org/program/#Workshops-Tutorials)
 
 ## Venue:
 
