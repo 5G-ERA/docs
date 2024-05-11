@@ -1,7 +1,9 @@
 # Connected Robotics Platform (CROP) - Documentation
 
-CROP enables seamless interaction among robots and Cloud/Edge devices. With the new capability, distributed robots’ development with Robot Operating System (ROS) is significantly simplified. CROP is highly efficient, secure, fully open source and vendor independent. The topology of the infrastructure is completely transparent to robots under the CROP. Therefore, there is little difference to robot developers that the device is running remotely via the internet on cloud or locally in local area network (LAN). 
+CROP enables seamless interaction among robots and Cloud/Edge devices. With the new capability, distributed robots’ development with Robot Operating System (ROS) is significantly simplified. CROP is highly efficient, secure, fully open source and vendor independent. The topology of the infrastructure is completely transparent to robots under the CROP. Therefore, there is little difference to robot developers that the device is running remotely via the internet on cloud or locally in local area network (LAN).
 
+[**Video: "CROP"**](https://www.youtube.com/watch?v=onze4jM2J0A)
+![Preview](https://i1.ytimg.com/vi/onze4jM2J0A/maxresdefault.jpg)
 
 ## Contents
 
