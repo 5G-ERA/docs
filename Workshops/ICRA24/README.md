@@ -15,14 +15,26 @@ Internet is a dynamic and unstructured network with multi-domain and multi-admin
 * You can enjoy our talks and demonstrations, explore networking and DevOp aspects of ROS under the connected robotics platform (CROP) without any preparation.
 * To follow the hand-on session fully, please take a laptop with Ubuntu 22.04, ROS2 Humble and Docker installed.
 
-
-
 <div id="Agenda"></div>
 
 ## Agenda:
 [<img src="https://github.com/5G-ERA/docs/blob/main/Workshops/ICRA24/files/Agenda.jpg"  width="800" >](https://youtu.be/KtKC98YrqK0)
 
+### Supporting documents to the tutorial 
+* [Demonstration of the Connected Robotics](https://github.com/5G-ERA/docs/blob/main/Workshops/ICRA24/Workshops/CROP-Demo.md)
+* [Hand on experience of ROS under the Connected Robotics](https://github.com/5G-ERA/docs/blob/main/Workshops/ICRA24/Workshops/HandsOn-for-ROS-with-CROP.md)
+* [Building your own ROS applications for the Connected Robotics](https://github.com/5G-ERA/docs/blob/main/Workshops/ICRA24/Workshops/Building-your-NetworkApplication-with-CROP.md)
 
+
+CROP Middleware | CROP Relay | CROP Radio Quality Signal  | Deployment | Edge Switch Over 
+:-: | :-: |  :-: | :-: | :-: 
+[<img src="https://raw.githubusercontent.com/5G-ERA/docs/main/Workshops/ICRA24/files/CROP-Middleware.png"  width="200">](https://github.com/5G-ERA/middleware) | [<img src="https://raw.githubusercontent.com/5G-ERA/docs/main/Workshops/ICRA24/files/CROP-Relay.png"  width="180">](https://github.com/5G-ERA/relay_network_application) | [<img src="https://raw.githubusercontent.com/5G-ERA/docs/main/Workshops/ICRA24/files/CROP-Quality-Signal.png"  width="200">](https://github.com/5G-ERA/signalQualityNetworkApplicationRos2) | [<img src="https://raw.githubusercontent.com/5G-ERA/docs/main/Workshops/ICRA24/files/Edge-installation.png"  width="180">](https://github.com/5G-ERA/docs/tree/main/Middleware/configuration/installation/infrastructure/Edge ) | [<img src="https://raw.githubusercontent.com/5G-ERA/docs/main/Workshops/ICRA24/files/Edge-switchover.png"  width="180">](https://github.com/5G-ERA/docs/tree/main/Middleware/usage/Switchover)
+
+### Speakers / Demonstrators
+<img src="https://raw.githubusercontent.com/5G-ERA/docs/main/Workshops/ICRA24/files/Speakers.png"  width="1000" >
+
+
+## Detailed Agenda
 **13:00-13:15 Registration and environment setup**
 
 **13:15-13:30 Opening and introduction**
@@ -63,8 +75,7 @@ Scenario: Accelerated ROS application development
 
 **17:20-17:30 Closing remarks**
 
-## Speakers / Demonstrators
-<img src="https://raw.githubusercontent.com/5G-ERA/docs/main/Workshops/ICRA24/files/Speakers.png"  width="900" >
+
 
 ## Demonstration Videos:
 
