@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hal-5g-era-solvesimulator 
+spec:
+  selector:
+    matchLabels:
+      name: hal-5g-era-solvesimulator 
+  template:
+    metadata:
+      labels:
+        name: hal-5g-era-solvesimulator 
+    spec:
+#      nodeSelector:
+#        kubernetes-io/os: linux
+      containers:
+        - name: hal-5g-era-solvesimulator 
+          image: ghcr.io/halrobotics/hal.5g-era.solve_simulator:latest
+          imagePullPolicy: IfNotPresent
+          resources: {}
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: Development
+            - name: gRPCPort
+              value: '7176'
+      imagePullSecrets:
+          - name: regcred

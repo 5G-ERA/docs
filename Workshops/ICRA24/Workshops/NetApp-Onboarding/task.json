@@ -1,0 +1,48 @@
+{
+    "id": "14b9d725-d2e1-4a3d-987f-a6fc58cbda64",
+    "name": "icra-hal-solve-simulator",
+    "priority": "Low",
+    "isDeterministic": false,
+    "tags": [],
+    "actionSequence": [
+        {
+            "id": "894e9507-f76d-497a-8f99-168388361281",
+            "name": "icra-hal-solve-simulator",
+            "priority": "Normal",
+            "order": 0,
+            "minimumNumCores": 0,
+            "minimumRam": 0,
+            "singleNetAppEntryPoint": false,
+            "tags": [],
+            "services": [
+                {
+                    "id": "981bdff3-3922-46ee-b27b-4470f005d3ba",
+                    "name": "icra-hal-solve-simulator",
+                    "type": null,
+                    "isReusable": false,
+                    "isPersistent": false,
+                    "rosTopicPublishers": [],
+                    "rosTopicSubscribers": [],
+                    "rosActions": [],
+                    "rosServices": [],
+                    "rosTransforms": [],
+                    "rosVersion": 0,
+                    "rosDistro": null,
+                    "family": null,
+                    "minimumRam": 0,
+                    "minimumNumOfCores": 0,                    
+                    "onboardedTime": "2024-02-14T13:49:40.3013258",
+                    "tags": [],
+                    "appliedPolicies": [],
+                    "containerImage": {
+                        "id": "99bee4dc-78fd-4eb4-a309-24aad5875f33",
+                        "name": "icra-hal-solve-simulator",                        
+                        "description": "The network application hosts the WP8 Solve Simulator from HAL Robotics.",
+                        "k8sDeployment": "apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: hal-5g-era-solvesimulator \nspec:\n  selector:\n    matchLabels:\n      name: hal-5g-era-solvesimulator \n  template:\n    metadata:\n      labels:\n        name: hal-5g-era-solvesimulator \n    spec:\n#      nodeSelector:\n#        kubernetes-io/os: linux\n      containers:\n        - name: hal-5g-era-solvesimulator \n          image: ghcr.io/halrobotics/hal.5g-era.solve_simulator:latest\n          imagePullPolicy: IfNotPresent\n          resources: {}\n          env:\n            - name: ASPNETCORE_ENVIRONMENT\n              value: Development\n            - name: gRPCPort\n              value: '7176'\n      imagePullSecrets:\n          - name: regcred",
+                        "k8sService": "apiVersion: v1\nkind: Service\nmetadata:\n  name: hal-5g-era-solvesimulator \nspec:\n  type: NodePort\n  selector:\n    name: hal-5g-era-solvesimulator  \n  ports:\n    - port: 80\n      targetPort: 80\n      name: http\n    - port: 7176\n      targetPort: 7176\n      name: grpc"
+                    }
+                }
+            ]
+        }
+    ]
+}
