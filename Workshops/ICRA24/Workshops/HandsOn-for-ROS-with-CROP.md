@@ -10,6 +10,12 @@ user: participant
 password: pass
 ```
 
+When running anything on your local machine, do not forget to set your ROS_DOMAIN_ID (you can find it on your paper)!
+
+```
+export ROS_DOMAIN_ID=XX
+```
+
 ### 1) Demonstration: limitation of ROS2 DDS (BUT)
 ### 2) Hand on experience of remote object detection in unstructured networks (BUT)
 
