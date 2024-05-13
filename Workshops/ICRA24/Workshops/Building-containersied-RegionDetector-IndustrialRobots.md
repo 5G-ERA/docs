@@ -63,6 +63,20 @@ polylines, vertices = self.find_regions(image.copy(), min_edges=MIN_EDGES, preci
 ```
 
 We advise you to use the provided jupyter notebook to play with the region detection service with visual feedback to understand it. 
+Finally, in order to build your docker image, please update the gRPC Port to a number unique to you. For the purposes of this demonstration, please use the ROS Domain ID on your sign up sheet. Your port number needs to be updated in the following places:
+
+```bash
+- region_detection.py, line 26, PORT = 500XX
+- Dockerfile, line 18, EXPOSE 500XX
+```
+
+In both these cases, please update XX to your provided ROS Domain ID.
+
+Lastly, build your docker image using the command, providing a unique image name for your entry.
+
+```bash
+docker build -t your-name-region-detector .
+```
 
 Good luck and enjoy!
 
