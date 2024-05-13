@@ -120,7 +120,7 @@ You can visualize results with the detection_publisher and show_image, just like
 Once you are satisfied with the results, you can utilize Middleware to deploy the application to the remote server:
 
 ```bash 
-docker run --network host --rm -e ROS_DOMAIN_ID=XX -e TOPICS_TO_SERVER='[{"name": "/image_raw", "type": "sensor_msgs/msg/Image"}]' -e TOPICS_FROM_SERVER='[{"name": "/res", "type": "std_msgs/msg/String"}]' -e USE_MIDDLEWARE=true -e MIDDLEWARE_USER=ad20f254-dc3b-406d-9f15-b73ccd47e867 -e MIDDLEWARE_PASSWORD=middleware -e MIDDLEWARE_TASK_ID=01a25415-df83-4bab-ae20-1e6d30197d09 -e MIDDLEWARE_ADDRESS=192.168.50.224:31000 -e MIDDLEWARE_ROBOT_ID=300c719a-1c06-4500-a13a-c2e20592b273 registry.5gera.net/but5gera/ros2_relay_client:1.5.0
+docker run --network host --rm -e ROS_DOMAIN_ID=XX -e TOPICS_TO_SERVER='[{"name": "/image_raw", "type": "sensor_msgs/msg/Image"}]' -e TOPICS_FROM_SERVER='[{"name": "/res", "type": "std_msgs/msg/String"}]' -e USE_MIDDLEWARE=true -e MIDDLEWARE_USER=ad20f254-dc3b-406d-9f15-b73ccd47e867 -e MIDDLEWARE_PASSWORD=middleware -e MIDDLEWARE_TASK_ID=46ef2dc1-4507-44cb-b0f7-09b50258d531 -e MIDDLEWARE_ADDRESS=192.168.50.224:31000 -e MIDDLEWARE_ROBOT_ID=300c719a-1c06-4500-a13a-c2e20592b273 registry.5gera.net/but5gera/ros2_relay_client:1.5.0
 ```
 
 To instruct the Middleware to deploy the network application for you, you need to set the USE_MIDDLEWARE variable to true and set user, password, middleware address, and robot-id variables. In this case, the Middleware deploys the application to the relevant computer and sets up the communication channel between the two instances of the Relay. 
