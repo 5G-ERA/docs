@@ -52,7 +52,7 @@ ros2 run image_publisher image_publisher_node video_file.mp4
 Now, when you have a working image topic with a video stream, you can run the object detector node:
 
 ```bash 
-docker run --rm -e ROS_DOMAIN_ID=XX -e INPUT_TOPIC=/image_raw -e OUTPUT_TOPIC=/res -e NETAPP_TORCH_DEVICE=cpu registry.5gera.net/but5gera/ros2_object_detection:0.3.0
+docker run --rm --network host -e ROS_DOMAIN_ID=XX -e INPUT_TOPIC=/image_raw -e OUTPUT_TOPIC=/res -e NETAPP_TORCH_DEVICE=cpu registry.5gera.net/but5gera/ros2_object_detection:0.3.0
 ```
 
 The INPUT_TOPIC variable sets the image topic the detector should use as an input. Similarly, the OUTPUT_TOPIC variable sets the topic's name with the results. The results topic is of type std_msgs/msg/String for simplicity. The NETAPP_TORCH_DEVICE=cpu tells the detector that CPU should be used for the detection (to use GPU, you need to have cuda and nvidia-docker installed and set the variable to cuda:0). By default, the detector will use the mobilenet model, which is suitable for CPUs and low-end GPU accelerators (such as Nvidia Jetson). 
