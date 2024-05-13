@@ -4,9 +4,11 @@ All hand-on experiences assumes you have Ubuntu 22.04 and ROS 2 Humble installed
 
 Throughout the tutorial, you will need to use SSH to connect to our Edge device with the following settings:
 
+```
 address: 192.168.50.224
 user: participant
 password: pass
+```
 
 ### 1) Demonstration: limitation of ROS2 DDS (BUT)
 ### 2) Hand on experience of remote object detection in unstructured networks (BUT)
@@ -44,7 +46,7 @@ ros2 run image_publisher image_publisher_node video_file.mp4
 Now, when you have a working image topic with a video stream, you can run the object detector node:
 
 ```bash 
-sudo docker run --rm -e INPUT_TOPIC=/image_raw -e OUTPUT_TOPIC=/res -e NETAPP_TORCH_DEVICE=cpu registry.5gera.net/but5gera/ros2_object_detection:0.3.0
+docker run --rm -e INPUT_TOPIC=/image_raw -e OUTPUT_TOPIC=/res -e NETAPP_TORCH_DEVICE=cpu registry.5gera.net/but5gera/ros2_object_detection:0.3.0
 ```
 
 The INPUT_TOPIC variable sets the image topic the detector should use as an input. Similarly, the OUTPUT_TOPIC variable sets the topic's name with the results. The results topic is of type std_msgs/msg/String for simplicity. The NETAPP_TORCH_DEVICE=cpu tells the detector that CPU should be used for the detection (to use GPU, you need to have cuda and nvidia-docker installed and set the variable to cuda:0). By default, the detector will use the mobilenet model, which is suitable for CPUs and low-end GPU accelerators (such as Nvidia Jetson). 
@@ -52,7 +54,7 @@ The INPUT_TOPIC variable sets the image topic the detector should use as an inpu
 To change the model to some more powerful variant, you can also set a NETAPP_MODEL_VARIANT=yolo_dark_net.
 
 ```bash 
-sudo docker run --rm -e INPUT_TOPIC=/image_raw -e OUTPUT_TOPIC=/res -e NETAPP_TORCH_DEVICE=cpu -e NETAPP_MODEL_VARIANT=yolo_dark_net registry.5gera.net/but5gera/ros2_object_detection:0.3.0
+docker run --rm -e INPUT_TOPIC=/image_raw -e OUTPUT_TOPIC=/res -e NETAPP_TORCH_DEVICE=cpu -e NETAPP_MODEL_VARIANT=yolo_dark_net registry.5gera.net/but5gera/ros2_object_detection:0.3.0
 ```
 
 You can try some more pre-prepared models with the NETAPP_MODEL_VARIANT variable:
@@ -74,7 +76,7 @@ ros2 topic echo /res
 To see the detected bounding boxes, you can use the following docker image: 
 
 ```bash 
-sudo docker run --rm --network host -e INPUT_IMAGES=/image_raw -e OUTPUT_IMAGES=/bounding_boxes -e RESULTS=/res registry.5gera.net/but5gera/ros2_detection_publisher:1.0.0
+docker run --rm --network host -e INPUT_IMAGES=/image_raw -e OUTPUT_IMAGES=/bounding_boxes -e RESULTS=/res registry.5gera.net/but5gera/ros2_detection_publisher:1.0.0
 ```
 
 It will create a /bounding_boxes topic that contains a video stream with superimposed bounding boxes that you can visualize with the show_image node:
@@ -88,13 +90,13 @@ To relieve stress from your computer, you can offload the object detector to som
 To run the object detector on the shared server, you will utilize the following command (run it on the shared server through ssh). You need to update the value of the ROS_DOMAIN_ID to be a number between 1-99, different from the other participants. Your assigned number is written in the Handbook (or you can use a random generator: https://xkcd.com/221/).
 
 ```bash 
-sudo docker run --rm -e INPUT_TOPIC=/image_raw -e OUTPUT_TOPIC=/res -e ROS_DOMAIN_ID=XX registry.5gera.net/but5gera/ros2_object_detection:0.3.0
+docker run --rm -e INPUT_TOPIC=/image_raw -e OUTPUT_TOPIC=/res -e ROS_DOMAIN_ID=XX registry.5gera.net/but5gera/ros2_object_detection:0.3.0
 ```
 
  You will use the same number in the configuration of the Relay server, where you need to set ROS_DOMAIN_ID and NETAPP_PORT (10001-10099):
 
 ```bash 
-sudo docker run --rm --network host -e ROS_DOMAIN_ID=XX -e NETAPP_PORT=100XX -e TOPICS_FROM_CLIENT='[{"name": "/image_raw", "type": "sensor_msgs/msg/Image"}]' -e TOPICS_TO_CLIENT='[{"name": "/res", "type": "std_msgs/msg/String"}]' registry.5gera.net/but5gera/ros2_relay_server:1.5.0
+docker run --rm --network host -e ROS_DOMAIN_ID=XX -e NETAPP_PORT=100XX -e TOPICS_FROM_CLIENT='[{"name": "/image_raw", "type": "sensor_msgs/msg/Image"}]' -e TOPICS_TO_CLIENT='[{"name": "/res", "type": "std_msgs/msg/String"}]' registry.5gera.net/but5gera/ros2_relay_server:1.5.0
 ```
 
 The variables TOPICS_FROM_CLIENT and TOPICS_TO_CLIENT sets the topics to be mirrored from client to server and back.
@@ -102,7 +104,7 @@ The variables TOPICS_FROM_CLIENT and TOPICS_TO_CLIENT sets the topics to be mirr
 On your laptop, you need to set up the Relay client:
 
 ```bash 
-sudo docker run --rm --network host -e NETAPP_ADDRESS=http://192.168.50.224:YYYYY -e TOPICS_TO_SERVER='[{"name": "/image_raw", "type": "sensor_msgs/msg/Image"}]' -e TOPICS_FROM_SERVER='[{"name": "/res", "type": "std_msgs/msg/String"}]'  registry.5gera.net/but5gera/ros2_relay_client:1.5.0
+docker run --rm --network host -e NETAPP_ADDRESS=http://192.168.50.224:YYYYY -e TOPICS_TO_SERVER='[{"name": "/image_raw", "type": "sensor_msgs/msg/Image"}]' -e TOPICS_FROM_SERVER='[{"name": "/res", "type": "std_msgs/msg/String"}]'  registry.5gera.net/but5gera/ros2_relay_client:1.5.0
 ```
 
 You must adjust the NETAPP_ADDRESS variable to contain the server's IP address and use the port number set in the previous step.
@@ -112,7 +114,7 @@ You can visualize results with the detection_publisher and show_image, just like
 Once you are satisfied with the results, you can utilize Middleware to deploy the application to the remote server:
 
 ```bash 
-sudo docker run --network host --rm -e TOPICS_TO_SERVER='[{"name": "/image_raw", "type": "sensor_msgs/msg/Image"}]' -e TOPICS_FROM_SERVER='[{"name": "/res", "type": "std_msgs/msg/String"}]' -e USE_MIDDLEWARE=true -e MIDDLEWARE_USER=GUID_USER -e MIDDLEWARE_PASSWORD=PASS -e MIDDLEWARE_TASK_ID=01a25415-df83-4bab-ae20-1e6d30197d09 -e MIDDLEWARE_ADDRESS=192.168.50.224:31000 -e MIDDLEWARE_ROBOT_ID=300c719a-1c06-4500-a13a-c2e20592b273 registry.5gera.net/but5gera/ros2_relay_client:1.5.0
+docker run --network host --rm -e TOPICS_TO_SERVER='[{"name": "/image_raw", "type": "sensor_msgs/msg/Image"}]' -e TOPICS_FROM_SERVER='[{"name": "/res", "type": "std_msgs/msg/String"}]' -e USE_MIDDLEWARE=true -e MIDDLEWARE_USER=GUID_USER -e MIDDLEWARE_PASSWORD=PASS -e MIDDLEWARE_TASK_ID=01a25415-df83-4bab-ae20-1e6d30197d09 -e MIDDLEWARE_ADDRESS=192.168.50.224:31000 -e MIDDLEWARE_ROBOT_ID=300c719a-1c06-4500-a13a-c2e20592b273 registry.5gera.net/but5gera/ros2_relay_client:1.5.0
 ```
 
 To instruct the Middleware to deploy the network application for you, you need to set the USE_MIDDLEWARE variable to true and set user, password, middleware address, and robot-id variables. In this case, the Middleware deploys the application to the relevant computer and sets up the communication channel between the two instances of the Relay. 
