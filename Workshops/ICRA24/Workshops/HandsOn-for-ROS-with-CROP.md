@@ -90,7 +90,7 @@ To relieve stress from your computer, you can offload the object detector to som
 To run the object detector on the shared server, you will utilize the following command (run it on the shared server through ssh). You need to update the value of the ROS_DOMAIN_ID to be a number between 1-99, different from the other participants. Your assigned number is written in the Handbook (or you can use a random generator: https://xkcd.com/221/).
 
 ```bash 
-docker run --rm -e INPUT_TOPIC=/image_raw -e OUTPUT_TOPIC=/res -e ROS_DOMAIN_ID=XX registry.5gera.net/but5gera/ros2_object_detection:0.3.0
+docker run --rm -e INPUT_TOPIC=/image_raw -e OUTPUT_TOPIC=/res -e ROS_DOMAIN_ID=XX --gpus all registry.5gera.net/but5gera/ros2_object_detection:0.3.0
 ```
 
  You will use the same number in the configuration of the Relay server, where you need to set ROS_DOMAIN_ID and NETAPP_PORT (10001-10099):
