@@ -114,7 +114,7 @@ You can visualize results with the detection_publisher and show_image, just like
 Once you are satisfied with the results, you can utilize Middleware to deploy the application to the remote server:
 
 ```bash 
-docker run --network host --rm -e TOPICS_TO_SERVER='[{"name": "/image_raw", "type": "sensor_msgs/msg/Image"}]' -e TOPICS_FROM_SERVER='[{"name": "/res", "type": "std_msgs/msg/String"}]' -e USE_MIDDLEWARE=true -e MIDDLEWARE_USER=GUID_USER -e MIDDLEWARE_PASSWORD=PASS -e MIDDLEWARE_TASK_ID=01a25415-df83-4bab-ae20-1e6d30197d09 -e MIDDLEWARE_ADDRESS=192.168.50.224:31000 -e MIDDLEWARE_ROBOT_ID=300c719a-1c06-4500-a13a-c2e20592b273 registry.5gera.net/but5gera/ros2_relay_client:1.5.0
+docker run --network host --rm -e TOPICS_TO_SERVER='[{"name": "/image_raw", "type": "sensor_msgs/msg/Image"}]' -e TOPICS_FROM_SERVER='[{"name": "/res", "type": "std_msgs/msg/String"}]' -e USE_MIDDLEWARE=true -e MIDDLEWARE_USER=ad20f254-dc3b-406d-9f15-b73ccd47e867 -e MIDDLEWARE_PASSWORD=middleware -e MIDDLEWARE_TASK_ID=01a25415-df83-4bab-ae20-1e6d30197d09 -e MIDDLEWARE_ADDRESS=192.168.50.224:31000 -e MIDDLEWARE_ROBOT_ID=300c719a-1c06-4500-a13a-c2e20592b273 registry.5gera.net/but5gera/ros2_relay_client:1.5.0
 ```
 
 To instruct the Middleware to deploy the network application for you, you need to set the USE_MIDDLEWARE variable to true and set user, password, middleware address, and robot-id variables. In this case, the Middleware deploys the application to the relevant computer and sets up the communication channel between the two instances of the Relay. 
@@ -146,11 +146,11 @@ To deploy the network application using the middleware, you can use a second cli
 
 ```bash
 export MIDDLEWARE_ADDRESS=192.168.50.224:31000
-export MIDDLEWARE_USER=TBA
-export MIDDLEWARE_PASSWORD=TBA
+export MIDDLEWARE_USER=ad20f254-dc3b-406d-9f15-b73ccd47e867
+export MIDDLEWARE_PASSWORD=middleware
 export MIDDLEWARE_TASK_ID=e8a6543b-6e93-4842-86c4-9bfd0d974824
 export MIDDLEWARE_ROBOT_ID=300c719a-1c06-4500-a13a-c2e20592b273
-fcw_client_python_middleware -c config.yaml --camera video3.yaml video3.mp4
+fcw_client_python_middleware -c config.yaml --camera video.yaml video.mp4
 ```
 
 #### Running remote visualization
