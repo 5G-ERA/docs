@@ -230,7 +230,7 @@ The required variables are:
 2. Middleware__Organization – the organization to which this middleware belongs. The organization is an artificial group of Middlewares that can cooperate.
 3. Middleware__InstanceName – a **unique** name of the Middleware.
 4. Middleware__InstanceType – Either Edge/Cloud.
-5. Middleware__Address - The entry point for the middleware is usually the gateway address, for local deployment use the ip address of the machine ex: 192.168.50.55. 
+5. Middleware__Address - The entry point for the middleware is usually the gateway address, however, for local deployment use the `http://` suffix, the ip of the machine, and the NodePort of the gateway service, ex: `http://192.168.50.55:31010`. 
 6. CustomLogger__LoggerName - Either Loki/Elasticsearch.
 7. CustomLogger__Url - The url of the logger.
 8. CustomLogger__User - The username for the logger.
