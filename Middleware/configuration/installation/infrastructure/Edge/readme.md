@@ -226,27 +226,27 @@ The last step is to prepare the deployment script for the middleware. It can be 
 
 The required variables are:
 
-1. IMAGE_REGISTRY – contains the address of the registry in which the Middleware images are stored. By default this value is `ghcr.io/5g-era`
-2. Middleware__Organization – the organization to which this middleware belongs. The organization is an artificial group of Middlewares that can cooperate.
-3. Middleware__InstanceName – a **unique** name of the Middleware.
-4. Middleware__InstanceType – Either Edge/Cloud.
-5. Middleware__Address - The entry point for the middleware is usually the gateway address, however, for local deployment use the `http://` suffix, the ip of the machine, and the NodePort of the gateway service, ex: `http://192.168.50.55:31010`. 
-6. CustomLogger__LoggerName - Either Loki/Elasticsearch.
-7. CustomLogger__Url - The url of the logger.
-8. CustomLogger__User - The username for the logger.
-9. CustomLogger__Password - The password for the logger.
-10. Slice__Hostname - The hostname of the SliceManager API that allows integration of the 5G slices into the planning process of the Middleware.
-11. RabbitMQ__Address - The address of RabbitMQ. 
-12. RabbitMQ__User - The user for RabbitMQ. 
-13. RabbitMQ__Pass - The password for RabbitMQ.
-14. CENTRAL_API_HOSTNAME - Address of the CentralAPI that is responsible for authenticating the Middleware instances during the startup. For more information refer to the [CentralAPI documentation](../../central-api)
+1. REDIS_INTERFACE_API_SERVICE_HOST - the address of the RedisInterface.API service, should be set to `redis-interface-api`.
+2. REDIS_INTERFACE_API_SERVICE_PORT - the port of the RedisInterface.API service, should be set to `80`.
+3. Middleware__Organization – the organization to which this middleware belongs. The organization is an artificial group of Middlewares that can cooperate.
+4. Middleware__InstanceName – a **unique** name of the Middleware.
+5. Middleware__InstanceType – Should be set to `Edge`.
+6. Middleware__Address - The entry point for the middleware is usually the gateway address, however, for local deployment use the `http://` suffix, the ip of the machine, and the NodePort of the gateway service, ex: `http://192.168.50.55:31010`. 
+7. CENTRAL_API_HOSTNAME - Address of the CentralAPI that is responsible for authenticating the Middleware instances during the startup. For more information refer to the [CentralAPI documentation](../../central-api)
+8. CustomLogger__LoggerName - Either Loki/Elasticsearch.
+9. CustomLogger__Url - The url of the logger.
+10. CustomLogger__User - The username for the logger.
+11. CustomLogger__Password - The password for the logger.
+12. RabbitMQ__Address - The address of RabbitMQ. 
+13. RabbitMQ__User - The user for RabbitMQ. 
+14. RabbitMQ__Pass - The password for RabbitMQ.
 15. Redis__ClusterHostname - The address of the redis backend.
 16. Redis__Password - The password for the redis backend.
 17. InfluxDB__Address - Address to which connect to InfluxDB, includes protocol, address, and port
 18. InfluxDB__ApiKey - Api key to access InfluxDB
 
 ## Middleware version
-The most up-to-date Middleware version is `v1.0.1`. Remember to set this tag in the `orchestrator-edge.yaml` file in the `spec -> template -> spec -> containers -> image`. 
+The most up-to-date Middleware version is `v1.0.3`. Remember to set this tag in the `orchestrator-edge.yaml` file in the `spec -> template -> spec -> containers -> image`. 
 
 
 ## Middleware deployment 
@@ -258,3 +258,12 @@ kubectl apply -f orchestrator-edge.yaml -n middleware
 ```
 
 The containers will be downloaded, and the Orchestrator will deploy the rest of the Middleware deployments and services required. 
+
+
+## 6 Multiple Middleware deployment 
+At this time you should have deployed the backing infrastructure and the Middleware system on an Edge machine. If you want to deploy a second Middleware instance on a different machine and synchronise it with the first instance of Middleware, here is what you should do in the second machine:
+
+#### 6.1 Start by redoing the stept in sections 1, 2, 5, 5.1, 5,2, 5.3, and 5.4 in the exact same way.
+
+#### 6.2 Following is step 5.5, however we need to modify the adresses of the services in the configuration file before we deploy de Middleware.
+Based on the type of the service, the address can contain the `http` suffix, the local name of the service `loki.loki.svc.cluster.local` and the port of the service `3100` which results in `http://loki.loki.svc.cluster.local:3100`, however, this will work if the loki service is deployed in the same machine where you deploy the Middleware. For the second Middleware deployment the address will look a bit different, we need to use the ip of the machine instead of the service name, and the NodePort instead of the port which will result in something similar to `http://192.168.50.55:31313`. Before even configuring the second Middleware deployment make sure that from the second machine you can actually access the services that were deployed in the first machine, by accessing the services as exaplined. The services you need to make sure can be accessible are: `CentralAPI`, `Loki`, `RabbitMQ`, `Redis-cluster`, and `InfluxDB`. Here is an example configuration file for the second Middleware deployment:
