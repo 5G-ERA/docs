@@ -1,12 +1,12 @@
-# Infrastructure deployment with Terraform and CROP Middleware installation for local Edge
+# Infrastructure deployment with Terraform and CRoP Middleware installation for local Edge
 
-The CROP Middleware system relies on numerous backing services that have to be deployed before its own installation process, such as: `redis`, `influxdb`, `rabbitmq`, `ingress-nginx`, `loki/grafana`, and a customized `central-api` which is responsible for the CROP registration and scalability management. When finishing this tutorial you should have CROP Middleware deployed and connected to all the baking infrustructure. It is recomended to use the configurarion and deployment files that are linked to this tutorial for successful completion.
+The CRoP Middleware system relies on numerous backing services that have to be deployed before its own installation process, such as: `redis`, `influxdb`, `rabbitmq`, `ingress-nginx`, `loki/grafana`, and a customized `central-api` which is responsible for the CRoP Middleware registration and scalability management. When finishing this tutorial you should have CRoP Middleware deployed and connected to all the baking infrustructure. It is recomended to use the configurarion and deployment files that are linked to this tutorial for successful completion. Section ***6*** of the tutorial is optional, one should proceed with this section only for multiple Middleware deployments.
 
 ## Prerequisites
 
-This installation tutorial assumes the CROP Middleware is installed in the `Ubuntu` system with version `20.04` or newer.
+This installation tutorial assumes the CRoP Middleware is installed in the `Ubuntu` system with version `20.04` or newer.
 
-The recommended hardware specifications for running the CROP Middleware locally for testing purposes are:
+The recommended hardware specifications for running the CRoP Middleware locally for testing purposes are:
 
 * CPU - 4 cores
 * RAM - 16 GB or above
@@ -47,7 +47,7 @@ mkdir -p ~/.kube
 
 Microk8s is the minimal Kubernetes installation that can be used on the local computer. It will be used to run the Middleware. 
 
-Although this guide provides installation instructions for the `microk8s`, any Kubernetes distribution like `minikube` or `kind` can be used. The installation instructions will differ and some configuration parts may differ in case of the deployment in a public cloud environment like AWS EKS or Azure AKS.
+Although this guide provides installation instructions for the `microk8s`, any Kubernetes distribution like `minikube` or `kind` can be used. The installation instructions will differ and some configuration parts may differ in case of the deployment in a public cloud environment like AWS EKS or Azure AKS. We recomend using version 1.27 or 1.28 for microk8s.
 
 
 #### 2.1 `microk8s` can be installed with the following command:
@@ -75,7 +75,7 @@ sudo microk8s config > ~/.kube/config
 kubectl get all -n kube-system
 ```
 
-With the `kubectl` access to the cluster, the additional modules have to be installed to ensure the correct work of the CROP Middleware.
+With the `kubectl` access to the cluster, the additional modules have to be installed to ensure the correct work of the CRoP Middleware.
 
 #### 2.5 We enable `metallb` addon to enable communication with the services inside the cluster with the dedicated IP address. During the execution of this command, **you will be asked to provide the ranges of the IP addresses you wish to use** for exposing services behind a Load Balancer, you can copy the suggested example excluding the quotes, like this one: `10.64.140.43-10.64.140.49,192.168.0.105-192.168.0.111`
 ```shell
@@ -143,7 +143,7 @@ terraform -help
 ```
 
 
-### Initialize and deploy the CROP infrastructure with Terraform
+### Initialize and deploy the CRoP infrastructure with Terraform
 
 #### 3.8 Create a new directory in your system, this will be your terraform working directory:
 
@@ -169,6 +169,9 @@ terraform plan
 ```shell
 terraform apply
 ```
+The picture below depicts all the backing service deployed with Terraform:
+
+![Terraform deployment](/Middleware/img/terraform-backing-services.png)
 
 ## 4. Install Central-API
 #### 4.1 Create namespace:
@@ -179,7 +182,9 @@ kubectl create namespace middleware-central
 ```shell
 kubectl apply -n middleware-central -f central-api-edge.yaml
 ```
-## 5. Install CROP Middleware
+The picture below depicts the Central-API:
+![Central-API](/Middleware/img/central-api.png)
+## 5. Install CRoP Middleware
 ### Cluster configuration
 
 After the `microk8s` is installed and the `kubectl` command has access to the cluster, it is time to configure the cluster so the middleware can be deployed and function correctly inside of it.
@@ -231,7 +236,7 @@ The required variables are:
 3. Middleware__Organization – the organization to which this middleware belongs. The organization is an artificial group of Middlewares that can cooperate.
 4. Middleware__InstanceName – a **unique** name of the Middleware.
 5. Middleware__InstanceType – Should be set to `Edge`.
-6. Middleware__Address - The entry point for the middleware is usually the gateway address, however, for local deployment use the `http://` suffix, the ip of the machine, and the NodePort of the gateway service, ex: `http://192.168.50.55:31010`. 
+6. Middleware__Address - The entry point for the middleware is usually the gateway address, however, for local deployment use the `http://` suffix, the ip of the machine, and the NodePort of the gateway service, ex: `http://192.168.50.23:31010`. 
 7. CENTRAL_API_HOSTNAME - Address of the CentralAPI that is responsible for authenticating the Middleware instances during the startup. For more information refer to the [CentralAPI documentation](../../central-api)
 8. CustomLogger__LoggerName - Either Loki/Elasticsearch.
 9. CustomLogger__Url - The url of the logger.
@@ -257,13 +262,23 @@ The most up-to-date Middleware version is `v1.0.3`. Remember to set this tag in 
 kubectl apply -f orchestrator-edge.yaml -n middleware
 ```
 
-The containers will be downloaded, and the Orchestrator will deploy the rest of the Middleware deployments and services required. 
+The containers will be downloaded, and the Orchestrator will deploy the rest of the Middleware deployments and services required. The picture below depicts the CRoP Middleware:
+
+![CRoP-Middleware](/Middleware/img/crop-middleware.png)
+
 
 
 ## 6 Multiple Middleware deployment 
-At this time you should have deployed the backing infrastructure and the Middleware system on an Edge machine. If you want to deploy a second Middleware instance on a different machine and synchronise it with the first instance of Middleware, here is what you should do in the second machine:
+At this time you should have deployed the backing infrastructure and the CRoP Middleware system on your first Edge machine. If you want to deploy a second Middleware instance on a second Edge machine and synchronise it with the first instance of Middleware, here is what you should do in the second machine:
 
-#### 6.1 Start by redoing the stept in sections 1, 2, 5, 5.1, 5,2, 5.3, and 5.4 in the exact same way.
+#### 6.1 Start by redoing the stept in sections 1, 2, 5, 5.1, 5,2, 5.3, and 5.4 in the exact same way, for preparing the environment.
 
-#### 6.2 Following is step 5.5, however we need to modify the adresses of the services in the configuration file before we deploy de Middleware.
-Based on the type of the service, the address can contain the `http` suffix, the local name of the service `loki.loki.svc.cluster.local` and the port of the service `3100` which results in `http://loki.loki.svc.cluster.local:3100`, however, this will work if the loki service is deployed in the same machine where you deploy the Middleware. For the second Middleware deployment the address will look a bit different, we need to use the ip of the machine instead of the service name, and the NodePort instead of the port which will result in something similar to `http://192.168.50.55:31313`. Before even configuring the second Middleware deployment make sure that from the second machine you can actually access the services that were deployed in the first machine, by accessing the services as exaplined. The services you need to make sure can be accessible are: `CentralAPI`, `Loki`, `RabbitMQ`, `Redis-cluster`, and `InfluxDB`. Here is an example configuration file for the second Middleware deployment:
+#### 6.2 Following is step 5.5, however we need to modify the adresses of the services in the configuration file before we deploy the second Middleware.
+Based on the type of the service, the address can contain the `http` suffix, the local name of the service `loki.loki.svc.cluster.local` and the port of the service `3100` which results in `http://loki.loki.svc.cluster.local:3100`, however, this will work if the loki service is deployed in the same machine where you deploy the first Middleware. For the second Middleware deployment the address will look a bit different, we need to use the IP of the first machine instead of the service name, and the NodePort instead of the port which will result in something similar to `http://192.168.50.23:31019`. ***NOTE (The structure af the addresses may differ, some may not need `http` suffix, some may not need `port` and so on, however the file that is linked below for the second Middleware deployment contains the exact addresses structure for each service)***
+ Before even configuring the second Middleware deployment make sure that from the second machine you can actually access the services that were deployed in the first machine, by accessing the services as exaplined using the IP of the first machine and NodePort. The services you need to make sure can be accessed from the second machine are: `CentralAPI`, `Loki`, `RabbitMQ`, `Redis-cluster`, and `InfluxDB`. Here is an example configuration file for the second Middleware delpyment which is locate in [Edge-middleware](Edge-middleware), namely the `orchestrator-edge-two.yaml`.
+
+ #### 6.2.1 After all the values are set, the second Middleware can be deployed:
+
+```shell
+kubectl apply -f orchestrator-edge-two.yaml -n middleware
+```

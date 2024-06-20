@@ -53,32 +53,34 @@ spec:
             - name: Middleware__Organization
               value: 5G-ERA-DEV
             - name: Middleware__InstanceName
-              value: MiddlewareEdgeDemo
+              value: MiddlewareEdgeTwoDemo
             - name: Middleware__InstanceType
               value: Edge
             - name: Middleware__Address
-              value: http://192.168.50.23:31010
+              value: http://192.168.50.81:31010
             - name: CENTRAL_API_HOSTNAME
-              value: central-api.middleware-central.svc.cluster.local
+              value: 192.168.50.23:31003
             - name: CustomLogger__LoggerName
               value: Loki
             - name: CustomLogger__Url
-              value: http://loki.loki.svc.cluster.local:3100
+              value: http://192.168.50.23:31019
             - name: CustomLogger__User
               value: lokiuser
             - name: CustomLogger__Password
               value: lokipassword
             - name: RabbitMQ__Address
-              value: rabbitmq.rabbitmq.svc.cluster.local
+              value: "192.168.50.23"
+            - name: RabbitMQ__Port
+              value: "32736"
             - name: RabbitMQ__User
               value: rabbitmquser
             - name: RabbitMQ__Pass
               value: rabbitmqpassword
             - name: Redis__ClusterHostname
-              value: redis-master.redis.svc.cluster.local
+              value: 192.168.50.23:31001
             - name: Redis__Password
               value: redispassword
             - name: InfluxDB__Address
-              value: http://influxdb.influxdb.svc.cluster.local:8086
+              value: http://192.160.50.23:30451
             - name: InfluxDB__ApiKey
               value: iFPLlUTbrcxlvIgejg0V_8NN-v4RY6BXvXMPE1E8A0y1ivUOfK1bMRbjcwKh06PyXqEbqe7D2G6P23Q35ZcIjQ==
