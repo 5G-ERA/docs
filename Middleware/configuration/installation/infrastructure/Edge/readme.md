@@ -171,16 +171,16 @@ terraform apply
 ```
 The picture below depicts all the backing service deployed with Terraform:
 
-![Terraform deployment](/docs/Middleware/img/terraform-backing-services.png)
+![Terraform deployment](/Middleware/img/terraform-backing-services.png)
 
 #### 3.13 Generate InfluxDB API token key
 In your influxdb service, locate the NodePort that forwards to port `8086` and open a browser using these details, ex: `localhost:31996`, in first window click the GetStarted button and fill in your credentials as below:
 > **Note:** If you left username and password unchanged in step 3.9 use the default `influxuser/influxpassword` otherwise use your own, however, for the organizartion use `5G-ERA` and for bucket name use `middleware` .
 
-![Influx Authentication](/docs/Middleware/img/influx-aut.png)
+![Influx Authentication](/Middleware/img/influx-aut.png)
 
 #### 3.14 Copy the token key, you will need this in step 5.5 Middleware configuration
-![Influx Authentication](/docs/Middleware/img/influx-auth.png)
+![Influx Authentication](/Middleware/img/influx-auth.png)
 
 ## 4. Install Central-API
 #### 4.1 Create namespace:
@@ -192,7 +192,7 @@ kubectl create namespace middleware-central
 kubectl apply -n middleware-central -f central-api-edge.yaml
 ```
 The picture below depicts the Central-API:
-![Central-API](/docs/Middleware/img/central-api.png)
+![Central-API](/Middleware/img/central-api.png)
 ## 5. Install CRoP Middleware
 ### Cluster configuration
 
@@ -273,7 +273,7 @@ kubectl apply -f orchestrator-edge.yaml -n middleware
 
 The containers will be downloaded, and the Orchestrator will deploy the rest of the Middleware deployments and services required. The picture below depicts the CRoP Middleware:
 
-![CRoP-Middleware](/docs/Middleware/img/crop-middleware.png)
+![CRoP-Middleware](/Middleware/img/crop-middleware.png)
 
 
 
