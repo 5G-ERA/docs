@@ -156,7 +156,7 @@ mkdir terraform-crop
 cd terraform-crop
 ```
 
-#### 3.10 Copy the content from the [services](../services) directory in your newly created `terraform-crop` directory, make sure your directory contains the following files(`main.tf, influxdb-values.yaml, redis-values.yaml, loki-values.yaml, nginx-values.yaml, rabbitmq-values.yaml`) and then run the init command:
+#### 3.10 Copy the content from the [services](../services) directory in your newly created `terraform-crop` directory, make sure your directory contains the following files(`main.tf, influxdb-values.yaml, redis-values.yaml, loki-values.yaml, nginx-values.yaml, rabbitmq-values.yaml`) ***Note*** ***(Credentiasl for each service are in the `values.yaml` files, feel free to leave them as they are or modify them with your own prefference)*** then run the init command:
 ```shell
 terraform init
 ```
@@ -171,7 +171,16 @@ terraform apply
 ```
 The picture below depicts all the backing service deployed with Terraform:
 
-![Terraform deployment](/Middleware/img/terraform-backing-services.png)
+![Terraform deployment](/docs/Middleware/img/terraform-backing-services.png)
+
+#### 3.13 Generate InfluxDB API token key
+In your influxdb service, locate the NodePort that forwards to port `8086` and open a browser using these details, ex: `localhost:31996`, in first window click the GetStarted button and fill in your credentials as below:
+> **Note:** If you left username and password unchanged in step 3.9 use the default `influxuser/influxpassword` otherwise use your own, however, for the organizartion use `5G-ERA` and for bucket name use `middleware` .
+
+![Influx Authentication](/docs/Middleware/img/influx-aut.png)
+
+#### 3.14 Copy the token key, you will need this in step 5.5 Middleware configuration
+![Influx Authentication](/docs/Middleware/img/influx-auth.png)
 
 ## 4. Install Central-API
 #### 4.1 Create namespace:
@@ -183,7 +192,7 @@ kubectl create namespace middleware-central
 kubectl apply -n middleware-central -f central-api-edge.yaml
 ```
 The picture below depicts the Central-API:
-![Central-API](/Middleware/img/central-api.png)
+![Central-API](/docs/Middleware/img/central-api.png)
 ## 5. Install CRoP Middleware
 ### Cluster configuration
 
@@ -224,7 +233,7 @@ kubectl apply -f orchestrator_role_binding.yaml
 
 ---
 
-### Middleware Configuration
+### 5.5 Middleware Configuration
 
 The last step is to prepare the deployment script for the middleware. It can be found in the [Edge-middleware](Edge-middleware). In the `orchestrator-edge.yaml` file there are environment variables that must be set to ensure the correct work of the Orchestrator. 
 
@@ -254,9 +263,9 @@ The required variables are:
 The most up-to-date Middleware version is `v1.0.3`. Remember to set this tag in the `orchestrator-edge.yaml` file in the `spec -> template -> spec -> containers -> image`. 
 
 
-## Middleware deployment 
+## 5.5 Middleware deployment 
 
-#### 5.5 After all the values are set, the Middleware can be deployed. Start with the deployment of the Orchestrator:
+#### After all the values are set, the Middleware can be deployed. Start with the deployment of the Orchestrator:
 
 ```shell
 kubectl apply -f orchestrator-edge.yaml -n middleware
@@ -264,7 +273,7 @@ kubectl apply -f orchestrator-edge.yaml -n middleware
 
 The containers will be downloaded, and the Orchestrator will deploy the rest of the Middleware deployments and services required. The picture below depicts the CRoP Middleware:
 
-![CRoP-Middleware](/Middleware/img/crop-middleware.png)
+![CRoP-Middleware](/docs/Middleware/img/crop-middleware.png)
 
 
 
