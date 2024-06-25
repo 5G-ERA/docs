@@ -42,7 +42,7 @@ spec:
         kubernetes.io/os: linux
       containers:
         - name: orchestrator-api
-          image: ghcr.io/5g-era/orchestrator-api:v1.0.3
+          image: ghcr.io/5g-era/orchestrator-api:v1.0.5
           imagePullPolicy: Always
           resources: {}
           env:

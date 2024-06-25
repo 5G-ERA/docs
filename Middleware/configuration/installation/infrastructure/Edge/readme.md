@@ -260,7 +260,7 @@ The required variables are:
 18. InfluxDB__ApiKey - Api key to access InfluxDB
 
 ## Middleware version
-The most up-to-date Middleware version is `v1.0.3`. Remember to set this tag in the `orchestrator-edge.yaml` file in the `spec -> template -> spec -> containers -> image`. 
+The most up-to-date Middleware version is `v1.0.5`. Remember to set this tag in the `orchestrator-edge.yaml` file in the `spec -> template -> spec -> containers -> image`. 
 
 
 ## 5.5 Middleware deployment 
@@ -277,7 +277,7 @@ The containers will be downloaded, and the Orchestrator will deploy the rest of 
 
 
 
-## 6 Multiple Middleware deployment 
+## 6. Multiple Middleware deployment 
 At this time you should have deployed the backing infrastructure and the CRoP Middleware system on your first Edge machine. If you want to deploy a second Middleware instance on a second Edge machine and synchronise it with the first instance of Middleware, here is what you should do in the second machine:
 
 #### 6.1 Start by redoing the stept in sections 1, 2, 5, 5.1, 5,2, 5.3, and 5.4 in the exact same way, for preparing the environment.
@@ -291,3 +291,8 @@ Based on the type of the service, the address can contain the `http` suffix, the
 ```shell
 kubectl apply -f orchestrator-edge-two.yaml -n middleware
 ```
+The videos linked below demonstrate the installation and usage of the Middleware and the Backing Services.
+
+> **Youtube** Demo video: [Installation](https://www.youtube.com/watch?v=wdH5yNIDLYs)
+
+> **Youtube** Demo video: [Usage](https://www.youtube.com/watch?v=Hcdp4AE2wQc)
