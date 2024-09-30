@@ -1,4 +1,4 @@
-Open Source Datasets for 5G-ERA virtual experimental enviroments:
+Open Source Datasets for 5G-ERA virtual experimental environments:
 
 |Dataset Name  |   Dataset Description |  Dataset link | Coresponding Video|
 |---|---|---|---|
